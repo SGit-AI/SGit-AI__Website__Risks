@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The documents · risks.sgit.ai</title>
+<meta name="description" content="The eleven source documents published verbatim, how the 37 sources were tiered, what is deliberately not published and why, the eight CC0 prior-art articles, and the licence position.">
+<link rel="canonical" href="https://risks.sgit.ai/documents/index.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="risks.sgit.ai">
+<meta property="og:url" content="https://risks.sgit.ai/documents/index.html">
+<meta property="og:title" content="The documents">
+<meta property="og:description" content="Raw markdown is the source of truth; the rendered pages are presentation. And what was excluded is published too.">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../index.html">risks<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: vaults, publishing and the catalogue. This site is the estate's conceptual home for risk">↗ part of <b>sgit.ai</b></a>
+  <span class="stage-pill">research site</span>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.1.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni ni-has">
+      <a class="nl" href="../acceptance/index.html">Acceptance<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../acceptance/index.html">The founding inversion</a>
+      <a class="sl" href="../acceptance/underwriting.html">Underwriting, not prediction</a>
+      <a class="sl" href="../acceptance/no-deny.html">There is no deny button</a>
+      <a class="sl" href="../acceptance/the-ladder.html">The interval ladder</a>
+      <a class="sl" href="../acceptance/unaccepted-is-critical.html">Unaccepted is critical</a>
+      <a class="sl" href="../acceptance/workflow.html">Who underwrites, and how it flows up</a>
+      <a class="sl" href="../acceptable/index.html">Accepted is not acceptable</a>
+      <a class="sl" href="../acceptable/appetite.html">Appetite as a revealed band</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../ladder/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../ladder/index.html">The grounding ladder</a>
+      <a class="sl" href="../ladder/formulas.html">Node type formulas</a>
+      <a class="sl" href="../ladder/bridges.html">Bridges, not merges</a>
+      <a class="sl" href="../ladder/absence.html">Not knowing is a fact</a>
+      <a class="sl" href="../register/index.html">The register as a graph of graphs</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../plug/index.html">The exposure<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../plug/index.html">Who can pull the plug</a>
+      <a class="sl" href="../plug/recoverability.html">Recoverability: the hard limit</a>
+      <a class="sl" href="../blast-radius/index.html">Blast radius &amp; authorization closure</a>
+      <a class="sl" href="../practice/index.html">Practice: owners, altitude, meta-risks</a>
+      <a class="sl" href="../ramm/index.html">RAMM and the maturity models</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../examples/index.html">The proof<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../examples/index.html">Three worked graphs</a>
+      <a class="sl" href="../examples/2fa.html">The 2FA instance graph</a>
+      <a class="sl" href="../examples/browser-isolation.html">The browser-isolation case</a>
+      <a class="sl" href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+      <a class="sl" href="../examples/vaults.html">The four live vaults</a>
+      <a class="sl" href="../examples/scenarios.html">The ten scenarios</a>
+      <a class="sl" href="../examples/plug-register.html">The plug register</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../agents/index.html">For agents<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../agents/index.html">The machine surface</a>
+      <a class="sl" href="../concepts/index.html">All 42 concepts, addressable</a>
+      <a class="sl" href="../shipped/index.html">What is argued, what runs</a>
+      <a class="sl" href="../llms.txt">llms.txt</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../network/index.html">Site<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../network/index.html">The network: where the boundaries are</a>
+      <a class="sl" href="../origins/index.html">Origins: February to August 2026</a>
+      <a class="sl here" href="../documents/index.html">The documents</a>
+      <a class="sl" href="../admin/comms.html">Comms: asks &amp; tasks</a>
+      <a class="sl" href="../admin/versions.html">Release history</a>
+      <a class="sl" href="../admin/index.html">Admin &amp; engineering</a>
+      <a class="sl" href="../about/participant.html">Where we lose</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__Risks">★ GitHub</a>
+  <script src="../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+<div class="crumb"><a href="../index.html">risks.sgit.ai</a> / documents</div>
+<h1>The documents</h1>
+<p class="lead">Every page on this site was written from a source, and the sources are published here rather than summarised away. <b>Raw markdown is the source of truth; the rendered pages are presentation.</b> Where a source is not published, the reason is stated — and on this site that list is longer than usual.</p>
+<h2 id="pack">The brief pack this site was built from</h2>
+<p>Eleven documents, prepared 22 August 2026 against the source repository at <code>v0.33.62</code>, with every path verified to exist at that tag. Published verbatim, at stable constructed paths.</p>
+<div class="tablewrap"><table>
+  <thead><tr><th>Document</th><th>What it holds</th></tr></thead>
+  <tbody>
+    <tr><td><a href="../briefs/00__BRIEF.md">00 · The brief</a></td><td>The two-part commission, the honesty constraint, the thesis in one paragraph, the ten concepts an agent must hold, the refactor table, the four vaults, the numbers, the build order</td></tr>
+    <tr><td><a href="../briefs/01__concepts-index.md">01 · Concepts index</a></td><td><b>All 42 concepts</b> with canonical path, first appearance, maturity, newcomer-readiness and best verbatim quote — the raw material for <a href="../concepts/index.html">/concepts/</a> and <a href="../data/concepts.json">concepts.json</a></td></tr>
+    <tr><td><a href="../briefs/02__risk-acceptance.md">02 · Risk acceptance, traced in full</a></td><td><b>The commissioned centrepiece.</b> The acceptance thread traced chronologically from the February pre-history through the June inversion to the August formalisation. The source for <a href="../acceptance/index.html">/acceptance/</a></td></tr>
+    <tr><td><a href="../briefs/03__worked-examples-and-vaults.md">03 · Worked examples and the live vaults</a></td><td>Three worked graphs, four published vaults, and every citable figure in the corpus with its source. The source for <a href="../examples/index.html">/examples/</a></td></tr>
+    <tr><td><a href="../briefs/04__riskmandate-refactor.md">04 · The riskmandate.ai refactor</a></td><td>The other half of the commission — page by page, with the leave-behind stub template and the finding that justifies the split</td></tr>
+    <tr><td><a href="../briefs/05__site-architecture.md">05 · Site architecture</a></td><td>Page-by-page information architecture with sources and publish status per page</td></tr>
+    <tr><td><a href="../briefs/06__boundaries-and-house-style.md">06 · Boundaries and house style</a></td><td>The eight-site boundary map, the redaction watch-list, provenance rules, and the vault publishing rules</td></tr>
+    <tr><td><a href="../briefs/07__gaps-and-open-questions.md">07 · Gaps and open questions</a></td><td>Six write-fresh items, <a href="../network/index.html#open">eight open questions</a>, <a href="../network/index.html#tensions">seven honest tensions</a>, and the loose ends inside the acceptance thread</td></tr>
+    <tr><td><a href="../briefs/08__source-manifest.csv">08 · Source manifest</a></td><td><b>37 rows</b>, machine-readable, every path verified at v0.33.62 — 19 Tier-0, 13 Tier-1, 1 Tier-2, <b>4 Tier-3 do-not-publish</b></td></tr>
+    <tr><td><a href="../briefs/sources__docs-diniscruz-ai-risk.json">Prior-art sources</a></td><td>The eight published articles with <code>first_published</code>, canonical URL, authors, PDF and LinkedIn links</td></tr>
+    <tr><td><a href="../briefs/PUBLIC.md"><b>PUBLIC.md</b></a></td><td><b>What was redacted from the pack before publication, and why.</b> Fourteen redactions across six of the twelve documents, each recorded with its reason — the convention the Regulation Graph vault adopted after an audit: publish the artefact, and publish what was taken out of it</td></tr>
+    <tr><td><a href="../briefs/README.md">README</a> · <a href="../briefs/LICENSE.md">Licence</a></td><td>The pack's own index and its licence scope note</td></tr>
+  </tbody>
+</table></div>
+<div class="warnbox"><p style="margin-top:0"><b>The pack is published with fourteen redactions, and they are itemised.</b> The brief pack was written as a working document for the agent building this site, and it names the four <b>Tier-3 do-not-publish</b> sources <em>by name</em> so that the builder knows what to skip. That is right for a working document and wrong for a published one: republishing it verbatim would publish exactly the four things it says not to publish. So the pack is published in full with the identifying detail of those four rows removed, each removal marked in place and recorded in <a href="../briefs/PUBLIC.md"><code>briefs/PUBLIC.md</code></a>. <b>Nothing else was changed</b> — no argument softened, no number adjusted, no finding dropped, and five of the twelve documents are byte-identical to the pack as received. The rule is enforced rather than remembered: the gate scans <em>every</em> file in the tree, <code>briefs/</code> included, so a later edit cannot quietly undo it.</p></div>
+
+<p class="small dim">These are fetchable at stable constructed paths: <code>/briefs/&lt;filename&gt;</code>. That is a promise rather than an accident — agents rely on constructed paths, so the convention is stated rather than left to be inferred. All eleven are also concatenated into <a href="../llms-full.txt"><code>/llms-full.txt</code></a>.</p>
+
+<h2 id="tiers">How the sources were tiered</h2>
+<p>The manifest tiers all 37 verified sources by what can be done with them. Publishing the tiering as well as the result is the point: a reader can see what was excluded, and disagree.</p>
+<div class="tablewrap"><table>
+  <thead><tr><th>Tier</th><th class="num">Rows</th><th>Means</th></tr></thead>
+  <tbody>
+    <tr><td><b>Tier 0</b></td><td class="num">19</td><td>Publishable near-as-is; highest value</td></tr>
+    <tr><td><b>Tier 1</b></td><td class="num">13</td><td>Publishable with a correction, a framing note, or a citation to another site in the estate</td></tr>
+    <tr><td><b>Tier 2</b></td><td class="num">1</td><td>Needs a decision about where it belongs before it is published anywhere</td></tr>
+    <tr><td><b>Tier 3</b></td><td class="num">4</td><td><b>Do not publish</b> — and the pre-release gate enforces it</td></tr>
+  </tbody>
+</table></div>
+<p><b>69,724 words</b> of Tier-0 and Tier-1 source material sit behind this site, drawn from a corpus of roughly 496,000.</p>
+
+<h2 id="not-here">What is deliberately not published</h2>
+<p>This corpus has the highest redaction load of any in the estate. It names real companies critically, contains a live contract draft, carries investor figures, and includes operational detail about credentials. None of that is on this site, and the reasons are stated rather than left as an absence.</p>
+<div class="tablewrap"><table class="corr">
+  <thead><tr><th>What</th><th>Why not</th></tr></thead>
+  <tbody>
+    <tr><td><b>A comparative vendor assessment</b> scoring two named real companies</td><td class="was">Rigorous, sourced, scrupulous about its own limits — and a legal and relationship exposure. <b>Needs a legal read and a right-of-reply process before it goes anywhere public</b> (<a href="../admin/comms.html#n3">N3</a>). The underlying <em>model</em> brief in the same folder is clean and is not the problem</td></tr>
+    <tr><td><b>Competitor maps</b> naming large vendors, with dismissive characterisations</td><td class="was">Commercial positioning, not research. <b>Internal only.</b> A research site that carries competitor disparagement is a marketing site with footnotes</td></tr>
+    <tr><td><b>Investor material</b> — illustrative revenue and valuation scenarios</td><td class="was">Explicitly framed at source as scenarios rather than projections, and still not research. <b>Internal only</b></td></tr>
+    <tr><td><b>A partnership contract draft</b> with commercial terms</td><td class="was">An actual contract. <b>Internal only, unambiguously</b></td></tr>
+    <tr><td><b>Incident and access-token records</b> from the February pre-history</td><td class="was">Even with values redacted, the metadata is operational — token status, remaining quota, the branch where it stays readable. <b>Internal only.</b> Ironically one of the best real illustrations of “accepted is not acceptable” anywhere in the corpus</td></tr>
+    <tr><td><b>Research briefs naming real organisations</b> in breach and incident narratives</td><td class="was">All sourced from published material with URLs, and naming organisations — including government bodies — as breach victims warrants framing this site has not yet written. Held rather than rushed</td></tr>
+    <tr><td><b>Third-party pricing</b> quoted verbatim across several briefs</td><td class="was">Goes stale, and reads as competitive intelligence rather than research. Stripped</td></tr>
+  </tbody>
+</table></div>
+<div class="note"><p style="margin-top:0"><b>The exclusion is enforced, not remembered.</b> The pre-release gate pattern-matches the distinctive strings of the four Tier-3 rows across every file in the tree except the manifest itself, and fails the build if one appears. The manifest is exempt because a manifest naming a do-not-publish row is the mechanism working. <a href="../admin/index.html#gate">All ten checks →</a></p></div>
+
+<h2 id="prior-art">The prior art: eight published articles, CC0</h2>
+<p><b>59,131 words</b> on <code>docs.diniscruz.ai</code>, February to July 2025 — a year before the corpus this site consolidates, in the founder's public voice, already circulated.</p>
+<div class="tablewrap"><table>
+  <thead><tr><th>First published</th><th>Title</th><th class="num">Words</th></tr></thead>
+  <tbody>
+    <tr><td>2025-02-15</td><td><a href="https://docs.diniscruz.ai/2025/02/15/project-supplyshield__genai-driven-supply-chain-risk-management-and-compliance.html" rel="nofollow">Project SupplyShield: GenAI-Driven Supply Chain Risk Management and Compliance</a></td><td class="num">8,802</td></tr>
+    <tr><td>2025-04-02</td><td><a href="https://docs.diniscruz.ai/2025/04/02/maturity-modes-vs-traditional-standards-in-application-security.html" rel="nofollow">Maturity Models vs. Traditional Standards in Application Security</a> — <b><a href="../ramm/index.html#priorart">RAMM's ancestor</a></b></td><td class="num">2,701</td></tr>
+    <tr><td>2025-04-10</td><td><a href="https://docs.diniscruz.ai/2025/04/10/project-cybersage__ai-powered-risk-contextual.html" rel="nofollow">Project Cybersage: AI-Powered Risk Contextualization &amp; Security Reporting</a></td><td class="num">6,270</td></tr>
+    <tr><td>2025-05-29</td><td><a href="https://docs.diniscruz.ai/2025/05/29/threat-models-as-mandatory-disclosures__a-vision-for-security-transparency.html" rel="nofollow">Threat Models as Mandatory Disclosures</a></td><td class="num">7,160</td></tr>
+    <tr><td>2025-05-29</td><td><a href="https://docs.diniscruz.ai/2025/05/29/advancing-threat-modeling-with-semantic-knowledge-graphs.html" rel="nofollow">Advancing Threat Modeling with Semantic Knowledge Graphs</a></td><td class="num">9,217</td></tr>
+    <tr><td>2025-06-02</td><td><a href="https://docs.diniscruz.ai/2025/06/02/linking-threat-models-with-semantic-business-graphs.html" rel="nofollow">Linking Threat Models with Semantic Business Graphs</a></td><td class="num">9,816</td></tr>
+    <tr><td>2025-07-06</td><td><a href="https://docs.diniscruz.ai/2025/07/06/finding-the-good-enough-threshold-optimizing-risk-creativity-and-product-decisions.html" rel="nofollow">Finding the “Good Enough” Threshold</a> — <b><a href="../acceptable/appetite.html#priorart">the appetite argument, pre-vocabulary</a></b></td><td class="num">4,924</td></tr>
+    <tr><td>2025-07-27</td><td><a href="https://docs.diniscruz.ai/2025/07/27/project-vulnai-ai-powered-vulnerability-risk-.html" rel="nofollow">Project VulnAI: AI-Powered Vulnerability Risk Management Platform</a></td><td class="num">10,241</td></tr>
+  </tbody>
+</table></div>
+<div class="warnbox"><p style="margin-top:0"><b>Provenance contract, and why these are cited rather than republished.</b> The eight articles were published under <b>CC0</b>; this site's content is <b>CC BY 4.0</b>. Republishing CC0 material under CC BY is legally fine and is not what this site does — because <b>the historical link matters more than the licence does</b>. Each article keeps its original URL, its original publication date and its original authorship, and this site links rather than mirrors. Full metadata, including PDFs and the original LinkedIn posts, is in <a href="../briefs/sources__docs-diniscruz-ai-risk.json"><code>/briefs/sources__docs-diniscruz-ai-risk.json</code></a>.</p></div>
+
+<h2 id="upstream">The upstream corpus</h2>
+<p>The material itself lives in <code>SGraph-AI__App__Send</code> under <code>team/humans/dinis_cruz/briefs/</code> and is <b>not published anywhere</b>. There is no public URL for it, so <b>the version tag is the address</b>: every citation on this site gives a repository path plus <code>v0.33.62</code>, which is the only thing that makes a claim checkable by someone with access.</p>
+<pre class="term"><code><b>source_repo</b>       SGraph-AI__App__Send
+<b>source_repo_path</b>  team/humans/dinis_cruz/briefs/06/28/ontology-and-definitions/v0.33.36__arch-brief__…
+<b>source_version</b>    v0.33.36
+<b>first_written</b>     2026-06-28
+<b>source_licence</b>    CC BY 4.0</code></pre>
+<p class="small dim">Note that the upstream path itself carries a personal name. Where documents are cited with their paths, the name travels with them — a deliberate choice rather than an oversight, since it is the author's own corpus and the attribution is correct.</p>
+
+<h2 id="licence">The licence position</h2>
+<ul>
+  <li><b>This site's content is CC BY 4.0</b>, per the 21 August 2026 decision applied across the estate: unless a document says otherwise, every <code>.md</code> file in the corpus and the entire content of every <code>*.sgit.ai</code> site is CC BY 4.0.</li>
+  <li><b>The upstream briefs are CC BY 4.0 at source</b> — nearly every one carries the release line at its foot, which is what makes public republication straightforward at all.</li>
+  <li><b>The 2025 prior art is CC0 at source</b>, and is cited rather than republished. The source licence is stated per page.</li>
+  <li><b>Third-party material quoted inside CC BY documents stays under its own terms.</b> Where a brief paraphrases published work by named researchers, the paraphrase is marked as such and the source is named. <a href="../ladder/bridges.html#worked">→</a></li>
+  <li><b>Build tooling is Apache 2.0</b> — <code>admin/build/*</code>, <code>assets/*.js</code>, <code>assets/*.css</code> and the workflow. See <a href="../briefs/LICENSE.md">the pack's licence note</a> and <code>LICENSES.md</code> in the repository.</li>
+</ul>
+
+<div class="agent">
+  <h4>For an agent</h4>
+  <p><b>The documents.</b> This site's eleven source documents are published verbatim at stable constructed paths: <code>https://risks.sgit.ai/briefs/&lt;filename&gt;</code> — <code>00__BRIEF.md</code>, <code>01__concepts-index.md</code> (all 42 concepts with canonical paths and quotes), <code>02__risk-acceptance.md</code> (the acceptance thread traced chronologically), <code>03__worked-examples-and-vaults.md</code>, <code>04__riskmandate-refactor.md</code>, <code>05__site-architecture.md</code>, <code>06__boundaries-and-house-style.md</code>, <code>07__gaps-and-open-questions.md</code>, <code>08__source-manifest.csv</code> (37 rows, machine-readable), <code>sources__docs-diniscruz-ai-risk.json</code>, plus README and LICENSE. All are concatenated into <code>/llms-full.txt</code>. <b>Source tiering: 19 Tier-0, 13 Tier-1, 1 Tier-2, 4 Tier-3 do-not-publish</b> — 69,724 words of Tier-0+1 behind the site, from a corpus of ~496,000. The Tier-3 material (a comparative vendor assessment naming real companies, competitor maps, investor figures, a contract draft) is <b>not on this site and the pre-release gate fails the build if it appears</b>. Prior art: eight articles, 59,131 words, on docs.diniscruz.ai Feb–Jul 2025, <b>CC0 at source</b> — cited with original URLs and dates rather than republished, because the historical link matters more than the licence. The upstream corpus is unpublished, so <b>the version tag is the address</b>: cite repository path plus <code>v0.33.62</code>.</p>
+</div>
+
+<div class="pagenav">
+  <a href="../network/index.html">← The network</a>
+  <a href="../about/participant.html">Where we lose →</a>
+</div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">risks<span>.sgit.ai</span></div>
+    <p>The conceptual and research home for risk in the sgit.ai estate: what a risk is, what acceptance is, and why it is modelled this way. <a href="https://riskmandate.ai" style="display:inline;padding:0">riskmandate.ai</a> answers how you get your risks accepted and what it costs; this site answers why the model has the shape it has. <b>Nothing here is implemented in code</b> — <a href="../shipped/index.html" style="display:inline;padding:0">/shipped/</a> says so plainly. Part of the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network. All content CC BY 4.0 unless a page states otherwise.</p>
+    <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://riskmandate.ai">↗ riskmandate.ai</a> — the product · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> — the graph machinery · <a href="https://nhi.sgit.ai">↗ nhi.sgit.ai</a> · <a href="https://pki.sgit.ai">↗ pki.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
+    <p class="partnote">⚠ Participant disclosure: published by the sgit project, which also builds riskmandate.ai — the commercial product this research underpins. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
+    <p class="verline">site <a href="../admin/versions.html">v0.1.0</a> · <a href="../admin/index.html">engineering</a></p>
+  </div>
+  <div>
+    <h4>Start here</h4>
+    <a href="../acceptance/index.html">&#8594; The founding inversion</a>
+    <a href="../acceptance/no-deny.html">There is no deny button</a>
+    <a href="../acceptance/the-ladder.html">The interval ladder</a>
+    <a href="../acceptable/index.html">Accepted is not acceptable</a>
+    <a href="../ladder/index.html">The grounding ladder</a>
+  </div>
+  <div>
+    <h4>For agents</h4>
+    <a href="../agents/index.html">&#8594; The machine surface</a>
+    <a href="../concepts/index.html">All 42 concepts</a>
+    <a href="../data/concepts.json">concepts.json — the definitions</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+  </div>
+  <div>
+    <h4>The proof</h4>
+    <a href="../examples/index.html">Three worked graphs</a>
+    <a href="../examples/vaults.html">The four live vaults</a>
+    <a href="../examples/2fa.html">The 2FA instance graph</a>
+    <a href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+    <a href="../shipped/index.html">What is argued, what runs</a>
+  </div>
+  <div>
+    <h4>Site</h4>
+    <a href="../network/index.html">The network</a>
+    <a href="../origins/index.html">Origins</a>
+    <a href="../documents/index.html">The documents</a>
+    <a href="../admin/comms.html">Comms: asks &amp; tasks</a>
+    <a href="../admin/versions.html">Release history</a>
+    <a href="../about/participant.html">Where we lose</a>
+  </div>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Who underwrites, and how it flows up · risks.sgit.ai</title>
+<meta name="description" content="The underwriting graph that must be complete before an executive decision is legitimate, propagation to the board, decision-as-a-node, and the two mechanisms the corpus proposes and never finishes.">
+<link rel="canonical" href="https://risks.sgit.ai/acceptance/workflow.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="risks.sgit.ai">
+<meta property="og:url" content="https://risks.sgit.ai/acceptance/workflow.html">
+<meta property="og:title" content="Who underwrites, and how it flows up">
+<meta property="og:description" content="An exec never decides alone. Before they act, the direct-line owner, the CSO and GRC must each have recorded an acceptance or an explicit refusal.">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../index.html">risks<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: vaults, publishing and the catalogue. This site is the estate's conceptual home for risk">↗ part of <b>sgit.ai</b></a>
+  <span class="stage-pill">research site</span>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.1.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni ni-has">
+      <a class="nl here" href="../acceptance/index.html">Acceptance<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../acceptance/index.html">The founding inversion</a>
+      <a class="sl" href="../acceptance/underwriting.html">Underwriting, not prediction</a>
+      <a class="sl" href="../acceptance/no-deny.html">There is no deny button</a>
+      <a class="sl" href="../acceptance/the-ladder.html">The interval ladder</a>
+      <a class="sl" href="../acceptance/unaccepted-is-critical.html">Unaccepted is critical</a>
+      <a class="sl here" href="../acceptance/workflow.html">Who underwrites, and how it flows up</a>
+      <a class="sl" href="../acceptable/index.html">Accepted is not acceptable</a>
+      <a class="sl" href="../acceptable/appetite.html">Appetite as a revealed band</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../ladder/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../ladder/index.html">The grounding ladder</a>
+      <a class="sl" href="../ladder/formulas.html">Node type formulas</a>
+      <a class="sl" href="../ladder/bridges.html">Bridges, not merges</a>
+      <a class="sl" href="../ladder/absence.html">Not knowing is a fact</a>
+      <a class="sl" href="../register/index.html">The register as a graph of graphs</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../plug/index.html">The exposure<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../plug/index.html">Who can pull the plug</a>
+      <a class="sl" href="../plug/recoverability.html">Recoverability: the hard limit</a>
+      <a class="sl" href="../blast-radius/index.html">Blast radius &amp; authorization closure</a>
+      <a class="sl" href="../practice/index.html">Practice: owners, altitude, meta-risks</a>
+      <a class="sl" href="../ramm/index.html">RAMM and the maturity models</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../examples/index.html">The proof<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../examples/index.html">Three worked graphs</a>
+      <a class="sl" href="../examples/2fa.html">The 2FA instance graph</a>
+      <a class="sl" href="../examples/browser-isolation.html">The browser-isolation case</a>
+      <a class="sl" href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+      <a class="sl" href="../examples/vaults.html">The four live vaults</a>
+      <a class="sl" href="../examples/scenarios.html">The ten scenarios</a>
+      <a class="sl" href="../examples/plug-register.html">The plug register</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../agents/index.html">For agents<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../agents/index.html">The machine surface</a>
+      <a class="sl" href="../concepts/index.html">All 42 concepts, addressable</a>
+      <a class="sl" href="../shipped/index.html">What is argued, what runs</a>
+      <a class="sl" href="../llms.txt">llms.txt</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../network/index.html">Site<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../network/index.html">The network: where the boundaries are</a>
+      <a class="sl" href="../origins/index.html">Origins: February to August 2026</a>
+      <a class="sl" href="../documents/index.html">The documents</a>
+      <a class="sl" href="../admin/comms.html">Comms: asks &amp; tasks</a>
+      <a class="sl" href="../admin/versions.html">Release history</a>
+      <a class="sl" href="../admin/index.html">Admin &amp; engineering</a>
+      <a class="sl" href="../about/participant.html">Where we lose</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__Risks">★ GitHub</a>
+  <script src="../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+<div class="crumb"><a href="../index.html">risks.sgit.ai</a> / <a href="index.html">acceptance</a> / the workflow</div>
+<h1>Who underwrites, and how it flows up</h1>
+<p class="lead">An executive never decides alone, and an acceptance is not a field on a risk. This page is the machinery around the act: the underwriting graph that must be complete before a decision is legitimate, the propagation upward to the board, the two independent dimensions of a decision, override, and compound pre-approval — including the parts the corpus proposes and never finishes.</p>
+<h2 id="two-dimensions">A decision has two independent dimensions</h2>
+<p>An acceptance is usually described as a single choice. It is two, chosen independently: <b>the direction</b> — what is going to happen to the risk — and <b>the revisit interval</b> — when it comes back. Neither implies the other.</p>
+<blockquote class="challenge">“there are at least two core primitives here, accept and get more data, and accept and deal with it and reduce the risk, and actually there should be another, accept and increase the risk, because it is okay to increase the risk if the business is okay with it.”</blockquote>
+<div class="ops">
+  <div class="op"><b>DIRECTION · GET MORE DATA</b><p>Accept it, and commission the evidence. Usually paired with a short interval, because the point is to come back better informed. The rung and the direction are still separate choices.</p></div>
+  <div class="op"><b>DIRECTION · REDUCE</b><p>Accept it, and fund work that lowers it. The interval is the delivery window for that work.</p></div>
+  <div class="op"><b>DIRECTION · INCREASE</b><p>Accept it, and deliberately take on more — because the business wants the capability that comes with it. Rarely offered in a conventional register, and its absence is why registers read as one-directional.</p></div>
+  <div class="op"><b>DIRECTION · HOLD</b><p>Accept it as it stands, and do nothing until the interval expires. Paired with a long rung, this is the honest form of “we are waiting to see”.</p></div>
+</div>
+
+<h2 id="who">Who has to have signed before an executive can act</h2>
+<p>The corpus is specific, and the specificity is the point — an underwriting is not legitimate because a senior person clicked, but because the graph beneath their click is complete.</p>
+<blockquote class="challenge">“the exec should never make a risk decision that has not been accepted, or explicitly not accepted, which also matters, by at least the technical or direct-line element, the CIO or CTO or CFO depending on the dimension, the respective CSO, and at least GRC”</blockquote>
+<div class="tablewrap"><table>
+  <thead><tr><th>Who</th><th>What they underwrite</th><th>Why the decision is not legitimate without them</th></tr></thead>
+  <tbody>
+    <tr><td><b>The direct-line owner</b><br><span class="small dim">CIO / CTO / CFO by dimension</span></td><td>That the exposure is real in their domain and the response is deliverable</td><td>An executive accepting a technical exposure nobody technical has confirmed is accepting something that may not be true</td></tr>
+    <tr><td><b>The CSO</b></td><td>The security reading of it</td><td>Security's view is a distinct dimension, not a subset of IT's</td></tr>
+    <tr><td><b>GRC</b></td><td>That the obligation genuinely applies, and how</td><td>Compliance is interpretive work; it is neither a fact nor an appetite judgement</td></tr>
+    <tr><td><b>The business owner</b></td><td>The decision itself, and its consequence</td><td>This is the underwriting proper — the others are inputs to it</td></tr>
+  </tbody>
+</table></div>
+<div class="note"><p style="margin-top:0"><b>A recorded refusal counts as much as a recorded acceptance.</b> The phrase in the source is “accepted, <em>or explicitly not accepted, which also matters</em>”. This is not a contradiction of <a href="no-deny.html">the no-deny mechanic</a>: no-deny removes denial of the <em>risk</em>. What is being recorded here is a named person's refusal to be the one who <em>underwrites</em> it — which is a legitimate, informative and attributable act, and is the “escalate” move rather than a rejection. <a href="../network/index.html#q3">Q3 asks what happens when a refusal has nowhere left to go.</a></p></div>
+
+<h2 id="propagation">Propagation, and where the buck stops</h2>
+<p>Once accepted at the right altitude, an acceptance does not stay there. It propagates to the boss, the boss's boss, and eventually to the CEO — with the largest going to the board itself.</p>
+<div class="pathline">
+  <span class="nd">Risk</span><span class="ed">accepted_by</span><span class="nd">Decision</span><span class="ed">underwritten_by</span><span class="nd">Owner (L1)</span><span class="ed">propagates_to</span><span class="nd">L2 … L4</span><span class="ed">propagates_to</span><span class="nd">CEO</span><span class="ed">propagates_to</span><span class="nd">Board</span>
+  <span class="say">Read as a sentence: this risk was accepted by a decision, underwritten by an owner at the altitude where it belongs, and propagates to every altitude above it, ending at the board for the largest.</span>
+</div>
+<blockquote class="challenge">“the risk needs to be accepted at the right altitude, and then it propagates out… all the way to the CEO. The CEO acts on behalf of the board, so the buck stops with them, although some risks even the CEO has to take up to the board.”</blockquote>
+<p>Altitude does real work here and is treated as a first-class modelling dimension throughout: the same risk is restated in each altitude's own language, may be <em>confirmed</em> at one altitude and <em>accepted</em> at another, and — on the plug question — has a different off-switch at every level. <a href="../practice/index.html#altitude">Altitude →</a></p>
+
+<h2 id="decision-node">A decision is its own node, not a field</h2>
+<p>Late in the corpus (2 August 2026) the acceptance is promoted to a fully independent node. It is a small modelling change with three consequences that are not small:</p>
+<ul>
+  <li><b>Many decisions per risk, without overwriting.</b> A risk accumulates a dated history of decisions rather than carrying one mutable status field. The trajectory becomes visible.</li>
+  <li><b>One decision covering several risks.</b> Which is what actually happens in a meeting, and what a status field cannot express.</li>
+  <li><b>A calibration record.</b> Over time you can ask the only question that matters about a decision: <em>was the person who accepted this for a month right?</em> That question is unanswerable if the decision was a field that got overwritten.</li>
+</ul>
+<div class="claim">“a decision is actually captured independently from the risk.”</div>
+
+<h2 id="loose">Two mechanisms the corpus proposes and does not finish</h2>
+<p>Both are on the site as stated rather than as settled, because a research site that quietly completes its sources is not a research site.</p>
+<div class="tablewrap"><table>
+  <thead><tr><th>Mechanism</th><th>What is stated</th><th>What is missing</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><b>Override</b></td>
+      <td>A superior may override an acceptance in either direction. The original acceptance is preserved and the override is attributed — so the record shows both what was decided and what it was changed to, by whom.</td>
+      <td><b>No authority model.</b> Who may override whom, on what grounds, and whether the original acceptor's liability survives the override, are all unstated.</td>
+    </tr>
+    <tr>
+      <td><b>Compound pre-approval</b></td>
+      <td>Approval attaches to a <em>risk profile</em> rather than to each instance. Further instances matching the profile become an FYI; a fresh approval is needed only when the profile changes.</td>
+      <td><b>Never worked through.</b> What constitutes a profile, what counts as a change to one, and who notices, are not specified.</td>
+    </tr>
+  </tbody>
+</table></div>
+<p>One thing <em>is</em> settled, and it constrains both: no override can buy a physically impossible timeline. Where a remediation cannot be delivered inside a window, that rung is struck off the ladder before the choice is offered, and the only escape is ceasing the activity. <a href="../plug/index.html">The plug →</a></p>
+
+<h2 id="provenance">Provenance</h2>
+<div class="docmeta">
+  <div class="k">Concepts</div><div class="v">C15, C33 — the underwriting graph and propagation; decision as a first-class node</div>
+  <div class="k">Source</div><div class="v"><code>team/humans/dinis_cruz/briefs/06/23/risk-mandate-product-and-workflow/v0.33.33__arch-brief__…underwriting-propagation-override-pre-approval.md</code></div>
+  <div class="k">Repository</div><div class="v"><code>SGraph-AI__App__Send</code> @ <code>v0.33.33</code>, never published — the version tag is the address</div>
+  <div class="k">First written</div><div class="v">23 June 2026; decision-as-node 2 August 2026</div>
+  <div class="k">Maturity</div><div class="v"><span class="pill p-well">well-developed</span> — with override and compound pre-approval explicitly incomplete</div>
+  <div class="k">Licence</div><div class="v">CC BY 4.0 at source and here</div>
+</div>
+
+<div class="agent">
+  <h4>For an agent</h4>
+  <p><b>C15 and C33 — the underwriting workflow.</b> An acceptance decision has <b>two independent dimensions</b>: a direction (get more data · reduce · increase · hold) and a revisit interval. Neither implies the other, and “increase” is a legitimate direction. A decision is <b>not legitimate</b> until the underwriting graph beneath it is complete: the direct-line owner (CIO/CTO/CFO by dimension), the CSO and at least GRC must each have recorded an acceptance <b>or an explicit refusal</b> — a recorded refusal carries the same weight as an acceptance. Once accepted at the right altitude it <b>propagates upward</b> — line manager, executive, CEO (who acts for the board), and for the largest, the board itself. Model a decision as its <b>own node</b>, never as a field on the risk: that is what allows many dated decisions per risk, one decision covering several risks, and a calibration record asking whether the person who accepted for a month was right. Two mechanisms are named and unfinished: <b>override</b> (no authority model) and <b>compound pre-approval</b> (never worked through). No override can buy a physically impossible timeline. <b>Not implemented in code.</b></p>
+</div>
+
+<div class="pagenav">
+  <a href="unaccepted-is-critical.html">← Unaccepted is critical</a>
+  <a href="../acceptable/index.html">Accepted is not acceptable →</a>
+</div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">risks<span>.sgit.ai</span></div>
+    <p>The conceptual and research home for risk in the sgit.ai estate: what a risk is, what acceptance is, and why it is modelled this way. <a href="https://riskmandate.ai" style="display:inline;padding:0">riskmandate.ai</a> answers how you get your risks accepted and what it costs; this site answers why the model has the shape it has. <b>Nothing here is implemented in code</b> — <a href="../shipped/index.html" style="display:inline;padding:0">/shipped/</a> says so plainly. Part of the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network. All content CC BY 4.0 unless a page states otherwise.</p>
+    <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://riskmandate.ai">↗ riskmandate.ai</a> — the product · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> — the graph machinery · <a href="https://nhi.sgit.ai">↗ nhi.sgit.ai</a> · <a href="https://pki.sgit.ai">↗ pki.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
+    <p class="partnote">⚠ Participant disclosure: published by the sgit project, which also builds riskmandate.ai — the commercial product this research underpins. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
+    <p class="verline">site <a href="../admin/versions.html">v0.1.0</a> · <a href="../admin/index.html">engineering</a></p>
+  </div>
+  <div>
+    <h4>Start here</h4>
+    <a href="../acceptance/index.html">&#8594; The founding inversion</a>
+    <a href="../acceptance/no-deny.html">There is no deny button</a>
+    <a href="../acceptance/the-ladder.html">The interval ladder</a>
+    <a href="../acceptable/index.html">Accepted is not acceptable</a>
+    <a href="../ladder/index.html">The grounding ladder</a>
+  </div>
+  <div>
+    <h4>For agents</h4>
+    <a href="../agents/index.html">&#8594; The machine surface</a>
+    <a href="../concepts/index.html">All 42 concepts</a>
+    <a href="../data/concepts.json">concepts.json — the definitions</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+  </div>
+  <div>
+    <h4>The proof</h4>
+    <a href="../examples/index.html">Three worked graphs</a>
+    <a href="../examples/vaults.html">The four live vaults</a>
+    <a href="../examples/2fa.html">The 2FA instance graph</a>
+    <a href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+    <a href="../shipped/index.html">What is argued, what runs</a>
+  </div>
+  <div>
+    <h4>Site</h4>
+    <a href="../network/index.html">The network</a>
+    <a href="../origins/index.html">Origins</a>
+    <a href="../documents/index.html">The documents</a>
+    <a href="../admin/comms.html">Comms: asks &amp; tasks</a>
+    <a href="../admin/versions.html">Release history</a>
+    <a href="../about/participant.html">Where we lose</a>
+  </div>
+</div></footer>
+</body>
+</html>

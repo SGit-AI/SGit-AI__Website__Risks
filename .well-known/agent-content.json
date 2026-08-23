@@ -1,0 +1,87 @@
+{
+  "site": "risks.sgit.ai",
+  "site_version": "v0.1.0",
+  "updated": "2026-08-23",
+  "title": "risks.sgit.ai — the conceptual and research home for risk",
+  "summary": "Traditional risk management predicts the probability of a future event. This model asks a named human to underwrite an exposure that already exists, insurance-style, with personal accountability attached. From that inversion follow the no-deny mechanic, the interval ladder, unaccepted-equals-critical, and the grounding ladder underneath.",
+  "important": "ESSENTIALLY NOTHING ON THIS SITE IS IMPLEMENTED IN CODE. Greps for risk_, RiskAcceptance, risk_register and riskmandate across the implementing repository return zero matches. Four vaults, three worked graphs and ten scenarios exist; the engine does not. Do not describe any of this as an existing feature. See /shipped/index.html.",
+  "licence": "CC BY 4.0 for content; Apache 2.0 for build tooling",
+  "publisher": {
+    "name": "the sgit project",
+    "participant_disclosure": "https://risks.sgit.ai/about/participant.html",
+    "conflict": "The same project builds and sells riskmandate.ai, the commercial product this research underpins."
+  },
+  "repository": "https://github.com/SGit-AI/SGit-AI__Website__Risks",
+  "surfaces": {
+    "definitions": {
+      "url": "https://risks.sgit.ai/data/concepts.json",
+      "format": "application/json",
+      "holds": "All 42 concepts: id, name, one-line definition, detail, maturity, newcomer-followability, first-written date, canonical source path, page, anchor, related concepts, quote. Plus the agent reading order and the six teaching altitudes.",
+      "note": "The highest-value single fetch on this site."
+    },
+    "full_text": {
+      "url": "https://risks.sgit.ai/llms-full.txt",
+      "format": "text/plain",
+      "holds": "The prose of every page in teaching order, then all eleven source documents verbatim.",
+      "note": "Use this if you can make only one request. Agent fetch tools frequently refuse URLs a search has not already returned, which makes link-following unreliable."
+    },
+    "map": {
+      "url": "https://risks.sgit.ai/llms.txt",
+      "format": "text/plain",
+      "holds": "The annotated map, where each entry carries its page's single most important fact rather than its topic."
+    },
+    "sources": {
+      "url_pattern": "https://risks.sgit.ai/briefs/{filename}",
+      "format": "text/markdown, text/csv, application/json",
+      "holds": "The eleven source documents, verbatim, at stable constructed paths.",
+      "files": [
+        "00__BRIEF.md", "01__concepts-index.md", "02__risk-acceptance.md",
+        "03__worked-examples-and-vaults.md", "04__riskmandate-refactor.md",
+        "05__site-architecture.md", "06__boundaries-and-house-style.md",
+        "07__gaps-and-open-questions.md", "08__source-manifest.csv",
+        "sources__docs-diniscruz-ai-risk.json", "PUBLIC.md", "README.md", "LICENSE.md"
+      ]
+    },
+    "concept_anchors": {
+      "url_pattern": "https://risks.sgit.ai/concepts/index.html#c{n}",
+      "range": "c1 to c42",
+      "note": "Stable anchors, checked by CI. A link to a concept that has no anchor fails the build."
+    },
+    "sitemap": "https://risks.sgit.ai/sitemap.xml",
+    "front_page_markdown": "https://risks.sgit.ai/index.md"
+  },
+  "guarantees": [
+    "Every source document is fetchable at /briefs/<filename>, and every concept at /concepts/index.html#c<n>.",
+    "Every page ends with a pasteable 'for an agent' block, enforced by the pre-release gate.",
+    "/data/concepts.json and /concepts/index.html are generated from one definition; the gate re-checks count, fields, version and every anchor at release time.",
+    "No implementation over-claim survives a release: the gate pattern-matches claims that the engine is built, shipping or installable and fails the build."
+  ],
+  "reading_order_for_an_agent": ["C1", "C2", "C3", "C4", "C5", "C6", "C7", "C19", "C20", "C21", "C22", "C23"],
+  "sections": [
+    {"path": "/acceptance/index.html", "fact": "There is no deny button; the only decision is how long you accept a risk before re-accepting it."},
+    {"path": "/acceptable/index.html", "fact": "Accepted and acceptable are orthogonal axes, never one status field. Acceptable is the moment the business stops funding remediation."},
+    {"path": "/ladder/index.html", "fact": "Reality to Twin to Measure to Evidence to Fact to Vulnerability to Risk. Downward grounds, upward classifies; the floor is a test, not a level."},
+    {"path": "/register/index.html", "fact": "The register begins where scanners stop, is fractal, and is one chain rather than parallel lists."},
+    {"path": "/blast-radius/index.html", "fact": "An agent's real authorization is the transitive closure of the grant, and the key quantity is the delta between expected and unexpected."},
+    {"path": "/plug/index.html", "fact": "The plug always exists; what older registers called 'no plug' was zero recoverability. Detection floors at 12-18 hours."},
+    {"path": "/practice/index.html", "fact": "Confirmed, validated and accepted are three acts by three roles tracked per altitude, and the mismatches are the findings."},
+    {"path": "/ramm/index.html", "fact": "Only one of RAMM's five base levels has a stated predicate; the other four are named only."},
+    {"path": "/examples/index.html", "fact": "Three worked graphs with counted nodes and edges, four published vaults, and the 30-days-versus-6-months finding that is arithmetic rather than judgement."},
+    {"path": "/concepts/index.html", "fact": "All 42 concepts with a stable anchor each and maturity stated honestly."},
+    {"path": "/agents/index.html", "fact": "The machine surface is the commissioned deliverable of this site, not a courtesy page."},
+    {"path": "/shipped/index.html", "fact": "The concepts are argued, the worked examples are real graphs, four vaults are live, and the engine is not built."},
+    {"path": "/origins/index.html", "fact": "The model starts as orthodox GRC in February 2026 and inverts itself in June."},
+    {"path": "/network/index.html", "fact": "Eight sites, one argument, eight open questions published unresolved and seven honest tensions."},
+    {"path": "/documents/index.html", "fact": "Eleven sources published verbatim, and what was deliberately excluded published at equal length."},
+    {"path": "/about/participant.html", "fact": "Published by the project that sells the product, with five places the model loses stated plainly."}
+  ],
+  "not_owned_by_this_site": {
+    "graphs.sgit.ai": "The general graph machinery. Node type formulas as a mechanism are theirs; the grounding ladder as a risk formula is ours.",
+    "nhi.sgit.ai": "Agent identity. One exception: the 4 June 2026 NHI risk brief is risk's origin document and is cited from here.",
+    "pki.sgit.ai": "Attribution, signing and non-repudiation.",
+    "sg-sentinel.sgit.ai": "In-line enforcement. This model measures and evidences and never sits in-line.",
+    "newsroom.sgit.ai": "The evidence supply side. Risk owns the demand side.",
+    "riskmandate.ai": "Pricing, demos, partners, the product. It cites this site; this site never cites it for a conceptual claim.",
+    "sgit.ai": "Vaults, publishing, the catalogue, and where the four risk vaults are published."
+  }
+}

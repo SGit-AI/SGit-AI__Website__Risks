@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The 2FA instance graph · risks.sgit.ai</title>
+<meta name="description" content="51 nodes, 53 edges. One missing second factor produces nine risks across three CIA branches — including R2, the governance air gap, where the wrong owner accepts.">
+<link rel="canonical" href="https://risks.sgit.ai/examples/2fa.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="risks.sgit.ai">
+<meta property="og:url" content="https://risks.sgit.ai/examples/2fa.html">
+<meta property="og:title" content="The 2FA instance graph">
+<meta property="og:description" content="The founding scenario: nine risks from one missing second factor, and the governance air gap modelled as a risk in its own right.">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../index.html">risks<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: vaults, publishing and the catalogue. This site is the estate's conceptual home for risk">↗ part of <b>sgit.ai</b></a>
+  <span class="stage-pill">research site</span>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.1.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni ni-has">
+      <a class="nl" href="../acceptance/index.html">Acceptance<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../acceptance/index.html">The founding inversion</a>
+      <a class="sl" href="../acceptance/underwriting.html">Underwriting, not prediction</a>
+      <a class="sl" href="../acceptance/no-deny.html">There is no deny button</a>
+      <a class="sl" href="../acceptance/the-ladder.html">The interval ladder</a>
+      <a class="sl" href="../acceptance/unaccepted-is-critical.html">Unaccepted is critical</a>
+      <a class="sl" href="../acceptance/workflow.html">Who underwrites, and how it flows up</a>
+      <a class="sl" href="../acceptable/index.html">Accepted is not acceptable</a>
+      <a class="sl" href="../acceptable/appetite.html">Appetite as a revealed band</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../ladder/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../ladder/index.html">The grounding ladder</a>
+      <a class="sl" href="../ladder/formulas.html">Node type formulas</a>
+      <a class="sl" href="../ladder/bridges.html">Bridges, not merges</a>
+      <a class="sl" href="../ladder/absence.html">Not knowing is a fact</a>
+      <a class="sl" href="../register/index.html">The register as a graph of graphs</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../plug/index.html">The exposure<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../plug/index.html">Who can pull the plug</a>
+      <a class="sl" href="../plug/recoverability.html">Recoverability: the hard limit</a>
+      <a class="sl" href="../blast-radius/index.html">Blast radius &amp; authorization closure</a>
+      <a class="sl" href="../practice/index.html">Practice: owners, altitude, meta-risks</a>
+      <a class="sl" href="../ramm/index.html">RAMM and the maturity models</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../examples/index.html">The proof<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../examples/index.html">Three worked graphs</a>
+      <a class="sl here" href="../examples/2fa.html">The 2FA instance graph</a>
+      <a class="sl" href="../examples/browser-isolation.html">The browser-isolation case</a>
+      <a class="sl" href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+      <a class="sl" href="../examples/vaults.html">The four live vaults</a>
+      <a class="sl" href="../examples/scenarios.html">The ten scenarios</a>
+      <a class="sl" href="../examples/plug-register.html">The plug register</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../agents/index.html">For agents<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../agents/index.html">The machine surface</a>
+      <a class="sl" href="../concepts/index.html">All 42 concepts, addressable</a>
+      <a class="sl" href="../shipped/index.html">What is argued, what runs</a>
+      <a class="sl" href="../llms.txt">llms.txt</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../network/index.html">Site<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../network/index.html">The network: where the boundaries are</a>
+      <a class="sl" href="../origins/index.html">Origins: February to August 2026</a>
+      <a class="sl" href="../documents/index.html">The documents</a>
+      <a class="sl" href="../admin/comms.html">Comms: asks &amp; tasks</a>
+      <a class="sl" href="../admin/versions.html">Release history</a>
+      <a class="sl" href="../admin/index.html">Admin &amp; engineering</a>
+      <a class="sl" href="../about/participant.html">Where we lose</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__Risks">★ GitHub</a>
+  <script src="../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+<div class="crumb"><a href="../index.html">risks.sgit.ai</a> / <a href="index.html">examples</a> / 2FA</div>
+<h1>The 2FA instance graph</h1>
+<p class="lead">The founding scenario, and the graph the whole register model was first worked through on. One missing second factor on admin accounts produces <b>nine risks</b> across three CIA branches, two data classifications, an attack mapped to MITRE, an interval resolution with a rung struck off — and the corpus's canonical governance failure, sitting in the middle of it as a risk in its own right.</p>
+<div class="proof">
+  <div class="n"><b>51 · 53</b><span>nodes and edges in the instance graph</span><em>26 Jun 2026</em></div>
+  <div class="n"><b>24 · 34</b><span>node classes and edge types in the ontology</span><em>including Acceptance and Interval</em></div>
+  <div class="n"><b>9</b><span>risks from one vulnerability</span><em>R1–R9</em></div>
+  <div class="n"><b>T1110.004</b><span>MITRE ATT&amp;CK technique — credential stuffing</span><em>ATK-1</em></div>
+</div>
+
+<h2 id="chain">The chain, from configuration to board</h2>
+<div class="pathline">
+  <span class="nd">E1: configuration shows no MFA</span><span class="ed">backs</span><span class="nd">F: admin accounts lack 2FA</span><span class="ed">gives_rise_to</span><span class="nd">V1</span><span class="ed">exposes</span><span class="nd">ATK-1: credential stuffing (T1110.004)</span><span class="ed">performed_by</span><span class="nd">TA-1</span>
+  <span class="say">And from V1 upward, nine risks in three directions — confidentiality, integrity and availability — each with its own owner, its own altitude and its own interval.</span>
+</div>
+
+<h2 id="risks">The nine risks</h2>
+<div class="tablewrap"><table>
+  <thead><tr><th>#</th><th>Risk</th><th>What it demonstrates</th></tr></thead>
+  <tbody>
+    <tr><td><b>R1</b></td><td>Accounts compromised</td><td>The obvious one, and the only one most registers would carry</td></tr>
+    <tr id="r2"><td><b>R2</b></td><td><b>The governance air gap</b> — the risk is accepted by the wrong owner</td><td>The canonical failure, modelled as a risk rather than corrected silently. See below</td></tr>
+    <tr><td><b>R3</b></td><td>Unauthorised HR admin access</td><td>The interval resolution worked in full — see <a href="#intervals">below</a></td></tr>
+    <tr><td><b>R4</b></td><td>The risk is mis-classified until investigated</td><td>Spawned by fact <b>F5, which lacks evidence</b>. <a href="../ladder/absence.html">Not knowing is a fact</a>, generating a risk of its own</td></tr>
+    <tr><td><b>R5</b></td><td>A data incident</td><td>Distinct from R6, deliberately</td></tr>
+    <tr><td><b>R6</b></td><td>A GDPR breach</td><td><b>Two distinct risks, not one.</b> Different owners, different consequences, different intervals — the CFO carries the fine, the CEO the compliance failure</td></tr>
+    <tr><td><b>R7</b></td><td>Salary or record tampering, or fabricated hires</td><td>The integrity branch, which produces no alert and no missing data</td></tr>
+    <tr><td><b>R8</b></td><td>The weekly-backup data-loss window</td><td>Availability. Backed by <b>E4</b>: backup logs show weekly</td></tr>
+    <tr><td><b>R9</b></td><td>The restore has never been tested</td><td>Backed by <b>E5</b>: no record of a tested restore — a documented zero, which is a measurement</td></tr>
+  </tbody>
+</table></div>
+
+<h2 id="air-gap">R2: the governance air gap</h2>
+<p>The most instructive row in the graph, and the reason this example keeps being cited. IT validates that admin accounts lack a second factor — which is correct, and within IT's competence. IT then <em>accepts the risk</em>, which is not.</p>
+<div class="claim">IT validating a 2FA gap is not IT accepting an HR data-breach exposure. The technical owner confirms; the business owner underwrites. <a href="../practice/index.html#owners">→</a></div>
+<p>The model's response is not to reject the acceptance but to <b>make the misplacement a risk</b>: R2 exists, is rated, and needs an owner. It is accepted by the Head of GRC at a <b>four-hour interval</b> — a P1 — and propagates GRC → CIO → CEO → Board, <em>each accepting at four hours because that is the only option open to them</em>.</p>
+<div class="warnbox"><p style="margin-top:0"><b>The 4h-for-everyone problem, carried as a loose end.</b> Every altitude in that chain selects the same rung, not because four hours is right for each of them but because it is the only rung available once the one below is struck off. Either the ladder needs a per-altitude variant, or that uniformity is itself a finding about the model. The corpus does not settle it. <a href="../acceptance/the-ladder.html#struck">The ladder →</a></p></div>
+
+<h2 id="intervals">Interval resolution for R3</h2>
+<p>What <a href="../acceptance/the-ladder.html">the ladder</a> looks like when applied to a specific risk rather than described in general:</p>
+<div class="tablewrap"><table class="rungs">
+  <thead><tr><th>Rung</th><th>Resolution</th><th>Why</th></tr></thead>
+  <tbody>
+    <tr><td class="iv struck">4 hours</td><td class="struck">Struck off</td><td>Not technically possible in the window — no authority or budget buys it</td></tr>
+    <tr><td class="iv">48 hours</td><td>P1</td><td>The shortest deliverable response</td></tr>
+    <tr><td class="iv">2 weeks</td><td>Incident</td><td>A lower grade of the same thing</td></tr>
+    <tr><td class="iv">1–2 months</td><td>A funded project</td><td>Assemble and fund</td></tr>
+    <tr><td class="iv">6 months</td><td>Do nothing, and say so</td><td>Costs zero. Legitimate with a name on it</td></tr>
+  </tbody>
+</table></div>
+<p>Three pieces of evidence do real work in that resolution. <b>E3</b> — “no evidence of compromise” — backs the absence of clear and present danger, which is what makes anything longer than four hours defensible at all. <b>E4</b> establishes the backup cadence. <b>E5</b> is the documented zero on tested restores.</p>
+
+<h2 id="classification">Data classification as the blast-radius multiplier</h2>
+<p>The same vulnerability against two datasets is two different risks, and the graph carries the classification as a node so it can say so:</p>
+<div class="tablewrap"><table>
+  <thead><tr><th>Class</th><th>Contents</th><th>Effect</th></tr></thead>
+  <tbody>
+    <tr><td><b>DC-1</b></td><td>Full HR data — passports, salaries, bonuses, PIPs, performance reviews, hires, fires, dismissals</td><td>Regulatory, financial and reputational simultaneously. The reason R5 and R6 are separate</td></tr>
+    <tr><td><b>DC-2</b></td><td>Anonymised timesheets</td><td>Materially smaller in every dimension. Same vulnerability, different risk</td></tr>
+  </tbody>
+</table></div>
+
+<h2 id="ontology">The ontology this instance runs on</h2>
+<p><b>24 node classes and 34 edge types</b>, including <code>Acceptance</code> and <code>Interval</code> as node classes in their own right, with edges <code>accepted_by</code>, <code>has_interval</code>, <code>propagates_to</code>, <code>underwritten_by</code> and <code>overrides</code>. This is where <a href="../acceptance/workflow.html#decision-node">acceptance stops being a field and becomes a node</a> — 26 June 2026, the first of four progressive formalisations.</p>
+
+<div class="note"><p style="margin-top:0"><b>The data file is not mirrored here yet.</b> The instance graph exists as a JSON data file in the source repository (<code>briefs/06/26/semantic-graph-and-query-paths/v0.33.35__data__sg-send-2fa-mappings.json</code>), it declares its own principles inline, and it carries a CC BY 4.0 line — it is the only directly downloadable graph in the corpus. Publishing it at a stable path on this site is task <a href="../admin/comms.html#t5">T5</a>, open. This page describes it from the brief pack's counts rather than reproducing a file it does not have; a reconstructed graph presented as the original would be worse than a missing one.</p></div>
+
+<h2 id="provenance">Provenance</h2>
+<div class="docmeta">
+  <div class="k">Source</div><div class="v"><code>briefs/06/26/risk-register-and-five-whys/v0.33.35__arch-brief__…md</code> · <code>briefs/06/26/semantic-graph-and-query-paths/v0.33.35__arch-brief__…2fa-use-case…md</code> · <code>…v0.33.35__data__sg-send-2fa-mappings.json</code></div>
+  <div class="k">Repository</div><div class="v"><code>SGraph-AI__App__Send</code> @ <code>v0.33.35</code></div>
+  <div class="k">First written</div><div class="v">26 June 2026</div>
+  <div class="k">Scenario status</div><div class="v">The organisation and its roles are <b>generic and invented</b>. Role titles (IT Director, Head of GRC, CIO, CFO, CEO) carry no reference to any real person</div>
+  <div class="k">Licence</div><div class="v">CC BY 4.0 at source and here; the data file carries its own CC BY 4.0 line inline</div>
+</div>
+
+<div class="agent">
+  <h4>For an agent</h4>
+  <p><b>The 2FA instance graph — the founding worked example.</b> 51 nodes, 53 edges; ontology of <b>24 node classes and 34 edge types</b> including <code>Acceptance</code> and <code>Interval</code> as node classes with edges <code>accepted_by</code>, <code>has_interval</code>, <code>propagates_to</code>, <code>underwritten_by</code>, <code>overrides</code>. Chain: <b>E1</b> (config shows no MFA) backs the fact that admin accounts lack 2FA → <b>V1</b> → <b>ATK-1</b> credential stuffing, <b>MITRE T1110.004</b>, performed by <b>TA-1</b>. Nine risks R1–R9 from one vulnerability. <b>R2 is the canonical governance air gap</b>: the risk is accepted by the wrong owner (IT validating a 2FA gap is not IT accepting an HR data-breach exposure) — modelled as a risk in its own right, accepted by Head of GRC at 4h and propagating GRC → CIO → CEO → Board, <b>each accepting at 4h because it is the only option open to them</b> (an unresolved finding about the ladder). <b>R4</b> is spawned by fact F5, which lacks evidence. <b>R5 and R6 are two distinct risks</b> (data incident vs GDPR breach), not one. R3's interval resolution strikes 4h off as not technically possible, leaving 48h/2w/1–2m/6m. Data classification multiplies the blast radius: DC-1 full HR data vs DC-2 anonymised timesheets. The organisation and all role titles are invented.</p>
+</div>
+
+<div class="pagenav">
+  <a href="index.html">← Three worked graphs</a>
+  <a href="browser-isolation.html">The browser-isolation case →</a>
+</div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">risks<span>.sgit.ai</span></div>
+    <p>The conceptual and research home for risk in the sgit.ai estate: what a risk is, what acceptance is, and why it is modelled this way. <a href="https://riskmandate.ai" style="display:inline;padding:0">riskmandate.ai</a> answers how you get your risks accepted and what it costs; this site answers why the model has the shape it has. <b>Nothing here is implemented in code</b> — <a href="../shipped/index.html" style="display:inline;padding:0">/shipped/</a> says so plainly. Part of the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network. All content CC BY 4.0 unless a page states otherwise.</p>
+    <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://riskmandate.ai">↗ riskmandate.ai</a> — the product · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> — the graph machinery · <a href="https://nhi.sgit.ai">↗ nhi.sgit.ai</a> · <a href="https://pki.sgit.ai">↗ pki.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
+    <p class="partnote">⚠ Participant disclosure: published by the sgit project, which also builds riskmandate.ai — the commercial product this research underpins. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
+    <p class="verline">site <a href="../admin/versions.html">v0.1.0</a> · <a href="../admin/index.html">engineering</a></p>
+  </div>
+  <div>
+    <h4>Start here</h4>
+    <a href="../acceptance/index.html">&#8594; The founding inversion</a>
+    <a href="../acceptance/no-deny.html">There is no deny button</a>
+    <a href="../acceptance/the-ladder.html">The interval ladder</a>
+    <a href="../acceptable/index.html">Accepted is not acceptable</a>
+    <a href="../ladder/index.html">The grounding ladder</a>
+  </div>
+  <div>
+    <h4>For agents</h4>
+    <a href="../agents/index.html">&#8594; The machine surface</a>
+    <a href="../concepts/index.html">All 42 concepts</a>
+    <a href="../data/concepts.json">concepts.json — the definitions</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+  </div>
+  <div>
+    <h4>The proof</h4>
+    <a href="../examples/index.html">Three worked graphs</a>
+    <a href="../examples/vaults.html">The four live vaults</a>
+    <a href="../examples/2fa.html">The 2FA instance graph</a>
+    <a href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+    <a href="../shipped/index.html">What is argued, what runs</a>
+  </div>
+  <div>
+    <h4>Site</h4>
+    <a href="../network/index.html">The network</a>
+    <a href="../origins/index.html">Origins</a>
+    <a href="../documents/index.html">The documents</a>
+    <a href="../admin/comms.html">Comms: asks &amp; tasks</a>
+    <a href="../admin/versions.html">Release history</a>
+    <a href="../about/participant.html">Where we lose</a>
+  </div>
+</div></footer>
+</body>
+</html>

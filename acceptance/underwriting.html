@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Underwriting, not prediction · risks.sgit.ai</title>
+<meta name="description" content="The founding inversion: a risk is not a probability estimate about the future but an exposure that already exists, which a named person underwrites insurance-style for a stated interval.">
+<link rel="canonical" href="https://risks.sgit.ai/acceptance/underwriting.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="risks.sgit.ai">
+<meta property="og:url" content="https://risks.sgit.ai/acceptance/underwriting.html">
+<meta property="og:title" content="Underwriting, not prediction — the founding inversion">
+<meta property="og:description" content="The risk already exists the moment the permission is provisioned, so the only variable is how long you accept it.">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../index.html">risks<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: vaults, publishing and the catalogue. This site is the estate's conceptual home for risk">↗ part of <b>sgit.ai</b></a>
+  <span class="stage-pill">research site</span>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.1.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni ni-has">
+      <a class="nl here" href="../acceptance/index.html">Acceptance<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../acceptance/index.html">The founding inversion</a>
+      <a class="sl here" href="../acceptance/underwriting.html">Underwriting, not prediction</a>
+      <a class="sl" href="../acceptance/no-deny.html">There is no deny button</a>
+      <a class="sl" href="../acceptance/the-ladder.html">The interval ladder</a>
+      <a class="sl" href="../acceptance/unaccepted-is-critical.html">Unaccepted is critical</a>
+      <a class="sl" href="../acceptance/workflow.html">Who underwrites, and how it flows up</a>
+      <a class="sl" href="../acceptable/index.html">Accepted is not acceptable</a>
+      <a class="sl" href="../acceptable/appetite.html">Appetite as a revealed band</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../ladder/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../ladder/index.html">The grounding ladder</a>
+      <a class="sl" href="../ladder/formulas.html">Node type formulas</a>
+      <a class="sl" href="../ladder/bridges.html">Bridges, not merges</a>
+      <a class="sl" href="../ladder/absence.html">Not knowing is a fact</a>
+      <a class="sl" href="../register/index.html">The register as a graph of graphs</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../plug/index.html">The exposure<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../plug/index.html">Who can pull the plug</a>
+      <a class="sl" href="../plug/recoverability.html">Recoverability: the hard limit</a>
+      <a class="sl" href="../blast-radius/index.html">Blast radius &amp; authorization closure</a>
+      <a class="sl" href="../practice/index.html">Practice: owners, altitude, meta-risks</a>
+      <a class="sl" href="../ramm/index.html">RAMM and the maturity models</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../examples/index.html">The proof<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../examples/index.html">Three worked graphs</a>
+      <a class="sl" href="../examples/2fa.html">The 2FA instance graph</a>
+      <a class="sl" href="../examples/browser-isolation.html">The browser-isolation case</a>
+      <a class="sl" href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+      <a class="sl" href="../examples/vaults.html">The four live vaults</a>
+      <a class="sl" href="../examples/scenarios.html">The ten scenarios</a>
+      <a class="sl" href="../examples/plug-register.html">The plug register</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../agents/index.html">For agents<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../agents/index.html">The machine surface</a>
+      <a class="sl" href="../concepts/index.html">All 42 concepts, addressable</a>
+      <a class="sl" href="../shipped/index.html">What is argued, what runs</a>
+      <a class="sl" href="../llms.txt">llms.txt</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../network/index.html">Site<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../network/index.html">The network: where the boundaries are</a>
+      <a class="sl" href="../origins/index.html">Origins: February to August 2026</a>
+      <a class="sl" href="../documents/index.html">The documents</a>
+      <a class="sl" href="../admin/comms.html">Comms: asks &amp; tasks</a>
+      <a class="sl" href="../admin/versions.html">Release history</a>
+      <a class="sl" href="../admin/index.html">Admin &amp; engineering</a>
+      <a class="sl" href="../about/participant.html">Where we lose</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__Risks">★ GitHub</a>
+  <script src="../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+<div class="crumb"><a href="../index.html">risks.sgit.ai</a> / <a href="index.html">acceptance</a> / underwriting</div>
+<h1>Underwriting, not prediction</h1>
+<p class="lead">Traditional risk management estimates the probability of a future event. This model does something else: it asks a named human to <b>underwrite an exposure that already exists</b>, the way an insurance underwriter underwrites a cost. That is the founding inversion, and every other idea on this site is downstream of it.</p>
+<blockquote class="challenge">“because what we describe is reality, we are not describing the risk of something happening, we are asking them to accept it, to underwrite it. Maybe the analogy is insurance: you are underwriting the damage, the same way an underwriter underwrites the cost. The business executive is ultimately accountable for everything, so whatever they accept, they are underwriting the risk.”</blockquote>
+
+<h2 id="already">The risk already exists</h2>
+<p>The move that makes the rest coherent is temporal. In a conventional register, a risk is a statement about the future: <em>if this happens, we lose that, and here is how likely it is.</em> In this model the exposure is present tense. The moment an over-broad permission is provisioned, the exposure is real — before any attacker, before any incident, before anyone has estimated anything.</p>
+<div class="claim">“the risk already exists the moment the permission is provisioned, so the only variable is how long you accept it, until it is re-accepted, eliminated, or the permission is narrowed; saying you are not comfortable changes nothing, you either accept it for a realistic fix-window or remove the privilege now.”</div>
+<p>Three things fall out of that sentence, and they are the shape of the whole model:</p>
+<ul>
+  <li><b>The only variable is the interval.</b> If the exposure is already real, there is nothing to decide about whether it exists — only about how long it stands before it must be looked at again. <a href="the-ladder.html">That becomes the ladder</a>.</li>
+  <li><b>Discomfort is not a decision.</b> “I am not comfortable with this” changes nothing on its own; it is a feeling, not an act. The workflow converts it into one of three moves that <em>do</em> change something. <a href="../practice/index.html#three-moves">The three moves</a>.</li>
+  <li><b>Denial is not available.</b> You cannot decline an exposure that is already present, which is why <a href="no-deny.html">there is no deny button</a>.</li>
+</ul>
+
+<h2 id="liability">Why insurance, and not any other analogy</h2>
+<p>The insurance framing is doing real work rather than decorating the point. An underwriter does not predict whether a particular house will burn down; they accept a defined exposure at a defined price for a defined term, and they are on the hook if it materialises. Every one of those four properties transfers:</p>
+<div class="tablewrap"><table>
+  <thead><tr><th>Underwriting an insurance risk</th><th>Underwriting a business risk here</th></tr></thead>
+  <tbody>
+    <tr><td>A defined exposure, described in the policy</td><td>A risk node in the register, grounded downward to <a href="../ladder/index.html">evidence and facts</a></td></tr>
+    <tr><td>A defined term — the policy period</td><td>The <a href="the-ladder.html">acceptance interval</a>, after which it must be re-accepted</td></tr>
+    <tr><td>A price, paid in premium</td><td>A price, paid in the operational response the interval implies</td></tr>
+    <tr><td>A named party who carries it</td><td>A named person with the standing to carry it, and <a href="../practice/index.html#psychology">a physical act of signing</a></td></tr>
+  </tbody>
+</table></div>
+<p>The analogy also carries the part people would rather skip. Underwriting is not an administrative acknowledgement; it is the assumption of liability. The corpus is direct about this, and about why it is the mechanism rather than an unfortunate side effect:</p>
+<blockquote class="challenge">“from a psychological and accountability point of view, it is only when you get somebody to click, or put an emoji, or accept the terms, that they really engage, because that is the moment they become accountable. And if you accept the risk today and something major happens a week or month later, you are accountable, you should have done something. This creates positive pressures.”</blockquote>
+
+<h2 id="evidence">The second-order effect is the important one</h2>
+<p>The first-order effect of making acceptance personal is that people take it seriously. The second-order effect is the one that pays for the rest of the model.</p>
+<div class="claim">Someone who must sign their name to an exposure will demand to know what is underneath it — and that demand is what manufactures the market for evidence.</div>
+<p>Nobody has to fund a data-quality function to make a register accurate. Anticipated review does it: the prospect of putting your name on a decision converts care into a demand for evidence <em>before</em> the decision rather than after the incident. That is why this site has a <a href="../ladder/index.html">grounding ladder</a> at all — it exists because underwriting created the demand for one. <a href="../practice/index.html#self-maintaining">The register maintains itself →</a></p>
+
+<h2 id="upward">It flows upward, and across domains</h2>
+<p>Acceptance is not a single signature. It is done at multiple levels and flows up:</p>
+<blockquote class="challenge">“risk acceptance is done in multiple levels and flows upward. A department uses a third-party agent: the person using it accepts the risk, then it goes to their boss to underwrite, then to the exec to underwrite, and eventually to the board to underwrite.”</blockquote>
+<p>And it crosses domains, because a technical exposure is rarely a technical risk. The person who validates that admin accounts lack a second factor is not the person who owns the consequence of an HR data breach. Keeping those two apart is <a href="../practice/index.html#owners">the technical-owner / business-owner split</a>, and collapsing them is the canonical governance failure the <a href="../examples/2fa.html#r2">2FA worked example</a> is built around.</p>
+
+<div class="warnbox"><p style="margin-top:0"><b>Where this loses.</b> Making acceptance a personal act is what generates the demand for evidence — and it also gives every rational actor a reason to avoid ever being the named acceptor. The model's answer is that an unaccepted risk is <a href="unaccepted-is-critical.html">rated critical and rolls upward anyway</a>, which removes the deniability that avoidance depends on. Whether that survives contact with a large organisation is <a href="../network/index.html#q8">open question Q8</a>, published unresolved.</p></div>
+
+<h2 id="provenance">Provenance</h2>
+<div class="docmeta">
+  <div class="k">Concept</div><div class="v">C1 — Risk acceptance as underwriting (not prediction)</div>
+  <div class="k">Source</div><div class="v"><code>team/humans/dinis_cruz/briefs/06/18/agentic-permissions/v0.33.40__arch-brief__…the-risk-already-exists.md</code></div>
+  <div class="k">Repository</div><div class="v"><code>SGraph-AI__App__Send</code> @ <code>v0.33.40</code>, never published — the version tag is the address</div>
+  <div class="k">First written</div><div class="v">4 June 2026 (v0.32.3), deepened 18 June 2026</div>
+  <div class="k">Maturity</div><div class="v"><span class="pill p-well">well-developed</span> — and newcomer-followable: the insurance analogy carries it with no GRC background</div>
+  <div class="k">Licence</div><div class="v">CC BY 4.0 at source and here</div>
+</div>
+
+<div class="agent">
+  <h4>For an agent</h4>
+  <p><b>C1 — acceptance is underwriting, not prediction.</b> Do not model a risk as a probability estimate about a future event. Model it as an exposure that <em>already exists</em> and that a named person with standing agrees to carry for a stated interval, with accountability attached. The canonical quote: <em>“we are not describing the risk of something happening, we are asking them to accept it, to underwrite it.”</em> Three consequences to carry with it: the only variable is the interval; discomfort is not a decision; and denial is unavailable because you cannot decline an exposure that is already present. The second-order effect is the load-bearing one — a person who must sign demands evidence, which is what funds the grounding ladder beneath. Acceptance is multi-level and flows upward: user → line manager → executive → CEO → board. <b>Not implemented in code.</b></p>
+</div>
+
+<div class="pagenav">
+  <a href="index.html">← The founding inversion</a>
+  <a href="no-deny.html">There is no deny button →</a>
+</div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">risks<span>.sgit.ai</span></div>
+    <p>The conceptual and research home for risk in the sgit.ai estate: what a risk is, what acceptance is, and why it is modelled this way. <a href="https://riskmandate.ai" style="display:inline;padding:0">riskmandate.ai</a> answers how you get your risks accepted and what it costs; this site answers why the model has the shape it has. <b>Nothing here is implemented in code</b> — <a href="../shipped/index.html" style="display:inline;padding:0">/shipped/</a> says so plainly. Part of the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network. All content CC BY 4.0 unless a page states otherwise.</p>
+    <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://riskmandate.ai">↗ riskmandate.ai</a> — the product · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> — the graph machinery · <a href="https://nhi.sgit.ai">↗ nhi.sgit.ai</a> · <a href="https://pki.sgit.ai">↗ pki.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
+    <p class="partnote">⚠ Participant disclosure: published by the sgit project, which also builds riskmandate.ai — the commercial product this research underpins. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
+    <p class="verline">site <a href="../admin/versions.html">v0.1.0</a> · <a href="../admin/index.html">engineering</a></p>
+  </div>
+  <div>
+    <h4>Start here</h4>
+    <a href="../acceptance/index.html">&#8594; The founding inversion</a>
+    <a href="../acceptance/no-deny.html">There is no deny button</a>
+    <a href="../acceptance/the-ladder.html">The interval ladder</a>
+    <a href="../acceptable/index.html">Accepted is not acceptable</a>
+    <a href="../ladder/index.html">The grounding ladder</a>
+  </div>
+  <div>
+    <h4>For agents</h4>
+    <a href="../agents/index.html">&#8594; The machine surface</a>
+    <a href="../concepts/index.html">All 42 concepts</a>
+    <a href="../data/concepts.json">concepts.json — the definitions</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+  </div>
+  <div>
+    <h4>The proof</h4>
+    <a href="../examples/index.html">Three worked graphs</a>
+    <a href="../examples/vaults.html">The four live vaults</a>
+    <a href="../examples/2fa.html">The 2FA instance graph</a>
+    <a href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+    <a href="../shipped/index.html">What is argued, what runs</a>
+  </div>
+  <div>
+    <h4>Site</h4>
+    <a href="../network/index.html">The network</a>
+    <a href="../origins/index.html">Origins</a>
+    <a href="../documents/index.html">The documents</a>
+    <a href="../admin/comms.html">Comms: asks &amp; tasks</a>
+    <a href="../admin/versions.html">Release history</a>
+    <a href="../about/participant.html">Where we lose</a>
+  </div>
+</div></footer>
+</body>
+</html>

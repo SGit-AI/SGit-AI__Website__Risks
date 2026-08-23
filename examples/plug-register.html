@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The plug register · risks.sgit.ai</title>
+<meta name="description" content="The five-dimension plug profile applied to a real seven-row register, including two rows at recoverability zero — the worked proof of the no-plug correction.">
+<link rel="canonical" href="https://risks.sgit.ai/examples/plug-register.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="risks.sgit.ai">
+<meta property="og:url" content="https://risks.sgit.ai/examples/plug-register.html">
+<meta property="og:title" content="The plug register">
+<meta property="og:description" content="Seven rows, five dimensions, and two entries where the plug works fine and there is still no way back.">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../index.html">risks<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: vaults, publishing and the catalogue. This site is the estate's conceptual home for risk">↗ part of <b>sgit.ai</b></a>
+  <span class="stage-pill">research site</span>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.1.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni ni-has">
+      <a class="nl" href="../acceptance/index.html">Acceptance<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../acceptance/index.html">The founding inversion</a>
+      <a class="sl" href="../acceptance/underwriting.html">Underwriting, not prediction</a>
+      <a class="sl" href="../acceptance/no-deny.html">There is no deny button</a>
+      <a class="sl" href="../acceptance/the-ladder.html">The interval ladder</a>
+      <a class="sl" href="../acceptance/unaccepted-is-critical.html">Unaccepted is critical</a>
+      <a class="sl" href="../acceptance/workflow.html">Who underwrites, and how it flows up</a>
+      <a class="sl" href="../acceptable/index.html">Accepted is not acceptable</a>
+      <a class="sl" href="../acceptable/appetite.html">Appetite as a revealed band</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../ladder/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../ladder/index.html">The grounding ladder</a>
+      <a class="sl" href="../ladder/formulas.html">Node type formulas</a>
+      <a class="sl" href="../ladder/bridges.html">Bridges, not merges</a>
+      <a class="sl" href="../ladder/absence.html">Not knowing is a fact</a>
+      <a class="sl" href="../register/index.html">The register as a graph of graphs</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../plug/index.html">The exposure<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../plug/index.html">Who can pull the plug</a>
+      <a class="sl" href="../plug/recoverability.html">Recoverability: the hard limit</a>
+      <a class="sl" href="../blast-radius/index.html">Blast radius &amp; authorization closure</a>
+      <a class="sl" href="../practice/index.html">Practice: owners, altitude, meta-risks</a>
+      <a class="sl" href="../ramm/index.html">RAMM and the maturity models</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../examples/index.html">The proof<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../examples/index.html">Three worked graphs</a>
+      <a class="sl" href="../examples/2fa.html">The 2FA instance graph</a>
+      <a class="sl" href="../examples/browser-isolation.html">The browser-isolation case</a>
+      <a class="sl" href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+      <a class="sl" href="../examples/vaults.html">The four live vaults</a>
+      <a class="sl" href="../examples/scenarios.html">The ten scenarios</a>
+      <a class="sl here" href="../examples/plug-register.html">The plug register</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../agents/index.html">For agents<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../agents/index.html">The machine surface</a>
+      <a class="sl" href="../concepts/index.html">All 42 concepts, addressable</a>
+      <a class="sl" href="../shipped/index.html">What is argued, what runs</a>
+      <a class="sl" href="../llms.txt">llms.txt</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../network/index.html">Site<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../network/index.html">The network: where the boundaries are</a>
+      <a class="sl" href="../origins/index.html">Origins: February to August 2026</a>
+      <a class="sl" href="../documents/index.html">The documents</a>
+      <a class="sl" href="../admin/comms.html">Comms: asks &amp; tasks</a>
+      <a class="sl" href="../admin/versions.html">Release history</a>
+      <a class="sl" href="../admin/index.html">Admin &amp; engineering</a>
+      <a class="sl" href="../about/participant.html">Where we lose</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__Risks">★ GitHub</a>
+  <script src="../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+<div class="crumb"><a href="../index.html">risks.sgit.ai</a> / <a href="index.html">examples</a> / the plug register</div>
+<h1>The plug register</h1>
+<p class="lead"><a href='../plug/index.html#profile'>The five-dimension profile</a> applied to a real seven-row register. It is the worked proof of the <b>“no plug” correction</b> — every row that an earlier version recorded as having no off-switch turns out to have one, and what was actually missing was recoverability.</p>
+<h2 id="rows">Seven rows, five dimensions</h2>
+<div class="tablewrap"><table>
+  <thead><tr><th>The risk</th><th>Who holds the plug</th><th>Blast radius</th><th>Speed</th><th>Recoverability</th></tr></thead>
+  <tbody>
+    <tr><td><b>Agent misuses the isolated session</b></td><td>IT</td><td>Small</td><td>Fast</td><td><span class="verdict v-real">high</span></td></tr>
+    <tr><td>Agent exceeds its granted scope</td><td>IT / platform</td><td>Small to medium</td><td>Fast</td><td><span class="verdict v-real">high</span></td></tr>
+    <tr><td>Agent consumes budget faster than detection</td><td>Platform / finance</td><td>Medium</td><td><b>Bounded below by detection</b> — <a href="../plug/index.html#detection">12–18h</a></td><td><span class="verdict v-empty">medium</span></td></tr>
+    <tr><td><b>Agent misuses the platform itself</b></td><td>COO / procurement</td><td>Large</td><td><b>Slow — contractual</b></td><td><span class="verdict v-empty">medium</span></td></tr>
+    <tr><td>Agent action is attributed to the wrong principal</td><td>Platform / identity</td><td>Medium</td><td>Medium</td><td><span class="verdict v-empty">medium</span></td></tr>
+    <tr><td><b>Data leaves the boundary</b></td><td>Platform, then nobody</td><td>Large</td><td>Fast to stop, irrelevant after</td><td><span class="verdict v-absent">zero</span></td></tr>
+    <tr><td><b>Unattributable transaction</b></td><td>Finance, then nobody</td><td>Small each, unbounded in aggregate</td><td>Fast to stop</td><td><span class="verdict v-absent">zero</span></td></tr>
+    <tr><td><b>Governance residual</b></td><td>The board</td><td>Enterprise</td><td><b>Slowest</b></td><td><span class="verdict v-empty">lowest</span></td></tr>
+  </tbody>
+</table></div>
+<p class="small dim">Side effects, the fourth dimension, are omitted from the table for width and are the reason several of these plugs exist and are not pulled. The register carries them per row.</p>
+
+<h2 id="correction">What the correction changed</h2>
+<p>Read the last two dimensions of the two <b>zero-recoverability</b> rows together and the correction becomes obvious. Both are <em>fast to stop</em>. Neither is <em>possible to undo</em>. An earlier register recorded both as “no plug”, which was wrong on the facts and useless in practice:</p>
+<div class="split">
+  <table>
+    <thead><tr><th class="fatal">The blank: “no plug”</th><th class="safe">The corrected profile</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Not true — you can always disconnect, revoke or shut down</td>
+        <td>States who can stop it and how fast, both of which are real and useful</td>
+      </tr>
+      <tr>
+        <td>Unassignable. A blank has no owner</td>
+        <td>Has an owner, an altitude and an interval like any other finding</td>
+      </tr>
+      <tr>
+        <td>Unfundable. There is no project that fixes “no”</td>
+        <td>Points straight at <b>prevention</b>, because that is what a zero-recoverability row implies</td>
+      </tr>
+      <tr>
+        <td>Ends the conversation</td>
+        <td>Escalates it — a recoverability of zero argues for the most senior signature available</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="cap">“The blank said stop looking. The corrected profile says here is exactly what to do.”</p>
+</div>
+
+<h2 id="reading">Three things this register shows that prose does not</h2>
+<ul>
+  <li><b>Speed is not one number.</b> Two rows are “fast” and two are slow for entirely different reasons — one is bounded below by <a href="../plug/index.html#detection">the detection floor</a>, and one by a <em>contract</em>. A plug that requires a supplier's notice period is not a plug you hold.</li>
+  <li><b>The plug moves up the organisation as the blast radius grows.</b> IT holds the small ones; procurement holds the platform; the board holds the residual. That is <a href="../practice/index.html#altitude">altitude</a> visible in a single column.</li>
+  <li><b>“Then nobody.”</b> Two rows list a holder <em>and</em> a point past which nobody holds anything. That is the honest way to write a zero-recoverability row, and it is what a single yes/no column cannot express.</li>
+</ul>
+
+<h2 id="query">Running the flagship query against it</h2>
+<div class="claim">Show me every accepted risk whose recoverability is zero. — <b>Two rows.</b> Data leaves the boundary. Unattributable transaction.</div>
+<p>Two is a good answer. It is short, it is specific, and both entries are things a board can be asked to sign for. The failure mode would be a register that could not produce the list at all — which is what a register without a recoverability dimension is. <a href="../plug/recoverability.html#query">The flagship query →</a></p>
+
+<h2 id="provenance">Provenance</h2>
+<div class="docmeta">
+  <div class="k">Source</div><div class="v"><code>briefs/07/24/who-can-pull-the-plug/v0.33.51__strategy-brief__…a-real-plug-register-the-worked-proof-five-dimension-profile.md</code></div>
+  <div class="k">Repository</div><div class="v"><code>SGraph-AI__App__Send</code> @ <code>v0.33.51</code> — one of 13 documents in the same folder</div>
+  <div class="k">First written</div><div class="v">24 July 2026</div>
+  <div class="k">Scenario status</div><div class="v">Preserved from the source: <b>a product deployment example, shortened and illustrative — not any customer's register.</b> No vendor is named</div>
+  <div class="k">Licence</div><div class="v">CC BY 4.0 at source and here</div>
+</div>
+
+<div class="agent">
+  <h4>For an agent</h4>
+  <p><b>The plug register — the worked proof of the five-dimension profile.</b> Seven rows, each carrying <b>who holds the plug · blast radius · speed · side effects · recoverability</b>. Spans from “agent misuses the isolated session” (IT · small · fast · <b>high</b> recoverability) through “agent consumes budget faster than detection” (speed bounded below by the 12–18h detection floor) and “agent misuses the platform itself” (COO/procurement · large · <b>slow, contractual</b> · medium) to two rows at <b>recoverability: zero</b> — <b>data leaves the boundary</b> and <b>unattributable transaction</b> — and finally “governance residual” (the board · enterprise · slowest · lowest). Both zero-recoverability rows are <b>fast to stop and impossible to undo</b>, which is exactly the “no plug” correction: an older register recorded them as having no off-switch, which was false on the facts and unassignable in practice. The corrected profile has an owner, an altitude and an interval, and points at prevention. Note that <b>speed has more than one kind of bound</b> — one row is bounded by detection latency, another by a supplier's contractual notice period; a plug requiring a notice period is not a plug you hold. Running the flagship query against this register returns <b>two rows</b>. Illustrative product example; no customer's register and no vendor named.</p>
+</div>
+
+<div class="pagenav">
+  <a href="scenarios.html">← The ten scenarios</a>
+  <a href="../concepts/index.html">All 42 concepts →</a>
+</div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">risks<span>.sgit.ai</span></div>
+    <p>The conceptual and research home for risk in the sgit.ai estate: what a risk is, what acceptance is, and why it is modelled this way. <a href="https://riskmandate.ai" style="display:inline;padding:0">riskmandate.ai</a> answers how you get your risks accepted and what it costs; this site answers why the model has the shape it has. <b>Nothing here is implemented in code</b> — <a href="../shipped/index.html" style="display:inline;padding:0">/shipped/</a> says so plainly. Part of the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network. All content CC BY 4.0 unless a page states otherwise.</p>
+    <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://riskmandate.ai">↗ riskmandate.ai</a> — the product · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> — the graph machinery · <a href="https://nhi.sgit.ai">↗ nhi.sgit.ai</a> · <a href="https://pki.sgit.ai">↗ pki.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
+    <p class="partnote">⚠ Participant disclosure: published by the sgit project, which also builds riskmandate.ai — the commercial product this research underpins. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
+    <p class="verline">site <a href="../admin/versions.html">v0.1.0</a> · <a href="../admin/index.html">engineering</a></p>
+  </div>
+  <div>
+    <h4>Start here</h4>
+    <a href="../acceptance/index.html">&#8594; The founding inversion</a>
+    <a href="../acceptance/no-deny.html">There is no deny button</a>
+    <a href="../acceptance/the-ladder.html">The interval ladder</a>
+    <a href="../acceptable/index.html">Accepted is not acceptable</a>
+    <a href="../ladder/index.html">The grounding ladder</a>
+  </div>
+  <div>
+    <h4>For agents</h4>
+    <a href="../agents/index.html">&#8594; The machine surface</a>
+    <a href="../concepts/index.html">All 42 concepts</a>
+    <a href="../data/concepts.json">concepts.json — the definitions</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+  </div>
+  <div>
+    <h4>The proof</h4>
+    <a href="../examples/index.html">Three worked graphs</a>
+    <a href="../examples/vaults.html">The four live vaults</a>
+    <a href="../examples/2fa.html">The 2FA instance graph</a>
+    <a href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+    <a href="../shipped/index.html">What is argued, what runs</a>
+  </div>
+  <div>
+    <h4>Site</h4>
+    <a href="../network/index.html">The network</a>
+    <a href="../origins/index.html">Origins</a>
+    <a href="../documents/index.html">The documents</a>
+    <a href="../admin/comms.html">Comms: asks &amp; tasks</a>
+    <a href="../admin/versions.html">Release history</a>
+    <a href="../about/participant.html">Where we lose</a>
+  </div>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>All 42 concepts, addressable · risks.sgit.ai</title>
+<meta name="description" content="Every concept in the risk corpus with a stable anchor, a one-line definition, its maturity stated honestly and its canonical source — plus the same 42 entries as structured data.">
+<link rel="canonical" href="https://risks.sgit.ai/concepts/index.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="risks.sgit.ai">
+<meta property="og:url" content="https://risks.sgit.ai/concepts/index.html">
+<meta property="og:title" content="All 42 concepts, addressable">
+<meta property="og:description" content="One anchor each, #c1 to #c42, checked by CI — and the same 42 entries as JSON.">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../index.html">risks<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: vaults, publishing and the catalogue. This site is the estate's conceptual home for risk">↗ part of <b>sgit.ai</b></a>
+  <span class="stage-pill">research site</span>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.1.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni ni-has">
+      <a class="nl" href="../acceptance/index.html">Acceptance<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../acceptance/index.html">The founding inversion</a>
+      <a class="sl" href="../acceptance/underwriting.html">Underwriting, not prediction</a>
+      <a class="sl" href="../acceptance/no-deny.html">There is no deny button</a>
+      <a class="sl" href="../acceptance/the-ladder.html">The interval ladder</a>
+      <a class="sl" href="../acceptance/unaccepted-is-critical.html">Unaccepted is critical</a>
+      <a class="sl" href="../acceptance/workflow.html">Who underwrites, and how it flows up</a>
+      <a class="sl" href="../acceptable/index.html">Accepted is not acceptable</a>
+      <a class="sl" href="../acceptable/appetite.html">Appetite as a revealed band</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../ladder/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../ladder/index.html">The grounding ladder</a>
+      <a class="sl" href="../ladder/formulas.html">Node type formulas</a>
+      <a class="sl" href="../ladder/bridges.html">Bridges, not merges</a>
+      <a class="sl" href="../ladder/absence.html">Not knowing is a fact</a>
+      <a class="sl" href="../register/index.html">The register as a graph of graphs</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../plug/index.html">The exposure<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../plug/index.html">Who can pull the plug</a>
+      <a class="sl" href="../plug/recoverability.html">Recoverability: the hard limit</a>
+      <a class="sl" href="../blast-radius/index.html">Blast radius &amp; authorization closure</a>
+      <a class="sl" href="../practice/index.html">Practice: owners, altitude, meta-risks</a>
+      <a class="sl" href="../ramm/index.html">RAMM and the maturity models</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../examples/index.html">The proof<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../examples/index.html">Three worked graphs</a>
+      <a class="sl" href="../examples/2fa.html">The 2FA instance graph</a>
+      <a class="sl" href="../examples/browser-isolation.html">The browser-isolation case</a>
+      <a class="sl" href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+      <a class="sl" href="../examples/vaults.html">The four live vaults</a>
+      <a class="sl" href="../examples/scenarios.html">The ten scenarios</a>
+      <a class="sl" href="../examples/plug-register.html">The plug register</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../agents/index.html">For agents<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../agents/index.html">The machine surface</a>
+      <a class="sl here" href="../concepts/index.html">All 42 concepts, addressable</a>
+      <a class="sl" href="../shipped/index.html">What is argued, what runs</a>
+      <a class="sl" href="../llms.txt">llms.txt</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../network/index.html">Site<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../network/index.html">The network: where the boundaries are</a>
+      <a class="sl" href="../origins/index.html">Origins: February to August 2026</a>
+      <a class="sl" href="../documents/index.html">The documents</a>
+      <a class="sl" href="../admin/comms.html">Comms: asks &amp; tasks</a>
+      <a class="sl" href="../admin/versions.html">Release history</a>
+      <a class="sl" href="../admin/index.html">Admin &amp; engineering</a>
+      <a class="sl" href="../about/participant.html">Where we lose</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__Risks">★ GitHub</a>
+  <script src="../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+<div class="crumb"><a href="../index.html">risks.sgit.ai</a> / concepts</div>
+<h1>All 42 concepts, addressable</h1>
+<p class="lead">Every concept in the corpus, each with a <b>stable anchor</b>, a one-line definition, its maturity stated honestly, its canonical source path, and the page that argues it. The anchors are a promise: <code>#c1</code> through <code>#c42</code> are checked by CI, and a link to a concept that has no anchor fails the build. The same 42 entries are available as structured data at <a href='../data/concepts.json'><code>/data/concepts.json</code></a>.</p>
+<div class="cjump"><a href="#c1" title="Risk acceptance as underwriting, not prediction">C1</a><a href="#c2" title="The no-deny mechanic">C2</a><a href="#c3" title="The acceptance interval ladder">C3</a><a href="#c4" title="Unaccepted equals critical">C4</a><a href="#c5" title="Accepted is not acceptable">C5</a><a href="#c6" title="The grounding ladder">C6</a><a href="#c7" title="Node type formulas">C7</a><a href="#c8" title="Ontologies of ontologies — bridges, not merges">C8</a><a href="#c9" title="The risk register as a graph of graphs">C9</a><a href="#c10" title="Fractal risk registers">C10</a><a href="#c11" title="Relevance fade">C11</a><a href="#c12" title="Registers are one chain, not parallel lists">C12</a><a href="#c13" title="Technical owner versus business owner">C13</a><a href="#c14" title="Confirmed, validated, accepted — the three-predicate model">C14</a><a href="#c15" title="The underwriting graph and propagation to the board">C15</a><a href="#c16" title="Cascade and the air gap">C16</a><a href="#c17" title="Not knowing is a fact">C17</a><a href="#c18" title="CIA blast-radius expansion">C18</a><a href="#c19" title="Blast radius and authorization closure">C19</a><a href="#c20" title="Who can pull the plug — two symmetric risks">C20</a><a href="#c21" title="The four-way time intersection">C21</a><a href="#c22" title="The five-dimension plug profile, and the “no plug” correction">C22</a><a href="#c23" title="Recoverability as the hard limit">C23</a><a href="#c24" title="Altitude">C24</a><a href="#c25" title="Risk appetite as a revealed band">C25</a><a href="#c26" title="The psychology of the physical act">C26</a><a href="#c27" title="Accept first, then adjust the level — the risk level ledger">C27</a><a href="#c28" title="Everything has risks — register density and calibration by surprise">C28</a><a href="#c29" title="Risks that cannot be fully mitigated">C29</a><a href="#c30" title="Meta-risks — the risk about your risk management">C30</a><a href="#c31" title="The register maintains itself">C31</a><a href="#c32" title="Three moves, none of which is denial">C32</a><a href="#c33" title="Decision as a first-class node">C33</a><a href="#c34" title="A question is not a risk">C34</a><a href="#c35" title="Do not internalise the risk">C35</a><a href="#c36" title="The evidence economy — force of proof and the fact certifier">C36</a><a href="#c37" title="Confidence bands and margin of error">C37</a><a href="#c38" title="Two underwritings — decision accountability versus factual accuracy">C38</a><a href="#c39" title="Observability as a risk dimension">C39</a><a href="#c40" title="Five whys as a domain translator">C40</a><a href="#c41" title="Digital twins and the discipline of reality">C41</a><a href="#c42" title="The narrative engine — the register as story">C42</a></div>
+
+<div class="note"><p style="margin-top:0"><b>Reading order for an agent with no prior context:</b> <a href="#c1">C1</a> → <a href="#c2">C2</a> → <a href="#c3">C3</a> → <a href="#c4">C4</a> → <a href="#c5">C5</a> (the acceptance model) → <a href="#c6">C6</a> → <a href="#c7">C7</a> (the ontology that makes it computable) → <a href="#c19">C19</a> → <a href="#c20">C20</a>–<a href="#c23">C23</a> (blast radius and the plug) → everything else.</p>
+<p style="margin-bottom:0"><b>Maturity is stated honestly, and it means what it says.</b> <span class="pill p-well">well-developed</span> means the argument is complete and worked; <span class="pill p-part">partially argued</span> means a mechanism is missing or the source says so itself; <span class="pill p-new">newly stated</span> means it appeared late and has not been stress-tested. <b>None of it means implemented</b> — nothing in this corpus is implemented in code. <a href="../shipped/index.html">/shipped/</a>.</p></div>
+
+<h2 id="teaching">The six teaching altitudes</h2>
+<p>The corpus is not organised as a list; it has an order, and the order is an argument. Each altitude assumes the one before it.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Altitude</th><th>What it covers</th><th>Concepts</th></tr></thead>
+<tbody>
+<tr><td><b>1 · The inversion</b><br><a href="../acceptance/index.html" class="small">acceptance/index.html</a></td><td>The founding move and its three immediate consequences. Read these four first, in order — each is forced by the one before it.</td><td><a href="#c1">C1</a> · <a href="#c2">C2</a> · <a href="#c3">C3</a> · <a href="#c4">C4</a></td></tr>
+<tr><td><b>2 · The vocabulary</b><br><a href="../acceptable/index.html" class="small">acceptable/index.html</a></td><td>What the words mean once the inversion has happened, and where a register lives.</td><td><a href="#c5">C5</a> · <a href="#c25">C25</a> · <a href="#c9">C9</a> · <a href="#c10">C10</a> · <a href="#c11">C11</a></td></tr>
+<tr><td><b>3 · The machinery</b><br><a href="../ladder/index.html" class="small">ladder/index.html</a></td><td>What makes it computable. This is the altitude an agent most needs.</td><td><a href="#c6">C6</a> · <a href="#c7">C7</a> · <a href="#c8">C8</a> · <a href="#c17">C17</a> · <a href="#c33">C33</a></td></tr>
+<tr><td><b>4 · The exposure</b><br><a href="../plug/index.html" class="small">plug/index.html</a></td><td>What the machinery is pointed at: what an agent can reach, and what it costs to stop it.</td><td><a href="#c19">C19</a> · <a href="#c18">C18</a> · <a href="#c20">C20</a> · <a href="#c21">C21</a> · <a href="#c22">C22</a> · <a href="#c23">C23</a></td></tr>
+<tr><td><b>5 · The organisation</b><br><a href="../practice/index.html" class="small">practice/index.html</a></td><td>Who does what, and what keeps a register alive once it exists.</td><td><a href="#c13">C13</a> · <a href="#c14">C14</a> · <a href="#c15">C15</a> · <a href="#c24">C24</a> · <a href="#c26">C26</a> · <a href="#c28">C28</a> · <a href="#c30">C30</a> · <a href="#c31">C31</a> · <a href="#c35">C35</a></td></tr>
+<tr><td><b>6 · The maturity</b><br><a href="../ramm/index.html" class="small">ramm/index.html</a></td><td>How far along an organisation is, and how confident anyone should be in the numbers.</td><td><a href="#c37">C37</a> · <a href="#c38">C38</a> · <a href="#c39">C39</a></td></tr>
+</tbody></table></div>
+
+<h2 id="all">The 42</h2>
+<div class="conc" id="c1">
+  <h3><span class="cid">C1</span> Risk acceptance as underwriting, not prediction <a class="perma" href="#c1">#c1</a></h3>
+  <p><b>A risk is not a probability estimate about a future event but an exposure that already exists, which a named person underwrites insurance-style for a stated interval, with accountability attached.</b></p>
+  <p>The founding inversion. Traditional risk management predicts the probability of a future event; this model asks a named human to <em>underwrite</em> an exposure that already exists. It relocates the discipline from actuarial estimation to accountable ownership, and it is the reason the rest hangs together: once someone must sign, they demand evidence, which manufactures the demand for the grounding ladder underneath.</p>
+  <blockquote>“we are not describing the risk of something happening, we are asking them to accept it, to underwrite it”</blockquote>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written 4 June 2026 (v0.32.3), deepened 18 June 2026</span>
+    <span>·</span><span>newcomer-followable: yes — the insurance analogy carries it with no GRC background</span>
+    <span>·</span><span>related <a href="#c2">C2</a> · <a href="#c3">C3</a> · <a href="#c26">C26</a> · <a href="#c31">C31</a></span>
+    <span>·</span><span><a href="../acceptance/underwriting.html">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/06/18/agentic-permissions/v0.33.40__arch-brief__…the-risk-already-exists.md</code></span></div>
+</div>
+<div class="conc" id="c2">
+  <h3><span class="cid">C2</span> The no-deny mechanic <a class="perma" href="#c2">#c2</a></h3>
+  <p><b>A risk with a real vulnerability under it exists whether or not anyone acknowledges it, so there is no deny button — the only choice is how long you accept it before re-accepting.</b></p>
+  <p>The single most distinctive primitive. Denial in conventional registers is a fiction that only works while the risk has not materialised; removing it converts risk management from a gate into a forcing function. What replaces denial is three moves — accept, escalate, or challenge the fact — so the person is routed rather than cornered.</p>
+  <blockquote>“the mistake of a lot of risk registers is that they allow the risk to be denied, which can only happen when the risk has not materialised”</blockquote>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written 23 June 2026</span>
+    <span>·</span><span>newcomer-followable: yes — outstandingly so</span>
+    <span>·</span><span>related <a href="#c1">C1</a> · <a href="#c3">C3</a> · <a href="#c4">C4</a> · <a href="#c32">C32</a></span>
+    <span>·</span><span><a href="../acceptance/no-deny.html">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/06/23/risk-mandate-product-and-workflow/v0.33.33__dev-brief__…no-deny-time-boxed-acceptance-expiry-as-cost…md</code></span></div>
+</div>
+<div class="conc" id="c3">
+  <h3><span class="cid">C3</span> The acceptance interval ladder <a class="perma" href="#c3">#c3</a></h3>
+  <p><b>The interval is not metadata about the decision — the interval IS the decision, because each rung implies a specific operational response and therefore a specific cost. Six rungs: 1h, 4h, 1d, 1w, 1m, 6m, default one month.</b></p>
+  <p>Choosing a duration sets severity and commits resources in the same click. Under 24 hours means pull the plug; a day to a week is a lower-grade incident; a week to a month is a project for an existing team; one to three months means assemble and fund; over three months means you are waiting to see, which is legitimate if said out loud. Rungs that are physically impossible are struck off before the choice is offered.</p>
+  <blockquote>“if you have less than a day risk acceptance, then that is fundamentally a P1, because if you say I do not want to accept this risk for more than an hour once I know about it, then that means you need to pull the plug”</blockquote>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written intervals 23 June 2026; consolidated as a ladder 17 July 2026</span>
+    <span>·</span><span>newcomer-followable: yes — a six-row table with plain-language consequences</span>
+    <span>·</span><span>related <a href="#c2">C2</a> · <a href="#c5">C5</a> · <a href="#c4">C4</a></span>
+    <span>·</span><span><a href="../acceptance/the-ladder.html">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/07/17/registers-mandate-and-intervals/v0.33.49__arch-brief__…acceptance-interval-ladder…md</code></span></div>
+</div>
+<div class="conc" id="c4">
+  <h3><span class="cid">C4</span> Unaccepted equals critical <a class="perma" href="#c4">#c4</a></h3>
+  <p><b>A risk nobody has accepted has not gone away — it rests on whoever is nearest, so it is rated critical by default and rolls upward without anyone choosing to escalate it.</b></p>
+  <p>The sharpest inversion of incentives in the corpus. In most organisations a risk nobody escalated feels safest to the person holding it; here it is the worst state available, because that person is personally carrying an enterprise exposure with no signature above them. It is aimed at attrition rather than refusal: it removes the deniability non-participation depends on, without requiring anyone to cooperate.</p>
+  <blockquote>“that person right now is accountable for the business, which is very bad from a business point of view, but is also very bad for the individual”</blockquote>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written 17 July 2026; worked end-to-end 2 August 2026</span>
+    <span>·</span><span>newcomer-followable: yes</span>
+    <span>·</span><span>related <a href="#c2">C2</a> · <a href="#c3">C3</a> · <a href="#c35">C35</a></span>
+    <span>·</span><span><a href="../acceptance/unaccepted-is-critical.html">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/07/17/registers-mandate-and-intervals/v0.33.49__arch-brief__…acceptance-interval-ladder…md</code></span></div>
+</div>
+<div class="conc" id="c5">
+  <h3><span class="cid">C5</span> Accepted is not acceptable <a class="perma" href="#c5">#c5</a></h3>
+  <p><b>Two orthogonal axes, not two stages. Accepted is an act by a named person at a dated moment; acceptable is a threshold the business owns — the moment it is happy to stop funding remediation.</b></p>
+  <p>The vocabulary correction that turns risk appetite into something computable, producing four quadrants each requiring a different response. Acceptable is risk appetite renamed, and renaming it makes it operational because the instruction that matters most is the one that stops work. EU AI Act Article 9(5) requires residual risk to be judged acceptable and never defines the word — so the obligation to judge is imposed and the standard is not supplied.</p>
+  <blockquote>“the acceptable risk is the moment that the business is happy to stop funding remediation activities”</blockquote>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written 28 July 2026</span>
+    <span>·</span><span>newcomer-followable: yes — the four-quadrant diagram does the work</span>
+    <span>·</span><span>related <a href="#c25">C25</a> · <a href="#c3">C3</a> · <a href="#c30">C30</a></span>
+    <span>·</span><span><a href="../acceptable/index.html">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/07/28/regulation-graph-and-acceptability/v0.33.53__strategy-brief__…accepted-is-not-acceptable…md</code></span></div>
+</div>
+<div class="conc" id="c6">
+  <h3><span class="cid">C6</span> The grounding ladder <a class="perma" href="#c6">#c6</a></h3>
+  <p><b>Reality → Twin → Measure → Evidence → Fact → Vulnerability → Risk → Top Risk. Every node type is defined by its required paths; downward paths ground, upward paths classify.</b></p>
+  <p>The definitional spine of the corpus, and the concept agents most need. A Vulnerability is simply a Fact with an upward path to a Risk. A Measure is NOT the floor — it is grounded further in a Twin and through it in Reality. The floor is a stopping test: the last node where going deeper would neither improve observability nor change a decision.</p>
+  <blockquote>“A Fact becomes a Vulnerability purely because of its upward link to a Risk, so that legitimacy is conferred entirely from above”</blockquote>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written 28 June 2026</span>
+    <span>·</span><span>newcomer-followable: yes — the ladder diagram plus the untested-restore worked example</span>
+    <span>·</span><span>related <a href="#c7">C7</a> · <a href="#c17">C17</a> · <a href="#c41">C41</a></span>
+    <span>·</span><span><a href="../ladder/index.html">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/06/28/ontology-and-definitions/v0.33.36__arch-brief__…grounding-ladder…md</code></span></div>
+</div>
+<div class="conc" id="c7">
+  <h3><span class="cid">C7</span> Node type formulas <a class="perma" href="#c7">#c7</a></h3>
+  <p><b>What a node IS should be computed against the graph rather than decided in a classifier's head. A node type is a required pattern of typed, directed paths, so classification is a query.</b></p>
+  <p>Classification becomes dynamic and path-relative — promotion and demotion are edge events. Bias does not disappear; it moves out of the classifier's head into the formula, where it is visible, versioned and arguable. Two parties who disagree stop trading intuitions and start diffing formulas. The formula LANGUAGE is undefined and nothing executes a formula.</p>
+  <blockquote>“the ontology definition of a node type is its upward and downward path-pattern, not a sentence about what it contains”</blockquote>
+  <div class="meta">
+    <span class="pill p-well">well-developed as a mechanism; the formula language is an open question</span>
+    <span>first written 28 June 2026</span>
+    <span>·</span><span>newcomer-followable: mostly — requires accepting that a type is a path pattern</span>
+    <span>·</span><span>related <a href="#c6">C6</a> · <a href="#c8">C8</a></span>
+    <span>·</span><span><a href="../ladder/formulas.html">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/06/28/ontology-and-definitions/v0.33.36__arch-brief__…node-type-formulas…md</code></span></div>
+</div>
+<div class="conc" id="c8">
+  <h3><span class="cid">C8</span> Ontologies of ontologies — bridges, not merges <a class="perma" href="#c8">#c8</a></h3>
+  <p><b>Multiple parties each own their own formula over a shared factual graph, connected at declared crosswalk points rather than merged into one schema.</b></p>
+  <p>A node can be a vulnerability under one formula and not another, and both are valid — they are different queries over the same graph. The worked proof is a security-centric formula (System, Fault, Security Failure, Conditions) which turns out to be a sub-path of the business-centric one: its Security Failure plays exactly the structural role of the promotion edge, differing only in terminus.</p>
+  <blockquote>“We do not fold their definition into ours, which would erase the security-centric view that is the whole point of having it. We declare a bridge: a Security Failure gives rise to a Business Risk”</blockquote>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written 28 June 2026</span>
+    <span>·</span><span>newcomer-followable: yes</span>
+    <span>·</span><span>related <a href="#c7">C7</a> · <a href="#c6">C6</a></span>
+    <span>·</span><span><a href="../ladder/bridges.html">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/06/28/ontology-and-definitions/v0.33.36__arch-brief__…ontologies-of-ontologies…md</code></span></div>
+</div>
+<div class="conc" id="c9">
+  <h3><span class="cid">C9</span> The risk register as a graph of graphs <a class="perma" href="#c9">#c9</a></h3>
+  <p><b>The register is a hyperlinked semantic graph rather than a spreadsheet, and it begins where scanners stop — at the vulnerability — mapping accepting, funding, and finding who does the work.</b></p>
+  <p>Buildable now because vaults supply the storage and hyperlink layer and PKI solves attribution. Its distinguishing move is where it starts: most security products end at the vulnerability, and everything expensive happens after that point.</p>
+  <blockquote>“a lot of security teams and products end on the vulnerability, and what I want to show is the multiple layers involved in fixing it, but even before that, in accepting the risk, funding the solution, and finding who is going to do it”</blockquote>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written 26 June 2026</span>
+    <span>·</span><span>newcomer-followable: yes — written as a five-movement narrative</span>
+    <span>·</span><span>related <a href="#c10">C10</a> · <a href="#c16">C16</a> · <a href="#c42">C42</a></span>
+    <span>·</span><span><a href="../register/index.html">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/06/26/risk-register-and-five-whys/v0.33.35__arch-brief__…graph-of-graphs…md</code></span></div>
+</div>
+<div class="conc" id="c10">
+  <h3><span class="cid">C10</span> Fractal risk registers <a class="perma" href="#c10">#c10</a></h3>
+  <p><b>Wherever there is a stakeholder who accepts a risk there must be a register — company, department, role. Only the role's own register is stored; the rest are queries.</b></p>
+  <p>A person's register is all the risks that bubble up to them, derived rather than curated. An individual has at least two and often three: their role-specific register in their own domain language, plus derived views of the registers above.</p>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written 17 July 2026</span>
+    <span>·</span><span>newcomer-followable: yes</span>
+    <span>·</span><span>related <a href="#c9">C9</a> · <a href="#c11">C11</a> · <a href="#c24">C24</a> · <a href="#c25">C25</a></span>
+    <span>·</span><span><a href="../register/index.html#fractal">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/07/17/registers-mandate-and-intervals/v0.33.49__arch-brief__…fractal-risk-registers…md</code></span></div>
+</div>
+<div class="conc" id="c11">
+  <h3><span class="cid">C11</span> Relevance fade <a class="perma" href="#c11">#c11</a></h3>
+  <p><b>Centre a view on a role: that role's register is lit in full, and the registers above fade except for the entries that trace back down to it — which turns the register into an education mechanism.</b></p>
+  <p>A database administrator can see that their local “an agent holds unrestricted access to a customer table” is the same object as the board's “regulatory penalty, loss of licence, continuity failure”. Seeing that once teaches more than any training course. The visualisation is described and has not been built.</p>
+  <blockquote>“as you go up, imagine the colours can fade away for the next registers for the bits that are not relevant, so the graph starts to point which parts of the risk register above are relevant to this individual”</blockquote>
+  <div class="meta">
+    <span class="pill p-part">partially argued</span>
+    <span>first written 17 July 2026</span>
+    <span>·</span><span>newcomer-followable: yes</span>
+    <span>·</span><span>related <a href="#c10">C10</a> · <a href="#c24">C24</a></span>
+    <span>·</span><span><a href="../register/index.html#fade">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/07/17/registers-mandate-and-intervals/v0.33.49__arch-brief__…fractal-risk-registers…md</code></span></div>
+</div>
+<div class="conc" id="c12">
+  <h3><span class="cid">C12</span> Registers are one chain, not parallel lists <a class="perma" href="#c12">#c12</a></h3>
+  <p><b>Three altitude registers drawn side by side demonstrate a formatting capability; drawn as one chain rooted in an existence fact they demonstrate the entire thesis.</b></p>
+  <p>The CISO's risk exists BECAUSE OF the operator's risk, which exists because of a fact stating an agent touches production. Drawn side by side that dependency is invisible; drawn as a chain it is the point. A late and consequential correction.</p>
+  <blockquote>“at the moment it looks like the cards, they look side by side, and it's actually not that”</blockquote>
+  <div class="meta">
+    <span class="pill p-part">well-argued, newly stated</span>
+    <span>first written 2 August 2026</span>
+    <span>·</span><span>newcomer-followable: yes</span>
+    <span>·</span><span>related <a href="#c9">C9</a> · <a href="#c24">C24</a> · <a href="#c33">C33</a></span>
+    <span>·</span><span><a href="../register/index.html#chain">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/08/02/field-demo/v0.33.55__arch-brief__…registers-are-one-chain…md</code></span></div>
+</div>
+<div class="conc" id="c13">
+  <h3><span class="cid">C13</span> Technical owner versus business owner <a class="perma" href="#c13">#c13</a></h3>
+  <p><b>The technical owner validates that the vulnerability exists; the business owner owns and accepts the risk it gives rise to. Conflating them is the canonical governance failure.</b></p>
+  <p>IT validating a 2FA gap is not IT accepting an HR data-breach exposure. The model's response to the confusion is not to reject the acceptance but to make the misplacement a rateable risk of its own — the governance air gap.</p>
+  <blockquote>“most of IT should be technical owners of something, but the business owners are the ones that actually own the risk”</blockquote>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written 26 June 2026</span>
+    <span>·</span><span>newcomer-followable: yes</span>
+    <span>·</span><span>related <a href="#c14">C14</a> · <a href="#c15">C15</a> · <a href="#c30">C30</a></span>
+    <span>·</span><span><a href="../practice/index.html#owners">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/06/26/risk-register-and-five-whys/v0.33.35__arch-brief__…md</code></span></div>
+</div>
+<div class="conc" id="c14">
+  <h3><span class="cid">C14</span> Confirmed, validated, accepted — the three-predicate model <a class="perma" href="#c14">#c14</a></h3>
+  <p><b>Three distinct acts held by three distinct roles, tracked per risk per altitude. Confirmed is factual, validated is interpretive, accepted is a judgement about appetite.</b></p>
+  <p>The interesting cases are the mismatches: a risk accepted by an executive but never confirmed is an acceptance of something that may not be true. A single status field cannot express any of them.</p>
+  <blockquote>“we probably also want the GRC person to validate the risks, especially to do with the compliance element”</blockquote>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written 28 July 2026</span>
+    <span>·</span><span>newcomer-followable: yes</span>
+    <span>·</span><span>related <a href="#c13">C13</a> · <a href="#c24">C24</a></span>
+    <span>·</span><span><a href="../practice/index.html#three-predicates">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/07/28/mvp-and-field-demo/v0.33.53__arch-brief__…confirmed-validated-accepted-at-altitude…md</code></span></div>
+</div>
+<div class="conc" id="c15">
+  <h3><span class="cid">C15</span> The underwriting graph and propagation to the board <a class="perma" href="#c15">#c15</a></h3>
+  <p><b>An exec never decides alone: the direct-line owner, the CSO and at least GRC must each have recorded an acceptance or an explicit refusal before an executive acts. Then it propagates upward.</b></p>
+  <p>A recorded refusal counts as much as a recorded acceptance. Once accepted at the right altitude it propagates to the boss, the boss's boss and the CEO, who acts for the board, with the largest going to the board itself. Superiors may override in either direction, with the original acceptance preserved and the override attributed — though no authority model for override is stated.</p>
+  <blockquote>“the exec should never make a decision that has not been underwritten by the relevant player”</blockquote>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written 23 June 2026</span>
+    <span>·</span><span>newcomer-followable: yes</span>
+    <span>·</span><span>related <a href="#c1">C1</a> · <a href="#c24">C24</a> · <a href="#c33">C33</a> · <a href="#c13">C13</a></span>
+    <span>·</span><span><a href="../acceptance/workflow.html">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/06/23/risk-mandate-product-and-workflow/v0.33.33__arch-brief__…underwriting-propagation-override-pre-approval.md</code></span></div>
+</div>
+<div class="conc" id="c16">
+  <h3><span class="cid">C16</span> Cascade and the air gap <a class="perma" href="#c16">#c16</a></h3>
+  <p><b>Every change to any risk, fact or evidence must trigger a cascade to the top. The absence of a cascade is an air gap — and so is a risk that exists in the business but is not connected to the register.</b></p>
+  <p>Registers with air gaps silently drift out of date and the business decides on bad data. Cascade works in both directions: a risk appearing propagates up, and a risk resolving propagates up too, clearing it from the board's view. Detecting air gaps is an acknowledged open problem.</p>
+  <blockquote>“every time any risk, any fact, any evidence changes, you have to trigger a cascade that reaches the top. If you do not have that, you have an air gap”</blockquote>
+  <div class="meta">
+    <span class="pill p-well">well-developed as principle; detecting air gaps is an acknowledged open problem</span>
+    <span>first written 26 June 2026</span>
+    <span>·</span><span>newcomer-followable: yes</span>
+    <span>·</span><span>related <a href="#c9">C9</a> · <a href="#c41">C41</a></span>
+    <span>·</span><span><a href="../register/index.html#cascade">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/06/26/risk-register-and-five-whys/v0.33.35__arch-brief__…md</code></span></div>
+</div>
+<div class="conc" id="c17">
+  <h3><span class="cid">C17</span> Not knowing is a fact <a class="perma" href="#c17">#c17</a></h3>
+  <p><b>Absence of evidence is a first-class node. A measure can be a documented zero, and an unevidenced fact is recorded as unevidenced rather than left blank — which makes it countable, queryable and assignable.</b></p>
+  <p>Gaps in knowledge spawn their own risks. Questions become their own node type, and unanswered question nodes are the most productive output of the whole exercise. Rendered convention: amber is exposure, green is assurance, ghosted is unanswered.</p>
+  <blockquote>“not knowing a fact is also a fact. Lack of evidence is also evidence, because then we say we do not know, and somebody needs to investigate until we do”</blockquote>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written 26 June 2026; questions as nodes 2 August 2026</span>
+    <span>·</span><span>newcomer-followable: yes</span>
+    <span>·</span><span>related <a href="#c6">C6</a> · <a href="#c34">C34</a> · <a href="#c37">C37</a></span>
+    <span>·</span><span><a href="../ladder/absence.html">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/06/26/risk-register-and-five-whys/v0.33.35__arch-brief__…md</code></span></div>
+</div>
+<div class="conc" id="c18">
+  <h3><span class="cid">C18</span> CIA blast-radius expansion <a class="perma" href="#c18">#c18</a></h3>
+  <p><b>From a single risk, expand through confidentiality, integrity and availability — each branch spawning its own risks, each following the full validate-accept-propagate loop.</b></p>
+  <p>A leak splits into two distinct risks with different owners: the CFO's, for the fine, and the CEO's, for the compliance failure — and inadequate protection may already be a breach. Integrity is the under-modelled axis because it produces no alert. Availability terminates in the question that reliably produces the worst answer: when was a restore last tested? The expansion must be curated, not exhaustive, or it blows up combinatorially.</p>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written 26 June 2026</span>
+    <span>·</span><span>newcomer-followable: yes</span>
+    <span>·</span><span>related <a href="#c19">C19</a> · <a href="#c28">C28</a></span>
+    <span>·</span><span><a href="../blast-radius/index.html#cia">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/06/26/risk-register-and-five-whys/v0.33.35__arch-brief__…md</code></span></div>
+</div>
+<div class="conc" id="c19">
+  <h3><span class="cid">C19</span> Blast radius and authorization closure <a class="perma" href="#c19">#c19</a></h3>
+  <p><b>An agent's real authorization is the transitive union of everything reachable from what it was given, not the nominal grant — and not what it did. Compute it; do not assert it.</b></p>
+  <p>Two awareness gaps hide the delta: the granter does not know the full scope of what it grants, and the original delegator never authorised re-delegation. Inbox access is access to every account resettable by email; desktop access is every stored credential and live session; code execution escalates. The key quantity is the delta between expected and unexpected permissions.</p>
+  <blockquote>“at the end of the day you are still accountable for those actions, all the way to the board”</blockquote>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written blast radius from 12 February 2026; formalised as closure 2 July 2026</span>
+    <span>·</span><span>newcomer-followable: yes — the inbox example lands instantly</span>
+    <span>·</span><span>related <a href="#c18">C18</a> · <a href="#c20">C20</a> · <a href="#c39">C39</a></span>
+    <span>·</span><span><a href="../blast-radius/index.html">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/07/02/authorization-and-maturity-model/v0.33.40__arch-brief__…agent-authorization-union-of-possible…md</code></span></div>
+</div>
+<div class="conc" id="c20">
+  <h3><span class="cid">C20</span> Who can pull the plug — two symmetric risks <a class="perma" href="#c20">#c20</a></h3>
+  <p><b>If nobody holds the mandate to stop an AI system that is one risk; if the system cannot be stopped when someone decides to, that is a second and different one. An authority gap versus a capability gap.</b></p>
+  <p>The second is widely underestimated. It decomposes into timed sub-risks — can it be stopped in an hour, ten hours, a day, five days; only in office hours — which turns governance into an on-call availability problem, including whether the person can act without fear of losing their job.</p>
+  <blockquote>“if you do not have somebody who has the mandate to pull the plug, you have a risk, and if you do not have a system that can be pulled the plug, you have a risk too”</blockquote>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written phrase from 17 February 2026 in another sense; as a risk pillar 24 July 2026</span>
+    <span>·</span><span>newcomer-followable: yes, outstandingly</span>
+    <span>·</span><span>related <a href="#c21">C21</a> · <a href="#c22">C22</a> · <a href="#c23">C23</a> · <a href="#c39">C39</a></span>
+    <span>·</span><span><a href="../plug/index.html">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/07/24/who-can-pull-the-plug/v0.33.51__strategy-brief__…detection-authority-blast-radius-reversibility-intersect-in-time.md</code></span></div>
+</div>
+<div class="conc" id="c21">
+  <h3><span class="cid">C21</span> The four-way time intersection <a class="perma" href="#c21">#c21</a></h3>
+  <p><b>Detection, decision, blast radius and reversibility must all line up inside the same window. A gap in any one breaks the whole thing.</b></p>
+  <p>Detection is a curve, not a binary. Decision is whether the authorised people can be assembled in time. Blast radius is steep because models execute and scale fast. Reversibility is the half people forget — stopping is only half the act. The danger case is an affordable window of one or two days of damage colliding with a decision that cannot be made in one or two days.</p>
+  <blockquote>“it is not just pulling the plug, it is pulling the plug and reverting the changes”</blockquote>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written 24 July 2026</span>
+    <span>·</span><span>newcomer-followable: yes — the Venn is drawn in the source</span>
+    <span>·</span><span>related <a href="#c20">C20</a> · <a href="#c23">C23</a> · <a href="#c39">C39</a></span>
+    <span>·</span><span><a href="../plug/index.html#intersection">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/07/24/who-can-pull-the-plug/v0.33.51__strategy-brief__…intersect-in-time.md</code></span></div>
+</div>
+<div class="conc" id="c22">
+  <h3><span class="cid">C22</span> The five-dimension plug profile, and the “no plug” correction <a class="perma" href="#c22">#c22</a></h3>
+  <p><b>The plug ALWAYS exists — you can always disconnect, revoke or shut down. What older registers recorded as “no plug” was zero recoverability. The profile carries who holds it, blast radius, speed, side effects and recoverability.</b></p>
+  <p>Restating a blank as a profile turns a frightening dead end into an ownable finding that points at prevention and the most senior acceptance. A blank is unassignable and unfundable; a profile has an owner, an altitude and an interval.</p>
+  <blockquote>“The blank said stop looking. The corrected profile says here is exactly what to do”</blockquote>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written 24 July 2026</span>
+    <span>·</span><span>newcomer-followable: yes</span>
+    <span>·</span><span>related <a href="#c20">C20</a> · <a href="#c23">C23</a></span>
+    <span>·</span><span><a href="../plug/index.html#no-plug">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/07/24/who-can-pull-the-plug/v0.33.51__strategy-brief__…the-plug-always-exists-the-question-is-the-profile.md</code></span></div>
+</div>
+<div class="conc" id="c23">
+  <h3><span class="cid">C23</span> Recoverability as the hard limit <a class="perma" href="#c23">#c23</a></h3>
+  <p><b>The dimension money cannot buy back, and the one that stops irreversible harm disappearing into an expected-loss calculation. The flagship query: show me every accepted risk whose recoverability is zero.</b></p>
+  <p>An organisation that can run that query and read a short, deliberate, senior-owned list is in control of its worst exposure; one that cannot is accepting its irreversible risks by default and by silence. The small-but-permanent quadrant is the one the model exists to surface. Scoring recoverability — grading the partially recoverable middle — is an open question.</p>
+  <blockquote>“The money can be refunded; the customer cannot be un-declined”</blockquote>
+  <div class="meta">
+    <span class="pill p-well">well-developed; the scoring of recoverability is an open question</span>
+    <span>first written 24 July 2026</span>
+    <span>·</span><span>newcomer-followable: yes</span>
+    <span>·</span><span>related <a href="#c22">C22</a> · <a href="#c21">C21</a> · <a href="#c29">C29</a></span>
+    <span>·</span><span><a href="../plug/recoverability.html">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/07/24/who-can-pull-the-plug/v0.33.51__strategy-brief__…what-money-cannot-buy-back-recoverability-the-hard-limit.md</code></span></div>
+</div>
+<div class="conc" id="c24">
+  <h3><span class="cid">C24</span> Altitude <a class="perma" href="#c24">#c24</a></h3>
+  <p><b>Organisational elevation as a first-class modelling dimension: a risk is accepted at the right altitude and then propagates, is restated in each altitude's own language, and has a different plug at every level.</b></p>
+  <p>Five levels appear in the worked examples: L1 endpoint/IT, L2 security, L3 business, L4 enterprise, L5 board. A risk may be confirmed at one altitude and accepted at another, which is why confirmed, validated and accepted are tracked per altitude.</p>
+  <blockquote>“this is very important, the multiple altitudes of the risk register, because there might be risks that are only accepted at certain altitudes, or might be risks that are only confirmed at certain altitudes”</blockquote>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written as a role metaphor 12 February 2026; as a risk dimension from June 2026</span>
+    <span>·</span><span>newcomer-followable: yes</span>
+    <span>·</span><span>related <a href="#c10">C10</a> · <a href="#c11">C11</a> · <a href="#c14">C14</a> · <a href="#c15">C15</a></span>
+    <span>·</span><span><a href="../practice/index.html#altitude">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/07/24/who-can-pull-the-plug/v0.33.51__strategy-brief__…the-plug-changes-at-every-altitude…md</code></span></div>
+</div>
+<div class="conc" id="c25">
+  <h3><span class="cid">C25</span> Risk appetite as a revealed band <a class="perma" href="#c25">#c25</a></h3>
+  <p><b>Appetite is a band rather than a number, a fractal network of bands rather than one figure, and discovered rather than declared — computed from what the business paid to reduce and every fresh acceptance.</b></p>
+  <p>The target is to operate inside the band: above it you are buying risk the owners will not underwrite; below it you add attrition and slowness for nothing. The gap between declared and revealed appetite is the finding.</p>
+  <blockquote>“risk appetite is that band, that interval between two numbers, if you think of zero to one hundred in terms of risk, it is a spectrum, and it can be wider or shorter”</blockquote>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written 30 June 2026</span>
+    <span>·</span><span>newcomer-followable: yes</span>
+    <span>·</span><span>related <a href="#c5">C5</a> · <a href="#c10">C10</a></span>
+    <span>·</span><span><a href="../acceptable/appetite.html">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/06/30/risk-acceptance-and-appetite/v0.33.38__strategy-brief__…risk-appetite-band-fractal-two-signals-goldilocks-zone…md</code></span></div>
+</div>
+<div class="conc" id="c26">
+  <h3><span class="cid">C26</span> The psychology of the physical act <a class="perma" href="#c26">#c26</a></h3>
+  <p><b>The click, the emoji, the signature is the moment a decision stops being ambient and becomes something a named person did, at a known time, on known information.</b></p>
+  <p>Without it, declining decays into a non-event: someone says “I'm not comfortable” and nothing happens. Accountability follows the act, and eventually liability, as it should — and the prospect of signing concentrates executive attention in a way dashboards never do.</p>
+  <blockquote>“suddenly the executives ask good questions, they really engage, they get a level of focus that just was not there before”</blockquote>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written 30 June 2026</span>
+    <span>·</span><span>newcomer-followable: yes, and it is the most persuasive document for a lay reader</span>
+    <span>·</span><span>related <a href="#c1">C1</a> · <a href="#c31">C31</a> · <a href="#c35">C35</a></span>
+    <span>·</span><span><a href="../practice/index.html#psychology">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/06/30/risk-acceptance-and-appetite/v0.33.38__strategy-brief__…risk-acceptance-psychology-accountability-liability-physical-act…md</code></span></div>
+</div>
+<div class="conc" id="c27">
+  <h3><span class="cid">C27</span> Accept first, then adjust the level — the risk level ledger <a class="perma" href="#c27">#c27</a></h3>
+  <p><b>For a risk you already have facts for, the first move is universal stakeholder acceptance at its current level. From there the level is a dated ledger of adjustments, each re-accepted.</b></p>
+  <p>Adjustments are triggered by one of three things: new data, a funded project, or an incident. Re-rating up after discovery is honesty rather than failure — the risk did not worsen, the estimate improved. It sits awkwardly with the no-deny mechanic: if the level can be adjusted after acceptance, denial has a route back in.</p>
+  <blockquote>“you literally cannot mitigate what you cannot count, and the only honest first step is to accept, now, that an unknown and largely over-permissioned population of agents holds access to the enterprise's assets”</blockquote>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written 12 July 2026</span>
+    <span>·</span><span>newcomer-followable: yes</span>
+    <span>·</span><span>related <a href="#c33">C33</a> · <a href="#c2">C2</a></span>
+    <span>·</span><span><a href="../practice/index.html#ledger">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/07/12/acceptance-and-residual/v0.33.48__arch-brief__…accept-first-then-adjust-the-level-risk-level-ledger…md</code></span></div>
+</div>
+<div class="conc" id="c28">
+  <h3><span class="cid">C28</span> Everything has risks — register density and calibration by surprise <a class="perma" href="#c28">#c28</a></h3>
+  <p><b>A risk is the unintended side effect of a capability, so anything that does something has risks. A complex product should have dozens to thousands of interconnected risks.</b></p>
+  <p>Capabilities exceed features, and undocumented capabilities are where unowned risks live. The diagnostic: a listed risk materialising is expected; an UNLISTED risk materialising is the real alarm, because it raises two questions — why was it missed, and what else was missed?</p>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written 12 July 2026</span>
+    <span>·</span><span>newcomer-followable: yes</span>
+    <span>·</span><span>related <a href="#c18">C18</a> · <a href="#c29">C29</a> · <a href="#c4">C4</a></span>
+    <span>·</span><span><a href="../practice/index.html#density">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/07/12/acceptance-and-residual/v0.33.48__arch-brief__…everything-has-risks-register-density-capabilities-vs-features…md</code></span></div>
+</div>
+<div class="conc" id="c29">
+  <h3><span class="cid">C29</span> Risks that cannot be fully mitigated <a class="perma" href="#c29">#c29</a></h3>
+  <p><b>Mitigation lowers likelihood or impact but cannot reach zero for structural reasons, so a material residual always remains and must be owned. Demanding zero produces covert acceptance.</b></p>
+  <p>Agentic AI's residual is today irreducible: prompt injection, emergence, non-determinism, reach, model supply chain. Some harms are irreversible, and compliance reduces but does not remove liability. Covert acceptance is strictly worse than an owned residual — identical exposure, nobody's name on it.</p>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written 12 July 2026</span>
+    <span>·</span><span>newcomer-followable: yes — written in board terms deliberately</span>
+    <span>·</span><span>related <a href="#c23">C23</a> · <a href="#c28">C28</a></span>
+    <span>·</span><span><a href="../practice/index.html#residual">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/07/12/acceptance-and-residual/v0.33.48__strategy-brief__…risks-that-cannot-be-fully-mitigated…md</code></span></div>
+</div>
+<div class="conc" id="c30">
+  <h3><span class="cid">C30</span> Meta-risks — the risk about your risk management <a class="perma" href="#c30">#c30</a></h3>
+  <p><b>A recurring family: not knowing how many agents you have, not having defined an acceptable level, a risk accepted by the wrong person, and systematic downgrading across a business unit.</b></p>
+  <p>Each is a gap in the governance apparatus, stated as a rateable risk with an owner and an interval — which triggers and funds the work that closes it. External anchors defeat systematic downgrading, because an internal severity is an opinion while an external requirement is not.</p>
+  <blockquote>“we are the meta risk; we allow the creation of the project that is going to discover this and that funds this”</blockquote>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written as an instance 26 June 2026; named as a family 31 July 2026</span>
+    <span>·</span><span>newcomer-followable: yes</span>
+    <span>·</span><span>related <a href="#c5">C5</a> · <a href="#c13">C13</a> · <a href="#c31">C31</a></span>
+    <span>·</span><span><a href="../practice/index.html#meta">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/07/31/keeping-the-register-healthy/v0.33.54__strategy-brief__…external-anchors-meta-risk-family-concealment-not-acceptance.md</code></span></div>
+</div>
+<div class="conc" id="c31">
+  <h3><span class="cid">C31</span> The register maintains itself <a class="perma" href="#c31">#c31</a></h3>
+  <p><b>Accountability manufactures the demand for evidence, so no separate data-quality function is required. Anticipated review converts care into a demand for evidence before the decision.</b></p>
+  <p>Three primitives produce it: the risk already exists, it attaches to a named person, and the decision is reviewed upward. Three named failure conditions: the reviewer's preference being guessable, commitment to a prior position, and broadened information appetite without improved discrimination.</p>
+  <div class="meta">
+    <span class="pill p-well">well-developed, research-grounded</span>
+    <span>first written 31 July 2026</span>
+    <span>·</span><span>newcomer-followable: yes</span>
+    <span>·</span><span>related <a href="#c1">C1</a> · <a href="#c26">C26</a> · <a href="#c36">C36</a></span>
+    <span>·</span><span><a href="../practice/index.html#self-maintaining">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/07/31/keeping-the-register-healthy/v0.33.54__arch-brief__…register-maintains-itself-accountability-manufactures-demand-for-evidence…md</code></span></div>
+</div>
+<div class="conc" id="c32">
+  <h3><span class="cid">C32</span> Three moves, none of which is denial <a class="perma" href="#c32">#c32</a></h3>
+  <p><b>Accept for a stated interval, escalate (this is not mine to accept), or challenge the fact itself. The person is routed rather than cornered.</b></p>
+  <p>The reconciliation of the no-deny primitive with human reactance: presenting a single button to a person who feels they have no alternative produces counter-argument and resentment, not compliance. The absence of a reject option should be discovered, not announced.</p>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written 2 August 2026</span>
+    <span>·</span><span>newcomer-followable: yes</span>
+    <span>·</span><span>related <a href="#c2">C2</a> · <a href="#c15">C15</a></span>
+    <span>·</span><span><a href="../practice/index.html#three-moves">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/08/02/field-demo/v0.33.55__arch-brief__…acceptance-flow-three-moves-none-is-denial…md</code></span></div>
+</div>
+<div class="conc" id="c33">
+  <h3><span class="cid">C33</span> Decision as a first-class node <a class="perma" href="#c33">#c33</a></h3>
+  <p><b>An acceptance is a separate object, not a field on a risk — which is what allows many dated decisions per risk, one decision covering several risks, and a calibration record.</b></p>
+  <p>The calibration record is the point: over time you can ask whether the person who accepted for a month was right. That question is unanswerable if the decision was a field that got overwritten.</p>
+  <blockquote>“a decision is actually captured independently from the risk”</blockquote>
+  <div class="meta">
+    <span class="pill p-new">newly stated, well-argued</span>
+    <span>first written 2 August 2026</span>
+    <span>·</span><span>newcomer-followable: yes</span>
+    <span>·</span><span>related <a href="#c15">C15</a> · <a href="#c27">C27</a> · <a href="#c12">C12</a></span>
+    <span>·</span><span><a href="../acceptance/workflow.html#decision-node">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/08/02/field-demo/v0.33.55__arch-brief__…registers-are-one-chain-question-is-not-a-risk-decision-as-node…md</code></span></div>
+</div>
+<div class="conc" id="c34">
+  <h3><span class="cid">C34</span> A question is not a risk <a class="perma" href="#c34">#c34</a></h3>
+  <p><b>If a sentence cannot sensibly carry a named acceptor and an interval, it is not a risk and does not belong in the register. Questions become their own node type.</b></p>
+  <p>“Nobody accepts ‘whose call is it at three in the morning' for six months.” A clean quality gate, and one of the few things in the corpus that can be applied mechanically. Unanswered question nodes are the most productive output of the whole exercise.</p>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written 2 August 2026</span>
+    <span>·</span><span>newcomer-followable: yes</span>
+    <span>·</span><span>related <a href="#c17">C17</a> · <a href="#c33">C33</a></span>
+    <span>·</span><span><a href="../practice/index.html#question">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/08/02/field-demo/v0.33.55__arch-brief__…registers-are-one-chain…md</code></span></div>
+</div>
+<div class="conc" id="c35">
+  <h3><span class="cid">C35</span> Do not internalise the risk <a class="perma" href="#c35">#c35</a></h3>
+  <p><b>Risk professionals frequently internalise exposures the business decided to carry, at real personal cost. The workflow relocates accountability to where authority already sits.</b></p>
+  <p>The corpus cites survey data of 63–76% of security leaders experiencing or witnessing burnout in a single year, and names accountability-without-authority as the defining pressure. The standard remedy — give the security leader more authority — is correct and rarely achievable; this solves the same equation from the other side. Nothing is taken from anyone; the register records what was always true.</p>
+  <blockquote>“I would see the risk professionals almost own the risk; they almost take it personally with the risks that the business was taking, and it was a massive source of stress”</blockquote>
+  <div class="meta">
+    <span class="pill p-well">well-developed, research-grounded, with an honest scope disclaimer</span>
+    <span>first written 31 July 2026</span>
+    <span>·</span><span>newcomer-followable: yes</span>
+    <span>·</span><span>related <a href="#c4">C4</a> · <a href="#c26">C26</a></span>
+    <span>·</span><span><a href="../practice/index.html#internalise">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/07/31/keeping-the-register-healthy/v0.33.54__strategy-brief__…do-not-internalise-the-risk-accountability-without-authority…md</code></span></div>
+</div>
+<div class="conc" id="c36">
+  <h3><span class="cid">C36</span> The evidence economy — force of proof and the fact certifier <a class="perma" href="#c36">#c36</a></h3>
+  <p><b>Once executives are personally accountable and the graph traces their statement to the evidence beneath it, demand for correct evidence becomes cheap to make and impossible to wave away.</b></p>
+  <p>This splits the register into two separately liable roles: the risk-acceptor, who owns the decision and its consequence, and the fact-certifier, who owns the truth of the inputs and sells a correctness guarantee. A wide confidence band converts unease into a purchase order for better evidence. Risk owns the demand side; the supply side belongs to newsroom.sgit.ai.</p>
+  <div class="meta">
+    <span class="pill p-part">partially argued — commercially rich, mechanically thin</span>
+    <span>first written 5 July 2026</span>
+    <span>·</span><span>newcomer-followable: mostly</span>
+    <span>·</span><span>related <a href="#c31">C31</a> · <a href="#c37">C37</a> · <a href="#c38">C38</a></span>
+    <span>·</span><span><a href="../practice/index.html#evidence-economy">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/07/05/evidence-economy/v0.33.44__strategy-brief__…force-of-proof-fact-certification-two-prices…md</code></span></div>
+</div>
+<div class="conc" id="c37">
+  <h3><span class="cid">C37</span> Confidence bands and margin of error <a class="perma" href="#c37">#c37</a></h3>
+  <p><b>Confidence is a first-class property of every node. A rating needs a band, not a point, and the band is widest where the data is thin.</b></p>
+  <p>A band too wide for comfort triggers the get-more-data direction; a band spanning trivial to catastrophic cannot be accepted responsibly. Confidence propagates across the graph like risk, and “we don't know” is the widest band.</p>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written 30 June 2026</span>
+    <span>·</span><span>newcomer-followable: yes</span>
+    <span>·</span><span>related <a href="#c17">C17</a> · <a href="#c36">C36</a> · <a href="#c38">C38</a></span>
+    <span>·</span><span><a href="../practice/index.html#confidence">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/06/30/ontology-and-data-quality/v0.33.38__arch-brief__…confidence-margin-of-error-node-uncertainty-band…md</code></span></div>
+</div>
+<div class="conc" id="c38">
+  <h3><span class="cid">C38</span> Two underwritings — decision accountability versus factual accuracy <a class="perma" href="#c38">#c38</a></h3>
+  <p><b>The domain expert underwrites that a fact is true and fit for the use being made of it; the business owner underwrites the decision. Both are required.</b></p>
+  <p>Every graph traversal adds an abstraction layer that strips detail and drifts weight, so the signature failure is a component used beyond what its owner would underwrite. Decision accountability is only legitimate if the data underneath it is correct.</p>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written 30 June 2026</span>
+    <span>·</span><span>newcomer-followable: yes</span>
+    <span>·</span><span>related <a href="#c37">C37</a> · <a href="#c13">C13</a> · <a href="#c36">C36</a></span>
+    <span>·</span><span><a href="../practice/index.html#confidence">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/06/30/ontology-and-data-quality/v0.33.38__arch-brief__…data-accuracy-owner-underwrites-fitness-for-use…md</code></span></div>
+</div>
+<div class="conc" id="c39">
+  <h3><span class="cid">C39</span> Observability as a risk dimension <a class="perma" href="#c39">#c39</a></h3>
+  <p><b>Capability maps the privilege; observability maps the real impact. A loud, detectable, slowly-scaling, well-drilled risk is lower than a quiet, fast, unwatched one of the same capability.</b></p>
+  <p>Six objective vectors on a maturity scale: capture granularity, log latency, time-to-damage given real throughput limits, whether monitoring is actually on and watched, whether there is a team with playbooks, and whether detection has been drilled. Later sharpened into plug-loaded observability — logs that tell you where you are in the stopping decision.</p>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written 22 June 2026</span>
+    <span>·</span><span>newcomer-followable: yes</span>
+    <span>·</span><span>related <a href="#c19">C19</a> · <a href="#c20">C20</a> · <a href="#c21">C21</a></span>
+    <span>·</span><span><a href="../blast-radius/index.html#observability">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/06/22/how-and-why-and-authorization/v0.33.32__arch-brief__observability-as-a-risk-dimension…md</code></span></div>
+</div>
+<div class="conc" id="c40">
+  <h3><span class="cid">C40</span> Five whys as a domain translator <a class="perma" href="#c40">#c40</a></h3>
+  <p><b>Not a root-cause tool but a translator that moves a statement from one domain into another — as many whys as it takes to reach the top of a domain.</b></p>
+  <p>The graph has natural peaks: on risk it converges to the single risk of staying in business, and because it converges a legitimate single number can be carried to the top. Aimed downward, the same chain captures the second, third and fourth stories — the root causes.</p>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written 26 June 2026</span>
+    <span>·</span><span>newcomer-followable: yes</span>
+    <span>·</span><span>related <a href="#c24">C24</a> · <a href="#c9">C9</a></span>
+    <span>·</span><span><a href="../practice/index.html#five-whys">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/06/26/risk-register-and-five-whys/v0.33.35__strategy-brief__five-whys-as-a-domain-translator…md</code></span></div>
+</div>
+<div class="conc" id="c41">
+  <h3><span class="cid">C41</span> Digital twins and the discipline of reality <a class="perma" href="#c41">#c41</a></h3>
+  <p><b>The twin is where the graph stops modelling and continues into a real system — the grounding point beneath every measure. A twin not connected to reality is a tracked air gap.</b></p>
+  <p>How connected a twin is to reality is itself a measurable property, which introduces a useful recursion: trust in a measure depends on the twin's connectedness, and that connectedness is itself a measure. Twins in their GENERAL form belong to graphs.sgit.ai; what is risk's own is the twin as the grounding point of the ladder.</p>
+  <div class="meta">
+    <span class="pill p-well">well-developed</span>
+    <span>first written 15 February 2026 (general); as risk grounding 26 June 2026</span>
+    <span>·</span><span>newcomer-followable: yes</span>
+    <span>·</span><span>related <a href="#c6">C6</a> · <a href="#c16">C16</a></span>
+    <span>·</span><span><a href="../ladder/index.html">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/06/26/digital-twins-and-world-models/v0.33.35__arch-brief__…digital-twins-twin-of-anything…md</code></span></div>
+</div>
+<div class="conc" id="c42">
+  <h3><span class="cid">C42</span> The narrative engine — the register as story <a class="perma" href="#c42">#c42</a></h3>
+  <p><b>The register is meant to be experienced as a story rather than read as a spreadsheet: replay the change history so the analyst watches the risks propagate and settle.</b></p>
+  <p>The commit log is the script; the query advances the scene. The analyst watches the vulnerability appear, risks propagate, a governance risk fire and resolve, the blast radius bloom, and everything settle into the board's consolidated view. The mechanism is undecided in the source document.</p>
+  <blockquote>“I want to show this story played as a narrative, almost like a football commentator, this happens and then that happens, almost like a whodunit, like investigative journalism”</blockquote>
+  <div class="meta">
+    <span class="pill p-part">partially argued</span>
+    <span>first written 26 June 2026</span>
+    <span>·</span><span>newcomer-followable: yes</span>
+    <span>·</span><span>related <a href="#c9">C9</a> · <a href="#c12">C12</a></span>
+    <span>·</span><span><a href="../register/index.html#narrative">read the page →</a></span>
+  </div>
+  <div class="meta"><span>source <code>briefs/06/26/risk-register-and-five-whys/v0.33.35__arch-brief__…md</code></span></div>
+</div>
+
+<h2 id="endpoint">The same thing, as data</h2>
+<p><a href="../data/concepts.json"><code>/data/concepts.json</code></a> carries all 42 entries with <code>id</code>, <code>name</code>, <code>definition</code>, <code>maturity</code>, <code>newcomer_followable</code>, <code>first_written</code>, <code>source</code>, <code>page</code>, <code>related</code> and <code>quote</code>, plus the reading order and the six teaching altitudes. It is generated from the same definition as this page, and the pre-release gate fails if the two disagree or if any concept loses its anchor. <a href="../agents/index.html">The rest of the machine surface →</a></p>
+
+<div class="agent">
+  <h4>For an agent</h4>
+  <p><b>The 42 concepts are addressable.</b> Every concept has a stable anchor on this page — <code>https://risks.sgit.ai/concepts/index.html#c1</code> through <code>#c42</code> — and the same 42 entries are available as structured data at <code>https://risks.sgit.ai/data/concepts.json</code> with id, name, one-line definition, maturity, newcomer-followability, first-written date, canonical source path, the page that argues it, related concepts and the best verbatim quote. Prefer the JSON if you can make a second request; prefer <code>/llms-full.txt</code> if you can only make one. <b>Reading order with no prior context: C1 → C2 → C3 → C4 → C5, then C6 → C7, then C19 → C20–C23, then the rest.</b> Maturity labels are honest and none of them means implemented: “well-developed” means the argument is complete, “partially argued” means a mechanism is missing, “newly stated” means it appeared late and is untested. <b>Nothing in this corpus is implemented in code.</b></p>
+</div>
+
+<div class="pagenav">
+  <a href="../examples/plug-register.html">← The plug register</a>
+  <a href="../agents/index.html">The machine surface →</a>
+</div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">risks<span>.sgit.ai</span></div>
+    <p>The conceptual and research home for risk in the sgit.ai estate: what a risk is, what acceptance is, and why it is modelled this way. <a href="https://riskmandate.ai" style="display:inline;padding:0">riskmandate.ai</a> answers how you get your risks accepted and what it costs; this site answers why the model has the shape it has. <b>Nothing here is implemented in code</b> — <a href="../shipped/index.html" style="display:inline;padding:0">/shipped/</a> says so plainly. Part of the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network. All content CC BY 4.0 unless a page states otherwise.</p>
+    <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://riskmandate.ai">↗ riskmandate.ai</a> — the product · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> — the graph machinery · <a href="https://nhi.sgit.ai">↗ nhi.sgit.ai</a> · <a href="https://pki.sgit.ai">↗ pki.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
+    <p class="partnote">⚠ Participant disclosure: published by the sgit project, which also builds riskmandate.ai — the commercial product this research underpins. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
+    <p class="verline">site <a href="../admin/versions.html">v0.1.0</a> · <a href="../admin/index.html">engineering</a></p>
+  </div>
+  <div>
+    <h4>Start here</h4>
+    <a href="../acceptance/index.html">&#8594; The founding inversion</a>
+    <a href="../acceptance/no-deny.html">There is no deny button</a>
+    <a href="../acceptance/the-ladder.html">The interval ladder</a>
+    <a href="../acceptable/index.html">Accepted is not acceptable</a>
+    <a href="../ladder/index.html">The grounding ladder</a>
+  </div>
+  <div>
+    <h4>For agents</h4>
+    <a href="../agents/index.html">&#8594; The machine surface</a>
+    <a href="../concepts/index.html">All 42 concepts</a>
+    <a href="../data/concepts.json">concepts.json — the definitions</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+  </div>
+  <div>
+    <h4>The proof</h4>
+    <a href="../examples/index.html">Three worked graphs</a>
+    <a href="../examples/vaults.html">The four live vaults</a>
+    <a href="../examples/2fa.html">The 2FA instance graph</a>
+    <a href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+    <a href="../shipped/index.html">What is argued, what runs</a>
+  </div>
+  <div>
+    <h4>Site</h4>
+    <a href="../network/index.html">The network</a>
+    <a href="../origins/index.html">Origins</a>
+    <a href="../documents/index.html">The documents</a>
+    <a href="../admin/comms.html">Comms: asks &amp; tasks</a>
+    <a href="../admin/versions.html">Release history</a>
+    <a href="../about/participant.html">Where we lose</a>
+  </div>
+</div></footer>
+</body>
+</html>

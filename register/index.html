@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The register as a graph of graphs · risks.sgit.ai</title>
+<meta name="description" content="One register per accepting entity, all of them views of one connected chain rather than parallel lists. Relevance fade, cascade, air gaps, and the register replayed as a narrative.">
+<link rel="canonical" href="https://risks.sgit.ai/register/index.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="risks.sgit.ai">
+<meta property="og:url" content="https://risks.sgit.ai/register/index.html">
+<meta property="og:title" content="The register as a graph of graphs">
+<meta property="og:description" content="It begins where scanners stop — at the vulnerability — and maps accepting, funding, and finding who does the work.">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../index.html">risks<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: vaults, publishing and the catalogue. This site is the estate's conceptual home for risk">↗ part of <b>sgit.ai</b></a>
+  <span class="stage-pill">research site</span>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.1.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni ni-has">
+      <a class="nl" href="../acceptance/index.html">Acceptance<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../acceptance/index.html">The founding inversion</a>
+      <a class="sl" href="../acceptance/underwriting.html">Underwriting, not prediction</a>
+      <a class="sl" href="../acceptance/no-deny.html">There is no deny button</a>
+      <a class="sl" href="../acceptance/the-ladder.html">The interval ladder</a>
+      <a class="sl" href="../acceptance/unaccepted-is-critical.html">Unaccepted is critical</a>
+      <a class="sl" href="../acceptance/workflow.html">Who underwrites, and how it flows up</a>
+      <a class="sl" href="../acceptable/index.html">Accepted is not acceptable</a>
+      <a class="sl" href="../acceptable/appetite.html">Appetite as a revealed band</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../ladder/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../ladder/index.html">The grounding ladder</a>
+      <a class="sl" href="../ladder/formulas.html">Node type formulas</a>
+      <a class="sl" href="../ladder/bridges.html">Bridges, not merges</a>
+      <a class="sl" href="../ladder/absence.html">Not knowing is a fact</a>
+      <a class="sl here" href="../register/index.html">The register as a graph of graphs</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../plug/index.html">The exposure<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../plug/index.html">Who can pull the plug</a>
+      <a class="sl" href="../plug/recoverability.html">Recoverability: the hard limit</a>
+      <a class="sl" href="../blast-radius/index.html">Blast radius &amp; authorization closure</a>
+      <a class="sl" href="../practice/index.html">Practice: owners, altitude, meta-risks</a>
+      <a class="sl" href="../ramm/index.html">RAMM and the maturity models</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../examples/index.html">The proof<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../examples/index.html">Three worked graphs</a>
+      <a class="sl" href="../examples/2fa.html">The 2FA instance graph</a>
+      <a class="sl" href="../examples/browser-isolation.html">The browser-isolation case</a>
+      <a class="sl" href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+      <a class="sl" href="../examples/vaults.html">The four live vaults</a>
+      <a class="sl" href="../examples/scenarios.html">The ten scenarios</a>
+      <a class="sl" href="../examples/plug-register.html">The plug register</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../agents/index.html">For agents<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../agents/index.html">The machine surface</a>
+      <a class="sl" href="../concepts/index.html">All 42 concepts, addressable</a>
+      <a class="sl" href="../shipped/index.html">What is argued, what runs</a>
+      <a class="sl" href="../llms.txt">llms.txt</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../network/index.html">Site<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../network/index.html">The network: where the boundaries are</a>
+      <a class="sl" href="../origins/index.html">Origins: February to August 2026</a>
+      <a class="sl" href="../documents/index.html">The documents</a>
+      <a class="sl" href="../admin/comms.html">Comms: asks &amp; tasks</a>
+      <a class="sl" href="../admin/versions.html">Release history</a>
+      <a class="sl" href="../admin/index.html">Admin &amp; engineering</a>
+      <a class="sl" href="../about/participant.html">Where we lose</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__Risks">★ GitHub</a>
+  <script src="../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+<div class="crumb"><a href="../index.html">risks.sgit.ai</a> / the register</div>
+<h1>The register as a graph of graphs</h1>
+<p class="lead">A risk register is not a spreadsheet at the top of a company. It is a hyperlinked semantic graph — one per accepting entity, all of them views of one connected structure rather than parallel lists. Its distinguishing move is where it <em>starts</em>: at the vulnerability, which is exactly where scanners and security products stop.</p>
+<blockquote class="challenge">“a lot of security teams and products end on the vulnerability, and what I want to show is the multiple layers involved in fixing it, but even before that, in accepting the risk, funding the solution, and finding who is going to do it.”</blockquote>
+
+<h2 id="starts">It begins where scanners stop</h2>
+<p>A scanner's output is a list of vulnerabilities, and its implicit theory is that the hard part is finding them. In practice the finding is the cheap part. What follows is where the work is, and none of it is in the scanner's output:</p>
+<div class="ops">
+  <div class="op"><b>1 · WHO CONFIRMS IT</b><p>The technical owner validates that the vulnerability is real in their domain. Factual, and either true or false. <a href="../practice/index.html#three-predicates">Confirmed →</a></p></div>
+  <div class="op"><b>2 · WHO OWNS THE CONSEQUENCE</b><p>Not the same person. The business owner owns the risk the vulnerability gives rise to, which is usually in a different department and a different vocabulary. <a href="../practice/index.html#owners">Technical vs business owner →</a></p></div>
+  <div class="op"><b>3 · WHO ACCEPTS IT, AND FOR HOW LONG</b><p>The underwriting act, at the right altitude, on <a href="../acceptance/the-ladder.html">the interval ladder</a>.</p></div>
+  <div class="op"><b>4 · WHO FUNDS THE FIX, AND WHO DOES IT</b><p>The interval already committed the organisation to a response. This is where that commitment turns into a project with a name against it.</p></div>
+</div>
+
+<h2 id="fractal">Fractal: one register per accepting entity</h2>
+<p>Wherever there is a stakeholder who accepts risk, there is a register. For the company, for a department, for an individual role. That is not an organisational nicety — it follows directly from <a href="../acceptance/index.html">acceptance being a personal act</a>: if a named person underwrites, they need a place where the things they have underwritten are listed.</p>
+<p>Most of those registers are <b>derived rather than curated</b>. An individual has at least two and often three: their own role-specific register in their own domain language, plus views of the registers above them. <b>Only the role's own register is stored; the rest are queries.</b></p>
+<div class="tablewrap"><table>
+  <thead><tr><th>Register</th><th>Stored or derived</th><th>Whose language it is in</th></tr></thead>
+  <tbody>
+    <tr><td>The role's own</td><td><b>Stored</b></td><td>The role's — a DBA's register says “unrestricted access to the customer table”</td></tr>
+    <tr><td>The department's, seen from the role</td><td>Derived</td><td>The department's, with the parts that trace back to this role lit up</td></tr>
+    <tr><td>The board's, seen from the role</td><td>Derived</td><td>The board's — “regulatory penalty, loss of licence, continuity failure”</td></tr>
+  </tbody>
+</table></div>
+
+<h2 id="fade">Relevance fade, and why it teaches</h2>
+<p>The visualisation property that falls out of the fractal structure, and the most quietly powerful idea in this section. Centre a view on a role: that role's register is lit in full, and the registers above it fade — except for the entries that trace back down to this role, which stay lit.</p>
+<blockquote class="challenge">“as you go up, imagine the colours can fade away for the next registers for the bits that are not relevant, so the graph starts to point which parts of the risk register above are relevant to this individual, so that he understands the picture.”</blockquote>
+<div class="claim">A database administrator can see that their local “an agent holds unrestricted access to a customer table” is <em>the same object</em> as the board's “regulatory penalty, loss of licence, continuity failure”. Seeing that once teaches more than any training course.</div>
+<p><span class="pill p-part">partially argued</span> The visualisation is described and has not been built.</p>
+
+<h2 id="chain">One chain, not parallel lists</h2>
+<p>A late correction (2 August 2026) and a consequential one. Three altitude registers drawn side by side demonstrate a formatting capability. Drawn as <b>one chain rooted in an existence fact</b>, they demonstrate the entire thesis.</p>
+<div class="pathline">
+  <span class="nd">F1: an agent has write access to production</span><span class="ed">gives_rise_to</span><span class="nd">L1: the operator's risk</span><span class="ed">gives_rise_to</span><span class="nd">L3: the CISO's risk</span><span class="ed">gives_rise_to</span><span class="nd">L5: the board's risk</span>
+  <span class="say">The CISO's risk exists <em>because of</em> the operator's risk, which exists because of a fact. Side by side, that dependency is invisible; as a chain, it is the point.</span>
+</div>
+<div class="claim">“at the moment it looks like the cards, they look side by side, and it's actually not that.”</div>
+
+<h2 id="cascade">Cascade, and the air gap</h2>
+<p>Every change to any risk, fact or piece of evidence must trigger a cascade that reaches the top. The absence of a cascade has a name:</p>
+<blockquote class="challenge">“every time any risk, any fact, any evidence changes, you have to trigger a cascade that reaches the top. If you do not have that, you have an air gap, which means you do not have good data, and you cannot make good decisions.”</blockquote>
+<p><b>Air gap</b> is used in two senses, and both are useful. A missing cascade is one. A risk that exists in the business but is not connected to the register at all is the other — and it is the more dangerous, because nothing about the register indicates it is there. A <a href="../ladder/index.html">twin that is not connected to reality</a> is a third instance of the same shape.</p>
+<p id="airgap">Cascade runs in both directions, which is easy to miss: a risk <em>resolving</em> propagates upward too, clearing it from the board's view. A register that only ever accumulates is as misleading as one that never updates.</p>
+<div class="warnbox"><p style="margin-top:0"><b>Detecting air gaps is an acknowledged open problem.</b> The principle is well developed and the detection mechanism is not specified — by construction it is hard, since an air gap is defined by the absence of a connection nobody recorded. The corpus states this rather than glossing it.</p></div>
+
+<h2 id="narrative">The register as a story</h2>
+<p>The last idea in this section, and the one furthest from being built. The register is meant to be <em>experienced</em> rather than read: replay its change history through timestamps, commits or a series of queries, and watch the vulnerability appear, the risks propagate, a governance risk fire and resolve, the blast radius bloom, and everything settle into the board's consolidated view.</p>
+<blockquote class="challenge">“I want to show this story played as a narrative, almost like a football commentator, this happens and then that happens, almost like a whodunit, like investigative journalism.”</blockquote>
+<p>The commit log is the script and the query advances the scene. <span class="pill p-part">partially argued</span> — the mechanism is undecided in the source document. The nearest thing that exists is <a href="../examples/vaults.html#risk-mandate">the Risk Mandate vault's 98 commits</a>, which is the method applied to its own build and is a change history somebody could replay.</p>
+
+<h2 id="provenance">Provenance</h2>
+<div class="docmeta">
+  <div class="k">Concepts</div><div class="v">C9 register as a graph of graphs · C10 fractal registers · C11 relevance fade · C12 one chain not parallel lists · C16 cascade and air gaps · C42 the narrative engine</div>
+  <div class="k">Sources</div><div class="v"><code>briefs/06/26/risk-register-and-five-whys/v0.33.35__arch-brief__…graph-of-graphs…md</code> · <code>briefs/07/17/registers-mandate-and-intervals/v0.33.49__arch-brief__…fractal-risk-registers…md</code> · <code>briefs/08/02/field-demo/v0.33.55__arch-brief__…registers-are-one-chain…md</code></div>
+  <div class="k">First written</div><div class="v">26 June 2026 · 17 July 2026 · 2 August 2026</div>
+  <div class="k">Maturity</div><div class="v"><span class="pill p-well">well-developed</span> for the register, fractal structure and cascade · <span class="pill p-part">partially argued</span> for relevance fade and the narrative engine</div>
+  <div class="k">Licence</div><div class="v">CC BY 4.0 at source and here</div>
+</div>
+
+<div class="agent">
+  <h4>For an agent</h4>
+  <p><b>The register (C9, C10, C11, C12, C16, C42).</b> A risk register is a <b>hyperlinked semantic graph</b>, not a spreadsheet, and it <b>begins at the vulnerability</b> — where scanners stop — and maps confirming, owning, accepting, funding and staffing the fix. It is <b>fractal</b>: one register per accepting entity (company, department, role), of which <b>only the role's own register is stored — the rest are queries</b>. <b>Relevance fade</b>: centring a view on a role lights that role's register in full and fades the registers above it except for entries tracing back down, so a DBA can see their local exposure and the board's “regulatory penalty” are the same object. <b>Registers are one chain, not parallel lists</b> — the CISO's risk exists <em>because of</em> the operator's risk, which exists because of an existence fact; drawn side by side that dependency is invisible. <b>Cascade</b>: any change to any risk, fact or evidence must propagate to the top, in both directions (resolution clears the board's view too); a missing cascade, or a risk not connected to the register at all, is an <b>air gap</b>, and detecting air gaps is an acknowledged open problem. <b>Not implemented in code</b>; relevance fade and the narrative engine are not even specified.</p>
+</div>
+
+<div class="pagenav">
+  <a href="../ladder/absence.html">← Not knowing is a fact</a>
+  <a href="../blast-radius/index.html">Blast radius →</a>
+</div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">risks<span>.sgit.ai</span></div>
+    <p>The conceptual and research home for risk in the sgit.ai estate: what a risk is, what acceptance is, and why it is modelled this way. <a href="https://riskmandate.ai" style="display:inline;padding:0">riskmandate.ai</a> answers how you get your risks accepted and what it costs; this site answers why the model has the shape it has. <b>Nothing here is implemented in code</b> — <a href="../shipped/index.html" style="display:inline;padding:0">/shipped/</a> says so plainly. Part of the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network. All content CC BY 4.0 unless a page states otherwise.</p>
+    <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://riskmandate.ai">↗ riskmandate.ai</a> — the product · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> — the graph machinery · <a href="https://nhi.sgit.ai">↗ nhi.sgit.ai</a> · <a href="https://pki.sgit.ai">↗ pki.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
+    <p class="partnote">⚠ Participant disclosure: published by the sgit project, which also builds riskmandate.ai — the commercial product this research underpins. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
+    <p class="verline">site <a href="../admin/versions.html">v0.1.0</a> · <a href="../admin/index.html">engineering</a></p>
+  </div>
+  <div>
+    <h4>Start here</h4>
+    <a href="../acceptance/index.html">&#8594; The founding inversion</a>
+    <a href="../acceptance/no-deny.html">There is no deny button</a>
+    <a href="../acceptance/the-ladder.html">The interval ladder</a>
+    <a href="../acceptable/index.html">Accepted is not acceptable</a>
+    <a href="../ladder/index.html">The grounding ladder</a>
+  </div>
+  <div>
+    <h4>For agents</h4>
+    <a href="../agents/index.html">&#8594; The machine surface</a>
+    <a href="../concepts/index.html">All 42 concepts</a>
+    <a href="../data/concepts.json">concepts.json — the definitions</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+  </div>
+  <div>
+    <h4>The proof</h4>
+    <a href="../examples/index.html">Three worked graphs</a>
+    <a href="../examples/vaults.html">The four live vaults</a>
+    <a href="../examples/2fa.html">The 2FA instance graph</a>
+    <a href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+    <a href="../shipped/index.html">What is argued, what runs</a>
+  </div>
+  <div>
+    <h4>Site</h4>
+    <a href="../network/index.html">The network</a>
+    <a href="../origins/index.html">Origins</a>
+    <a href="../documents/index.html">The documents</a>
+    <a href="../admin/comms.html">Comms: asks &amp; tasks</a>
+    <a href="../admin/versions.html">Release history</a>
+    <a href="../about/participant.html">Where we lose</a>
+  </div>
+</div></footer>
+</body>
+</html>

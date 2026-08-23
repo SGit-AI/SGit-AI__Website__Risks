@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Accepted is not acceptable · risks.sgit.ai</title>
+<meta name="description" content="Accepted is an act by a named person at a dated moment. Acceptable is a threshold the business owns — the point at which it stops funding remediation. Two orthogonal axes, four states, and the Article 9(5) definitional gap.">
+<link rel="canonical" href="https://risks.sgit.ai/acceptable/index.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="risks.sgit.ai">
+<meta property="og:url" content="https://risks.sgit.ai/acceptable/index.html">
+<meta property="og:title" content="Accepted is not acceptable — two orthogonal axes">
+<meta property="og:description" content="Acceptable is the moment the business is happy to stop funding remediation activities. Article 9(5) mandates the judgement and never defines the word.">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../index.html">risks<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: vaults, publishing and the catalogue. This site is the estate's conceptual home for risk">↗ part of <b>sgit.ai</b></a>
+  <span class="stage-pill">research site</span>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.1.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni ni-has">
+      <a class="nl here" href="../acceptance/index.html">Acceptance<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../acceptance/index.html">The founding inversion</a>
+      <a class="sl" href="../acceptance/underwriting.html">Underwriting, not prediction</a>
+      <a class="sl" href="../acceptance/no-deny.html">There is no deny button</a>
+      <a class="sl" href="../acceptance/the-ladder.html">The interval ladder</a>
+      <a class="sl" href="../acceptance/unaccepted-is-critical.html">Unaccepted is critical</a>
+      <a class="sl" href="../acceptance/workflow.html">Who underwrites, and how it flows up</a>
+      <a class="sl here" href="../acceptable/index.html">Accepted is not acceptable</a>
+      <a class="sl" href="../acceptable/appetite.html">Appetite as a revealed band</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../ladder/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../ladder/index.html">The grounding ladder</a>
+      <a class="sl" href="../ladder/formulas.html">Node type formulas</a>
+      <a class="sl" href="../ladder/bridges.html">Bridges, not merges</a>
+      <a class="sl" href="../ladder/absence.html">Not knowing is a fact</a>
+      <a class="sl" href="../register/index.html">The register as a graph of graphs</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../plug/index.html">The exposure<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../plug/index.html">Who can pull the plug</a>
+      <a class="sl" href="../plug/recoverability.html">Recoverability: the hard limit</a>
+      <a class="sl" href="../blast-radius/index.html">Blast radius &amp; authorization closure</a>
+      <a class="sl" href="../practice/index.html">Practice: owners, altitude, meta-risks</a>
+      <a class="sl" href="../ramm/index.html">RAMM and the maturity models</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../examples/index.html">The proof<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../examples/index.html">Three worked graphs</a>
+      <a class="sl" href="../examples/2fa.html">The 2FA instance graph</a>
+      <a class="sl" href="../examples/browser-isolation.html">The browser-isolation case</a>
+      <a class="sl" href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+      <a class="sl" href="../examples/vaults.html">The four live vaults</a>
+      <a class="sl" href="../examples/scenarios.html">The ten scenarios</a>
+      <a class="sl" href="../examples/plug-register.html">The plug register</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../agents/index.html">For agents<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../agents/index.html">The machine surface</a>
+      <a class="sl" href="../concepts/index.html">All 42 concepts, addressable</a>
+      <a class="sl" href="../shipped/index.html">What is argued, what runs</a>
+      <a class="sl" href="../llms.txt">llms.txt</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../network/index.html">Site<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../network/index.html">The network: where the boundaries are</a>
+      <a class="sl" href="../origins/index.html">Origins: February to August 2026</a>
+      <a class="sl" href="../documents/index.html">The documents</a>
+      <a class="sl" href="../admin/comms.html">Comms: asks &amp; tasks</a>
+      <a class="sl" href="../admin/versions.html">Release history</a>
+      <a class="sl" href="../admin/index.html">Admin &amp; engineering</a>
+      <a class="sl" href="../about/participant.html">Where we lose</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__Risks">★ GitHub</a>
+  <script src="../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+<div class="crumb"><a href="../index.html">risks.sgit.ai</a> / acceptable</div>
+<h1>Accepted is not acceptable</h1>
+<p class="lead">The vocabulary correction that turns risk appetite into something computable. <b>Accepted</b> is an act: a named person with the standing to do it says <em>I carry this</em>, for a stated interval. <b>Acceptable</b> is a threshold the business owns — the point at which it is happy to stop funding remediation. They are two orthogonal axes, not two stages of one process, and conflating them is the failure this whole correction exists to prevent.</p>
+<div class="claim">“the acceptable risk is the moment that the business is happy to stop funding remediation activities.”</div>
+<p>That is a stopping instruction, and it is the one instruction a risk function almost never receives. Teams are told what to worry about, rarely what to stop worrying about — so remediation continues until budget or attention runs out rather than until a stated line is reached. Naming the line makes it arguable, and makes everything above it fundable.</p>
+
+<h2 id="axes">Two axes, four states</h2>
+<p class="quadaxes"><span><b>Accepted →</b> has a named person underwritten it, for a stated interval?</span> <span><b>Acceptable ↓</b> is it at or below the level the business has said it stops funding remediation at?</span></p>
+<div class="quad">
+  <div class="q ok"><span class="st">accepted · acceptable</span><b>The steady state</b><p>Someone owns it, and it sits where the business has said it is content for it to sit. Nothing further is funded. This is the only quadrant where inaction is correct, and most registers never reach it because nobody defined the line.</p></div>
+  <div class="q warn"><span class="st">accepted · not acceptable</span><b>Owned and over the line</b><p>Somebody has signed for an exposure the business has said is too high. Legitimate, temporarily, and it should carry a <b>short interval</b> and funded work. This is what a well-run remediation programme looks like from the register's side.</p></div>
+  <div class="q bad"><span class="st">unaccepted · not acceptable</span><b>The dangerous one</b><p>Over the line and nobody has signed. By <a href="../acceptance/unaccepted-is-critical.html">C4</a> this is rated critical and rolls upward on its own. It is the state the model is built to make impossible to sit in quietly.</p></div>
+  <div class="q"><span class="st">unaccepted · acceptable</span><b>Fine, and unrecorded</b><p>Below the line but nobody has confirmed that. Harmless in effect and corrosive in aggregate: it is indistinguishable, from the register, from the quadrant above it. This is where a register goes stale.</p></div>
+</div>
+<p>The diagonal is what makes the two axes worth separating. <em>Accepted but not acceptable</em> and <em>unaccepted but acceptable</em> are opposite situations requiring opposite responses, and a register with one status field cannot tell them apart.</p>
+
+<h2 id="appetite">Acceptable is risk appetite, renamed — and the rename is the point</h2>
+<p>“Risk appetite” is a phrase most organisations have in a policy document and almost none can act on, because it is written as a sentiment rather than as a threshold. Renaming it <em>acceptable</em> and defining it as the point where funding stops makes it operational, because it now answers a question someone actually has to answer on a Tuesday: <em>do we keep paying for this?</em></p>
+<p>And appetite, so defined, is not declared — it is <b>revealed</b>. Any organisation that has been operating for a while already has one, visible in what it has paid to reduce in the past and in every fresh acceptance going forward. <a href="appetite.html">Appetite as a revealed band →</a></p>
+
+<h2 id="article-9">Article 9(5): the obligation to judge, without the standard</h2>
+<p>The EU AI Act requires that residual risk be “judged acceptable” — and never defines the word. That is not a drafting slip so much as a structural fact about how the obligation was written: the duty to make the judgement is imposed, and the standard against which to make it is not supplied.</p>
+<div class="note"><p style="margin-top:0"><b>The consequence for a register.</b> An organisation that has never defined its own acceptable level cannot demonstrate compliance with an obligation to judge acceptability — not because its risks are too high, but because it has no line to judge them against. That absence is itself a rateable risk with an owner and an interval: a <a href="../practice/index.html#meta">meta-risk</a> about the organisation's own risk management. In <a href="../examples/article-26-5.html">the Article 26(5) worked example</a> it appears explicitly as <b>R5 — no acceptable level defined</b>, one of five risks and the only meta one.</p>
+<p class="small dim" style="margin-bottom:0">Legal points on this site are factual and are not legal advice. The provisions are cited from <a href="../examples/vaults.html#regulation-graph">the Regulation Graph vault</a>, which carries the Act as 1,523 nodes and 1,944 edges parsed from official Formex XML and hash-verified.</p></div>
+
+<h2 id="distance">Distance to the line sets the clock</h2>
+<p>The connection the corpus flags as new and untested, and the reason the two axes are worth the trouble: if you know where a risk sits and where the line is, the gap between them is a number — and that number could set the interval.</p>
+<div class="tablewrap"><table class="rungs">
+  <thead><tr><th>Where the risk sits</th><th>Implied interval</th><th>Because</th></tr></thead>
+  <tbody>
+    <tr><td>Far above the acceptable line</td><td class="iv">hours to days</td><td>Every day it stands is a day spent above the level the business said it would fund remediation to</td></tr>
+    <tr><td>Somewhat above</td><td class="iv">weeks to a month</td><td>A funded project, with a delivery window</td></tr>
+    <tr><td>At or below the line</td><td class="iv">months</td><td>Nothing is owed. Review it when something changes</td></tr>
+  </tbody>
+</table></div>
+<p>If it holds, <a href="../acceptance/the-ladder.html">the interval</a> stops being chosen and becomes computed from two numbers the register already carries. It is recorded here as <b>proposed and untested</b> — the corpus states it once and never works it through.</p>
+
+<h2 id="who-sets">Who sets the line, and what stops them setting it conveniently</h2>
+<p><a href="../network/index.html#q2">Open question Q2</a>, published unresolved. The definition — the point at which the business stops funding remediation — says <em>what</em> acceptable is and not <em>who</em> decides it or what constrains them. The obvious failure is a business unit that sets its acceptable level wherever its current exposure happens to be, making everything acceptable by construction.</p>
+<p>The corpus's partial answer is <b>external anchors</b>: an internal severity is an opinion, and an external requirement is not. A retention period written into a regulation cannot be downgraded by a business unit that finds it inconvenient — which is precisely why <a href="../examples/article-26-5.html#arithmetic">the thirty-days-versus-six-months finding</a> is the most defensible thing in that graph. It is arithmetic. <a href="../practice/index.html#downgrading">When the business downgrades everything →</a></p>
+
+<h2 id="provenance">Provenance</h2>
+<div class="docmeta">
+  <div class="k">Concept</div><div class="v">C5 — Accepted is not acceptable (two orthogonal axes)</div>
+  <div class="k">Moved from</div><div class="v"><code>https://riskmandate.ai/acceptable.html</code> · moved 22 August 2026 · a stub linking here is published at the source</div>
+  <div class="k">Source</div><div class="v"><code>team/humans/dinis_cruz/briefs/07/28/regulation-graph-and-acceptability/v0.33.53__strategy-brief__…accepted-is-not-acceptable…md</code></div>
+  <div class="k">Repository</div><div class="v"><code>SGraph-AI__App__Send</code> @ <code>v0.33.53</code></div>
+  <div class="k">First written</div><div class="v">28 July 2026</div>
+  <div class="k">Curation</div><div class="v">edited — commercial framing and the executive-audience targeting removed</div>
+  <div class="k">Maturity</div><div class="v"><span class="pill p-well">well-developed</span> — formalised as node types P-PRED-001 to P-PRED-004</div>
+  <div class="k">Licence</div><div class="v">CC BY 4.0 at source and here</div>
+</div>
+
+<div class="agent">
+  <h4>For an agent</h4>
+  <p><b>C5 — accepted is not acceptable.</b> These are two orthogonal properties, not two stages. <b>Accepted</b> = an act by a named person at a dated moment, for a stated interval. <b>Acceptable</b> = a threshold owned by the business: <em>“the moment that the business is happy to stop funding remediation activities.”</em> Crossing them gives four states, each needing a different response: accepted+acceptable is the steady state; accepted+not-acceptable is legitimate but owes a short interval and funded work; <b>unaccepted+not-acceptable is the dangerous one</b> and is rated critical by C4; unaccepted+acceptable is fine in effect and corrosive in aggregate, because the register cannot tell it from the dangerous one. Never collapse the two into a single status field. Acceptable is risk appetite renamed, and it is <b>revealed rather than declared</b>. EU AI Act Article 9(5) requires residual risk to be “judged acceptable” and never defines the term — so an organisation with no defined acceptable level carries a meta-risk about its own risk management. Proposed but untested: distance from the line sets the acceptance interval. <b>Not implemented in code.</b></p>
+</div>
+
+<div class="pagenav">
+  <a href="../acceptance/workflow.html">← Who underwrites, and how it flows up</a>
+  <a href="appetite.html">Appetite as a revealed band →</a>
+</div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">risks<span>.sgit.ai</span></div>
+    <p>The conceptual and research home for risk in the sgit.ai estate: what a risk is, what acceptance is, and why it is modelled this way. <a href="https://riskmandate.ai" style="display:inline;padding:0">riskmandate.ai</a> answers how you get your risks accepted and what it costs; this site answers why the model has the shape it has. <b>Nothing here is implemented in code</b> — <a href="../shipped/index.html" style="display:inline;padding:0">/shipped/</a> says so plainly. Part of the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network. All content CC BY 4.0 unless a page states otherwise.</p>
+    <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://riskmandate.ai">↗ riskmandate.ai</a> — the product · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> — the graph machinery · <a href="https://nhi.sgit.ai">↗ nhi.sgit.ai</a> · <a href="https://pki.sgit.ai">↗ pki.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
+    <p class="partnote">⚠ Participant disclosure: published by the sgit project, which also builds riskmandate.ai — the commercial product this research underpins. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
+    <p class="verline">site <a href="../admin/versions.html">v0.1.0</a> · <a href="../admin/index.html">engineering</a></p>
+  </div>
+  <div>
+    <h4>Start here</h4>
+    <a href="../acceptance/index.html">&#8594; The founding inversion</a>
+    <a href="../acceptance/no-deny.html">There is no deny button</a>
+    <a href="../acceptance/the-ladder.html">The interval ladder</a>
+    <a href="../acceptable/index.html">Accepted is not acceptable</a>
+    <a href="../ladder/index.html">The grounding ladder</a>
+  </div>
+  <div>
+    <h4>For agents</h4>
+    <a href="../agents/index.html">&#8594; The machine surface</a>
+    <a href="../concepts/index.html">All 42 concepts</a>
+    <a href="../data/concepts.json">concepts.json — the definitions</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+  </div>
+  <div>
+    <h4>The proof</h4>
+    <a href="../examples/index.html">Three worked graphs</a>
+    <a href="../examples/vaults.html">The four live vaults</a>
+    <a href="../examples/2fa.html">The 2FA instance graph</a>
+    <a href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+    <a href="../shipped/index.html">What is argued, what runs</a>
+  </div>
+  <div>
+    <h4>Site</h4>
+    <a href="../network/index.html">The network</a>
+    <a href="../origins/index.html">Origins</a>
+    <a href="../documents/index.html">The documents</a>
+    <a href="../admin/comms.html">Comms: asks &amp; tasks</a>
+    <a href="../admin/versions.html">Release history</a>
+    <a href="../about/participant.html">Where we lose</a>
+  </div>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>There is no deny button · risks.sgit.ai</title>
+<meta name="description" content="Denial only works while a risk has not materialised. Remove the deny button and what remains — how long do you accept it — carries more information than the button ever did.">
+<link rel="canonical" href="https://risks.sgit.ai/acceptance/no-deny.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="risks.sgit.ai">
+<meta property="og:url" content="https://risks.sgit.ai/acceptance/no-deny.html">
+<meta property="og:title" content="There is no deny button">
+<meta property="og:description" content="You cannot vote a fact out of existence. The only question left is who carries it, and for how long.">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../index.html">risks<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: vaults, publishing and the catalogue. This site is the estate's conceptual home for risk">↗ part of <b>sgit.ai</b></a>
+  <span class="stage-pill">research site</span>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.1.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni ni-has">
+      <a class="nl here" href="../acceptance/index.html">Acceptance<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../acceptance/index.html">The founding inversion</a>
+      <a class="sl" href="../acceptance/underwriting.html">Underwriting, not prediction</a>
+      <a class="sl here" href="../acceptance/no-deny.html">There is no deny button</a>
+      <a class="sl" href="../acceptance/the-ladder.html">The interval ladder</a>
+      <a class="sl" href="../acceptance/unaccepted-is-critical.html">Unaccepted is critical</a>
+      <a class="sl" href="../acceptance/workflow.html">Who underwrites, and how it flows up</a>
+      <a class="sl" href="../acceptable/index.html">Accepted is not acceptable</a>
+      <a class="sl" href="../acceptable/appetite.html">Appetite as a revealed band</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../ladder/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../ladder/index.html">The grounding ladder</a>
+      <a class="sl" href="../ladder/formulas.html">Node type formulas</a>
+      <a class="sl" href="../ladder/bridges.html">Bridges, not merges</a>
+      <a class="sl" href="../ladder/absence.html">Not knowing is a fact</a>
+      <a class="sl" href="../register/index.html">The register as a graph of graphs</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../plug/index.html">The exposure<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../plug/index.html">Who can pull the plug</a>
+      <a class="sl" href="../plug/recoverability.html">Recoverability: the hard limit</a>
+      <a class="sl" href="../blast-radius/index.html">Blast radius &amp; authorization closure</a>
+      <a class="sl" href="../practice/index.html">Practice: owners, altitude, meta-risks</a>
+      <a class="sl" href="../ramm/index.html">RAMM and the maturity models</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../examples/index.html">The proof<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../examples/index.html">Three worked graphs</a>
+      <a class="sl" href="../examples/2fa.html">The 2FA instance graph</a>
+      <a class="sl" href="../examples/browser-isolation.html">The browser-isolation case</a>
+      <a class="sl" href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+      <a class="sl" href="../examples/vaults.html">The four live vaults</a>
+      <a class="sl" href="../examples/scenarios.html">The ten scenarios</a>
+      <a class="sl" href="../examples/plug-register.html">The plug register</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../agents/index.html">For agents<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../agents/index.html">The machine surface</a>
+      <a class="sl" href="../concepts/index.html">All 42 concepts, addressable</a>
+      <a class="sl" href="../shipped/index.html">What is argued, what runs</a>
+      <a class="sl" href="../llms.txt">llms.txt</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../network/index.html">Site<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../network/index.html">The network: where the boundaries are</a>
+      <a class="sl" href="../origins/index.html">Origins: February to August 2026</a>
+      <a class="sl" href="../documents/index.html">The documents</a>
+      <a class="sl" href="../admin/comms.html">Comms: asks &amp; tasks</a>
+      <a class="sl" href="../admin/versions.html">Release history</a>
+      <a class="sl" href="../admin/index.html">Admin &amp; engineering</a>
+      <a class="sl" href="../about/participant.html">Where we lose</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__Risks">★ GitHub</a>
+  <script src="../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+<div class="crumb"><a href="../index.html">risks.sgit.ai</a> / <a href="index.html">acceptance</a> / no deny</div>
+<h1>There is no deny button</h1>
+<p class="lead">The single most distinctive primitive in the model, and the one that lands fastest. A risk that has a real vulnerability under it exists whether or not anyone acknowledges it — so denial is not a decision, it is a fiction. Remove the button and the register stops being a gate and becomes a forcing function.</p>
+<blockquote class="challenge">“the mistake of a lot of risk registers is that they allow the risk to be denied, which can only happen when the risk has not materialised. Once the vulnerability exists, the risk exists to the business.”</blockquote>
+
+<h2 id="why">Why denial only ever worked in advance</h2>
+<p>Look at when a denial gets tested. A risk is raised, someone with authority declines to accept it, and the register records a rejection. That record survives exactly as long as nothing happens. The moment the exposure materialises, the rejection does not protect anyone — it becomes the most damaging document in the file, because it shows the organisation was told and said no.</p>
+<p>So denial is not a risk decision at all. It is a bet that the window closes before the exposure is exercised, made by someone who usually is not the one who will answer for it. The corpus's move is to notice that the bet has no upside worth having and to take the button away.</p>
+<div class="claim">You cannot vote a fact out of existence. If the vulnerability is real, the risk is real, and the only remaining question is who carries it and for how long.</div>
+
+<h2 id="instead">What replaces it</h2>
+<p>Removing an option is only defensible if what remains carries more information than what was taken away. It does. In place of accept/deny there is a duration:</p>
+<div class="tablewrap"><table class="rungs">
+  <thead><tr><th>The only buttons</th><th>What choosing it says</th></tr></thead>
+  <tbody>
+    <tr><td class="iv">1 hour</td><td>I cannot decide on what I have. Someone must get me more data, now.</td></tr>
+    <tr><td class="iv">4 hours</td><td>This is a P1. Trigger incident response and come back with a remediation.</td></tr>
+    <tr><td class="iv">2 days</td><td>A smaller incident, but still an incident. Something must be done this week.</td></tr>
+    <tr><td class="iv">2 weeks</td><td>A funded project. Plan it, resource it, and do it.</td></tr>
+    <tr><td class="iv">6 months</td><td>Do nothing. Review it then. This costs zero, because nothing is being done.</td></tr>
+  </tbody>
+</table></div>
+<p>Notice what the last row does. In a register with a deny button, “we are not doing anything about this” is unsayable, so it gets said as a rejection instead and disappears. Here it is a first-class, dated, signed choice with a name against it — and it is <em>legitimate</em>, provided somebody says it out loud. <a href="the-ladder.html">The full six-rung ladder, with the operational response per rung →</a></p>
+
+<h2 id="forcing">From a gate to a forcing function</h2>
+<p>A register with a deny button is a gate: things arrive, and the gate opens or does not. Its output is a decision about the register. A register without one cannot be a gate, because nothing can be turned away. Its output is <em>work</em>: every item that enters leaves as either a funded action, a scheduled review, or an explicit and attributed decision to do nothing.</p>
+<div class="epal">
+  <span><i class="exposure"></i> exposure — something is carried</span>
+  <span><i class="assurance"></i> assurance — something was done</span>
+  <span><i class="unanswered"></i> unanswered — nobody has looked</span>
+</div>
+<p>That is also why the mechanic composes with <a href="unaccepted-is-critical.html">unaccepted-equals-critical</a>. If you cannot deny and you do not accept, the item does not sit quietly: it is rated critical and rolls upward. The two primitives together close both exits at once — you cannot say no, and you cannot say nothing.</p>
+
+<h2 id="reactance">The correction: three moves, none of which is denial</h2>
+<p>Stated crudely, “there is no deny button” is also the model's hardest sell, and the corpus knows why. Presenting one button to a person who feels they have no alternative produces counter-argument and resentment, not compliance. The resolution was already in the material: there was never only one move. There are three.</p>
+<div class="ops">
+  <div class="op"><b>1 · ACCEPT</b><p>Take it for a stated interval, with the operational response that interval implies. Your name is on it until it expires.</p></div>
+  <div class="op"><b>2 · ESCALATE</b><p><em>This is not mine to accept.</em> A legitimate and common answer — it names the altitude the decision actually belongs at, and routes it there.</p></div>
+  <div class="op"><b>3 · CHALLENGE THE FACT</b><p>Dispute what is underneath. Not <em>“I reject this risk”</em> but <em>“this fact is wrong, and here is why”</em> — which is an argument about evidence, and can be settled.</p></div>
+</div>
+<p>The person is routed rather than cornered. And the corpus's design note is worth keeping: <b>the absence of a reject option should be discovered, not announced.</b> A user who reaches for a button that is not there and finds a better one has learned the model; a user who is told the button has been removed has been lectured. <a href="../practice/index.html#three-moves">More on the three moves →</a></p>
+
+<h2 id="evidence">Evidence strikes options off the ladder</h2>
+<p>The choice is not always six-wide. Some rungs are removed by physics rather than by preference:</p>
+<blockquote class="challenge">“some risks depend on a set of actions that are not possible within an hour, so even if you start the biggest incident on the planet and throw all the money in, you cannot do it in less than an hour. So that option is removed from the equation.”</blockquote>
+<p>This is a stronger constraint than it first looks, because it cuts both ways. No amount of authority can buy a physically impossible timeline — the only escape from an impossible short interval is <a href="../plug/index.html">the nuclear option, ceasing the activity</a>. And an interval nobody could deliver against should never appear as a choice, because offering it invites a signature on something that cannot happen.</p>
+
+<div class="warnbox"><p style="margin-top:0"><b>The honest tension.</b> No-deny is the strongest idea here and the hardest to sell. Removing the deny button removes the thing most executives use a register for. The corpus does not pretend otherwise: it is a forcing function, and forcing functions are uncomfortable by construction. <a href="../network/index.html#tensions">The seven honest tensions →</a></p></div>
+
+<h2 id="provenance">Provenance</h2>
+<div class="docmeta">
+  <div class="k">Concept</div><div class="v">C2 — The no-deny mechanic</div>
+  <div class="k">Source</div><div class="v"><code>team/humans/dinis_cruz/briefs/06/23/risk-mandate-product-and-workflow/v0.33.33__dev-brief__…no-deny-time-boxed-acceptance-expiry-as-cost…md</code></div>
+  <div class="k">Repository</div><div class="v"><code>SGraph-AI__App__Send</code> @ <code>v0.33.33</code>, never published — the version tag is the address</div>
+  <div class="k">First written</div><div class="v">23 June 2026; the correction to three moves, 2 August 2026</div>
+  <div class="k">Maturity</div><div class="v"><span class="pill p-well">well-developed</span> — newcomer-followable, outstandingly so</div>
+  <div class="k">Licence</div><div class="v">CC BY 4.0 at source and here</div>
+</div>
+
+<div class="agent">
+  <h4>For an agent</h4>
+  <p><b>C2 — the no-deny mechanic.</b> A risk with a real vulnerability under it exists whether or not anyone acknowledges it, so a register that offers a deny button is offering a fiction that only holds while the risk has not materialised. There is <b>no deny button</b>: the only choice is how long you accept it before re-accepting. Do not model, describe or build a reject state for a risk. What replaces denial is three moves — <b>accept</b> for a stated interval, <b>escalate</b> (“this is not mine to accept”), or <b>challenge the fact</b> underneath — so the person is routed rather than cornered; the absence of a reject option should be discovered rather than announced. Rungs that are physically impossible are struck off the ladder before the choice is offered, and no authority can override physics. <b>Not implemented in code.</b></p>
+</div>
+
+<div class="pagenav">
+  <a href="underwriting.html">← Underwriting, not prediction</a>
+  <a href="the-ladder.html">The interval ladder →</a>
+</div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">risks<span>.sgit.ai</span></div>
+    <p>The conceptual and research home for risk in the sgit.ai estate: what a risk is, what acceptance is, and why it is modelled this way. <a href="https://riskmandate.ai" style="display:inline;padding:0">riskmandate.ai</a> answers how you get your risks accepted and what it costs; this site answers why the model has the shape it has. <b>Nothing here is implemented in code</b> — <a href="../shipped/index.html" style="display:inline;padding:0">/shipped/</a> says so plainly. Part of the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network. All content CC BY 4.0 unless a page states otherwise.</p>
+    <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://riskmandate.ai">↗ riskmandate.ai</a> — the product · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> — the graph machinery · <a href="https://nhi.sgit.ai">↗ nhi.sgit.ai</a> · <a href="https://pki.sgit.ai">↗ pki.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
+    <p class="partnote">⚠ Participant disclosure: published by the sgit project, which also builds riskmandate.ai — the commercial product this research underpins. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
+    <p class="verline">site <a href="../admin/versions.html">v0.1.0</a> · <a href="../admin/index.html">engineering</a></p>
+  </div>
+  <div>
+    <h4>Start here</h4>
+    <a href="../acceptance/index.html">&#8594; The founding inversion</a>
+    <a href="../acceptance/no-deny.html">There is no deny button</a>
+    <a href="../acceptance/the-ladder.html">The interval ladder</a>
+    <a href="../acceptable/index.html">Accepted is not acceptable</a>
+    <a href="../ladder/index.html">The grounding ladder</a>
+  </div>
+  <div>
+    <h4>For agents</h4>
+    <a href="../agents/index.html">&#8594; The machine surface</a>
+    <a href="../concepts/index.html">All 42 concepts</a>
+    <a href="../data/concepts.json">concepts.json — the definitions</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+  </div>
+  <div>
+    <h4>The proof</h4>
+    <a href="../examples/index.html">Three worked graphs</a>
+    <a href="../examples/vaults.html">The four live vaults</a>
+    <a href="../examples/2fa.html">The 2FA instance graph</a>
+    <a href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+    <a href="../shipped/index.html">What is argued, what runs</a>
+  </div>
+  <div>
+    <h4>Site</h4>
+    <a href="../network/index.html">The network</a>
+    <a href="../origins/index.html">Origins</a>
+    <a href="../documents/index.html">The documents</a>
+    <a href="../admin/comms.html">Comms: asks &amp; tasks</a>
+    <a href="../admin/versions.html">Release history</a>
+    <a href="../about/participant.html">Where we lose</a>
+  </div>
+</div></footer>
+</body>
+</html>

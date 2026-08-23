@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The grounding ladder · risks.sgit.ai</title>
+<meta name="description" content="Reality → Twin → Measure → Evidence → Fact → Vulnerability → Risk. Downward paths ground; upward paths classify. A Vulnerability is simply a Fact with an upward path to a Risk.">
+<link rel="canonical" href="https://risks.sgit.ai/ladder/index.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="risks.sgit.ai">
+<meta property="og:url" content="https://risks.sgit.ai/ladder/index.html">
+<meta property="og:title" content="The grounding ladder">
+<meta property="og:description" content="Every node type is defined by its required paths, not by what it contains. Downward grounds, upward classifies.">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../index.html">risks<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: vaults, publishing and the catalogue. This site is the estate's conceptual home for risk">↗ part of <b>sgit.ai</b></a>
+  <span class="stage-pill">research site</span>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.1.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni ni-has">
+      <a class="nl" href="../acceptance/index.html">Acceptance<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../acceptance/index.html">The founding inversion</a>
+      <a class="sl" href="../acceptance/underwriting.html">Underwriting, not prediction</a>
+      <a class="sl" href="../acceptance/no-deny.html">There is no deny button</a>
+      <a class="sl" href="../acceptance/the-ladder.html">The interval ladder</a>
+      <a class="sl" href="../acceptance/unaccepted-is-critical.html">Unaccepted is critical</a>
+      <a class="sl" href="../acceptance/workflow.html">Who underwrites, and how it flows up</a>
+      <a class="sl" href="../acceptable/index.html">Accepted is not acceptable</a>
+      <a class="sl" href="../acceptable/appetite.html">Appetite as a revealed band</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../ladder/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl here" href="../ladder/index.html">The grounding ladder</a>
+      <a class="sl" href="../ladder/formulas.html">Node type formulas</a>
+      <a class="sl" href="../ladder/bridges.html">Bridges, not merges</a>
+      <a class="sl" href="../ladder/absence.html">Not knowing is a fact</a>
+      <a class="sl" href="../register/index.html">The register as a graph of graphs</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../plug/index.html">The exposure<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../plug/index.html">Who can pull the plug</a>
+      <a class="sl" href="../plug/recoverability.html">Recoverability: the hard limit</a>
+      <a class="sl" href="../blast-radius/index.html">Blast radius &amp; authorization closure</a>
+      <a class="sl" href="../practice/index.html">Practice: owners, altitude, meta-risks</a>
+      <a class="sl" href="../ramm/index.html">RAMM and the maturity models</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../examples/index.html">The proof<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../examples/index.html">Three worked graphs</a>
+      <a class="sl" href="../examples/2fa.html">The 2FA instance graph</a>
+      <a class="sl" href="../examples/browser-isolation.html">The browser-isolation case</a>
+      <a class="sl" href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+      <a class="sl" href="../examples/vaults.html">The four live vaults</a>
+      <a class="sl" href="../examples/scenarios.html">The ten scenarios</a>
+      <a class="sl" href="../examples/plug-register.html">The plug register</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../agents/index.html">For agents<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../agents/index.html">The machine surface</a>
+      <a class="sl" href="../concepts/index.html">All 42 concepts, addressable</a>
+      <a class="sl" href="../shipped/index.html">What is argued, what runs</a>
+      <a class="sl" href="../llms.txt">llms.txt</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../network/index.html">Site<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../network/index.html">The network: where the boundaries are</a>
+      <a class="sl" href="../origins/index.html">Origins: February to August 2026</a>
+      <a class="sl" href="../documents/index.html">The documents</a>
+      <a class="sl" href="../admin/comms.html">Comms: asks &amp; tasks</a>
+      <a class="sl" href="../admin/versions.html">Release history</a>
+      <a class="sl" href="../admin/index.html">Admin &amp; engineering</a>
+      <a class="sl" href="../about/participant.html">Where we lose</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__Risks">★ GitHub</a>
+  <script src="../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+<div class="crumb"><a href="../index.html">risks.sgit.ai</a> / the grounding ladder</div>
+<h1>The grounding ladder</h1>
+<p class="lead">The definitional spine of the whole model, and the part an agent most needs to hold. Every node type is defined by the <b>paths it is required to have</b>, not by what it contains. Downward paths confer <em>grounding</em> — is this real? Upward paths confer <em>classification and implication</em> — what is it, and why does it matter? A Vulnerability is not a special kind of Fact. It is a Fact with an upward path to a Risk.</p>
+<h2 id="rungs">Reality → Twin → Measure → Evidence → Fact → Vulnerability → Risk → Top Risk</h2>
+<div class="pathline">
+  <span class="nd">Reality</span><span class="ed">has_twin</span><span class="nd">Twin</span><span class="ed">measured_by</span><span class="nd">Measure</span><span class="ed">produces</span><span class="nd">Evidence</span><span class="ed">backs</span><span class="nd">Fact</span><span class="ed">gives_rise_to</span><span class="nd">Vulnerability</span><span class="ed">gives_rise_to</span><span class="nd">Risk</span><span class="ed">rolls_up_to</span><span class="nd">Top Risk</span>
+  <span class="say">Read downward it is an answer to “how do you know?”. Read upward it is an answer to “so what?”. Both directions are typed, and neither is optional.</span>
+</div>
+
+<div class="ladder">
+  <div class="cap"><span class="capnum">1</span><h3>Reality</h3>
+    <p>The running system, the actual estate, the world. Not a record of it — the thing itself. Everything in the graph is ultimately an assertion about this, and the only rung that is not a node in your model.</p></div>
+  <div class="cap"><span class="capnum">2</span><h3>Twin</h3>
+    <p>A representation of a piece of reality, connected to it. <b>The twin is where the graph stops modelling and continues into a real system</b> — an inventory that is actually synced, a config that is actually read. How connected a twin is to reality is itself a measurable property, which produces a useful recursion: trust in a measure depends on the twin's connectedness, and that connectedness is itself a measure. A twin not connected to reality is a <a href="../register/index.html#airgap">tracked air gap</a>.</p></div>
+  <div class="cap"><span class="capnum">3</span><h3>Measure</h3>
+    <p>An observation taken through the twin. <b>A Measure is not the floor.</b> That is the most common misreading of the ladder: a measurement feels like bedrock, but it is grounded further, in the twin and through it in reality. A measure with no twin beneath it is a number nobody can defend.</p></div>
+  <div class="cap"><span class="capnum">4</span><h3>Evidence</h3>
+    <p>What a measure produces, and what a fact is backed by. Evidence is a first-class node, so it can be counted, dated, attributed and — crucially — found to be <em>absent</em>. <a href="absence.html">Not knowing is a fact →</a></p></div>
+  <div class="cap"><span class="capnum">5</span><h3>Fact</h3>
+    <p>A statement about reality that evidence backs. <em>Admin accounts do not require a second factor.</em> <em>Logs are retained for thirty days.</em> Facts are the layer where a register and reality touch, and a register built on unevidenced facts is a register of opinions.</p></div>
+  <div class="cap"><span class="capnum">6</span><h3>Vulnerability</h3>
+    <p><b>A Fact with an upward path to a Risk.</b> Nothing about the fact changes when it becomes a vulnerability; what changes is that something above it now depends on it. This is the rung that makes the whole formula idea click, and it is why classification is dynamic: add the upward edge and the fact is promoted; remove it and it is demoted.</p></div>
+  <div class="cap"><span class="capnum">7</span><h3>Risk</h3>
+    <p>A business consequence that a vulnerability gives rise to, and the level at which <a href="../acceptance/index.html">acceptance</a> happens. One vulnerability commonly gives rise to several risks in different dimensions — <a href="../blast-radius/index.html#cia">confidentiality, integrity and availability each spawn their own</a>, and each follows the full confirm-accept-propagate loop.</p></div>
+  <div class="cap"><span class="capnum">8</span><h3>Top Risk</h3>
+    <p>What risks roll up to at the highest altitude. The chain converges: pushed far enough, business risk converges on the single risk of staying in business, which is why a legitimate single number can be carried to the top at all. <a href="../practice/index.html#five-whys">Five whys as a domain translator →</a></p></div>
+</div>
+
+<h2 id="direction">Downward grounds, upward classifies</h2>
+<p>The two directions are not symmetrical, and keeping them straight is most of the value:</p>
+<div class="tablewrap"><table>
+  <thead><tr><th></th><th>Downward</th><th>Upward</th></tr></thead>
+  <tbody>
+    <tr><td><b>Question</b></td><td>How do you know this is real?</td><td>What is it, and why does it matter?</td></tr>
+    <tr><td><b>Confers</b></td><td>Grounding</td><td>Classification and implication</td></tr>
+    <tr><td><b>Failure</b></td><td>An assertion nobody can defend</td><td>A true statement nobody has a reason to act on</td></tr>
+    <tr><td><b>Example</b></td><td>A risk with no fact beneath it is somebody's worry</td><td>A fact with no risk above it is trivia — accurate, evidenced, and irrelevant</td></tr>
+  </tbody>
+</table></div>
+<div class="claim">“A Fact becomes a Vulnerability purely because of its upward link to a Risk, so that legitimacy is conferred entirely from above.”</div>
+
+<h2 id="floor">Where the ladder stops — a test, not a rung</h2>
+<p>Every grounding chain has to stop somewhere, and the obvious answers are all wrong: not at the measure, not at the tool, not at wherever the data happened to come from. The corpus gives a <em>test</em> instead of a level:</p>
+<div class="claim">The floor is the last node where going deeper would neither improve observability nor change a decision.</div>
+<p>This is a good rule and an under-worked one. It is decision-relative, which means the same graph can have different floors for different questions, and it means the floor moves when the decision changes. <a href="../network/index.html#q7">Open question Q7</a>: no worked example in the corpus applies the test to a genuinely hard case, so how it behaves at the margin is unknown.</p>
+
+<h2 id="worked">The worked example the source uses: the untested restore</h2>
+<div class="pathline">
+  <span class="nd">Backup system</span><span class="ed">has_twin</span><span class="nd">Backup config + logs</span><span class="ed">measured_by</span><span class="nd">“restore tests in last 12 months”</span><span class="ed">produces</span><span class="nd">E5: zero records found</span><span class="ed">backs</span><span class="nd">F: no restore has been tested</span><span class="ed">gives_rise_to</span><span class="nd">V: recovery capability unproven</span><span class="ed">gives_rise_to</span><span class="nd">R9: data loss is unrecoverable in practice</span>
+  <span class="say">Note that the measure returned zero, and the zero is the evidence. <a href="absence.html">A documented absence is a measurement</a>, not a missing one.</span>
+</div>
+
+<h2 id="boundary">The boundary with graphs.sgit.ai</h2>
+<div class="note"><p style="margin-top:0"><b>Node type formulas as a <em>mechanism</em> belong to <a href="https://graphs.sgit.ai">graphs.sgit.ai</a>; the grounding ladder as a <em>risk formula</em> belongs here.</b> This site cites the mechanism rather than restating it — the general case for directed edges with named inverses, query paths that prevent node explosion, and digital twins in their general form is argued at length there and is not re-argued here. What is risk's own is this specific chain, its stopping test, and what each rung licenses you to say. <a href="../network/index.html">The full boundary map →</a></p></div>
+
+<h2 id="provenance">Provenance</h2>
+<div class="docmeta">
+  <div class="k">Concept</div><div class="v">C6 — The grounding ladder</div>
+  <div class="k">Source</div><div class="v"><code>team/humans/dinis_cruz/briefs/06/28/ontology-and-definitions/v0.33.36__arch-brief__…grounding-ladder…md</code></div>
+  <div class="k">Repository</div><div class="v"><code>SGraph-AI__App__Send</code> @ <code>v0.33.36</code>, never published — the version tag is the address</div>
+  <div class="k">First written</div><div class="v">28 June 2026</div>
+  <div class="k">Maturity</div><div class="v"><span class="pill p-well">well-developed</span> — the most rigorous document in the corpus, and the one agents most need</div>
+  <div class="k">Licence</div><div class="v">CC BY 4.0 at source and here</div>
+</div>
+
+<div class="agent">
+  <h4>For an agent</h4>
+  <p><b>C6 — the grounding ladder.</b> <code>Reality → Twin → Measure → Evidence → Fact → Vulnerability → Risk → Top Risk</code>. Every node type is defined by its <b>required paths</b>, not by its content. <b>Downward paths confer grounding</b> (“is it real?”); <b>upward paths confer classification and implication</b> (“what is it, why does it matter?”). Key definitions to carry: a <b>Vulnerability is a Fact with an upward path to a Risk</b> — legitimacy is conferred entirely from above, so promotion and demotion are edge events, not re-assessments. A <b>Measure is not the floor</b>: it is grounded further in a Twin and through it in Reality. The <b>floor is a test, not a level</b> — the last node where going deeper would neither improve observability nor change a decision. A risk with no fact beneath it is a worry; a fact with no risk above it is trivia. The general graph machinery (directed edges with named inverses, query paths, twins in general form) belongs to graphs.sgit.ai and is cited rather than restated here. <b>Not implemented in code.</b></p>
+</div>
+
+<div class="pagenav">
+  <a href="../acceptable/appetite.html">← Appetite as a revealed band</a>
+  <a href="formulas.html">Node type formulas →</a>
+</div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">risks<span>.sgit.ai</span></div>
+    <p>The conceptual and research home for risk in the sgit.ai estate: what a risk is, what acceptance is, and why it is modelled this way. <a href="https://riskmandate.ai" style="display:inline;padding:0">riskmandate.ai</a> answers how you get your risks accepted and what it costs; this site answers why the model has the shape it has. <b>Nothing here is implemented in code</b> — <a href="../shipped/index.html" style="display:inline;padding:0">/shipped/</a> says so plainly. Part of the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network. All content CC BY 4.0 unless a page states otherwise.</p>
+    <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://riskmandate.ai">↗ riskmandate.ai</a> — the product · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> — the graph machinery · <a href="https://nhi.sgit.ai">↗ nhi.sgit.ai</a> · <a href="https://pki.sgit.ai">↗ pki.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
+    <p class="partnote">⚠ Participant disclosure: published by the sgit project, which also builds riskmandate.ai — the commercial product this research underpins. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
+    <p class="verline">site <a href="../admin/versions.html">v0.1.0</a> · <a href="../admin/index.html">engineering</a></p>
+  </div>
+  <div>
+    <h4>Start here</h4>
+    <a href="../acceptance/index.html">&#8594; The founding inversion</a>
+    <a href="../acceptance/no-deny.html">There is no deny button</a>
+    <a href="../acceptance/the-ladder.html">The interval ladder</a>
+    <a href="../acceptable/index.html">Accepted is not acceptable</a>
+    <a href="../ladder/index.html">The grounding ladder</a>
+  </div>
+  <div>
+    <h4>For agents</h4>
+    <a href="../agents/index.html">&#8594; The machine surface</a>
+    <a href="../concepts/index.html">All 42 concepts</a>
+    <a href="../data/concepts.json">concepts.json — the definitions</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+  </div>
+  <div>
+    <h4>The proof</h4>
+    <a href="../examples/index.html">Three worked graphs</a>
+    <a href="../examples/vaults.html">The four live vaults</a>
+    <a href="../examples/2fa.html">The 2FA instance graph</a>
+    <a href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+    <a href="../shipped/index.html">What is argued, what runs</a>
+  </div>
+  <div>
+    <h4>Site</h4>
+    <a href="../network/index.html">The network</a>
+    <a href="../origins/index.html">Origins</a>
+    <a href="../documents/index.html">The documents</a>
+    <a href="../admin/comms.html">Comms: asks &amp; tasks</a>
+    <a href="../admin/versions.html">Release history</a>
+    <a href="../about/participant.html">Where we lose</a>
+  </div>
+</div></footer>
+</body>
+</html>

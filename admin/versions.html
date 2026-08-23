@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Release history · risks.sgit.ai</title>
+<meta name="description" content="Every push to dev is a release: validate, verify the version bump, tag, deploy. What shipped in each one.">
+<link rel="canonical" href="https://risks.sgit.ai/admin/versions.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="risks.sgit.ai">
+<meta property="og:url" content="https://risks.sgit.ai/admin/versions.html">
+<meta property="og:title" content="Release history">
+<meta property="og:description" content="validate → tag → deploy, one row per release.">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../index.html">risks<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: vaults, publishing and the catalogue. This site is the estate's conceptual home for risk">↗ part of <b>sgit.ai</b></a>
+  <span class="stage-pill">research site</span>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.1.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni ni-has">
+      <a class="nl" href="../acceptance/index.html">Acceptance<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../acceptance/index.html">The founding inversion</a>
+      <a class="sl" href="../acceptance/underwriting.html">Underwriting, not prediction</a>
+      <a class="sl" href="../acceptance/no-deny.html">There is no deny button</a>
+      <a class="sl" href="../acceptance/the-ladder.html">The interval ladder</a>
+      <a class="sl" href="../acceptance/unaccepted-is-critical.html">Unaccepted is critical</a>
+      <a class="sl" href="../acceptance/workflow.html">Who underwrites, and how it flows up</a>
+      <a class="sl" href="../acceptable/index.html">Accepted is not acceptable</a>
+      <a class="sl" href="../acceptable/appetite.html">Appetite as a revealed band</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../ladder/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../ladder/index.html">The grounding ladder</a>
+      <a class="sl" href="../ladder/formulas.html">Node type formulas</a>
+      <a class="sl" href="../ladder/bridges.html">Bridges, not merges</a>
+      <a class="sl" href="../ladder/absence.html">Not knowing is a fact</a>
+      <a class="sl" href="../register/index.html">The register as a graph of graphs</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../plug/index.html">The exposure<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../plug/index.html">Who can pull the plug</a>
+      <a class="sl" href="../plug/recoverability.html">Recoverability: the hard limit</a>
+      <a class="sl" href="../blast-radius/index.html">Blast radius &amp; authorization closure</a>
+      <a class="sl" href="../practice/index.html">Practice: owners, altitude, meta-risks</a>
+      <a class="sl" href="../ramm/index.html">RAMM and the maturity models</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../examples/index.html">The proof<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../examples/index.html">Three worked graphs</a>
+      <a class="sl" href="../examples/2fa.html">The 2FA instance graph</a>
+      <a class="sl" href="../examples/browser-isolation.html">The browser-isolation case</a>
+      <a class="sl" href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+      <a class="sl" href="../examples/vaults.html">The four live vaults</a>
+      <a class="sl" href="../examples/scenarios.html">The ten scenarios</a>
+      <a class="sl" href="../examples/plug-register.html">The plug register</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../agents/index.html">For agents<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../agents/index.html">The machine surface</a>
+      <a class="sl" href="../concepts/index.html">All 42 concepts, addressable</a>
+      <a class="sl" href="../shipped/index.html">What is argued, what runs</a>
+      <a class="sl" href="../llms.txt">llms.txt</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../network/index.html">Site<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../network/index.html">The network: where the boundaries are</a>
+      <a class="sl" href="../origins/index.html">Origins: February to August 2026</a>
+      <a class="sl" href="../documents/index.html">The documents</a>
+      <a class="sl" href="../admin/comms.html">Comms: asks &amp; tasks</a>
+      <a class="sl here" href="../admin/versions.html">Release history</a>
+      <a class="sl" href="../admin/index.html">Admin &amp; engineering</a>
+      <a class="sl" href="../about/participant.html">Where we lose</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__Risks">★ GitHub</a>
+  <script src="../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+<div class="crumb"><a href="../index.html">risks.sgit.ai</a> / admin / versions</div>
+<h1>Release history</h1>
+<p class="lead">Every push to <code>dev</code> is a release: CI validates the site, verifies the version bump, tags the commit <code>v{release}.{major}.{minor}</code>, and deploys to GitHub Pages. The version is owned by <code>admin/build/version.txt</code> and must agree with the release commit's subject. <a href='index.html'>How it works</a>.</p>
+<div class="tablewrap"><table class="vers">
+  <thead><tr><th>Version</th><th>Date</th><th>What shipped</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="vnum">v0.1.0</td>
+      <td>23 Aug 2026</td>
+      <td><b>The site, first release — pipeline first, then the eight sections the brief sequences first.</b>
+        <p><b>The pipeline before the content</b>, so that every release from here goes through a gate that already works: validate → auto-tag → deploy, carried over from the sibling sites with the merge-commit anchoring and the SIGPIPE fix those sites had to learn the hard way. <a href="index.html#gate">Ten checks</a>, three of them written for this site specifically. <b>The over-claim tripwire</b> is the load-bearing one: nothing in this risk corpus is implemented in code, so no page may say <span data-not-built>the engine is built, shipping or installable</span> — a page may state such a claim only by marking the element <code>data-not-built</code>, which exactly one element on the site does. <b>The do-not-publish tripwire</b> pattern-matches the distinctive strings of the four Tier-3 manifest rows across the whole tree, so a later edit cannot quietly reintroduce a comparative vendor assessment or a contract term. And <b>internal links are checked to the fragment</b>, not just to the file — because this site's promise to an agent is that all 42 concepts have stable anchors, and a promise that is checked is a fact.</p>
+        <p><b><a href="../acceptance/index.html">/acceptance/</a> — the founding inversion, five pages.</b> <a href="../acceptance/underwriting.html">Underwriting rather than prediction</a>, with the temporal move that makes the rest coherent: the risk already exists the moment the permission is provisioned, so the only variable is how long. <a href="../acceptance/no-deny.html">There is no deny button</a>, including the correction that replaces one button with three moves — accept, escalate, or challenge the fact — because presenting a single button to someone who feels cornered produces resentment rather than compliance. <a href="../acceptance/the-ladder.html">The interval ladder</a> as a six-row table with the operational response and the cost stated per rung, the default at one month set deliberately just above the incident line, and rungs struck off where a remediation is physically impossible. <a href="../acceptance/unaccepted-is-critical.html">Unaccepted equals critical</a> — escalation without an escalator, aimed at attrition rather than refusal. And <a href="../acceptance/workflow.html">the underwriting graph</a>, with override and compound pre-approval published as <em>proposed and unfinished</em> rather than tidied up.</p>
+        <p><b><a href="../acceptable/index.html">/acceptable/</a> and <a href="../ladder/index.html">/ladder/</a> — the vocabulary and the machinery.</b> Two orthogonal axes drawn as four quadrants, appetite as <a href="../acceptable/appetite.html">a revealed band computed from two signals</a>, and the Article 9(5) gap where the obligation to judge acceptability is imposed and the standard is not supplied. Then the definitional spine: <a href="../ladder/index.html">the grounding ladder</a> with each rung defined by its required paths, <a href="../ladder/formulas.html">node type formulas</a> including the honest limit that <b>no formula language exists and nothing executes one</b>, <a href="../ladder/bridges.html">bridges rather than merges</a> with the worked external bridge, and <a href="../ladder/absence.html">not-knowing-is-a-fact</a>.</p>
+        <p><b><a href="../plug/index.html">/plug/</a> — moved off the commercial site, <em>with</em> a correction it does not carry.</b> Two symmetric risks, the four-way time intersection, the 12–18 hour detection floor, and <a href="../plug/index.html#no-plug">the pillar correction that the plug always exists</a> — what older registers recorded as “no plug” was zero recoverability, and restating it that way turns an unassignable blank into an ownable finding. <a href="../plug/recoverability.html">Recoverability</a> gets its own page for the flagship query: show me every accepted risk whose recoverability is zero.</p>
+        <p><b><a href="../examples/index.html">/examples/</a> — the proof layer, seven pages.</b> The three worked graphs with their real counts (<a href="../examples/browser-isolation.html">59/75</a>, <a href="../examples/2fa.html">51/53</a>, and <a href="../examples/article-26-5.html">the Article 26(5) inventory</a>), <a href="../examples/vaults.html">the four live vaults</a> with the read-keys-yes-write-keys-never rule stated as the pipeline property it is, <a href="../examples/scenarios.html">the ten scenarios</a>, and <a href="../examples/plug-register.html">the seven-row plug register</a>. Two things are stated rather than fudged: the 2FA data file is <b>not mirrored here</b> (task <a href="comms.html#t5">T5</a>) because a reconstructed graph presented as the original would be worse than a missing one, and the browser-isolation graph's counterweight figure is published in both directions rather than in the one that flatters the argument it sits in.</p>
+        <p><b><a href="../concepts/index.html">/concepts/</a> and <a href="../agents/index.html">/agents/</a> — the commissioned audience.</b> All <b>42 concepts</b> with a stable anchor each, a one-line definition, maturity stated honestly, canonical source path and the page that argues it — plus <a href="../data/concepts.json">the same 42 as structured data</a> with the reading order and the six teaching altitudes. Both are generated from one definition, and the gate re-checks the count, the fields, the version and every anchor at release time, so they cannot drift. <a href="../llms-full.txt"><code>llms-full.txt</code></a> concatenates the prose of every page plus all eleven source documents, because agent fetch tools frequently refuse URLs a search has not returned and a single-file surface is the practical mitigation.</p>
+        <p><b>And the parts a research site owes a reader.</b> <a href="../shipped/index.html">/shipped/</a> says the engine is not built, first rather than last, with the grep result quoted. <a href="../network/index.html">/network/</a> carries the eight-site boundary map, <b>eight open questions published unresolved</b> and <b>seven honest tensions</b> — including that the model rates the ability to stop and refuses to provide it. <a href="../origins/index.html">/origins/</a> traces the trajectory from February's <em>“residual risk: acceptable”</em> to June's <em>“there is no deny button”</em>, and names the canonical brief that eight documents cite and nobody can read. <a href="../documents/index.html">/documents/</a> publishes the eleven sources and, at equal length, <b>what was deliberately excluded and why</b>. <a href="../about/participant.html">/about/participant.html</a> discloses that this site is published by the project that sells the product, and then states five places the model loses.</p>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class="note"><p style="margin-top:0"><b>Versioning.</b> <code>v{release}.{major}.{minor}</code>. Every push to <code>dev</code> is a minor release and must bump <code>admin/build/version.txt</code> exactly once, with the same version in the commit subject as <code>site vX.Y.Z: …</code>. CI verifies the two agree and that the bump is the next minor (or a deliberate major), then tags the release commit — <code>HEAD</code> on a direct push, <code>HEAD</code>'s parent when a pull request lands as a merge commit. The first run backfills tags for any historical release from the commit subjects.</p></div>
+
+<div class="pagenav">
+  <a href="comms.html">← Comms: asks and tasks</a>
+  <a href="../about/participant.html">Where we lose →</a>
+</div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">risks<span>.sgit.ai</span></div>
+    <p>The conceptual and research home for risk in the sgit.ai estate: what a risk is, what acceptance is, and why it is modelled this way. <a href="https://riskmandate.ai" style="display:inline;padding:0">riskmandate.ai</a> answers how you get your risks accepted and what it costs; this site answers why the model has the shape it has. <b>Nothing here is implemented in code</b> — <a href="../shipped/index.html" style="display:inline;padding:0">/shipped/</a> says so plainly. Part of the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network. All content CC BY 4.0 unless a page states otherwise.</p>
+    <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://riskmandate.ai">↗ riskmandate.ai</a> — the product · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> — the graph machinery · <a href="https://nhi.sgit.ai">↗ nhi.sgit.ai</a> · <a href="https://pki.sgit.ai">↗ pki.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
+    <p class="partnote">⚠ Participant disclosure: published by the sgit project, which also builds riskmandate.ai — the commercial product this research underpins. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
+    <p class="verline">site <a href="../admin/versions.html">v0.1.0</a> · <a href="../admin/index.html">engineering</a></p>
+  </div>
+  <div>
+    <h4>Start here</h4>
+    <a href="../acceptance/index.html">&#8594; The founding inversion</a>
+    <a href="../acceptance/no-deny.html">There is no deny button</a>
+    <a href="../acceptance/the-ladder.html">The interval ladder</a>
+    <a href="../acceptable/index.html">Accepted is not acceptable</a>
+    <a href="../ladder/index.html">The grounding ladder</a>
+  </div>
+  <div>
+    <h4>For agents</h4>
+    <a href="../agents/index.html">&#8594; The machine surface</a>
+    <a href="../concepts/index.html">All 42 concepts</a>
+    <a href="../data/concepts.json">concepts.json — the definitions</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+  </div>
+  <div>
+    <h4>The proof</h4>
+    <a href="../examples/index.html">Three worked graphs</a>
+    <a href="../examples/vaults.html">The four live vaults</a>
+    <a href="../examples/2fa.html">The 2FA instance graph</a>
+    <a href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+    <a href="../shipped/index.html">What is argued, what runs</a>
+  </div>
+  <div>
+    <h4>Site</h4>
+    <a href="../network/index.html">The network</a>
+    <a href="../origins/index.html">Origins</a>
+    <a href="../documents/index.html">The documents</a>
+    <a href="../admin/comms.html">Comms: asks &amp; tasks</a>
+    <a href="../admin/versions.html">Release history</a>
+    <a href="../about/participant.html">Where we lose</a>
+  </div>
+</div></footer>
+</body>
+</html>

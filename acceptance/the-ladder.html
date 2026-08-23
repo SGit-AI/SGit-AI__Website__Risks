@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The interval ladder · risks.sgit.ai</title>
+<meta name="description" content="1h, 4h, 1d, 1w, 1m, 6m — six rungs, each implying a specific operational response and a specific cost. The interval is not metadata about the decision; the interval is the decision.">
+<link rel="canonical" href="https://risks.sgit.ai/acceptance/the-ladder.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="risks.sgit.ai">
+<meta property="og:url" content="https://risks.sgit.ai/acceptance/the-ladder.html">
+<meta property="og:title" content="The interval is the decision">
+<meta property="og:description" content="Six rungs, each with its operational consequence stated. Default one month, set deliberately just above the incident line.">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../index.html">risks<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: vaults, publishing and the catalogue. This site is the estate's conceptual home for risk">↗ part of <b>sgit.ai</b></a>
+  <span class="stage-pill">research site</span>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.1.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni ni-has">
+      <a class="nl here" href="../acceptance/index.html">Acceptance<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../acceptance/index.html">The founding inversion</a>
+      <a class="sl" href="../acceptance/underwriting.html">Underwriting, not prediction</a>
+      <a class="sl" href="../acceptance/no-deny.html">There is no deny button</a>
+      <a class="sl here" href="../acceptance/the-ladder.html">The interval ladder</a>
+      <a class="sl" href="../acceptance/unaccepted-is-critical.html">Unaccepted is critical</a>
+      <a class="sl" href="../acceptance/workflow.html">Who underwrites, and how it flows up</a>
+      <a class="sl" href="../acceptable/index.html">Accepted is not acceptable</a>
+      <a class="sl" href="../acceptable/appetite.html">Appetite as a revealed band</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../ladder/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../ladder/index.html">The grounding ladder</a>
+      <a class="sl" href="../ladder/formulas.html">Node type formulas</a>
+      <a class="sl" href="../ladder/bridges.html">Bridges, not merges</a>
+      <a class="sl" href="../ladder/absence.html">Not knowing is a fact</a>
+      <a class="sl" href="../register/index.html">The register as a graph of graphs</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../plug/index.html">The exposure<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../plug/index.html">Who can pull the plug</a>
+      <a class="sl" href="../plug/recoverability.html">Recoverability: the hard limit</a>
+      <a class="sl" href="../blast-radius/index.html">Blast radius &amp; authorization closure</a>
+      <a class="sl" href="../practice/index.html">Practice: owners, altitude, meta-risks</a>
+      <a class="sl" href="../ramm/index.html">RAMM and the maturity models</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../examples/index.html">The proof<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../examples/index.html">Three worked graphs</a>
+      <a class="sl" href="../examples/2fa.html">The 2FA instance graph</a>
+      <a class="sl" href="../examples/browser-isolation.html">The browser-isolation case</a>
+      <a class="sl" href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+      <a class="sl" href="../examples/vaults.html">The four live vaults</a>
+      <a class="sl" href="../examples/scenarios.html">The ten scenarios</a>
+      <a class="sl" href="../examples/plug-register.html">The plug register</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../agents/index.html">For agents<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../agents/index.html">The machine surface</a>
+      <a class="sl" href="../concepts/index.html">All 42 concepts, addressable</a>
+      <a class="sl" href="../shipped/index.html">What is argued, what runs</a>
+      <a class="sl" href="../llms.txt">llms.txt</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../network/index.html">Site<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../network/index.html">The network: where the boundaries are</a>
+      <a class="sl" href="../origins/index.html">Origins: February to August 2026</a>
+      <a class="sl" href="../documents/index.html">The documents</a>
+      <a class="sl" href="../admin/comms.html">Comms: asks &amp; tasks</a>
+      <a class="sl" href="../admin/versions.html">Release history</a>
+      <a class="sl" href="../admin/index.html">Admin &amp; engineering</a>
+      <a class="sl" href="../about/participant.html">Where we lose</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__Risks">★ GitHub</a>
+  <script src="../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+<div class="crumb"><a href="../index.html">risks.sgit.ai</a> / <a href="index.html">acceptance</a> / the interval ladder</div>
+<h1>The interval <em>is</em> the decision</h1>
+<p class="lead">Once denial is gone, the only thing left to choose is a duration — and that turns out to carry more information than the button it replaced. Choosing a rung sets severity and commits resources in the same click, because <b>each rung implies a specific operational response</b>, and each response has a price. This is the single cleanest artefact in the corpus, and it is the thing an agent will look up.</p>
+<div class="tablewrap"><table class="rungs">
+  <thead><tr><th>Accept for</th><th>What you are saying</th><th>The operational response it implies</th><th>Cost</th></tr></thead>
+  <tbody>
+    <tr><td class="iv">1 hour</td><td>I cannot decide on what I have in front of me.</td><td>Someone goes and gets more data, immediately. This is a data-gathering instruction, not a risk judgement.</td><td class="cost">near-immediate</td></tr>
+    <tr><td class="iv">4 hours</td><td>This is a P1.</td><td>Trigger incident response. Playbooks, a bridge, a workflow, and a remediation inside four hours.</td><td class="cost">high, now</td></tr>
+    <tr><td class="iv">1–2 days</td><td>A smaller incident, but still an incident.</td><td>Something must be done within the window. Not a project — a response.</td><td class="cost">real</td></tr>
+    <tr><td class="iv">1–2 weeks</td><td>A funded project for an existing team.</td><td>Plan it, resource it, schedule it. It has an owner and a delivery date.</td><td class="cost">lower, planned</td></tr>
+    <tr class="default"><td class="iv">1 month</td><td>Assemble and fund. The default rung.</td><td>The work needs people who are not currently assigned to it. Set deliberately just <em>above</em> the incident line.</td><td class="cost">planned</td></tr>
+    <tr><td class="iv">6 months</td><td>We are waiting to see, and we are saying so.</td><td>Nothing. Review it then. Legitimate — provided somebody's name is on the decision to do nothing.</td><td class="cost">zero</td></tr>
+  </tbody>
+</table></div>
+<p class="small dim">Six rungs: 1h · 4h · 1d · 1w · 1m · 6m. Anything under a week is an incident and the rung simply names the grade. Anything over three months is <em>waiting to see</em>, which is a real strategy and an unsayable one in most registers.</p>
+
+<h2 id="not-metadata">Why the interval is not metadata</h2>
+<p>In a conventional register a review date is an administrative field: the decision is the rating, and the date says when someone will look again. Here the relationship is inverted.</p>
+<div class="claim">The interval is not a property of the decision. The interval is the decision — because each rung names a different operational response, and choosing the rung is choosing the response.</div>
+<p>The consequence is that severity and resourcing stop being two separate arguments. In most organisations, rating a risk “high” and getting a team assigned to it are different conversations held weeks apart, and the second one frequently does not happen. Here they are the same click. Somebody who selects four hours has started an incident; somebody who selects one month has requested funding; somebody who selects six months has declined to spend anything and has put their name to that.</p>
+<blockquote class="challenge">“if you have less than a day risk acceptance, then that is fundamentally a P1, because if you say I do not want to accept this risk for more than an hour once I know about it, then that means you need to pull the plug.”</blockquote>
+
+<h2 id="default">Why one month is the default</h2>
+<p>The default rung is doing deliberate work. One month sits just above the incident line: it is short enough that the item genuinely comes back, and long enough that selecting it is not itself an emergency. A default of one week would make every untouched item an incident and the register would be ignored within a fortnight. A default of six months would make silence free, which is exactly what <a href="unaccepted-is-critical.html">the next concept</a> is designed to prevent.</p>
+
+<h2 id="expiry">Expiry as cost</h2>
+<p>Read the table's last column downward and it is a price list. That is the point of it. An interval commits the organisation to a rate of spending, and a shorter interval is a more expensive one — which means a person choosing an interval is spending money, and knows it. The corpus's own framing:</p>
+<blockquote class="challenge">“four hours means start a P1 straight away, trigger your incident response and come back in four hours with a remediation. Two weeks means a funded project. Six months means you review it then, which means not doing anything, and that costs zero, because you are not doing anything about it.”</blockquote>
+<p>This is also the honest reason the ladder is short. A continuous slider would let people optimise for comfort; six named rungs each with a stated consequence force the choice to be about the response rather than about the number.</p>
+
+<h2 id="struck">Rungs get struck off before the choice is offered</h2>
+<p>The ladder is not always six wide for a given risk. Where a remediation is physically impossible inside a window, that rung is removed rather than offered — no authority and no budget buys a timeline that cannot exist. In the <a href="../examples/2fa.html">2FA worked example</a>, R3 resolves like this:</p>
+<div class="tablewrap"><table class="rungs">
+  <thead><tr><th>Rung</th><th>Resolution for R3 (unauthorised HR admin access)</th></tr></thead>
+  <tbody>
+    <tr><td class="iv struck">4 hours</td><td class="struck">Struck off — not technically possible in the window</td></tr>
+    <tr><td class="iv">48 hours</td><td>P1</td></tr>
+    <tr><td class="iv">2 weeks</td><td>Incident</td></tr>
+    <tr><td class="iv">1–2 months</td><td>A funded project</td></tr>
+    <tr><td class="iv">6 months</td><td>Do nothing, and say so</td></tr>
+  </tbody>
+</table></div>
+
+<h2 id="distance">One untested connection, flagged as new</h2>
+<p>The corpus proposes — and does not yet test — that the interval should be <b>a function of the distance from the acceptable line</b>: a risk far above where the business has said it stops funding remediation warrants a short interval; one at or below the line warrants a long one. If it holds, the interval becomes computable from two numbers the register already carries, rather than chosen. It is recorded here as proposed rather than as part of the model. <a href="../acceptable/index.html#distance">Accepted is not acceptable →</a></p>
+
+<div class="warnbox"><p style="margin-top:0"><b>Two loose ends worth carrying.</b> First, <a href="../network/index.html#q5">how the interval is enforced (Q5) is unspecified</a> — expiry-as-cost is asserted, and no mechanism is given for what happens at expiry. Second, the <b>4h-for-everyone problem</b>: in the 2FA example the governance air gap propagates GRC → CIO → CEO → Board with <em>each accepting at four hours, because that is the only option open to them</em>. Either the ladder needs a per-altitude variant, or that uniformity is itself a finding about the model. The corpus does not settle it, and neither does this page.</p></div>
+
+<h2 id="provenance">Provenance</h2>
+<div class="docmeta">
+  <div class="k">Concept</div><div class="v">C3 — The acceptance interval ladder</div>
+  <div class="k">Source</div><div class="v"><code>team/humans/dinis_cruz/briefs/07/17/registers-mandate-and-intervals/v0.33.49__arch-brief__…acceptance-interval-ladder…md</code></div>
+  <div class="k">Repository</div><div class="v"><code>SGraph-AI__App__Send</code> @ <code>v0.33.49</code>, never published — the version tag is the address</div>
+  <div class="k">First written</div><div class="v">intervals 23 June 2026; consolidated as a ladder 17 July 2026</div>
+  <div class="k">Maturity</div><div class="v"><span class="pill p-well">well-developed</span> — the single cleanest artefact in the corpus; a six-row table with plain-language consequences</div>
+  <div class="k">Licence</div><div class="v">CC BY 4.0 at source and here</div>
+</div>
+
+<div class="agent">
+  <h4>For an agent</h4>
+  <p><b>C3 — the interval ladder.</b> The interval is not metadata about an acceptance decision; <b>the interval is the decision</b>, because each rung implies a specific operational response and therefore a specific cost. The six rungs and what each commits the organisation to: <b>1h</b> = I need more data, fetch it now · <b>4h</b> = this is a P1, trigger incident response · <b>1–2d</b> = a smaller incident, act within the window · <b>1–2w</b> = a funded project for an existing team · <b>1m</b> = assemble and fund; <b>this is the default</b>, set deliberately just above the incident line · <b>6m</b> = do nothing and review then, which costs zero and is legitimate provided a name is on it. Under a week is an incident and the rung names the grade; over three months is “waiting to see”. Rungs that are physically impossible are struck off before the choice is offered. Proposed but untested: the interval as a function of distance from the acceptable line. <b>Not implemented in code, and the enforcement mechanism at expiry is unspecified.</b></p>
+</div>
+
+<div class="pagenav">
+  <a href="no-deny.html">← There is no deny button</a>
+  <a href="unaccepted-is-critical.html">Unaccepted is critical →</a>
+</div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">risks<span>.sgit.ai</span></div>
+    <p>The conceptual and research home for risk in the sgit.ai estate: what a risk is, what acceptance is, and why it is modelled this way. <a href="https://riskmandate.ai" style="display:inline;padding:0">riskmandate.ai</a> answers how you get your risks accepted and what it costs; this site answers why the model has the shape it has. <b>Nothing here is implemented in code</b> — <a href="../shipped/index.html" style="display:inline;padding:0">/shipped/</a> says so plainly. Part of the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network. All content CC BY 4.0 unless a page states otherwise.</p>
+    <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://riskmandate.ai">↗ riskmandate.ai</a> — the product · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> — the graph machinery · <a href="https://nhi.sgit.ai">↗ nhi.sgit.ai</a> · <a href="https://pki.sgit.ai">↗ pki.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
+    <p class="partnote">⚠ Participant disclosure: published by the sgit project, which also builds riskmandate.ai — the commercial product this research underpins. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
+    <p class="verline">site <a href="../admin/versions.html">v0.1.0</a> · <a href="../admin/index.html">engineering</a></p>
+  </div>
+  <div>
+    <h4>Start here</h4>
+    <a href="../acceptance/index.html">&#8594; The founding inversion</a>
+    <a href="../acceptance/no-deny.html">There is no deny button</a>
+    <a href="../acceptance/the-ladder.html">The interval ladder</a>
+    <a href="../acceptable/index.html">Accepted is not acceptable</a>
+    <a href="../ladder/index.html">The grounding ladder</a>
+  </div>
+  <div>
+    <h4>For agents</h4>
+    <a href="../agents/index.html">&#8594; The machine surface</a>
+    <a href="../concepts/index.html">All 42 concepts</a>
+    <a href="../data/concepts.json">concepts.json — the definitions</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+  </div>
+  <div>
+    <h4>The proof</h4>
+    <a href="../examples/index.html">Three worked graphs</a>
+    <a href="../examples/vaults.html">The four live vaults</a>
+    <a href="../examples/2fa.html">The 2FA instance graph</a>
+    <a href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+    <a href="../shipped/index.html">What is argued, what runs</a>
+  </div>
+  <div>
+    <h4>Site</h4>
+    <a href="../network/index.html">The network</a>
+    <a href="../origins/index.html">Origins</a>
+    <a href="../documents/index.html">The documents</a>
+    <a href="../admin/comms.html">Comms: asks &amp; tasks</a>
+    <a href="../admin/versions.html">Release history</a>
+    <a href="../about/participant.html">Where we lose</a>
+  </div>
+</div></footer>
+</body>
+</html>

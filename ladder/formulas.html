@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Node type formulas · risks.sgit.ai</title>
+<meta name="description" content="Classification as a computed path query rather than a judgement. A node type is defined by its required upward and downward paths — so promotion and demotion are edge events, and bias moves into the formula where it can be argued with.">
+<link rel="canonical" href="https://risks.sgit.ai/ladder/formulas.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="risks.sgit.ai">
+<meta property="og:url" content="https://risks.sgit.ai/ladder/formulas.html">
+<meta property="og:title" content="Node type formulas — classification as a query">
+<meta property="og:description" content="The ontology definition of a node type is its upward and downward path-pattern, not a sentence about what it contains.">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../index.html">risks<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: vaults, publishing and the catalogue. This site is the estate's conceptual home for risk">↗ part of <b>sgit.ai</b></a>
+  <span class="stage-pill">research site</span>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.1.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni ni-has">
+      <a class="nl" href="../acceptance/index.html">Acceptance<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../acceptance/index.html">The founding inversion</a>
+      <a class="sl" href="../acceptance/underwriting.html">Underwriting, not prediction</a>
+      <a class="sl" href="../acceptance/no-deny.html">There is no deny button</a>
+      <a class="sl" href="../acceptance/the-ladder.html">The interval ladder</a>
+      <a class="sl" href="../acceptance/unaccepted-is-critical.html">Unaccepted is critical</a>
+      <a class="sl" href="../acceptance/workflow.html">Who underwrites, and how it flows up</a>
+      <a class="sl" href="../acceptable/index.html">Accepted is not acceptable</a>
+      <a class="sl" href="../acceptable/appetite.html">Appetite as a revealed band</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../ladder/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../ladder/index.html">The grounding ladder</a>
+      <a class="sl here" href="../ladder/formulas.html">Node type formulas</a>
+      <a class="sl" href="../ladder/bridges.html">Bridges, not merges</a>
+      <a class="sl" href="../ladder/absence.html">Not knowing is a fact</a>
+      <a class="sl" href="../register/index.html">The register as a graph of graphs</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../plug/index.html">The exposure<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../plug/index.html">Who can pull the plug</a>
+      <a class="sl" href="../plug/recoverability.html">Recoverability: the hard limit</a>
+      <a class="sl" href="../blast-radius/index.html">Blast radius &amp; authorization closure</a>
+      <a class="sl" href="../practice/index.html">Practice: owners, altitude, meta-risks</a>
+      <a class="sl" href="../ramm/index.html">RAMM and the maturity models</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../examples/index.html">The proof<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../examples/index.html">Three worked graphs</a>
+      <a class="sl" href="../examples/2fa.html">The 2FA instance graph</a>
+      <a class="sl" href="../examples/browser-isolation.html">The browser-isolation case</a>
+      <a class="sl" href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+      <a class="sl" href="../examples/vaults.html">The four live vaults</a>
+      <a class="sl" href="../examples/scenarios.html">The ten scenarios</a>
+      <a class="sl" href="../examples/plug-register.html">The plug register</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../agents/index.html">For agents<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../agents/index.html">The machine surface</a>
+      <a class="sl" href="../concepts/index.html">All 42 concepts, addressable</a>
+      <a class="sl" href="../shipped/index.html">What is argued, what runs</a>
+      <a class="sl" href="../llms.txt">llms.txt</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../network/index.html">Site<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../network/index.html">The network: where the boundaries are</a>
+      <a class="sl" href="../origins/index.html">Origins: February to August 2026</a>
+      <a class="sl" href="../documents/index.html">The documents</a>
+      <a class="sl" href="../admin/comms.html">Comms: asks &amp; tasks</a>
+      <a class="sl" href="../admin/versions.html">Release history</a>
+      <a class="sl" href="../admin/index.html">Admin &amp; engineering</a>
+      <a class="sl" href="../about/participant.html">Where we lose</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__Risks">★ GitHub</a>
+  <script src="../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+<div class="crumb"><a href="../index.html">risks.sgit.ai</a> / <a href="index.html">the grounding ladder</a> / node type formulas</div>
+<h1>Node type formulas</h1>
+<p class="lead">The mechanism beneath the ladder, and arguably the most transferable idea in the corpus. What a node <em>is</em> should be computed against the graph rather than decided in a classifier's head. A node type formula is a required pattern of typed, directed paths; a node either matches it or does not. Classification becomes a <b>query</b>.</p>
+<div class="claim">“the ontology definition of a node type is its upward and downward path-pattern, not a sentence about what it contains.”</div>
+
+<h2 id="shape">What a formula looks like</h2>
+<p>The corpus's own example, from the AWS IAM layer where the ladder was applied to a second domain:</p>
+<pre class="term"><code><b>AcceptableForInterval</b> := a <b>Risk</b> with an <code>accepted_by</code> path to an
+                          <b>AcceptanceDecision</b> carrying an owner, a direction,
+                          an interval, and a sign-off.</code></pre>
+<p>Read it as a test rather than as a description. Given a node and a graph, the formula either matches or it does not, and the answer is checkable by anyone with the same graph. Compare with the sentence it replaces — <em>“an acceptable risk is one that has been properly signed off”</em> — which is unfalsifiable, because “properly” is doing all the work and is defined nowhere.</p>
+<div class="pathline">
+  <span class="nd">Risk</span><span class="ed">accepted_by</span><span class="nd">AcceptanceDecision</span><span class="ed">has_owner</span><span class="nd">Owner</span>
+  <span class="say">…and <code>has_direction</code>, <code>has_interval</code> and <code>signed_by</code> must also be present. Four required edges; miss one and the node does not match.</span>
+</div>
+
+<h2 id="dynamic">Classification becomes dynamic and path-relative</h2>
+<p>If a type is a path pattern, then type membership changes when the paths change. That is not a defect to be engineered around — it is the property that makes the model honest about what classification actually is.</p>
+<div class="tablewrap"><table>
+  <thead><tr><th>Event</th><th>What happens</th><th>In a conventional model</th></tr></thead>
+  <tbody>
+    <tr><td>A <code>gives_rise_to</code> edge is added from a fact to a risk</td><td>The fact <b>is now a vulnerability</b>. No re-assessment, no reclassification meeting — the edge is the promotion</td><td>Someone must notice, re-rate it, and update a field</td></tr>
+    <tr><td>The risk above it is closed and the edge removed</td><td>The node is a fact again. <b>Demotion is an edge event too</b></td><td>The vulnerability record stays, stale, until a cleanup that never comes</td></tr>
+    <tr><td>Two teams disagree about whether something is a vulnerability</td><td>They are running <b>different formulas over the same graph</b>, and both answers are correct under their own. <a href="bridges.html">Bridges, not merges →</a></td><td>An argument about words, settled by whoever is more senior</td></tr>
+  </tbody>
+</table></div>
+
+<h2 id="bias">Bias does not disappear — it relocates, which is the point</h2>
+<p>The strongest claim on this page, and the one worth arguing with. Formulas do not remove judgement from classification; they move it out of the classifier's head and into an artefact.</p>
+<div class="claim">Bias does not disappear. It moves into the formula, where it is visible, versioned and arguable.</div>
+<p>Two parties who disagree about whether a finding is a vulnerability currently trade intuitions, seniority and vocabulary. Under formulas they <b>diff two definitions</b>. That is a smaller, sharper and settleable disagreement — and one that leaves a record, because the formula that won is written down and dated.</p>
+<p>It also makes a class of quiet failure visible. If a business unit's formula for “critical” has an extra required edge that almost nothing satisfies, that unit will report very few critical risks — and under prose definitions nobody could see why. Under formulas, the reason is a line of the definition. <a href="../practice/index.html#downgrading">When the business downgrades everything →</a></p>
+
+<h2 id="scale">Where formulas have been written down</h2>
+<div class="tablewrap"><table>
+  <thead><tr><th>Domain</th><th>Scale</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr><td>The grounding ladder</td><td>8 rungs</td><td>The canonical chain, each rung defined by its required upward and downward paths. <a href="index.html">The ladder →</a></td></tr>
+    <tr><td>AWS IAM configuration risk</td><td><b>6 layers · ~31 node types · 20 edge types</b> (40 readings, counting inverses) · <b>7 node type formulas</b></td><td>The second domain the method was applied to, and where <code>AuthorizationClosure</code> appears as a first-class type. <a href="../blast-radius/index.html">Blast radius →</a></td></tr>
+    <tr><td>The 2FA instance ontology</td><td><b>24 node classes · 34 edge types</b></td><td>Includes <code>Acceptance</code> and <code>Interval</code> as node classes with <code>accepted_by</code>, <code>has_interval</code>, <code>propagates_to</code>, <code>underwritten_by</code> and <code>overrides</code>. <a href="../examples/2fa.html">The graph →</a></td></tr>
+    <tr><td>RAMM</td><td><b>5 levels</b>, expressed as graph predicates</td><td>⚠️ Only Level 3 has a stated predicate — <em>“all acceptance nodes have the five required edges”</em>. <a href="../ramm/index.html#underspecified">Levels 1, 2, 4 and 5 are underspecified →</a></td></tr>
+  </tbody>
+</table></div>
+
+<div class="warnbox"><p style="margin-top:0"><b>The open question the mechanism rests on.</b> <a href="../network/index.html#q1">Q1 — what is the formula language?</a> Every formula in the corpus is written in English prose that <em>describes</em> a path pattern. No notation is defined, no parser exists, and nothing executes one. The canonical brief names this as its own open question rather than glossing it, and this page does the same: node type formulas are a well-developed idea and an unimplemented mechanism. Until the language exists, “classification is a query” is a claim about how classification <em>should</em> work, not a description of a system that runs.</p></div>
+
+<h2 id="provenance">Provenance</h2>
+<div class="docmeta">
+  <div class="k">Concept</div><div class="v">C7 — Node type formulas (classification as a testable path-pattern)</div>
+  <div class="k">Source</div><div class="v"><code>team/humans/dinis_cruz/briefs/06/28/ontology-and-definitions/v0.33.36__arch-brief__…node-type-formulas…md</code></div>
+  <div class="k">Repository</div><div class="v"><code>SGraph-AI__App__Send</code> @ <code>v0.33.36</code>, never published — the version tag is the address</div>
+  <div class="k">First written</div><div class="v">28 June 2026</div>
+  <div class="k">Maturity</div><div class="v"><span class="pill p-well">well-developed as a mechanism</span> — but the formula <em>language</em> is an open question, named as such in the source</div>
+  <div class="k">Licence</div><div class="v">CC BY 4.0 at source and here</div>
+</div>
+
+<div class="agent">
+  <h4>For an agent</h4>
+  <p><b>C7 — node type formulas.</b> Define a node type by <b>the pattern of typed, directed paths it is required to have</b>, not by a sentence about what it contains. A node either matches the pattern or it does not, so classification is a <b>query</b> against the graph rather than a judgement in someone's head. Consequences: classification is <b>dynamic and path-relative</b> — adding a <code>gives_rise_to</code> edge promotes a Fact to a Vulnerability, and removing it demotes it, with no re-assessment step; and <b>bias relocates rather than disappearing</b> — it moves from the classifier into the formula, where it is visible, versioned and arguable, so two parties who disagree diff definitions instead of trading intuitions. Worked example of the notation: <code>AcceptableForInterval := a Risk with an accepted_by path to an AcceptanceDecision carrying an owner, a direction, an interval, and a sign-off.</code> <b>Important limit: no formula language is defined and nothing executes a formula</b> — every formula in the corpus is English prose describing a path pattern. That is open question Q1. <b>Not implemented in code.</b></p>
+</div>
+
+<div class="pagenav">
+  <a href="index.html">← The grounding ladder</a>
+  <a href="bridges.html">Bridges, not merges →</a>
+</div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">risks<span>.sgit.ai</span></div>
+    <p>The conceptual and research home for risk in the sgit.ai estate: what a risk is, what acceptance is, and why it is modelled this way. <a href="https://riskmandate.ai" style="display:inline;padding:0">riskmandate.ai</a> answers how you get your risks accepted and what it costs; this site answers why the model has the shape it has. <b>Nothing here is implemented in code</b> — <a href="../shipped/index.html" style="display:inline;padding:0">/shipped/</a> says so plainly. Part of the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network. All content CC BY 4.0 unless a page states otherwise.</p>
+    <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://riskmandate.ai">↗ riskmandate.ai</a> — the product · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> — the graph machinery · <a href="https://nhi.sgit.ai">↗ nhi.sgit.ai</a> · <a href="https://pki.sgit.ai">↗ pki.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
+    <p class="partnote">⚠ Participant disclosure: published by the sgit project, which also builds riskmandate.ai — the commercial product this research underpins. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
+    <p class="verline">site <a href="../admin/versions.html">v0.1.0</a> · <a href="../admin/index.html">engineering</a></p>
+  </div>
+  <div>
+    <h4>Start here</h4>
+    <a href="../acceptance/index.html">&#8594; The founding inversion</a>
+    <a href="../acceptance/no-deny.html">There is no deny button</a>
+    <a href="../acceptance/the-ladder.html">The interval ladder</a>
+    <a href="../acceptable/index.html">Accepted is not acceptable</a>
+    <a href="../ladder/index.html">The grounding ladder</a>
+  </div>
+  <div>
+    <h4>For agents</h4>
+    <a href="../agents/index.html">&#8594; The machine surface</a>
+    <a href="../concepts/index.html">All 42 concepts</a>
+    <a href="../data/concepts.json">concepts.json — the definitions</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+  </div>
+  <div>
+    <h4>The proof</h4>
+    <a href="../examples/index.html">Three worked graphs</a>
+    <a href="../examples/vaults.html">The four live vaults</a>
+    <a href="../examples/2fa.html">The 2FA instance graph</a>
+    <a href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+    <a href="../shipped/index.html">What is argued, what runs</a>
+  </div>
+  <div>
+    <h4>Site</h4>
+    <a href="../network/index.html">The network</a>
+    <a href="../origins/index.html">Origins</a>
+    <a href="../documents/index.html">The documents</a>
+    <a href="../admin/comms.html">Comms: asks &amp; tasks</a>
+    <a href="../admin/versions.html">Release history</a>
+    <a href="../about/participant.html">Where we lose</a>
+  </div>
+</div></footer>
+</body>
+</html>

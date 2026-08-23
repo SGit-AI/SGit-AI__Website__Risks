@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bridges, not merges · risks.sgit.ai</title>
+<meta name="description" content="Multiple parties each own their own formula over a shared factual graph, connected at declared crosswalk points rather than merged into one schema — with a worked bridge to a published security-centric vulnerability formula.">
+<link rel="canonical" href="https://risks.sgit.ai/ladder/bridges.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="risks.sgit.ai">
+<meta property="og:url" content="https://risks.sgit.ai/ladder/bridges.html">
+<meta property="og:title" content="Bridges, not merges">
+<meta property="og:description" content="A node can be a vulnerability under one formula and not another, and both are valid — they are different queries over the same graph.">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../index.html">risks<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: vaults, publishing and the catalogue. This site is the estate's conceptual home for risk">↗ part of <b>sgit.ai</b></a>
+  <span class="stage-pill">research site</span>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.1.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni ni-has">
+      <a class="nl" href="../acceptance/index.html">Acceptance<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../acceptance/index.html">The founding inversion</a>
+      <a class="sl" href="../acceptance/underwriting.html">Underwriting, not prediction</a>
+      <a class="sl" href="../acceptance/no-deny.html">There is no deny button</a>
+      <a class="sl" href="../acceptance/the-ladder.html">The interval ladder</a>
+      <a class="sl" href="../acceptance/unaccepted-is-critical.html">Unaccepted is critical</a>
+      <a class="sl" href="../acceptance/workflow.html">Who underwrites, and how it flows up</a>
+      <a class="sl" href="../acceptable/index.html">Accepted is not acceptable</a>
+      <a class="sl" href="../acceptable/appetite.html">Appetite as a revealed band</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../ladder/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../ladder/index.html">The grounding ladder</a>
+      <a class="sl" href="../ladder/formulas.html">Node type formulas</a>
+      <a class="sl here" href="../ladder/bridges.html">Bridges, not merges</a>
+      <a class="sl" href="../ladder/absence.html">Not knowing is a fact</a>
+      <a class="sl" href="../register/index.html">The register as a graph of graphs</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../plug/index.html">The exposure<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../plug/index.html">Who can pull the plug</a>
+      <a class="sl" href="../plug/recoverability.html">Recoverability: the hard limit</a>
+      <a class="sl" href="../blast-radius/index.html">Blast radius &amp; authorization closure</a>
+      <a class="sl" href="../practice/index.html">Practice: owners, altitude, meta-risks</a>
+      <a class="sl" href="../ramm/index.html">RAMM and the maturity models</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../examples/index.html">The proof<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../examples/index.html">Three worked graphs</a>
+      <a class="sl" href="../examples/2fa.html">The 2FA instance graph</a>
+      <a class="sl" href="../examples/browser-isolation.html">The browser-isolation case</a>
+      <a class="sl" href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+      <a class="sl" href="../examples/vaults.html">The four live vaults</a>
+      <a class="sl" href="../examples/scenarios.html">The ten scenarios</a>
+      <a class="sl" href="../examples/plug-register.html">The plug register</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../agents/index.html">For agents<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../agents/index.html">The machine surface</a>
+      <a class="sl" href="../concepts/index.html">All 42 concepts, addressable</a>
+      <a class="sl" href="../shipped/index.html">What is argued, what runs</a>
+      <a class="sl" href="../llms.txt">llms.txt</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../network/index.html">Site<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../network/index.html">The network: where the boundaries are</a>
+      <a class="sl" href="../origins/index.html">Origins: February to August 2026</a>
+      <a class="sl" href="../documents/index.html">The documents</a>
+      <a class="sl" href="../admin/comms.html">Comms: asks &amp; tasks</a>
+      <a class="sl" href="../admin/versions.html">Release history</a>
+      <a class="sl" href="../admin/index.html">Admin &amp; engineering</a>
+      <a class="sl" href="../about/participant.html">Where we lose</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__Risks">★ GitHub</a>
+  <script src="../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+<div class="crumb"><a href="../index.html">risks.sgit.ai</a> / <a href="index.html">the grounding ladder</a> / bridges</div>
+<h1>Bridges, not merges</h1>
+<p class="lead">Two parties disagree about what counts as a vulnerability. The instinct is to reconcile the definitions into one schema. That is the wrong move: it erases the view that was worth having. Instead, keep one shared factual graph, let each party own their own formula over it, and connect the two at <b>declared bridge points</b>.</p>
+<h2 id="layers">Three layers</h2>
+<div class="ladder">
+  <div class="cap"><span class="capnum">1</span><h3>The shared factual graph</h3>
+    <p>Facts, evidence, measures, twins. What is actually true about the estate — the part everyone can agree on, because it is grounded rather than interpreted. This layer is shared and should be the only shared one.</p></div>
+  <div class="cap"><span class="capnum">2</span><h3>Per-party formulas</h3>
+    <p>Each party runs their own <a href="formulas.html">node type formulas</a> over that shared graph. A node can be a vulnerability under one formula and not under another, <b>and both answers are correct</b> — they are different queries over the same data, not competing claims about it.</p></div>
+  <div class="cap"><span class="capnum">3</span><h3>Declared bridges</h3>
+    <p>Where the two views connect, the connection is <em>stated</em> as an edge with a name and a direction, rather than implied by a shared label. A bridge is a claim you can inspect, version and disagree with.</p></div>
+</div>
+<div class="claim">“We do not fold their definition into ours, which would erase the security-centric view that is the whole point of having it. We declare a bridge: a Security Failure gives rise to a Business Risk.”</div>
+
+<h2 id="worked">The worked bridge: a security-centric vulnerability formula</h2>
+<p>The corpus does not leave this abstract. It takes a published, security-centric definition of “vulnerability” — the formulation associated with Art Manion, Jay Jacobs and Michael Roytman, built from <b>System, Fault, Security Failure</b> and <b>Conditions</b> — and bridges it to the business-centric one rather than arguing with it.</p>
+<p>The finding is better than a reconciliation. The security-centric formula turns out to be a <b>sub-path</b> of the business-centric one:</p>
+<div class="pathline">
+  <span class="nd">System</span><span class="ed">has</span><span class="nd">Fault</span><span class="ed">under Conditions gives rise to</span><span class="nd">Security Failure</span>
+  <span class="say">Their chain. Now the bridge, at the terminus:</span>
+</div>
+<div class="pathline">
+  <span class="nd">Security Failure</span><span class="ed">gives_rise_to</span><span class="nd">Business Risk</span><span class="ed">accepted_by</span><span class="nd">AcceptanceDecision</span>
+  <span class="say">Their Security Failure plays exactly the structural role of the promotion edge in the grounding ladder. The two formulas differ only in where they stop.</span>
+</div>
+<p>That is a substantive result rather than diplomacy. It says the disagreement was never about what a vulnerability <em>is</em> — both formulas describe the same promotion structure — but about which terminus the discipline cares about. A security practice terminates at the security failure because that is where its remit ends; a business register continues one edge further, to the consequence someone has to underwrite. Neither is wrong, and merging them would have destroyed exactly the information that made the comparison useful.</p>
+
+<div class="note"><p style="margin-top:0"><b>Attribution and right of reply.</b> The source document names three real researchers and is explicit that it paraphrases their definitions rather than quoting them — <em>“Their definitions are paraphrased; see Sources”</em>. That care is preserved here. The treatment is favourable, the bridge is offered as a contribution rather than a correction, and the corpus's own stance applies: <em>“Offered to be built on and challenged.”</em> If any of the three would like the characterisation amended or removed, <a href="../admin/comms.html">ask N6 on the comms board</a> is the standing offer of a right of reply.</p></div>
+
+<h2 id="why">Why merging is the failure mode</h2>
+<div class="tablewrap"><table>
+  <thead><tr><th></th><th>Merge into one schema</th><th>Bridge two formulas</th></tr></thead>
+  <tbody>
+    <tr><td><b>What happens to the disagreement</b></td><td>Erased. One definition wins and the other becomes unspeakable</td><td>Preserved and made explicit as an edge between two named views</td></tr>
+    <tr><td><b>Who has to agree</b></td><td>Everyone, before anything works</td><td>Nobody, on the definitions. Only on the <em>facts</em> — which is the layer where agreement is achievable</td></tr>
+    <tr><td><b>Cost of a new party joining</b></td><td>Renegotiate the schema</td><td>Write one formula and declare its bridges</td></tr>
+    <tr><td><b>What a mismatch tells you</b></td><td>Nothing — it was normalised away</td><td>Something real: where two disciplines draw the line differently, and why</td></tr>
+  </tbody>
+</table></div>
+
+<h2 id="regulation">The same move, applied to regulation</h2>
+<p>A regulator's definition of an obligation and a company's definition of a control are exactly the two-formula case, and bridging rather than merging is what keeps a compliance claim honest. The <a href="../examples/vaults.html#regulation-graph">Regulation Graph vault</a> carries the EU AI Act as <b>1,523 nodes and 1,944 edges</b> parsed from official Formex XML and hash-verified — 113 articles, 500 paragraphs, 417 points, 180 recitals, 13 annexes and 68 definitions. Those are the regulator's nodes, in the regulator's structure, not a paraphrase.</p>
+<p>Risk's claims against them are then declared bridges, and deliberately narrow: <a href="../acceptable/index.html#article-9">Article 9(5) as the undefined “acceptable”</a>, <a href="../plug/index.html#article-14">Article 14 as the plug obligation</a>, and <a href="../examples/article-26-5.html">Article 26(5)/(6) as the worked example anchor</a>. Three bridges, each one stated, each one arguable. <a href="../network/index.html#eu-ai-act">Why the wider regulation thread is not this site's →</a></p>
+
+<h2 id="provenance">Provenance</h2>
+<div class="docmeta">
+  <div class="k">Concept</div><div class="v">C8 — Ontologies of ontologies — bridges, not merges</div>
+  <div class="k">Source</div><div class="v"><code>team/humans/dinis_cruz/briefs/06/28/ontology-and-definitions/v0.33.36__arch-brief__…ontologies-of-ontologies…md and …bridge-vulnerability-formula…md</code></div>
+  <div class="k">Repository</div><div class="v"><code>SGraph-AI__App__Send</code> @ <code>v0.33.36</code>, never published — the version tag is the address</div>
+  <div class="k">First written</div><div class="v">28 June 2026</div>
+  <div class="k">Maturity</div><div class="v"><span class="pill p-well">well-developed</span> — with one fully worked external bridge</div>
+  <div class="k">Licence</div><div class="v">CC BY 4.0 at source and here</div>
+</div>
+
+<div class="agent">
+  <h4>For an agent</h4>
+  <p><b>C8 — ontologies of ontologies: bridges, not merges.</b> When two parties define a type differently, do <b>not</b> merge their schemas — merging erases the view that made the second definition worth having. Use three layers: (1) one <b>shared factual graph</b> of facts, evidence, measures and twins; (2) <b>per-party formulas</b> over it, so a node can be a vulnerability under one formula and not another and <b>both answers are correct</b>, being different queries over the same data; (3) <b>declared bridges</b> — the connection stated as a named, directed edge rather than implied by a shared label. Worked proof: the security-centric vulnerability formula (System · Fault · Security Failure · Conditions, associated with Manion, Jacobs and Roytman, paraphrased in the source) is structurally a <b>sub-path</b> of the business-centric one — their Security Failure plays exactly the role of the promotion edge, and the two differ only in terminus. The bridge is <code>Security Failure gives_rise_to Business Risk</code>. Same move applied to regulation: the EU AI Act is carried as the regulator's own 1,523-node graph, and risk's claims against it are three narrow declared bridges. <b>Not implemented in code.</b></p>
+</div>
+
+<div class="pagenav">
+  <a href="formulas.html">← Node type formulas</a>
+  <a href="absence.html">Not knowing is a fact →</a>
+</div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">risks<span>.sgit.ai</span></div>
+    <p>The conceptual and research home for risk in the sgit.ai estate: what a risk is, what acceptance is, and why it is modelled this way. <a href="https://riskmandate.ai" style="display:inline;padding:0">riskmandate.ai</a> answers how you get your risks accepted and what it costs; this site answers why the model has the shape it has. <b>Nothing here is implemented in code</b> — <a href="../shipped/index.html" style="display:inline;padding:0">/shipped/</a> says so plainly. Part of the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network. All content CC BY 4.0 unless a page states otherwise.</p>
+    <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://riskmandate.ai">↗ riskmandate.ai</a> — the product · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> — the graph machinery · <a href="https://nhi.sgit.ai">↗ nhi.sgit.ai</a> · <a href="https://pki.sgit.ai">↗ pki.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
+    <p class="partnote">⚠ Participant disclosure: published by the sgit project, which also builds riskmandate.ai — the commercial product this research underpins. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
+    <p class="verline">site <a href="../admin/versions.html">v0.1.0</a> · <a href="../admin/index.html">engineering</a></p>
+  </div>
+  <div>
+    <h4>Start here</h4>
+    <a href="../acceptance/index.html">&#8594; The founding inversion</a>
+    <a href="../acceptance/no-deny.html">There is no deny button</a>
+    <a href="../acceptance/the-ladder.html">The interval ladder</a>
+    <a href="../acceptable/index.html">Accepted is not acceptable</a>
+    <a href="../ladder/index.html">The grounding ladder</a>
+  </div>
+  <div>
+    <h4>For agents</h4>
+    <a href="../agents/index.html">&#8594; The machine surface</a>
+    <a href="../concepts/index.html">All 42 concepts</a>
+    <a href="../data/concepts.json">concepts.json — the definitions</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+  </div>
+  <div>
+    <h4>The proof</h4>
+    <a href="../examples/index.html">Three worked graphs</a>
+    <a href="../examples/vaults.html">The four live vaults</a>
+    <a href="../examples/2fa.html">The 2FA instance graph</a>
+    <a href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+    <a href="../shipped/index.html">What is argued, what runs</a>
+  </div>
+  <div>
+    <h4>Site</h4>
+    <a href="../network/index.html">The network</a>
+    <a href="../origins/index.html">Origins</a>
+    <a href="../documents/index.html">The documents</a>
+    <a href="../admin/comms.html">Comms: asks &amp; tasks</a>
+    <a href="../admin/versions.html">Release history</a>
+    <a href="../about/participant.html">Where we lose</a>
+  </div>
+</div></footer>
+</body>
+</html>

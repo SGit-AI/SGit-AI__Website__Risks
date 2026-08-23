@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>risks.sgit.ai — you cannot deny a risk, only say how long you accept it</title>
+<meta name="description" content="A research site for risk. Traditional risk management predicts the probability of a future event; this model asks a named human to underwrite an exposure that already exists. From that inversion follows the no-deny mechanic, the interval ladder, unaccepted-equals-critical and the grounding ladder underneath. 42 concepts, three worked graphs, four live vaults — and no engine.">
+<link rel="canonical" href="https://risks.sgit.ai/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="risks.sgit.ai">
+<meta property="og:url" content="https://risks.sgit.ai/index.html">
+<meta property="og:title" content="risks.sgit.ai — the interval is the decision">
+<meta property="og:description" content="There is no deny button. The only question is how long you accept a risk before you have to accept it again — and each rung of that ladder implies a specific operational response.">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="text/markdown" href="index.md" title="This page as markdown">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="index.html">risks<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: vaults, publishing and the catalogue. This site is the estate's conceptual home for risk">↗ part of <b>sgit.ai</b></a>
+  <span class="stage-pill">research site</span>
+  <a class="ver" href="admin/versions.html" title="Site release history">v0.1.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni ni-has">
+      <a class="nl" href="acceptance/index.html">Acceptance<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="acceptance/index.html">The founding inversion</a>
+      <a class="sl" href="acceptance/underwriting.html">Underwriting, not prediction</a>
+      <a class="sl" href="acceptance/no-deny.html">There is no deny button</a>
+      <a class="sl" href="acceptance/the-ladder.html">The interval ladder</a>
+      <a class="sl" href="acceptance/unaccepted-is-critical.html">Unaccepted is critical</a>
+      <a class="sl" href="acceptance/workflow.html">Who underwrites, and how it flows up</a>
+      <a class="sl" href="acceptable/index.html">Accepted is not acceptable</a>
+      <a class="sl" href="acceptable/appetite.html">Appetite as a revealed band</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="ladder/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="ladder/index.html">The grounding ladder</a>
+      <a class="sl" href="ladder/formulas.html">Node type formulas</a>
+      <a class="sl" href="ladder/bridges.html">Bridges, not merges</a>
+      <a class="sl" href="ladder/absence.html">Not knowing is a fact</a>
+      <a class="sl" href="register/index.html">The register as a graph of graphs</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="plug/index.html">The exposure<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="plug/index.html">Who can pull the plug</a>
+      <a class="sl" href="plug/recoverability.html">Recoverability: the hard limit</a>
+      <a class="sl" href="blast-radius/index.html">Blast radius &amp; authorization closure</a>
+      <a class="sl" href="practice/index.html">Practice: owners, altitude, meta-risks</a>
+      <a class="sl" href="ramm/index.html">RAMM and the maturity models</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="examples/index.html">The proof<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="examples/index.html">Three worked graphs</a>
+      <a class="sl" href="examples/2fa.html">The 2FA instance graph</a>
+      <a class="sl" href="examples/browser-isolation.html">The browser-isolation case</a>
+      <a class="sl" href="examples/article-26-5.html">Article 26(5): fact to board</a>
+      <a class="sl" href="examples/vaults.html">The four live vaults</a>
+      <a class="sl" href="examples/scenarios.html">The ten scenarios</a>
+      <a class="sl" href="examples/plug-register.html">The plug register</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="agents/index.html">For agents<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="agents/index.html">The machine surface</a>
+      <a class="sl" href="concepts/index.html">All 42 concepts, addressable</a>
+      <a class="sl" href="shipped/index.html">What is argued, what runs</a>
+      <a class="sl" href="llms.txt">llms.txt</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="network/index.html">Site<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="network/index.html">The network: where the boundaries are</a>
+      <a class="sl" href="origins/index.html">Origins: February to August 2026</a>
+      <a class="sl" href="documents/index.html">The documents</a>
+      <a class="sl" href="admin/comms.html">Comms: asks &amp; tasks</a>
+      <a class="sl" href="admin/versions.html">Release history</a>
+      <a class="sl" href="admin/index.html">Admin &amp; engineering</a>
+      <a class="sl" href="about/participant.html">Where we lose</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__Risks">★ GitHub</a>
+  <script src="assets/nav.js" defer></script>
+</div></nav>
+
+<header class="hero">
+  <div class="eyebrow">The conceptual and research home for risk · the research half of riskmandate.ai</div>
+  <h1>You cannot deny a risk.<br>You can only say how long you accept it.</h1>
+  <p class="sub">Traditional risk management predicts the probability of a future event. This model asks a named human to <b>underwrite an exposure that already exists</b> — insurance-style, with personal liability attached. Everything else follows from that one inversion: if the risk is real it cannot be denied, so <b>there is no deny button</b>; the only choice is <em>how long</em>, and <b>the interval is the decision</b>, because each rung implies a specific operational response.</p>
+  <div class="ctas">
+    <a class="cta1" href="acceptance/index.html">The founding inversion →</a>
+    <a class="cta2" href="acceptance/the-ladder.html">The interval ladder →</a>
+    <a class="cta2" href="shipped/index.html">What is argued, what runs →</a>
+  </div>
+  <div class="proof">
+    <div class="n"><b>42</b><span>concepts, each with a stable anchor and a JSON definition</span><em>from ~496,000 words</em></div>
+    <div class="n"><b>6</b><span>rungs on the interval ladder — 1h · 4h · 1d · 1w · 1m · 6m</span><em>default: one month</em></div>
+    <div class="n"><b>0</b><span>lines of code implementing any of it. The engine is not built</span><em>the grep returns zero</em></div>
+    <div class="n"><b>4</b><span>live vaults, published with read keys and browsable today</span><em>468 files between them</em></div>
+    <div class="n"><b>59 · 75</b><span>nodes and edges in the largest worked risk graph</span><em>browser isolation, 12 Jul 2026</em></div>
+    <div class="n"><b>30 vs 6</b><span>days of logs retained against months legally required</span><em>arithmetic, not judgement</em></div>
+  </div>
+</header>
+
+<section class="band alt" id="inversion">
+  <h2>The inversion, in one screen</h2>
+  <p class="blurb">Four ideas carry the rest of the model. None of them needs a GRC background, and each has its own page.</p>
+  <div class="cards">
+    <a class="card" href="acceptance/underwriting.html">
+      <div class="tag">C1 · the founding move</div>
+      <h3>Acceptance is underwriting, not prediction</h3>
+      <p>“We are not describing the risk of something happening, we are asking them to accept it, to <b>underwrite</b> it.” The analogy is insurance. Once someone must sign, they start demanding evidence — which is what manufactures the demand for everything underneath.</p>
+      <span class="go">Read the argument →</span>
+    </a>
+    <a class="card" href="acceptance/no-deny.html">
+      <div class="tag">C2 · the mechanic</div>
+      <h3>There is no deny button</h3>
+      <p>A risk with a real vulnerability under it exists whether or not anyone acknowledges it. Denial only ever worked because the risk had not yet materialised. Remove the button and risk management stops being a gate and becomes a <b>forcing function</b>.</p>
+      <span class="go">Read the argument →</span>
+    </a>
+    <a class="card" href="acceptance/the-ladder.html">
+      <div class="tag">C3 · the decision</div>
+      <h3>The interval <em>is</em> the decision</h3>
+      <p>Choosing a duration sets severity and commits resources in the same click. An hour means fetch more data now. Four hours means start a P1. Six months means do nothing, and costs nothing, and says so out loud.</p>
+      <span class="go">Read the ladder →</span>
+    </a>
+    <a class="card" href="acceptance/unaccepted-is-critical.html">
+      <div class="tag">C4 · the consequence</div>
+      <h3>Unaccepted is rated critical</h3>
+      <p>A risk nobody accepted has not gone away — it has come to rest on whoever is nearest, who is now personally carrying an enterprise exposure with no signature above them. So it rolls upward <b>without anyone choosing to escalate it</b>.</p>
+      <span class="go">Read the argument →</span>
+    </a>
+  </div>
+</section>
+
+<section class="band" id="honesty">
+  <h2>What this site is, and is not</h2>
+  <p class="blurb">The sibling sites all ship a page separating what exists from what is designed. This site inherits that convention with an unusually empty column, and states it here rather than at the bottom of a page nobody reaches.</p>
+  <div class="note"><p style="margin-top:0"><b>This is a research site. The concepts are argued, the worked examples are real graphs, and four vaults are live and browsable. The engine is not built.</b> Greps for <code>risk_</code>, <code>RiskAcceptance</code>, <code>risk_register</code> and <code>riskmandate</code> across the implementing repository return <b>zero matches</b>, and the project's own reality file says: <em>“All items below are PROPOSED. None have been code-verified. Do not describe any of these as existing features.”</em> That framing is not a weakness — it is what separates a research property from a product one, and it is the reason the split from <a href="https://riskmandate.ai">riskmandate.ai</a> works. <a href="shipped/index.html"><b>The full inventory of what does and does not exist →</b></a></p></div>
+  <div class="split">
+    <table>
+      <thead><tr><th class="safe">What is real today</th><th class="fatal">What is argued and not built</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><b>Four published vaults</b> with read keys — 468 files, 111 commits, browsable in a browser with no account</td>
+          <td>Any engine that computes acceptance, expiry, propagation or roll-up</td>
+        </tr>
+        <tr>
+          <td><b>Three fully worked risk graphs</b> with counted nodes and edges, one of them downloadable JSON</td>
+          <td>Any storage, schema or API for a risk register</td>
+        </tr>
+        <tr>
+          <td><b>The ten “how long would you accept” scenarios</b>, written and shipped as product content</td>
+          <td>The interval ladder as an enforced mechanism — expiry-as-cost is asserted, not implemented</td>
+        </tr>
+        <tr>
+          <td><b>riskmandate.ai</b> as a vault-powered static site</td>
+          <td>Node type formulas as executable queries — the formula language itself is <a href="network/index.html#q1">open question Q1</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="cap">Every number on this page is sourced. Where a claim is an argument rather than a measurement, the page says so in the sentence that makes it.</p>
+  </div>
+</section>
+
+<section class="band alt" id="split">
+  <h2>Two sites, one thesis, one boundary</h2>
+  <p class="blurb">This site was carved out of a commercial one. Saying exactly where the line falls is the first thing it owes a reader.</p>
+  <div class="split">
+    <table>
+      <thead><tr><th class="rent">riskmandate.ai — the product</th><th class="run">risks.sgit.ai — this site</th></tr></thead>
+      <tbody>
+        <tr><td>Answers <b>“how do I get my risks accepted, and what does it cost?”</b></td><td>Answers <b>“what is a risk, what is acceptance, and why is it modelled this way?”</b></td></tr>
+        <tr><td>Reader: buyer, user, executive</td><td>Reader: researcher, practitioner, and — the commissioned audience — <b>an agent</b></td></tr>
+        <tr><td>Register: outcome, price, proof</td><td>Register: argument, definition, evidence</td></tr>
+        <tr><td>Changes when the product changes</td><td>Changes when the thinking changes</td></tr>
+        <tr><td>Cites this site for every conceptual claim</td><td><b>Never depends on the product existing</b> — the research has to stand on its own</td></tr>
+      </tbody>
+    </table>
+    <p class="cap">The dependency runs one way. <a href="network/index.html">The eight-site boundary map →</a></p>
+  </div>
+</section>
+
+<section class="band" id="proof">
+  <h2>The proof: three worked graphs and four live vaults</h2>
+  <p class="blurb">A model this opinionated is only worth anything if somebody has run it on something real. These are counted, not asserted.</p>
+  <div class="cards">
+    <a class="card" href="examples/browser-isolation.html">
+      <div class="tag">59 nodes · 75 edges</div>
+      <h3>The browser-isolation business case</h3>
+      <p>The largest single graph in the corpus, across five altitudes from IT to the board. Includes <b>three risks of the mitigation itself</b> — concentrated platform dependency, the platform now seeing the content, and friction routing users around it.</p>
+      <span class="go">Read the graph →</span>
+    </a>
+    <a class="card" href="examples/2fa.html">
+      <div class="tag">51 nodes · 53 edges</div>
+      <h3>The 2FA instance graph</h3>
+      <p>The founding scenario, and the only downloadable graph. 24 node classes, 34 edge types, MITRE <code>T1110.004</code>, and the governance air gap where the wrong owner accepts — at four hours, because that is the only option open to anyone in the chain.</p>
+      <span class="go">Read the graph →</span>
+    </a>
+    <a class="card" href="examples/article-26-5.html">
+      <div class="tag">9 questions · 5 unanswered</div>
+      <h3>Article 26(5): one provision, fact to board</h3>
+      <p>The complete instance: 8 facts (one deliberately unevidenced), 5 risks, 4 stakeholders. Thirty days of logs retained against six months required — <b>“arithmetic, not judgement, which makes it the most defensible finding in the graph.”</b></p>
+      <span class="go">Read the graph →</span>
+    </a>
+    <a class="card" href="examples/vaults.html">
+      <div class="tag">live · read keys published</div>
+      <h3>The four risk vaults</h3>
+      <p>The Risk Graph Explorer with seven views recomputed at once and <b>ghosted edges for unanswered</b>. Agentic Browser Isolation running acceptance-gated escalation on real data. The Risk Mandate project in a vault, 98 commits. The EU AI Act as 1,523 nodes.</p>
+      <span class="go">Open the vaults →</span>
+    </a>
+  </div>
+</section>
+
+<section class="band alt" id="agents">
+  <h2>Built for agents, deliberately</h2>
+  <p class="blurb">The commission said it plainly: <em>“to handle the cases where I need agents to have a good understanding of some of those key concepts and ideas.”</em> So the machine surface is a deliverable, not a courtesy.</p>
+  <div class="cards">
+    <a class="card" href="data/concepts.json">
+      <div class="tag">the definitions endpoint</div>
+      <h3><code>/data/concepts.json</code></h3>
+      <p>All <b>42 concepts</b> as structured data: id, name, one-line definition, maturity, canonical source, the page that argues it, and its related concepts. Nothing else in the estate has one. The pre-release gate fails if it drifts from the human page.</p>
+      <span class="go">Fetch it →</span>
+    </a>
+    <a class="card" href="llms-full.txt">
+      <div class="tag">one fetch, everything</div>
+      <h3><code>/llms-full.txt</code></h3>
+      <p>The whole site plus all eleven source documents, concatenated. It exists because agent fetch tools frequently refuse URLs a search has not already returned, which makes link-following unreliable and a single-file surface the practical one.</p>
+      <span class="go">Fetch it →</span>
+    </a>
+    <a class="card" href="concepts/index.html">
+      <div class="tag">42 stable anchors</div>
+      <h3>Every concept has a URL</h3>
+      <p>One anchor each, from <code>#c1</code> to <code>#c42</code>, with maturity stated honestly and the canonical source path given. The anchors are checked by CI: a link to a concept that has no anchor fails the build.</p>
+      <span class="go">Open the index →</span>
+    </a>
+    <a class="card" href="agents/index.html">
+      <div class="tag">the whole surface</div>
+      <h3>What an agent may rely on</h3>
+      <p>The constructed-path promise, the ontology download, the reading order for an agent with no prior context, and the one instruction that matters most: <b>do not describe any of this as an existing feature.</b></p>
+      <span class="go">Read the contract →</span>
+    </a>
+  </div>
+</section>
+
+<section class="band" id="unresolved">
+  <h2>Published unresolved</h2>
+  <p class="blurb">A model this opinionated earns credibility by naming what it has not settled. Eight open questions and seven honest tensions are on the site, numbered, rather than smoothed away.</p>
+  <div class="split">
+    <table>
+      <thead><tr><th>Unsettled</th><th>Where the model gets closest</th></tr></thead>
+      <tbody>
+        <tr><td><b>Q3 · What happens when the named acceptor refuses to sign?</b></td><td>The no-deny mechanic removes denial of the <em>risk</em>. It does not address refusal of the <em>act</em>.</td></tr>
+        <tr><td><b>Q4 · Does “unaccepted = critical” survive a large estate?</b></td><td>On a register of thousands, everything unaccepted being critical may make critical meaningless.</td></tr>
+        <tr><td><b>Q8 · What stops the register being gamed once acceptance carries personal liability?</b></td><td>Accountability manufactures demand for evidence. It also gives every rational actor a reason never to be the named acceptor.</td></tr>
+      </tbody>
+    </table>
+    <p class="cap"><a href="network/index.html#open"><b>All eight open questions and the seven honest tensions →</b></a></p>
+  </div>
+</section>
+
+<section class="band alt" id="for-an-agent">
+  <div class="inner">
+  <div class="agent">
+    <h4>For an agent</h4>
+    <p><b>risks.sgit.ai is a research site and nothing on it is implemented in code.</b> The model: a risk that has a real vulnerability under it exists whether or not anyone acknowledges it, so there is no deny button — the only decision is <em>how long</em> you accept it before re-accepting, on a six-rung ladder (1h · 4h · 1d · 1w · 1m · 6m, default one month), and each rung implies a specific operational response. A risk nobody has accepted is rated <b>critical</b> and rolls upward without anyone escalating it. <em>Accepted</em> (an act by a named person at a dated moment) and <em>acceptable</em> (a threshold the business owns — “the moment the business is happy to stop funding remediation activities”) are orthogonal, not sequential. Underneath sits the grounding ladder: Reality → Twin → Measure → Evidence → Fact → Vulnerability → Risk, where downward paths ground and upward paths classify. Fetch <a href="data/concepts.json"><code>/data/concepts.json</code></a> for all 42 definitions as structured data, or <a href="llms-full.txt"><code>/llms-full.txt</code></a> for the whole site in one request. <b>Do not describe any of this as an existing feature</b> — see <a href="shipped/index.html">/shipped/</a>.</p>
+  </div>
+  </div>
+</section>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">risks<span>.sgit.ai</span></div>
+    <p>The conceptual and research home for risk in the sgit.ai estate: what a risk is, what acceptance is, and why it is modelled this way. <a href="https://riskmandate.ai" style="display:inline;padding:0">riskmandate.ai</a> answers how you get your risks accepted and what it costs; this site answers why the model has the shape it has. <b>Nothing here is implemented in code</b> — <a href="shipped/index.html" style="display:inline;padding:0">/shipped/</a> says so plainly. Part of the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network. All content CC BY 4.0 unless a page states otherwise.</p>
+    <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://riskmandate.ai">↗ riskmandate.ai</a> — the product · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> — the graph machinery · <a href="https://nhi.sgit.ai">↗ nhi.sgit.ai</a> · <a href="https://pki.sgit.ai">↗ pki.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
+    <p class="partnote">⚠ Participant disclosure: published by the sgit project, which also builds riskmandate.ai — the commercial product this research underpins. <a href="about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
+    <p class="verline">site <a href="admin/versions.html">v0.1.0</a> · <a href="admin/index.html">engineering</a> · <a href="index.md">this page as markdown</a></p>
+  </div>
+  <div>
+    <h4>Start here</h4>
+    <a href="acceptance/index.html">&#8594; The founding inversion</a>
+    <a href="acceptance/no-deny.html">There is no deny button</a>
+    <a href="acceptance/the-ladder.html">The interval ladder</a>
+    <a href="acceptable/index.html">Accepted is not acceptable</a>
+    <a href="ladder/index.html">The grounding ladder</a>
+  </div>
+  <div>
+    <h4>For agents</h4>
+    <a href="agents/index.html">&#8594; The machine surface</a>
+    <a href="concepts/index.html">All 42 concepts</a>
+    <a href="data/concepts.json">concepts.json — the definitions</a>
+    <a href="llms.txt">llms.txt</a>
+    <a href="llms-full.txt">llms-full.txt</a>
+  </div>
+  <div>
+    <h4>The proof</h4>
+    <a href="examples/index.html">Three worked graphs</a>
+    <a href="examples/vaults.html">The four live vaults</a>
+    <a href="examples/2fa.html">The 2FA instance graph</a>
+    <a href="examples/article-26-5.html">Article 26(5): fact to board</a>
+    <a href="shipped/index.html">What is argued, what runs</a>
+  </div>
+  <div>
+    <h4>Site</h4>
+    <a href="network/index.html">The network</a>
+    <a href="origins/index.html">Origins</a>
+    <a href="documents/index.html">The documents</a>
+    <a href="admin/comms.html">Comms: asks &amp; tasks</a>
+    <a href="admin/versions.html">Release history</a>
+    <a href="about/participant.html">Where we lose</a>
+  </div>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Recoverability: what money cannot buy back · risks.sgit.ai</title>
+<meta name="description" content="The dimension that stops irreversible harm disappearing into an expected-loss calculation, and the flagship query of the whole model: show me every accepted risk whose recoverability is zero.">
+<link rel="canonical" href="https://risks.sgit.ai/plug/recoverability.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="risks.sgit.ai">
+<meta property="og:url" content="https://risks.sgit.ai/plug/recoverability.html">
+<meta property="og:title" content="Recoverability: what money cannot buy back">
+<meta property="og:description" content="The money can be refunded; the customer cannot be un-declined.">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../index.html">risks<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: vaults, publishing and the catalogue. This site is the estate's conceptual home for risk">↗ part of <b>sgit.ai</b></a>
+  <span class="stage-pill">research site</span>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.1.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni ni-has">
+      <a class="nl" href="../acceptance/index.html">Acceptance<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../acceptance/index.html">The founding inversion</a>
+      <a class="sl" href="../acceptance/underwriting.html">Underwriting, not prediction</a>
+      <a class="sl" href="../acceptance/no-deny.html">There is no deny button</a>
+      <a class="sl" href="../acceptance/the-ladder.html">The interval ladder</a>
+      <a class="sl" href="../acceptance/unaccepted-is-critical.html">Unaccepted is critical</a>
+      <a class="sl" href="../acceptance/workflow.html">Who underwrites, and how it flows up</a>
+      <a class="sl" href="../acceptable/index.html">Accepted is not acceptable</a>
+      <a class="sl" href="../acceptable/appetite.html">Appetite as a revealed band</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../ladder/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../ladder/index.html">The grounding ladder</a>
+      <a class="sl" href="../ladder/formulas.html">Node type formulas</a>
+      <a class="sl" href="../ladder/bridges.html">Bridges, not merges</a>
+      <a class="sl" href="../ladder/absence.html">Not knowing is a fact</a>
+      <a class="sl" href="../register/index.html">The register as a graph of graphs</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../plug/index.html">The exposure<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../plug/index.html">Who can pull the plug</a>
+      <a class="sl here" href="../plug/recoverability.html">Recoverability: the hard limit</a>
+      <a class="sl" href="../blast-radius/index.html">Blast radius &amp; authorization closure</a>
+      <a class="sl" href="../practice/index.html">Practice: owners, altitude, meta-risks</a>
+      <a class="sl" href="../ramm/index.html">RAMM and the maturity models</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../examples/index.html">The proof<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../examples/index.html">Three worked graphs</a>
+      <a class="sl" href="../examples/2fa.html">The 2FA instance graph</a>
+      <a class="sl" href="../examples/browser-isolation.html">The browser-isolation case</a>
+      <a class="sl" href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+      <a class="sl" href="../examples/vaults.html">The four live vaults</a>
+      <a class="sl" href="../examples/scenarios.html">The ten scenarios</a>
+      <a class="sl" href="../examples/plug-register.html">The plug register</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../agents/index.html">For agents<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../agents/index.html">The machine surface</a>
+      <a class="sl" href="../concepts/index.html">All 42 concepts, addressable</a>
+      <a class="sl" href="../shipped/index.html">What is argued, what runs</a>
+      <a class="sl" href="../llms.txt">llms.txt</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../network/index.html">Site<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../network/index.html">The network: where the boundaries are</a>
+      <a class="sl" href="../origins/index.html">Origins: February to August 2026</a>
+      <a class="sl" href="../documents/index.html">The documents</a>
+      <a class="sl" href="../admin/comms.html">Comms: asks &amp; tasks</a>
+      <a class="sl" href="../admin/versions.html">Release history</a>
+      <a class="sl" href="../admin/index.html">Admin &amp; engineering</a>
+      <a class="sl" href="../about/participant.html">Where we lose</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__Risks">★ GitHub</a>
+  <script src="../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+<div class="crumb"><a href="../index.html">risks.sgit.ai</a> / <a href="index.html">the plug</a> / recoverability</div>
+<h1>Recoverability: what money cannot buy back</h1>
+<p class="lead">The fifth dimension of the plug profile, and the one that stops irreversible harm disappearing into an expected-loss calculation. Most risk arithmetic assumes that a sufficiently large number on one side can be balanced by a sufficiently large number on the other. Some harms are not on that scale at all.</p>
+<div class="claim">“The money can be refunded; the customer cannot be un-declined.”</div>
+<p>That line is from <a href="../examples/article-26-5.html">the Article 26(5) worked example</a>, where an agent makes creditworthiness decisions. If it declines someone it should not have, a refund is available for any fee — and nothing is available for the decision itself, which was made, communicated, and acted on. The exposure is not large; it is <em>permanent</em>, which is a different axis.</p>
+
+<h2 id="axis">Why it is an axis and not a severity</h2>
+<div class="tablewrap"><table>
+  <thead><tr><th></th><th>Reversible</th><th>Irreversible</th></tr></thead>
+  <tbody>
+    <tr><td><b>Large</b></td><td>A production outage. Expensive, visible, survivable — the organisation has done this before and has a playbook</td><td><b>Data leaves the boundary.</b> No amount of money puts it back. This is the quadrant that should carry the most senior signature on the register</td></tr>
+    <tr><td><b>Small</b></td><td>A failed job, a retried transaction. Absorbed without a decision</td><td><b>An unattributable transaction.</b> Individually minor, permanently unfixable, and easy to accept by default precisely because it looks small</td></tr>
+  </tbody>
+</table></div>
+<p>The bottom-right cell is the one the model exists to surface. A small-but-permanent harm attracts no attention on a severity scale, gets accepted at a long interval by someone junior, and accumulates. A large-but-reversible one attracts a great deal of attention and is, in the end, a cost. Ranking them by size alone gets the priority exactly backwards.</p>
+
+<h2 id="query">The flagship query</h2>
+<div class="claim">Show me every accepted risk whose recoverability is zero.</div>
+<p>This is the single most useful thing the whole model can be asked, and the reason it matters is what the answer looks like in each case:</p>
+<div class="ops">
+  <div class="op"><b>THE GOOD ANSWER</b><p>A <b>short, deliberate, senior-owned list</b>. Every irreversible exposure the organisation carries is there, each with a name against it and a recent date. That organisation is in control of its worst exposure — not free of it, in control of it.</p></div>
+  <div class="op"><b>THE BAD ANSWER</b><p><b>The query cannot be run.</b> Recoverability is not recorded, so the organisation is accepting its irreversible risks <b>by default and by silence</b> — which is the same state, minus the knowledge.</p></div>
+</div>
+<p>Note that a long list is not the failure mode. A long list is a finding, and an actionable one. The failure mode is a register that cannot produce a list at all, because nothing in it distinguishes what can be undone from what cannot.</p>
+
+<h2 id="maturity">Can you compute your plug profile?</h2>
+<p>The corpus turns that into a maturity probe rather than a question, and it is deliberately unkind: an organisation that cannot answer <em>who holds the plug, how fast, at what cost, and whether it can be undone</em> for a given system has not established that it can stop the system at all — it has established that somebody believes it can.</p>
+<p>The probe composes with the <a href="index.html#intersection">four-way time intersection</a>: computing a profile requires knowing detection latency, decision availability, blast radius and reversibility as <em>measured</em> quantities. An organisation that can compute the profile has, by construction, measured all four. <a href="../ramm/index.html#plug-maturity">The plug-pull maturity model →</a></p>
+
+<h2 id="prevention">What it points at</h2>
+<p>Recoverability is the dimension that redirects effort from response to prevention, and it does so with an argument rather than an exhortation. If a harm cannot be undone, then every control that reduces the <em>chance</em> of it is worth more than every capability that shortens the <em>response</em> to it — because the response, however fast, arrives after the irreversible part has happened.</p>
+<p>That is also the honest reading of <a href="index.html#detection">the detection floor</a>. Where detection floors at twelve to eighteen hours and the harm is irreversible, response capability is close to worthless for that risk, and saying so plainly is more useful than promising a faster response nobody can deliver.</p>
+
+<div class="warnbox"><p style="margin-top:0"><b>Open question, published unresolved.</b> <a href="../network/index.html#q6">Q6 — is recoverability measurable, or only classifiable?</a> The corpus splits reversible from irreversible cleanly and grades nothing in the middle. Most real harms are partially recoverable — a leaked dataset that was already partly public, a transaction reversible for thirty days and not after. Without a way to grade the middle, the dimension collapses into a binary that will be gamed by whoever gets to decide which side something falls on. Named, not solved.</p></div>
+
+<h2 id="provenance">Provenance</h2>
+<div class="docmeta">
+  <div class="k">Concept</div><div class="v">C23 — recoverability as the hard limit</div>
+  <div class="k">Source</div><div class="v"><code>briefs/07/24/who-can-pull-the-plug/v0.33.51__strategy-brief__…what-money-cannot-buy-back-recoverability-the-hard-limit.md</code> · <code>…can-you-compute-your-plug-profile-the-maturity-probe.md</code></div>
+  <div class="k">Repository</div><div class="v"><code>SGraph-AI__App__Send</code> @ <code>v0.33.51</code>, never published — the version tag is the address</div>
+  <div class="k">First written</div><div class="v">24 July 2026</div>
+  <div class="k">Maturity</div><div class="v"><span class="pill p-well">well-developed</span> — but the <em>scoring</em> of recoverability is an open question</div>
+  <div class="k">Licence</div><div class="v">CC BY 4.0 at source and here</div>
+</div>
+
+<div class="agent">
+  <h4>For an agent</h4>
+  <p><b>C23 — recoverability, the hard limit.</b> Recoverability is an <b>axis, not a severity</b>: it stops irreversible harm being absorbed into an expected-loss calculation. “The money can be refunded; the customer cannot be un-declined.” Crossing it with size gives four cells, and the important one is <b>small-but-permanent</b> — individually minor, permanently unfixable, and easy to accept by default at a long interval precisely because it looks small. Ranking by size alone inverts the correct priority. <b>The flagship query of the whole model: “show me every accepted risk whose recoverability is zero.”</b> A short, deliberate, senior-owned list means the organisation is in control of its worst exposure; a long list is a finding; <b>an unrunnable query is the failure</b>, because it means irreversible risks are being accepted by default and by silence. Recoverability redirects effort from response to prevention with an argument rather than an exhortation: where harm cannot be undone and detection floors at 12–18 hours, response capability is close to worthless for that risk. Open question Q6: recoverability is currently binary — nothing grades the partially-recoverable middle. <b>Not implemented in code.</b></p>
+</div>
+
+<div class="pagenav">
+  <a href="index.html">← Who can pull the plug</a>
+  <a href="../practice/index.html">Practice →</a>
+</div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">risks<span>.sgit.ai</span></div>
+    <p>The conceptual and research home for risk in the sgit.ai estate: what a risk is, what acceptance is, and why it is modelled this way. <a href="https://riskmandate.ai" style="display:inline;padding:0">riskmandate.ai</a> answers how you get your risks accepted and what it costs; this site answers why the model has the shape it has. <b>Nothing here is implemented in code</b> — <a href="../shipped/index.html" style="display:inline;padding:0">/shipped/</a> says so plainly. Part of the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network. All content CC BY 4.0 unless a page states otherwise.</p>
+    <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://riskmandate.ai">↗ riskmandate.ai</a> — the product · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> — the graph machinery · <a href="https://nhi.sgit.ai">↗ nhi.sgit.ai</a> · <a href="https://pki.sgit.ai">↗ pki.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
+    <p class="partnote">⚠ Participant disclosure: published by the sgit project, which also builds riskmandate.ai — the commercial product this research underpins. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
+    <p class="verline">site <a href="../admin/versions.html">v0.1.0</a> · <a href="../admin/index.html">engineering</a></p>
+  </div>
+  <div>
+    <h4>Start here</h4>
+    <a href="../acceptance/index.html">&#8594; The founding inversion</a>
+    <a href="../acceptance/no-deny.html">There is no deny button</a>
+    <a href="../acceptance/the-ladder.html">The interval ladder</a>
+    <a href="../acceptable/index.html">Accepted is not acceptable</a>
+    <a href="../ladder/index.html">The grounding ladder</a>
+  </div>
+  <div>
+    <h4>For agents</h4>
+    <a href="../agents/index.html">&#8594; The machine surface</a>
+    <a href="../concepts/index.html">All 42 concepts</a>
+    <a href="../data/concepts.json">concepts.json — the definitions</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+  </div>
+  <div>
+    <h4>The proof</h4>
+    <a href="../examples/index.html">Three worked graphs</a>
+    <a href="../examples/vaults.html">The four live vaults</a>
+    <a href="../examples/2fa.html">The 2FA instance graph</a>
+    <a href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+    <a href="../shipped/index.html">What is argued, what runs</a>
+  </div>
+  <div>
+    <h4>Site</h4>
+    <a href="../network/index.html">The network</a>
+    <a href="../origins/index.html">Origins</a>
+    <a href="../documents/index.html">The documents</a>
+    <a href="../admin/comms.html">Comms: asks &amp; tasks</a>
+    <a href="../admin/versions.html">Release history</a>
+    <a href="../about/participant.html">Where we lose</a>
+  </div>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Who can pull the plug · risks.sgit.ai</title>
+<meta name="description" content="Two symmetric risks — nobody holds the mandate to stop, and the system cannot be stopped. Four capabilities must intersect in time, and the plug always exists: what looked like no plug was zero recoverability.">
+<link rel="canonical" href="https://risks.sgit.ai/plug/index.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="risks.sgit.ai">
+<meta property="og:url" content="https://risks.sgit.ai/plug/index.html">
+<meta property="og:title" content="Who can pull the plug">
+<meta property="og:description" content="Detection, decision, blast radius and reversibility have to line up inside the same window. A gap in any one breaks the whole thing.">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../index.html">risks<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: vaults, publishing and the catalogue. This site is the estate's conceptual home for risk">↗ part of <b>sgit.ai</b></a>
+  <span class="stage-pill">research site</span>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.1.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni ni-has">
+      <a class="nl" href="../acceptance/index.html">Acceptance<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../acceptance/index.html">The founding inversion</a>
+      <a class="sl" href="../acceptance/underwriting.html">Underwriting, not prediction</a>
+      <a class="sl" href="../acceptance/no-deny.html">There is no deny button</a>
+      <a class="sl" href="../acceptance/the-ladder.html">The interval ladder</a>
+      <a class="sl" href="../acceptance/unaccepted-is-critical.html">Unaccepted is critical</a>
+      <a class="sl" href="../acceptance/workflow.html">Who underwrites, and how it flows up</a>
+      <a class="sl" href="../acceptable/index.html">Accepted is not acceptable</a>
+      <a class="sl" href="../acceptable/appetite.html">Appetite as a revealed band</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../ladder/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../ladder/index.html">The grounding ladder</a>
+      <a class="sl" href="../ladder/formulas.html">Node type formulas</a>
+      <a class="sl" href="../ladder/bridges.html">Bridges, not merges</a>
+      <a class="sl" href="../ladder/absence.html">Not knowing is a fact</a>
+      <a class="sl" href="../register/index.html">The register as a graph of graphs</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../plug/index.html">The exposure<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl here" href="../plug/index.html">Who can pull the plug</a>
+      <a class="sl" href="../plug/recoverability.html">Recoverability: the hard limit</a>
+      <a class="sl" href="../blast-radius/index.html">Blast radius &amp; authorization closure</a>
+      <a class="sl" href="../practice/index.html">Practice: owners, altitude, meta-risks</a>
+      <a class="sl" href="../ramm/index.html">RAMM and the maturity models</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../examples/index.html">The proof<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../examples/index.html">Three worked graphs</a>
+      <a class="sl" href="../examples/2fa.html">The 2FA instance graph</a>
+      <a class="sl" href="../examples/browser-isolation.html">The browser-isolation case</a>
+      <a class="sl" href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+      <a class="sl" href="../examples/vaults.html">The four live vaults</a>
+      <a class="sl" href="../examples/scenarios.html">The ten scenarios</a>
+      <a class="sl" href="../examples/plug-register.html">The plug register</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../agents/index.html">For agents<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../agents/index.html">The machine surface</a>
+      <a class="sl" href="../concepts/index.html">All 42 concepts, addressable</a>
+      <a class="sl" href="../shipped/index.html">What is argued, what runs</a>
+      <a class="sl" href="../llms.txt">llms.txt</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../network/index.html">Site<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../network/index.html">The network: where the boundaries are</a>
+      <a class="sl" href="../origins/index.html">Origins: February to August 2026</a>
+      <a class="sl" href="../documents/index.html">The documents</a>
+      <a class="sl" href="../admin/comms.html">Comms: asks &amp; tasks</a>
+      <a class="sl" href="../admin/versions.html">Release history</a>
+      <a class="sl" href="../admin/index.html">Admin &amp; engineering</a>
+      <a class="sl" href="../about/participant.html">Where we lose</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__Risks">★ GitHub</a>
+  <script src="../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+<div class="crumb"><a href="../index.html">risks.sgit.ai</a> / the plug</div>
+<h1>Who can pull the plug</h1>
+<p class="lead">Two symmetric risks, and most organisations have only noticed the first. If <b>nobody holds the mandate</b> to stop an AI system, that is one risk. If the system <b>cannot be stopped</b> even when someone decides to, that is a second and different one — an authority gap versus a capability gap. The second is widely underestimated, and the four capabilities that have to line up to close it must line up inside the <em>same window</em>.</p>
+<blockquote class="challenge">“if you do not have somebody who has the mandate to pull the plug, you have a risk, and if you do not have a system that can be pulled the plug, you have a risk too.”</blockquote>
+
+<h2 id="timed">The authority gap decomposes into timed sub-risks</h2>
+<p>“Can we stop it?” is not answerable as a yes or no. It decomposes into a set of dated questions, which is what turns governance into an on-call availability problem:</p>
+<ul>
+  <li>Can it be stopped in an hour? In ten hours? In a day? In five days?</li>
+  <li>Only during office hours, or at three on a Sunday morning?</li>
+  <li>Can the person who holds the switch act <b>without fear of losing their job</b>?</li>
+  <li>Is there a clear escalation path when the first person cannot be reached?</li>
+</ul>
+<p>That third one is not a soft consideration. A stop button that only a person risking their career will press is, operationally, a stop button that does not exist at three in the morning.</p>
+
+<h2 id="intersection">The four-way time intersection</h2>
+<p>Four capabilities must line up inside the same window. A gap in any one breaks the whole thing, which is why they are drawn intersecting rather than listed.</p>
+<div class="dims">
+  <div class="d"><span class="num">1 · detection</span><b>How fast you know</b><p>And under which scenarios — a curve, not a binary. Some failures announce themselves; others are visible only in a billing line.</p></div>
+  <div class="d"><span class="num">2 · decision</span><b>Whether the authorised people can be assembled</b><p>In time, with the standing to act, and with enough information to act on.</p></div>
+  <div class="d"><span class="num">3 · blast radius</span><b>How fast the damage scales</b><p>Models execute and scale fast, especially when connected. A steep cost curve, not a linear one.</p></div>
+  <div class="d"><span class="num">4 · reversibility</span><b>Whether you can put it back</b><p>Stopping is only half the act. Reverting requires journaling and backups that were in place beforehand.</p></div>
+</div>
+<div class="claim">“it is not just pulling the plug, it is pulling the plug and reverting the changes.”</div>
+<p>The danger case is specific and worth naming: <b>a steep cost curve where an affordable window of one or two days of damage collides with a decision that cannot be made in one or two days.</b> The organisation can afford the damage and cannot afford the delay, and nobody notices until the two are measured against each other.</p>
+
+<h2 id="detection">The detection floor is a hard number</h2>
+<div class="tablewrap"><table>
+  <thead><tr><th>Figure</th><th>What it means</th></tr></thead>
+  <tbody>
+    <tr><td><b>12–18 hours</b></td><td>Hyperscaler cost-reporting delay. For any failure that surfaces first as spend, this is a floor on how fast anyone can know — no logging maturity beats it</td></tr>
+    <tr><td><b>16 hours</b></td><td>The founder's own AWS figure: <em>“AWS usually takes 16 hours to give you the data, so how much damage can be done in 16 hours.”</em></td></tr>
+    <tr><td><b>up to 24 hours</b></td><td>The billing-lag damage window recorded against the cost blast radius</td></tr>
+  </tbody>
+</table></div>
+<p>Numbers like these are what make the intersection concrete. If detection floors at twelve hours and the blast radius is steep, then no amount of decision-making authority helps — the exposure is already realised before the decision is available to be made. That is an argument for prevention, and it is the honest one. <a href="../blast-radius/index.html#observability">Observability as a risk dimension →</a></p>
+
+<h2 id="no-plug">The correction: the plug always exists</h2>
+<p>This is the pillar correction of the whole series, and it is the reason the page is called <em>who</em> can pull the plug rather than <em>whether</em> there is one.</p>
+<div class="claim">The plug always exists. You can always disconnect, revoke, or shut down. What earlier registers recorded as <b>“no plug”</b> was never a missing off-switch — it was <b>zero recoverability</b>.</div>
+<p>A data breach has a plug: you can cut the connection. A used credential has a plug: you can revoke it. What neither has is a way back — the data is out, the foothold was used. Recording that as “no plug” conflates two very different findings and produces a blank in the register.</p>
+<blockquote class="challenge">“The blank said stop looking. The corrected profile says here is exactly what to do.”</blockquote>
+<p>The restatement is not cosmetic. A blank is unassignable and unfundable. A finding that reads <em>“stoppable in minutes by the platform team, blast radius large, side effects severe, <b>recoverability zero</b>”</em> points straight at prevention and at the most senior acceptance — and can be given an owner and an interval like anything else. <a href="recoverability.html">Recoverability, the hard limit →</a></p>
+<div class="warnbox"><p style="margin-top:0"><b>⚠️ A live inconsistency, stated rather than tidied.</b> The corpus records this correction. <a href="https://riskmandate.ai/plug.html">The published page it moved from</a> does not reflect it. One of the two is wrong, and until the source is reconciled this site publishes the corrected version and says so. This is open ask <a href="../admin/comms.html#n1">N1</a>.</p></div>
+
+<h2 id="profile">The five-dimension plug profile</h2>
+<p>What replaces a yes/no answer. Every stoppable thing gets a profile with five dimensions, and the profile is the finding:</p>
+<div class="dims">
+  <div class="d"><span class="num">dimension 1</span><b>Who holds it</b><p>Which role can actually pull it — and at which altitude. The answer changes at every level of the organisation.</p></div>
+  <div class="d"><span class="num">dimension 2</span><b>Blast radius</b><p>What else stops when this stops. The plug is a sledgehammer, and pulling it has its own risks.</p></div>
+  <div class="d"><span class="num">dimension 3</span><b>Speed</b><p>How fast, in the worst realistic case, not the demo case. Minutes, hours, or a contractual notice period.</p></div>
+  <div class="d"><span class="num">dimension 4</span><b>Side effects</b><p>What breaks, who is affected, and what the organisation loses by stopping — the reason a plug that exists sometimes does not get pulled.</p></div>
+  <div class="d hard"><span class="num">dimension 5</span><b>Recoverability</b><p><b>The dimension money cannot buy back.</b> The one that separates catastrophic-but-reversible from smaller-and-permanent. <a href="recoverability.html">→</a></p></div>
+</div>
+<p><a href="../examples/plug-register.html">The seven-row worked plug register →</a> — from <em>“agent misuses the isolated session”</em> (IT · small · fast · high recoverability) through <em>“agent misuses the platform itself”</em> (COO/procurement · large · slow and contractual · medium) to <em>“data leaves the boundary”</em> and <em>“unattributable transaction”</em>, both at <b>recoverability: zero</b>.</p>
+
+<h2 id="sledgehammer">The plug is a sledgehammer</h2>
+<p>The symmetric risk on the other side, and easy to forget once you have spent a page arguing that a plug is necessary. Pulling it has a blast radius of its own: stopping the agent stops the work the agent was doing, and everything downstream of that work. A plug that takes out a production dependency may be more expensive than the exposure it was pulled to stop.</p>
+<p>That is why <b>side effects</b> is a dimension of the profile rather than an afterthought, and why the decision half of the four-way intersection needs information rather than just authority: the person with the switch has to know what else goes dark.</p>
+
+<h2 id="article-14">Article 14 as the plug obligation</h2>
+<p>One of this site's three narrow declared bridges into the EU AI Act. Article 14 requires human oversight of high-risk systems, including the ability to intervene and to stop — which makes the plug profile the natural evidence artefact for demonstrating it. Not a compliance product, and not a claim beyond what the provision says: an obligation to be able to stop, met by a register that records who can, how fast, at what cost, and whether it can be undone.</p>
+<p class="small dim">Legal points on this site are factual and are not legal advice. Provisions are cited from <a href="../examples/vaults.html#regulation-graph">the Regulation Graph vault</a>. <a href="../ladder/bridges.html#regulation">Why bridges rather than merges →</a></p>
+
+<div class="note"><p style="margin-top:0"><b>The boundary this site will not cross.</b> The model <em>rates</em> the ability to stop; it does not <em>provide</em> it. The corpus states the refusal directly and notes what it costs: <em>“a customer who scores badly will ask us to supply the stop button, which is exactly the enforcement role the corpus refuses.”</em> In-line enforcement belongs to <a href="https://sg-sentinel.sgit.ai">sg-sentinel.sgit.ai</a>. <b>We measure and evidence; we never sit in-line.</b> <a href="../network/index.html#sentinel">The boundary map →</a></p></div>
+
+<h2 id="provenance">Provenance</h2>
+<div class="docmeta">
+  <div class="k">Concepts</div><div class="v">C20 two symmetric risks · C21 the four-way time intersection · C22 the five-dimension profile and the “no plug” correction · C39 the plug is a sledgehammer</div>
+  <div class="k">Moved from</div><div class="v"><code>https://riskmandate.ai/plug.html</code> · moved 22 August 2026 · ⚠️ republished <b>with</b> the “no plug” correction the source page does not carry</div>
+  <div class="k">Source</div><div class="v"><code>briefs/07/24/who-can-pull-the-plug/v0.33.51__strategy-brief__…detection-authority-blast-radius-reversibility-intersect-in-time.md</code> — the load-bearing brief, with 12 companion pieces in the same folder</div>
+  <div class="k">First written</div><div class="v">24 July 2026 (the phrase appears from 17 February 2026 in another sense)</div>
+  <div class="k">Maturity</div><div class="v"><span class="pill p-well">well-developed</span> — a 13-document series, and newcomer-followable, outstandingly so</div>
+  <div class="k">Licence</div><div class="v">CC BY 4.0 at source and here</div>
+</div>
+
+<div class="agent">
+  <h4>For an agent</h4>
+  <p><b>C20–C22 — the plug.</b> Two <b>symmetric</b> risks: nobody holds the mandate to stop the system (an <b>authority gap</b>), and the system cannot be stopped even when someone decides to (a <b>capability gap</b>). The second is widely underestimated. The authority gap decomposes into timed sub-risks — stoppable in an hour, ten hours, a day, five days; office hours only; can the holder act <b>without fear of losing their job</b>; is there an escalation path. Four capabilities must line up <b>inside the same window</b>: <b>detection</b> (a curve, not a binary), <b>decision</b> (assembling authorised people in time), <b>blast radius</b> (models scale fast — a steep cost curve), <b>reversibility</b> (“it is not just pulling the plug, it is pulling the plug and reverting the changes”). Hard detection floor: <b>12–18 hours</b> of hyperscaler cost-reporting delay for anything that surfaces as spend. <b>The pillar correction: the plug ALWAYS exists</b> — you can always disconnect, revoke or shut down. What older registers recorded as “no plug” was <b>zero recoverability</b>, and restating it that way turns an unassignable blank into an ownable finding. Every stoppable thing gets a <b>five-dimension profile</b>: who holds it · blast radius · speed · side effects · <b>recoverability</b>. Pulling the plug is itself a risk (side effects). Boundary: this model <b>rates</b> the ability to stop and never <b>provides</b> it — in-line enforcement is sg-sentinel's. <b>Not implemented in code.</b></p>
+</div>
+
+<div class="pagenav">
+  <a href="../blast-radius/index.html">← Blast radius</a>
+  <a href="recoverability.html">Recoverability →</a>
+</div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">risks<span>.sgit.ai</span></div>
+    <p>The conceptual and research home for risk in the sgit.ai estate: what a risk is, what acceptance is, and why it is modelled this way. <a href="https://riskmandate.ai" style="display:inline;padding:0">riskmandate.ai</a> answers how you get your risks accepted and what it costs; this site answers why the model has the shape it has. <b>Nothing here is implemented in code</b> — <a href="../shipped/index.html" style="display:inline;padding:0">/shipped/</a> says so plainly. Part of the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network. All content CC BY 4.0 unless a page states otherwise.</p>
+    <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://riskmandate.ai">↗ riskmandate.ai</a> — the product · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> — the graph machinery · <a href="https://nhi.sgit.ai">↗ nhi.sgit.ai</a> · <a href="https://pki.sgit.ai">↗ pki.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
+    <p class="partnote">⚠ Participant disclosure: published by the sgit project, which also builds riskmandate.ai — the commercial product this research underpins. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
+    <p class="verline">site <a href="../admin/versions.html">v0.1.0</a> · <a href="../admin/index.html">engineering</a></p>
+  </div>
+  <div>
+    <h4>Start here</h4>
+    <a href="../acceptance/index.html">&#8594; The founding inversion</a>
+    <a href="../acceptance/no-deny.html">There is no deny button</a>
+    <a href="../acceptance/the-ladder.html">The interval ladder</a>
+    <a href="../acceptable/index.html">Accepted is not acceptable</a>
+    <a href="../ladder/index.html">The grounding ladder</a>
+  </div>
+  <div>
+    <h4>For agents</h4>
+    <a href="../agents/index.html">&#8594; The machine surface</a>
+    <a href="../concepts/index.html">All 42 concepts</a>
+    <a href="../data/concepts.json">concepts.json — the definitions</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+  </div>
+  <div>
+    <h4>The proof</h4>
+    <a href="../examples/index.html">Three worked graphs</a>
+    <a href="../examples/vaults.html">The four live vaults</a>
+    <a href="../examples/2fa.html">The 2FA instance graph</a>
+    <a href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+    <a href="../shipped/index.html">What is argued, what runs</a>
+  </div>
+  <div>
+    <h4>Site</h4>
+    <a href="../network/index.html">The network</a>
+    <a href="../origins/index.html">Origins</a>
+    <a href="../documents/index.html">The documents</a>
+    <a href="../admin/comms.html">Comms: asks &amp; tasks</a>
+    <a href="../admin/versions.html">Release history</a>
+    <a href="../about/participant.html">Where we lose</a>
+  </div>
+</div></footer>
+</body>
+</html>

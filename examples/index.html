@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Three worked graphs, four live vaults · risks.sgit.ai</title>
+<meta name="description" content="The proof layer: three risk graphs worked end to end with counted nodes and edges, four published vaults with read keys, the ten scenarios and the seven-row plug register.">
+<link rel="canonical" href="https://risks.sgit.ai/examples/index.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="risks.sgit.ai">
+<meta property="og:url" content="https://risks.sgit.ai/examples/index.html">
+<meta property="og:title" content="Three worked graphs, four live vaults">
+<meta property="og:description" content="Counted, not asserted. 59/75, 51/53, 1,523/1,944 — and four vaults you can open today.">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../index.html">risks<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: vaults, publishing and the catalogue. This site is the estate's conceptual home for risk">↗ part of <b>sgit.ai</b></a>
+  <span class="stage-pill">research site</span>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.1.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni ni-has">
+      <a class="nl" href="../acceptance/index.html">Acceptance<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../acceptance/index.html">The founding inversion</a>
+      <a class="sl" href="../acceptance/underwriting.html">Underwriting, not prediction</a>
+      <a class="sl" href="../acceptance/no-deny.html">There is no deny button</a>
+      <a class="sl" href="../acceptance/the-ladder.html">The interval ladder</a>
+      <a class="sl" href="../acceptance/unaccepted-is-critical.html">Unaccepted is critical</a>
+      <a class="sl" href="../acceptance/workflow.html">Who underwrites, and how it flows up</a>
+      <a class="sl" href="../acceptable/index.html">Accepted is not acceptable</a>
+      <a class="sl" href="../acceptable/appetite.html">Appetite as a revealed band</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../ladder/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../ladder/index.html">The grounding ladder</a>
+      <a class="sl" href="../ladder/formulas.html">Node type formulas</a>
+      <a class="sl" href="../ladder/bridges.html">Bridges, not merges</a>
+      <a class="sl" href="../ladder/absence.html">Not knowing is a fact</a>
+      <a class="sl" href="../register/index.html">The register as a graph of graphs</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../plug/index.html">The exposure<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../plug/index.html">Who can pull the plug</a>
+      <a class="sl" href="../plug/recoverability.html">Recoverability: the hard limit</a>
+      <a class="sl" href="../blast-radius/index.html">Blast radius &amp; authorization closure</a>
+      <a class="sl" href="../practice/index.html">Practice: owners, altitude, meta-risks</a>
+      <a class="sl" href="../ramm/index.html">RAMM and the maturity models</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../examples/index.html">The proof<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl here" href="../examples/index.html">Three worked graphs</a>
+      <a class="sl" href="../examples/2fa.html">The 2FA instance graph</a>
+      <a class="sl" href="../examples/browser-isolation.html">The browser-isolation case</a>
+      <a class="sl" href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+      <a class="sl" href="../examples/vaults.html">The four live vaults</a>
+      <a class="sl" href="../examples/scenarios.html">The ten scenarios</a>
+      <a class="sl" href="../examples/plug-register.html">The plug register</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../agents/index.html">For agents<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../agents/index.html">The machine surface</a>
+      <a class="sl" href="../concepts/index.html">All 42 concepts, addressable</a>
+      <a class="sl" href="../shipped/index.html">What is argued, what runs</a>
+      <a class="sl" href="../llms.txt">llms.txt</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../network/index.html">Site<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../network/index.html">The network: where the boundaries are</a>
+      <a class="sl" href="../origins/index.html">Origins: February to August 2026</a>
+      <a class="sl" href="../documents/index.html">The documents</a>
+      <a class="sl" href="../admin/comms.html">Comms: asks &amp; tasks</a>
+      <a class="sl" href="../admin/versions.html">Release history</a>
+      <a class="sl" href="../admin/index.html">Admin &amp; engineering</a>
+      <a class="sl" href="../about/participant.html">Where we lose</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__Risks">★ GitHub</a>
+  <script src="../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+<div class="crumb"><a href="../index.html">risks.sgit.ai</a> / examples</div>
+<h1>Three worked graphs, four live vaults</h1>
+<p class="lead">A model this opinionated is worth nothing unless somebody has run it on something real. Three risk graphs have been worked end to end with counted nodes and edges, four vaults are published and browsable today, and ten scenarios were written as product content. Every number on these pages is from the source rather than illustrative.</p>
+<div class="proof">
+  <div class="n"><b>59 · 75</b><span>nodes and edges — the browser-isolation case</span><em>12 Jul 2026</em></div>
+  <div class="n"><b>51 · 53</b><span>nodes and edges — the 2FA instance graph</span><em>26 Jun 2026</em></div>
+  <div class="n"><b>1,523 · 1,944</b><span>nodes and edges — the EU AI Act as a graph</span><em>live vault</em></div>
+  <div class="n"><b>9 · 5</b><span>questions, and unanswered ones, in Article 26(5)</span><em>“the actual output”</em></div>
+  <div class="n"><b>4</b><span>published vaults · 468 files · 111 commits</span><em>read keys published</em></div>
+  <div class="n"><b>24 · 34</b><span>node classes and edge types in the 2FA ontology</span><em>MITRE T1110.004</em></div>
+</div>
+
+<h2 id="graphs">The three worked graphs</h2>
+<div class="cards">
+  <a class="card" href="browser-isolation.html">
+    <div class="tag">59 nodes · 75 edges · 5 altitudes</div>
+    <h3>The browser-isolation business case</h3>
+    <p>The largest single graph in the corpus, with a full node and edge type distribution. Structured F1–F8, E1–E8, V1–V6, R1–R5, L1–L5. Carries <b>three risks of the mitigation itself</b>, and one deliberately-cited counterweight number that cuts against the argument it appears in.</p>
+    <span class="go">Read it →</span>
+  </a>
+  <a class="card" href="2fa.html">
+    <div class="tag">51 nodes · 53 edges · the founding scenario</div>
+    <h3>The 2FA instance graph</h3>
+    <p>Where the register model was first worked through: nine risks from one missing second factor, an attack mapped to MITRE <code>T1110.004</code>, an interval resolution with a rung struck off — and <b>R2, the governance air gap</b>, where the wrong owner accepts.</p>
+    <span class="go">Read it →</span>
+  </a>
+  <a class="card" href="article-26-5.html">
+    <div class="tag">the complete instance</div>
+    <h3>Article 26(5): fact to board and back</h3>
+    <p>One provision, one agent, one graph, with its own node and edge inventory. 8 facts (one deliberately unevidenced), 5 risks (one meta), 4 stakeholders, 3 decisions plus one deliberately absent, and <b>9 questions of which 5 are unanswered</b>.</p>
+    <span class="go">Read it →</span>
+  </a>
+</div>
+
+<h2 id="live">The four live vaults</h2>
+<p>Published, browsable, and the strongest asset this site has. The Risk Graph Explorer runs seven views recomputed simultaneously with <b>ghosted edges for unanswered</b>; Agentic Browser Isolation runs acceptance-gated escalation across five altitudes with no deny button; the Risk Mandate vault is the method applied to its own build across 98 commits; and the Regulation Graph carries the EU AI Act as a citable graph.</p>
+<p><a href="vaults.html"><b>All four, with what each one proves →</b></a></p>
+
+<h2 id="other">Two more artefacts</h2>
+<div class="cards">
+  <a class="card" href="scenarios.html">
+    <div class="tag">the shipped MVP content</div>
+    <h3>The ten scenarios</h3>
+    <p>Every email you own. Your calendar. The company card. The production database. Each written as hook → reveal → punchline, and the punchline is always the same three words. The one piece of this corpus that actually reached an audience.</p>
+    <span class="go">Read them →</span>
+  </a>
+  <a class="card" href="plug-register.html">
+    <div class="tag">7 rows · 5 dimensions</div>
+    <h3>The plug register</h3>
+    <p>The five-dimension profile applied to a real seven-row register, from <em>“agent misuses the isolated session”</em> through to two rows at <b>recoverability: zero</b> — which is what the corrected “no plug” finding looks like when it is written down properly.</p>
+    <span class="go">Read it →</span>
+  </a>
+</div>
+
+<h2 id="figures">Figures from across the corpus, with what each one is for</h2>
+<div class="tablewrap"><table>
+  <thead><tr><th>Figure</th><th>What it measures</th><th>Where it is used here</th></tr></thead>
+  <tbody>
+    <tr><td><b>12–18 hours</b></td><td>Hyperscaler cost-reporting delay — a hard detection floor for anything that surfaces as spend</td><td><a href="../plug/index.html#detection">The plug</a></td></tr>
+    <tr><td><b>16 hours</b></td><td>The founder's separate AWS figure: <em>“how much damage can be done in 16 hours”</em></td><td><a href="../plug/index.html#detection">The plug</a></td></tr>
+    <tr><td><b>30 days vs 6 months</b></td><td>Log retention observed against retention required — <em>“arithmetic, not judgement”</em></td><td><a href="article-26-5.html#arithmetic">Article 26(5)</a></td></tr>
+    <tr><td><b>~50% → ~1%</b></td><td>Browser prompt-injection attack success across one model generation, from vendor system cards. Cited as the honest counterweight: a large real improvement that still does not reach zero</td><td><a href="browser-isolation.html#counterweight">Browser isolation</a></td></tr>
+    <tr><td><b>63–76%</b></td><td>Security leaders experiencing or witnessing burnout in a single year</td><td><a href="../practice/index.html#internalise">Do not internalise</a></td></tr>
+    <tr><td><b>7,500+ participants</b></td><td>Preregistered escalation-of-commitment experiments: precommitment made later de-escalation seem more trustworthy</td><td><a href="../acceptance/the-ladder.html">The ladder</a></td></tr>
+    <tr><td><b>~496,000 words</b></td><td>The size of the June-to-August risk corpus this site consolidates, across ~185 documents</td><td><a href="../documents/index.html">The documents</a></td></tr>
+  </tbody>
+</table></div>
+<div class="note"><p style="margin-top:0"><b>What is not on this site.</b> The corpus also contains research briefs naming real organisations in breach and incident narratives, a comparative vendor assessment, and commercial material. Four manifest rows are marked <b>do-not-publish</b> and are not reproduced, quoted or paraphrased anywhere here — the pre-release gate fails the build if their distinctive strings appear. <a href="../documents/index.html#not-here">What was excluded, and why →</a></p></div>
+
+<div class="agent">
+  <h4>For an agent</h4>
+  <p><b>The proof layer.</b> Three risk graphs are worked end to end with counted nodes and edges: <b>browser isolation (59 nodes, 75 edges, 5 altitudes)</b>, <b>2FA (51 nodes, 53 edges; ontology 24 node classes and 34 edge types; MITRE T1110.004)</b>, and <b>Article 26(5) (8 facts, 7 evidence, 5 provisions, 3 vulnerabilities, 5 risks, 4 stakeholders, 3 decisions, 9 questions of which 5 unanswered)</b>. Four vaults are <b>published and browsable</b> with read keys: Risk Graph Explorer (7 views, ghosted = unanswered, <code>permissions: {}</code>), Agentic Browser Isolation (17 entry points, 5 altitudes, acceptance-gated escalation with no deny button), Risk Mandate (124 files, 98 commits — the method applied to its own build) and Regulation Graph (1,523 nodes, 1,944 edges of the EU AI Act from official Formex XML, hash-verified). Load-bearing figures: <b>12–18h</b> hyperscaler cost-reporting detection floor · <b>30 days vs 6 months</b> log retention, the most defensible finding because it is arithmetic · <b>~50% → ~1%</b> prompt-injection success across a model generation, cited as an honest counterweight. Four manifest rows are do-not-publish and appear nowhere on this site.</p>
+</div>
+
+<div class="pagenav">
+  <a href="../ramm/index.html">← RAMM</a>
+  <a href="2fa.html">The 2FA instance graph →</a>
+</div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">risks<span>.sgit.ai</span></div>
+    <p>The conceptual and research home for risk in the sgit.ai estate: what a risk is, what acceptance is, and why it is modelled this way. <a href="https://riskmandate.ai" style="display:inline;padding:0">riskmandate.ai</a> answers how you get your risks accepted and what it costs; this site answers why the model has the shape it has. <b>Nothing here is implemented in code</b> — <a href="../shipped/index.html" style="display:inline;padding:0">/shipped/</a> says so plainly. Part of the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network. All content CC BY 4.0 unless a page states otherwise.</p>
+    <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://riskmandate.ai">↗ riskmandate.ai</a> — the product · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> — the graph machinery · <a href="https://nhi.sgit.ai">↗ nhi.sgit.ai</a> · <a href="https://pki.sgit.ai">↗ pki.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
+    <p class="partnote">⚠ Participant disclosure: published by the sgit project, which also builds riskmandate.ai — the commercial product this research underpins. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
+    <p class="verline">site <a href="../admin/versions.html">v0.1.0</a> · <a href="../admin/index.html">engineering</a></p>
+  </div>
+  <div>
+    <h4>Start here</h4>
+    <a href="../acceptance/index.html">&#8594; The founding inversion</a>
+    <a href="../acceptance/no-deny.html">There is no deny button</a>
+    <a href="../acceptance/the-ladder.html">The interval ladder</a>
+    <a href="../acceptable/index.html">Accepted is not acceptable</a>
+    <a href="../ladder/index.html">The grounding ladder</a>
+  </div>
+  <div>
+    <h4>For agents</h4>
+    <a href="../agents/index.html">&#8594; The machine surface</a>
+    <a href="../concepts/index.html">All 42 concepts</a>
+    <a href="../data/concepts.json">concepts.json — the definitions</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+  </div>
+  <div>
+    <h4>The proof</h4>
+    <a href="../examples/index.html">Three worked graphs</a>
+    <a href="../examples/vaults.html">The four live vaults</a>
+    <a href="../examples/2fa.html">The 2FA instance graph</a>
+    <a href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+    <a href="../shipped/index.html">What is argued, what runs</a>
+  </div>
+  <div>
+    <h4>Site</h4>
+    <a href="../network/index.html">The network</a>
+    <a href="../origins/index.html">Origins</a>
+    <a href="../documents/index.html">The documents</a>
+    <a href="../admin/comms.html">Comms: asks &amp; tasks</a>
+    <a href="../admin/versions.html">Release history</a>
+    <a href="../about/participant.html">Where we lose</a>
+  </div>
+</div></footer>
+</body>
+</html>
