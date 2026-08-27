@@ -218,3 +218,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# sgit / SG-Vault — this is a website repo and must never carry a vault.
+# A stray `sgit` command run from the repo root creates .sg_vault/, and a vault
+# directory can hold the vault key itself (backups/ zips carry it). The site's
+# pre-release gate already refuses key-shaped strings anywhere in the tree; this
+# keeps them from ever being staged in the first place.
+.sg_vault/
+.sg_vault_new/
+*.vault__*.zip
