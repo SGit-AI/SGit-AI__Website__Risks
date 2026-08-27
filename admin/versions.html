@@ -20,7 +20,7 @@
   <a class="brand" href="../index.html">risks<span>.sgit.ai</span></a>
   <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: vaults, publishing and the catalogue. This site is the estate's conceptual home for risk">↗ part of <b>sgit.ai</b></a>
   <span class="stage-pill">research site</span>
-  <a class="ver" href="../admin/versions.html" title="Site release history">v0.2.1</a>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.2.2</a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
   <div class="nav-items">
     <div class="ni ni-has">
@@ -103,6 +103,16 @@
   <thead><tr><th>Version</th><th>Date</th><th>What shipped</th></tr></thead>
   <tbody>
     <tr>
+      <td class="vnum">v0.2.2</td>
+      <td>27 Aug 2026</td>
+      <td><b>The plan that was nearly lost, put back — and the difference between “not destroyed” and “visible”.</b>
+        <p><b>The proposal for <a href="../examples/execution-boundary/index.html">the execution boundary</a> was the vault's <code>index.html</code> for exactly one commit</b>, and the implementation commit overwrote it. Nothing was destroyed — it was still there in the commit history, which is what a versioned store is for. But nobody holding the read key would ever have found it, because a vault reader opens the app entry and sees the current tree. <b>For two commits the plan existed only where nobody looks.</b></p>
+        <p>It is restored as <code>proposal.html</code>, a page in its own right, with <b>one</b> change made to it and the change stated rather than implied: a navigation strip inserted after <code>&lt;body&gt;</code>, because a document with no way back out is a document a reader leaves. <b>18 lines added, 0 removed, 792 bytes.</b> The untouched source travels in the vault as <code>build/proposal-source.html</code>, and the original bytes remain at commit <code>obj-cas-imm-678bd9b6e7cc</code>, so “unedited” is a claim anyone with the read key can check rather than one they have to accept.</p>
+        <p><b>The vault's own front page now opens on the choice between the two</b>, which is what makes the pair worth having: the proposal registered five expectations and all five held, and that sounds better than it is, because three were close to tautologies once the data model was fixed. The load-bearing part is that <b>two predicted failures and got them</b>, and that <b>three findings nobody registered</b> turned up during the build and changed the model rather than the code. A plan quietly rewritten to match its outcome can never show any of that. <code>plan.html</code> is now the scorecard rather than the plan, and says so in its first paragraph.</p>
+        <p><b>On this site:</b> the example page gains a section naming both documents and what each is, the vault's derived facts move to <b>36 files · 809 KB · 5 commits · 9 pages behind 1 app entry</b>, and the five-vault totals follow. The vault's credential audit was re-run across the enlarged tree — <b>36 files, 92 raw hits, all 92 ruled out</b>, up from 77 because the restored proposal arrives with its own inline stylesheet and therefore its own copy of the four CSS declarations that generate the false positive. <b>A rising count with an unchanged ruling is the normal case</b>; a hit that is not a CSS declaration would not be, and there has never been one.</p>
+      </td>
+    </tr>
+    <tr>
       <td class="vnum">v0.2.1</td>
       <td>27 Aug 2026</td>
       <td><b>Numbers derived rather than typed, and the verification stated at its real strength.</b>
@@ -156,7 +166,7 @@
     <p>The conceptual and research home for risk in the sgit.ai estate: what a risk is, what acceptance is, and why it is modelled this way. <a href="https://riskmandate.ai" style="display:inline;padding:0">riskmandate.ai</a> answers how you get your risks accepted and what it costs; this site answers why the model has the shape it has. <b>Nothing here is implemented in code</b> — <a href="../shipped/index.html" style="display:inline;padding:0">/shipped/</a> says so plainly. Part of the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network. All content CC BY 4.0 unless a page states otherwise.</p>
     <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://riskmandate.ai">↗ riskmandate.ai</a> — the product · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> — the graph machinery · <a href="https://nhi.sgit.ai">↗ nhi.sgit.ai</a> · <a href="https://pki.sgit.ai">↗ pki.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
     <p class="partnote">⚠ Participant disclosure: published by the sgit project, which also builds riskmandate.ai — the commercial product this research underpins. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
-    <p class="verline">site <a href="../admin/versions.html">v0.2.1</a> · <a href="../admin/index.html">engineering</a></p>
+    <p class="verline">site <a href="../admin/versions.html">v0.2.2</a> · <a href="../admin/index.html">engineering</a></p>
   </div>
   <div>
     <h4>Start here</h4>

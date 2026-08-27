@@ -1,6 +1,6 @@
 # risks.sgit.ai — you cannot deny a risk, only say how long you accept it
 
-*The conceptual and research home for risk · site v0.2.1 · CC BY 4.0*
+*The conceptual and research home for risk · site v0.2.2 · CC BY 4.0*
 
 Traditional risk management predicts the probability of a future event. This model asks a
 named human to **underwrite an exposure that already exists** — insurance-style, with
@@ -34,7 +34,7 @@ Risk, where downward paths ground and upward paths classify.
   words, one [authored here](examples/execution-boundary/index.html#new)
 - **6** rungs on the interval ladder, default one month
 - **0** lines of code implementing any of it
-- **5** live vaults, published with read keys — 502 files, 115 commits, one of them built here
+- **5** live vaults, published with read keys — 504 files, 116 commits, one of them built here
 - **59 nodes / 75 edges** in the largest worked graph; **51/53** in the 2FA graph; **1,523/1,944** in the regulation graph
 - **30 days vs 6 months** — logs retained against logs required, *"arithmetic, not judgement"*
 - **12–18 hours** of hyperscaler cost-reporting delay: a hard detection floor

@@ -1,6 +1,6 @@
 {
   "site": "risks.sgit.ai",
-  "site_version": "v0.2.1",
+  "site_version": "v0.2.2",
   "updated": "2026-08-23",
   "title": "risks.sgit.ai — the conceptual and research home for risk",
   "summary": "Traditional risk management predicts the probability of a future event. This model asks a named human to underwrite an exposure that already exists, insurance-style, with personal accountability attached. From that inversion follow the no-deny mechanic, the interval ladder, unaccepted-equals-critical, and the grounding ladder underneath.",

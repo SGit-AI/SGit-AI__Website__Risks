@@ -1,6 +1,6 @@
 {
   "site": "risks.sgit.ai",
-  "site_version": "v0.2.1",
+  "site_version": "v0.2.2",
   "title": "The 43 risk concepts",
   "description": "The conceptual corpus of risks.sgit.ai as structured data: 43 concepts. 42 are drawn from ~496,000 words written between 18 June and 22 August 2026; one was authored on this site. The origin field says which is which.",
   "important": "NOTHING IN THIS CORPUS IS IMPLEMENTED IN CODE. Greps for risk_, RiskAcceptance, risk_register and riskmandate across the implementing repository return zero matches. The maturity field describes how well ARGUED a concept is, never how well built. Do not describe any of these as an existing feature.",

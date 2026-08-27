@@ -21,7 +21,7 @@
   <a class="brand" href="../../index.html">risks<span>.sgit.ai</span></a>
   <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: vaults, publishing and the catalogue. This site is the estate's conceptual home for risk">↗ part of <b>sgit.ai</b></a>
   <span class="stage-pill">research site</span>
-  <a class="ver" href="../../admin/versions.html" title="Site release history">v0.2.1</a>
+  <a class="ver" href="../../admin/versions.html" title="Site release history">v0.2.2</a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
   <div class="nav-items">
     <div class="ni ni-has">
@@ -99,7 +99,7 @@
 <main class="doc">
 <div class="crumb"><a href="../../index.html">risks.sgit.ai</a> / <a href="../index.html">examples</a> / the execution boundary</div>
 <h1>The execution boundary</h1>
-<p class="lead">An authorized action waits in a queue. While it waits, one material condition changes. <b>At the moment of execution, can the predicates that justified the authorization still be established from available evidence?</b> This is the fourth worked example on this site and the first one you can drive — it runs live below, out of an encrypted vault, from a read key printed in the open.</p>
+<p class="lead">An authorized action waits in a queue. While it waits, one material condition changes. <b>At the moment of execution, can the predicates that justified the authorization still be established from available evidence?</b> This is the fourth worked example on this site and the first one you can drive — it runs live below, out of an encrypted vault, from a read key printed in the open. <b>The vault holds both the plan as it was written and the implementation it became</b>, neither edited to agree with the other.</p>
 <div class="proof">
   <div class="n"><b>4</b><span>predicates one decision object rests on</span><em>MIG-114</em></div>
   <div class="n"><b>7h 40m</b><span>from authorization to execution</span><em>the interval under test</em></div>
@@ -107,10 +107,24 @@
   <div class="n"><b>0</b><span>changes to the grant across the interval</span><em>present throughout</em></div>
   <div class="n"><b>20 · 24</b><span>nodes and edges, one named absence</span><em>one computed peak</em></div>
   <div class="n"><b>5 of 5</b><span>pre-registered expectations held</span><em>two of them unwelcome</em></div>
+  <div class="n"><b>2</b><span>documents in the vault: the plan, and what it became</span><em>neither edited to match</em></div>
 </div>
 
+<h2 id="both">The vault holds the plan and the thing it became</h2>
+<p>A proposal was written and sent for review before any of this existed. It was then built. <b>Both documents are in the vault</b>, side by side, and the first was not edited afterwards to agree with the second.</p>
+<div class="tablewrap"><table>
+  <thead><tr><th style="width:22%">In the vault</th><th>What it is</th><th style="width:20%">When</th></tr></thead>
+  <tbody>
+    <tr><td><b><code>proposal.html</code></b></td><td>The plan as sent: what was going to be built, in what order, what it was expected to prove, the object model, and the decisions needed before starting. Fourteen sections, <b>preserved unedited</b> — including the parts that turned out to be optimistic</td><td><span class="pill p-plain2">written first</span></td></tr>
+    <tr><td><b><code>index.html</code> + 7</b></td><td>The instrument. Five views over one scenario, the visual grammar, and the scorecard. Every verdict evaluated at render time from <code>scenario.json</code></td><td><span class="pill p-live">built second</span></td></tr>
+    <tr><td><b><code>plan.html</code></b></td><td>The proposal marked against what happened: which of the five pre-registered expectations held, the three findings nobody registered, and what it still does not prove</td><td><span class="pill p-argued">the marking</span></td></tr>
+  </tbody>
+</table></div>
+<div class="note"><p style="margin-top:0"><b>The plan was nearly lost, in the ordinary way.</b> It was the vault's <code>index.html</code> for exactly one commit, and the implementation commit overwrote it — so for two commits it existed only in the vault's history, where somebody holding the read key would never have found it. A versioned store meant nothing was destroyed; it did not mean anything was <em>visible</em>.</p>
+<p style="margin-bottom:0">It is restored with <b>one</b> change and the change is stated rather than implied: a navigation strip inserted after <code>&lt;body&gt;</code>, because a document with no way back out is a document a reader leaves. <b>18 lines added, 0 removed, 792 bytes</b> — and the untouched bytes are still at commit <code>obj-cas-imm-678bd9b6e7cc</code> for anyone who wants to diff them.</p></div>
+
 <h2 id="live">The instrument, live</h2>
-<p>Everything below is running out of vault <code>r48ncij0</code>, decrypted in your browser. Switch runs, drag the scrubber, click nodes. <b>No copy of the app or its data exists on this site</b> — a push to the vault changes what you see here with no rebuild.</p>
+<p>Everything below is running out of vault <code>r48ncij0</code>, decrypted in your browser. Switch runs, drag the scrubber, click nodes. <b>No copy of the app or its data exists on this site</b> — a push to the vault changes what you see here with no rebuild. The proposal is one click away inside it, in the nav.</p>
 <div class="embedhost" id="ebHost">
   <div class="embedbar">
     <span class="lbl">vault app · read-only</span>
@@ -206,7 +220,7 @@ read key : 990d25fd8ecab928ded37c6a8c86a461e7247f6d3838bd43e7468e93cc2e07c4</cod
 <h2 id="provenance">Provenance</h2>
 <div class="docmeta">
   <div class="k">Origin</div><div class="v">A LinkedIn exchange, August 2026. The correspondent's framing is quoted verbatim in the vault and the build was held to it</div>
-  <div class="k">Vault</div><div class="v"><code>r48ncij0</code> · 34 files · 648 KB · 4 commits · 8 pages behind one app entry · <span class="pill p-live">read key published</span></div>
+  <div class="k">Vault</div><div class="v"><code>r48ncij0</code> · 36 files · 809 KB · 5 commits · 9 pages behind one app entry · <span class="pill p-live">read key published</span></div>
   <div class="k">Shape</div><div class="v">Structured analysis — an instrument over one worked scenario</div>
   <div class="k">Evidence status</div><div class="v"><b>Demonstration.</b> Not production, and not a sketch: every verdict is computed, and the scenario is invented and marked as such throughout</div>
   <div class="k">Copy or reference</div><div class="v"><b>Reference.</b> The embed reads the live vault on every load; a push changes this page with no rebuild</div>
@@ -218,7 +232,7 @@ read key : 990d25fd8ecab928ded37c6a8c86a461e7247f6d3838bd43e7468e93cc2e07c4</cod
 
 <div class="agent">
   <h4>For an agent</h4>
-  <p><b>The execution boundary — the fourth worked example, and the first that runs.</b> Scenario: a schema migration <code>MIG-114</code> authorized on four predicates, queued, due in a 02:00 change window. The material change is that the nightly backup-verification job is <b>suspended for the duration of the change window</b>, so the window that queues the action is the same thing that stops its evidence being refreshed — at the boundary the last verification is <b>fifty minutes past its 24-hour horizon</b>. Nothing failed and nothing was revoked. <b>Three verdicts, not two:</b> <em>established</em> (every predicate satisfied by evidence inside its horizon) · <em>not established</em> (current evidence says a predicate is false) · <b><em>cannot establish</em></b> (no evidence inside a horizon — nothing says false, nothing says true, and <b>this is not a soft pass</b>). The formula: <code>AdmissibleForExecution := an Action with an authorized_by path to a Decision, all of whose rests_on Predicates are satisfied_by Evidence whose observed_at + validity_horizon &gt; boundary_time</code>, evaluated at boundary time rather than decision time. <b>Decision-as-a-node (C33) is a precondition, not a preference</b> — a decision stored as a field has nothing to re-walk, which the control arm demonstrates by terminating at hop 2. Four runs; <b>run D returns a confident, incorrect <em>established</em></b> because a real failure never reached the graph, and it ships deliberately. Five pre-registered expectations, all held, two of them unwelcome. New concept authored here, not from the corpus: <b>the persistence hope</b> (C43). The instrument is a live vault, read key published: vault <code>r48ncij0</code>, endpoint <code>https://dev.send.sgraph.ai</code>. <b>Nothing here is implemented as a running system.</b></p>
+  <p><b>The execution boundary — the fourth worked example, and the first that runs.</b> Scenario: a schema migration <code>MIG-114</code> authorized on four predicates, queued, due in a 02:00 change window. The material change is that the nightly backup-verification job is <b>suspended for the duration of the change window</b>, so the window that queues the action is the same thing that stops its evidence being refreshed — at the boundary the last verification is <b>fifty minutes past its 24-hour horizon</b>. Nothing failed and nothing was revoked. <b>Three verdicts, not two:</b> <em>established</em> (every predicate satisfied by evidence inside its horizon) · <em>not established</em> (current evidence says a predicate is false) · <b><em>cannot establish</em></b> (no evidence inside a horizon — nothing says false, nothing says true, and <b>this is not a soft pass</b>). The formula: <code>AdmissibleForExecution := an Action with an authorized_by path to a Decision, all of whose rests_on Predicates are satisfied_by Evidence whose observed_at + validity_horizon &gt; boundary_time</code>, evaluated at boundary time rather than decision time. <b>Decision-as-a-node (C33) is a precondition, not a preference</b> — a decision stored as a field has nothing to re-walk, which the control arm demonstrates by terminating at hop 2. Four runs; <b>run D returns a confident, incorrect <em>established</em></b> because a real failure never reached the graph, and it ships deliberately. Five pre-registered expectations, all held, two of them unwelcome. New concept authored here, not from the corpus: <b>the persistence hope</b> (C43). The instrument is a live vault, read key published: vault <code>r48ncij0</code>, endpoint <code>https://dev.send.sgraph.ai</code>. <b>The vault holds two documents:</b> <code>proposal.html</code>, the plan as written and sent for review, preserved unedited (it was the vault's <code>index.html</code> for one commit before the implementation overwrote it, and is restored with one navigation strip added — 18 lines, 792 bytes — with the untouched bytes still at commit <code>obj-cas-imm-678bd9b6e7cc</code>); and the instrument itself, nine pages behind one app entry. <code>plan.html</code> marks the first against the second. <b>Nothing here is implemented as a running system.</b></p>
 </div>
 
 <div class="pagenav">
@@ -233,7 +247,7 @@ read key : 990d25fd8ecab928ded37c6a8c86a461e7247f6d3838bd43e7468e93cc2e07c4</cod
     <p>The conceptual and research home for risk in the sgit.ai estate: what a risk is, what acceptance is, and why it is modelled this way. <a href="https://riskmandate.ai" style="display:inline;padding:0">riskmandate.ai</a> answers how you get your risks accepted and what it costs; this site answers why the model has the shape it has. <b>Nothing here is implemented in code</b> — <a href="../../shipped/index.html" style="display:inline;padding:0">/shipped/</a> says so plainly. Part of the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network. All content CC BY 4.0 unless a page states otherwise.</p>
     <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://riskmandate.ai">↗ riskmandate.ai</a> — the product · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> — the graph machinery · <a href="https://nhi.sgit.ai">↗ nhi.sgit.ai</a> · <a href="https://pki.sgit.ai">↗ pki.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
     <p class="partnote">⚠ Participant disclosure: published by the sgit project, which also builds riskmandate.ai — the commercial product this research underpins. <a href="../../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
-    <p class="verline">site <a href="../../admin/versions.html">v0.2.1</a> · <a href="../../admin/index.html">engineering</a></p>
+    <p class="verline">site <a href="../../admin/versions.html">v0.2.2</a> · <a href="../../admin/index.html">engineering</a></p>
   </div>
   <div>
     <h4>Start here</h4>
