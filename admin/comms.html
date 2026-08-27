@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Comms: asks and tasks · risks.sgit.ai</title>
-<meta name="description" content="The site's working board in public: seven numbered asks of the corpus and the estate, ten tasks this site owes itself, and four things decided against.">
+<meta name="description" content="The site's working board in public: nine numbered asks of the corpus and the estate, fifteen tasks this site owes itself, and four things decided against — one of them now reversed, with the reason.">
 <link rel="canonical" href="https://risks.sgit.ai/admin/comms.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="risks.sgit.ai">
@@ -20,7 +20,7 @@
   <a class="brand" href="../index.html">risks<span>.sgit.ai</span></a>
   <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: vaults, publishing and the catalogue. This site is the estate's conceptual home for risk">↗ part of <b>sgit.ai</b></a>
   <span class="stage-pill">research site</span>
-  <a class="ver" href="../admin/versions.html" title="Site release history">v0.1.0</a>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.2.0</a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
   <div class="nav-items">
     <div class="ni ni-has">
@@ -63,16 +63,17 @@
       <a class="sl" href="../examples/2fa.html">The 2FA instance graph</a>
       <a class="sl" href="../examples/browser-isolation.html">The browser-isolation case</a>
       <a class="sl" href="../examples/article-26-5.html">Article 26(5): fact to board</a>
-      <a class="sl" href="../examples/vaults.html">The four live vaults</a>
+      <a class="sl" href="../examples/vaults.html">The five live vaults</a>
       <a class="sl" href="../examples/scenarios.html">The ten scenarios</a>
       <a class="sl" href="../examples/plug-register.html">The plug register</a>
+      <a class="sl" href="../examples/execution-boundary/index.html">The execution boundary ★</a>
       </div>
     </div>
     <div class="ni ni-has">
       <a class="nl" href="../agents/index.html">For agents<span class="caret">&#9662;</span></a>
       <div class="sub">
       <a class="sl" href="../agents/index.html">The machine surface</a>
-      <a class="sl" href="../concepts/index.html">All 42 concepts, addressable</a>
+      <a class="sl" href="../concepts/index.html">All 43 concepts, addressable</a>
       <a class="sl" href="../shipped/index.html">What is argued, what runs</a>
       <a class="sl" href="../llms.txt">llms.txt</a>
       </div>
@@ -146,6 +147,18 @@
       <td>the corpus</td>
       <td><span class="tstat t-need">needed</span></td>
     </tr>
+    <tr id="n8">
+      <td><b>N8</b></td>
+      <td><b>Take <a href="../examples/execution-boundary/index.html">the execution boundary</a> back to the correspondent who set the test</b>, and ask specifically about the two results that were pre-registered as unwelcome rather than about the three that worked. Their framing was built to and not widened; whether the third verdict earns its cost in a system anyone actually runs is not a question this site can answer about itself. <b>The instrument is instrumented for exactly one scenario</b>, which is the constraint they asked for and also its main limit.</td>
+      <td>the correspondent</td>
+      <td><span class="tstat t-open">open</span></td>
+    </tr>
+    <tr id="n9">
+      <td><b>N9</b></td>
+      <td><b>Escrow the Execution Boundary vault's write key</b> before anything else is published from it. The estate's own standing rule is that a write key is escrowed <em>before</em> publication, because a vault whose write key is lost is frozen — permanently readable, never updatable, with no recovery path. This vault was published with the key held by the author and <a href="../examples/vaults.html#keys">the box left unticked in its <code>PUBLIC.md</code></a>. Recorded as an ask rather than quietly done, because the rule was broken in the direction the rule exists to prevent.</td>
+      <td>the project</td>
+      <td><span class="tstat t-need">needed</span></td>
+    </tr>
   </tbody>
 </table></div>
 
@@ -155,14 +168,19 @@
   <tbody>
     <tr id="t1"><td><b>T1</b></td><td>Stand up the pipeline before the content: validate → tag → deploy, with the gate carrying this site's three specific tripwires</td><td><span class="tstat t-done">done · v0.1.0</span></td></tr>
     <tr id="t2"><td><b>T2</b></td><td>Build <a href="../acceptance/index.html">/acceptance/</a>, <a href="../acceptable/index.html">/acceptable/</a>, <a href="../ladder/index.html">/ladder/</a> and <a href="../plug/index.html">/plug/</a> — the four near-publishable sections the brief sequences first</td><td><span class="tstat t-done">done · v0.1.0</span></td></tr>
-    <tr id="t3"><td><b>T3</b></td><td>Ship the definitions endpoint: <a href="../data/concepts.json">42 concepts as structured data</a>, generated from the same definition as the human page, with the gate enforcing that they cannot drift</td><td><span class="tstat t-done">done · v0.1.0</span></td></tr>
+    <tr id="t3"><td><b>T3</b></td><td>Ship the definitions endpoint: <a href="../data/concepts.json">the concepts as structured data</a> (42 at v0.1.0, 43 now), generated from the same definition as the human page, with the gate enforcing that they cannot drift</td><td><span class="tstat t-done">done · v0.1.0</span></td></tr>
     <tr id="t4"><td><b>T4</b></td><td>Publish <a href="../shipped/index.html">/shipped/</a> with the honesty constraint stated first rather than last, and enforce it in CI rather than remembering it</td><td><span class="tstat t-done">done · v0.1.0</span></td></tr>
     <tr id="t5"><td><b>T5</b></td><td><b>Mirror the 2FA instance graph as a downloadable file</b> at a stable path. It is the only directly downloadable graph in the corpus, it declares its own principles inline and carries a CC BY 4.0 line — and <a href="../examples/2fa.html#provenance">this site currently describes it from the brief pack's counts rather than reproducing a file it does not have</a></td><td><span class="tstat t-open">open</span></td></tr>
     <tr id="t6"><td><b>T6</b></td><td><b>Publish the ontology as machine-readable data</b>, not just as a vocabulary listing. Node types and edge types with their path formulas, so an agent can consume the schema rather than parse a code block. <a href="../agents/index.html#ontology">Currently a listing</a></td><td><span class="tstat t-open">open</span></td></tr>
     <tr id="t7"><td><b>T7</b></td><td><b>Run this site's own risk register in the open.</b> The corpus argues a register is a graph, that unaccepted equals critical, and that the register maintains itself. A research site that publishes its own register — <a href="../network/index.html#open">its open questions as unaccepted risks, with intervals</a> — demonstrates all three at zero cost. The house style names this as one of two demonstrations worth building in</td><td><span class="tstat t-open">open</span></td></tr>
     <tr id="t8"><td><b>T8</b></td><td>Write the leave-behind stubs for the four pages that moved off the commercial site, so each has a short summary and a link here rather than a drifting second copy</td><td><span class="tstat t-doing">in progress · this site's half is done</span></td></tr>
     <tr id="t9"><td><b>T9</b></td><td>Add a rendered in-page reader for each source document under <a href="../documents/index.html">/documents/</a>, rather than linking to raw markdown only</td><td><span class="tstat t-open">open</span></td></tr>
-    <tr id="t10"><td><b>T10</b></td><td>Render the three worked graphs as diagrams. Every one is currently prose plus a counted table; two of them exist as parseable JSON upstream and would render directly</td><td><span class="tstat t-open">open</span></td></tr>
+    <tr id="t10"><td><b>T10</b></td><td>Render the three worked graphs as diagrams. Every one is currently prose plus a counted table; two of them exist as parseable JSON upstream and would render directly. <b><a href="../examples/execution-boundary/index.html#live">The execution boundary shows what it would look like</a></b> — a 20-node graph with the visual grammar carried from graphs.sgit.ai — which makes the remaining three a matter of data rather than of method</td><td><span class="tstat t-open">open</span></td></tr>
+    <tr id="t11"><td><b>T11</b></td><td>Build <a href="../examples/execution-boundary/index.html">the execution boundary</a> as a live instrument in a vault, embedded rather than copied, with the read key published in the open and the write credential nowhere on this site</td><td><span class="tstat t-done">done · v0.2.0</span></td></tr>
+    <tr id="t12"><td><b>T12</b></td><td><b>Make the origin of every concept explicit.</b> This site now contains <a href="../concepts/index.html#c43">one concept it authored</a>, so <a href="../data/concepts.json">concepts.json</a> carries an <code>origin</code> field, the index carries a provenance pill, and the gate fails an entry without one. A site that consolidates a corpus and quietly adds to it stops being a report of the corpus</td><td><span class="tstat t-done">done · v0.2.0</span></td></tr>
+    <tr id="t13"><td><b>T13</b></td><td><b>Give the instrument a second scenario that is not ours.</b> Everything it computes today rests on one invented migration; four predicates is not a register, and whether the verdict stays legible at forty predicates or ten thousand queued actions is <a href="../network/index.html#q4">Q4 in a different costume</a>. Taking a scenario from someone else's estate would test the model rather than the authors' imagination</td><td><span class="tstat t-open">open</span></td></tr>
+    <tr id="t14"><td><b>T14</b></td><td><b>Publish the vault-app authoring contract this site now depends on.</b> The instrument's eight pages each inline their own CSS and JS because a vault app runs from a <code>blob:</code> URL and declarative references to vault paths are fetched before the bridge installs. That is written down in a build script rather than on a page, which is exactly the shape of thing this site tells other people not to do</td><td><span class="tstat t-open">open</span></td></tr>
+    <tr id="t15"><td><b>T15</b></td><td>Ship a favicon. The site has none, so every page view on every one of the 37 pages produces a <code>404</code> for <code>/favicon.ico</code> — harmless, visible in any devtools console, and exactly the kind of small untidiness a site that publishes its own gate ought not to be carrying</td><td><span class="tstat t-open">open</span></td></tr>
   </tbody>
 </table></div>
 
@@ -170,7 +188,7 @@
 <div class="tablewrap"><table>
   <thead><tr><th>What</th><th>Why not</th></tr></thead>
   <tbody>
-    <tr><td>Publishing vault read keys on this site</td><td>They are published and kept current in <a href="https://sgit.ai/demos/vaults/index.md">sgit.ai's own catalogue</a>. A second copy would go stale, and the gate refuses anything key-shaped anywhere in the tree — which is a rule worth keeping absolute rather than nearly absolute</td></tr>
+    <tr><td><s>Publishing vault read keys on this site</s> — <b>reversed at v0.2.0</b></td><td>The original reason still holds <em>for vaults this site does not own</em>: the four borrowed vaults' keys are published and kept current in <a href="https://sgit.ai/demos/vaults/index.md">sgit.ai's catalogue</a>, and a second copy here would go stale. It does not hold for a vault this site authored — <a href="../examples/execution-boundary/index.html#credential">the Execution Boundary's read key is printed in the open</a>, because a page that argues read access is a capability you can hand out and then declines to hand it out is arguing against itself. <b>The rule that stayed absolute is the one that matters:</b> read keys yes, vault keys never. The gate now recognises a read key by shape and by prefix and still refuses everything else — and it <a href="versions.html">caught a vault key on this very release</a></td></tr>
     <tr><td>Inventing the four missing RAMM predicates</td><td>Four plausible-sounding definitions presented as the model would be precisely the failure this site exists to avoid. <a href="#n2">N2</a> instead</td></tr>
     <tr><td>Reconstructing the 2FA data file from the brief pack's counts</td><td>A reconstructed graph presented as the original is worse than a missing one. <a href="#t5">T5</a> instead</td></tr>
     <tr><td>Any pricing, partner positioning or competitor comparison</td><td>Not this site's job, and corrosive on a research property. It stays on <a href="https://riskmandate.ai">riskmandate.ai</a></td></tr>
@@ -189,7 +207,7 @@
     <p>The conceptual and research home for risk in the sgit.ai estate: what a risk is, what acceptance is, and why it is modelled this way. <a href="https://riskmandate.ai" style="display:inline;padding:0">riskmandate.ai</a> answers how you get your risks accepted and what it costs; this site answers why the model has the shape it has. <b>Nothing here is implemented in code</b> — <a href="../shipped/index.html" style="display:inline;padding:0">/shipped/</a> says so plainly. Part of the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network. All content CC BY 4.0 unless a page states otherwise.</p>
     <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://riskmandate.ai">↗ riskmandate.ai</a> — the product · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> — the graph machinery · <a href="https://nhi.sgit.ai">↗ nhi.sgit.ai</a> · <a href="https://pki.sgit.ai">↗ pki.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
     <p class="partnote">⚠ Participant disclosure: published by the sgit project, which also builds riskmandate.ai — the commercial product this research underpins. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
-    <p class="verline">site <a href="../admin/versions.html">v0.1.0</a> · <a href="../admin/index.html">engineering</a></p>
+    <p class="verline">site <a href="../admin/versions.html">v0.2.0</a> · <a href="../admin/index.html">engineering</a></p>
   </div>
   <div>
     <h4>Start here</h4>
@@ -202,7 +220,7 @@
   <div>
     <h4>For agents</h4>
     <a href="../agents/index.html">&#8594; The machine surface</a>
-    <a href="../concepts/index.html">All 42 concepts</a>
+    <a href="../concepts/index.html">All 43 concepts</a>
     <a href="../data/concepts.json">concepts.json — the definitions</a>
     <a href="../llms.txt">llms.txt</a>
     <a href="../llms-full.txt">llms-full.txt</a>
@@ -210,9 +228,9 @@
   <div>
     <h4>The proof</h4>
     <a href="../examples/index.html">Three worked graphs</a>
-    <a href="../examples/vaults.html">The four live vaults</a>
+    <a href="../examples/vaults.html">The five live vaults</a>
     <a href="../examples/2fa.html">The 2FA instance graph</a>
-    <a href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+    <a href="../examples/execution-boundary/index.html">The execution boundary</a>
     <a href="../shipped/index.html">What is argued, what runs</a>
   </div>
   <div>

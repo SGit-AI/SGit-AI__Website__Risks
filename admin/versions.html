@@ -20,7 +20,7 @@
   <a class="brand" href="../index.html">risks<span>.sgit.ai</span></a>
   <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: vaults, publishing and the catalogue. This site is the estate's conceptual home for risk">↗ part of <b>sgit.ai</b></a>
   <span class="stage-pill">research site</span>
-  <a class="ver" href="../admin/versions.html" title="Site release history">v0.1.0</a>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.2.0</a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
   <div class="nav-items">
     <div class="ni ni-has">
@@ -63,16 +63,17 @@
       <a class="sl" href="../examples/2fa.html">The 2FA instance graph</a>
       <a class="sl" href="../examples/browser-isolation.html">The browser-isolation case</a>
       <a class="sl" href="../examples/article-26-5.html">Article 26(5): fact to board</a>
-      <a class="sl" href="../examples/vaults.html">The four live vaults</a>
+      <a class="sl" href="../examples/vaults.html">The five live vaults</a>
       <a class="sl" href="../examples/scenarios.html">The ten scenarios</a>
       <a class="sl" href="../examples/plug-register.html">The plug register</a>
+      <a class="sl" href="../examples/execution-boundary/index.html">The execution boundary ★</a>
       </div>
     </div>
     <div class="ni ni-has">
       <a class="nl" href="../agents/index.html">For agents<span class="caret">&#9662;</span></a>
       <div class="sub">
       <a class="sl" href="../agents/index.html">The machine surface</a>
-      <a class="sl" href="../concepts/index.html">All 42 concepts, addressable</a>
+      <a class="sl" href="../concepts/index.html">All 43 concepts, addressable</a>
       <a class="sl" href="../shipped/index.html">What is argued, what runs</a>
       <a class="sl" href="../llms.txt">llms.txt</a>
       </div>
@@ -101,6 +102,21 @@
 <div class="tablewrap"><table class="vers">
   <thead><tr><th>Version</th><th>Date</th><th>What shipped</th></tr></thead>
   <tbody>
+    <tr>
+      <td class="vnum">v0.2.0</td>
+      <td>27 Aug 2026</td>
+      <td><b>The execution boundary — the first thing on this site that computes, and the first vault this site built rather than borrowed.</b>
+        <p><b><a href="../examples/execution-boundary/index.html">A fourth worked example</a>, and it is not a document.</b> It came out of a LinkedIn exchange in which a correspondent set a specific test: an action authorized on defined conditions, queued, and one material condition changing before execution — <em>“whether, at the execution boundary, the system can establish from the available evidence that the predicates supporting that authorization still hold”</em>. They asked for it small: one decision object, one controlled material change, one consequential execution point. It was built to that constraint and no wider.</p>
+        <p><b>Three verdicts, not two, and the third is the contribution.</b> <em>established</em> · <em>not established</em> · <b><em>cannot establish</em></b> — no evidence inside a horizon, so nothing says the predicate is false and nothing says it is true. Most systems have an allow state and a deny state and quietly route “I don't know” to the first. That is <a href="../ladder/absence.html">not-knowing-is-a-fact</a> moved to the moment somebody presses a button, and consistent with <a href="../acceptance/no-deny.html">C2</a> the boundary routes rather than blocks: re-establish, escalate, or challenge.</p>
+        <p><b>The scenario is deliberately undramatic.</b> A schema migration <code>MIG-114</code> is authorized at 18:20 for an 02:00 change window, in part <em>because it was reversible</em> — a verified restorable backup existed. The nightly backup-verification job is then suspended for the duration of the change window, which is standard practice. <b>The window that queues the action is the same thing that stops its evidence being refreshed.</b> By 02:00 the last verification is fifty minutes past its 24-hour horizon. Nothing failed, nothing was revoked, the grant is present throughout — and the predicate that expired was the one carrying reversibility.</p>
+        <p><b>Two results were pre-registered as unwelcome and arrived that way.</b> Five expectations were written down before any view existed; all five held, and the informative ones are the two that predicted failure. <b>Run D returns a confident, incorrect <em>established</em></b> — an integrity check finds the backup unrestorable and never reaches the graph, so every predicate reads satisfied and nothing is amber. It ships, so that the claim “the boundary check makes execution safer” arrives with its counter-example attached. And the instrument cannot distinguish “nobody looked” from “somebody looked and did not record it”. A <a href="../examples/execution-boundary/index.html#precondition">control arm</a> runs the same query against a decision stored as a field rather than a node and terminates at hop 2, which makes <a href="../acceptance/workflow.html#decision-node">C33</a> a precondition rather than a modelling preference.</p>
+        <p><b>The 43rd concept, and the first this site authored rather than consolidated.</b> <a href="../concepts/index.html#c43">C43, the persistence hope</a> — hoping the conditions that justified an authorization still hold at execution, and inferring that they do from the grant still being present. It sits beside the two hopes <a href="https://nhi.sgit.ai/hope/index.html">nhi.sgit.ai</a> names, both of which are about the grant; this one is about time. Because a research site that consolidates a corpus and quietly adds to it is no longer reporting the corpus, <a href="../data/concepts.json">concepts.json</a> gained an <code>origin</code> field — <code>corpus</code> or <code>authored-here</code> — the concept index gained a provenance pill, and the gate now fails if an entry is missing it.</p>
+        <p><b>The vault is embedded, not copied.</b> Eight pages of instrument live in vault <code>r48ncij0</code> and are decrypted in the reader's browser using <a href="https://sgit.ai/assets/vault-embed.js">sgit.ai's embed technique</a>, carried over verbatim with attribution rather than reimplemented. <b>No copy of the app or its data exists in this repository</b>, so a push to the vault changes the page with no site rebuild. The read key is printed in the open on the page, because read access is the whole credential: <code>sgit_rk1_990d25fd8ecab928ded37c6a8c86a461e7247f6d3838bd43e7468e93cc2e07c4:r48ncij0</code>.</p>
+        <div class="warnbox"><p style="margin-top:0"><b>The credential tripwire fired, on this release, on our own page.</b> The vault-viewer link was pasted in exactly as it had been sent — and as sent it was the <em>vault</em> key, in the legacy <code>passphrase:vault_id</code> form that carries write access and has no prefix to announce itself. It appeared three times in one file. <a href="index.html#gate">The gate</a> refused the build on all three, before the commit, so nothing reached the repository or the site.</p>
+        <p style="margin-bottom:0">It is recorded here rather than quietly corrected, and the check was then widened rather than narrowed: it now recognises a read key by shape <em>and</em> by the published <code>sgit_rk1_</code> prefix, and the near-miss is written into the source of the rule that caught it. The estate's convention is that an audit finding published beside the artefact is worth more than a clean history nobody can verify — <b>which is easy to hold when the finding is somebody else's</b>.</p></div>
+        <p><b>Also in this release.</b> <a href="../examples/vaults.html">The vaults page</a> carries a fifth vault and drops a claim that had become false — this site now reproduces a read key, deliberately, and says when that changed and why. <a href="../shipped/index.html">/shipped/</a> gains a row for something that runs, with <em>“and is not an engine”</em> in the status column rather than in a footnote, and a new row under what does not exist: an in-line check that refuses an execution. <a href="../examples/index.html">/examples/</a>, <a href="../index.html">the home page</a>, <a href="../llms.txt">llms.txt</a>, <a href="../index.md">index.md</a> and <a href="../.well-known/agent-content.json">the manifest</a> all follow the counts.</p>
+      </td>
+    </tr>
     <tr>
       <td class="vnum">v0.1.0</td>
       <td>23 Aug 2026</td>
@@ -131,7 +147,7 @@
     <p>The conceptual and research home for risk in the sgit.ai estate: what a risk is, what acceptance is, and why it is modelled this way. <a href="https://riskmandate.ai" style="display:inline;padding:0">riskmandate.ai</a> answers how you get your risks accepted and what it costs; this site answers why the model has the shape it has. <b>Nothing here is implemented in code</b> — <a href="../shipped/index.html" style="display:inline;padding:0">/shipped/</a> says so plainly. Part of the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network. All content CC BY 4.0 unless a page states otherwise.</p>
     <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://riskmandate.ai">↗ riskmandate.ai</a> — the product · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> — the graph machinery · <a href="https://nhi.sgit.ai">↗ nhi.sgit.ai</a> · <a href="https://pki.sgit.ai">↗ pki.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
     <p class="partnote">⚠ Participant disclosure: published by the sgit project, which also builds riskmandate.ai — the commercial product this research underpins. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
-    <p class="verline">site <a href="../admin/versions.html">v0.1.0</a> · <a href="../admin/index.html">engineering</a></p>
+    <p class="verline">site <a href="../admin/versions.html">v0.2.0</a> · <a href="../admin/index.html">engineering</a></p>
   </div>
   <div>
     <h4>Start here</h4>
@@ -144,7 +160,7 @@
   <div>
     <h4>For agents</h4>
     <a href="../agents/index.html">&#8594; The machine surface</a>
-    <a href="../concepts/index.html">All 42 concepts</a>
+    <a href="../concepts/index.html">All 43 concepts</a>
     <a href="../data/concepts.json">concepts.json — the definitions</a>
     <a href="../llms.txt">llms.txt</a>
     <a href="../llms-full.txt">llms-full.txt</a>
@@ -152,9 +168,9 @@
   <div>
     <h4>The proof</h4>
     <a href="../examples/index.html">Three worked graphs</a>
-    <a href="../examples/vaults.html">The four live vaults</a>
+    <a href="../examples/vaults.html">The five live vaults</a>
     <a href="../examples/2fa.html">The 2FA instance graph</a>
-    <a href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+    <a href="../examples/execution-boundary/index.html">The execution boundary</a>
     <a href="../shipped/index.html">What is argued, what runs</a>
   </div>
   <div>

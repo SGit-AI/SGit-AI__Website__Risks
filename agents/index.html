@@ -20,7 +20,7 @@
   <a class="brand" href="../index.html">risks<span>.sgit.ai</span></a>
   <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: vaults, publishing and the catalogue. This site is the estate's conceptual home for risk">↗ part of <b>sgit.ai</b></a>
   <span class="stage-pill">research site</span>
-  <a class="ver" href="../admin/versions.html" title="Site release history">v0.1.0</a>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.2.0</a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
   <div class="nav-items">
     <div class="ni ni-has">
@@ -63,16 +63,17 @@
       <a class="sl" href="../examples/2fa.html">The 2FA instance graph</a>
       <a class="sl" href="../examples/browser-isolation.html">The browser-isolation case</a>
       <a class="sl" href="../examples/article-26-5.html">Article 26(5): fact to board</a>
-      <a class="sl" href="../examples/vaults.html">The four live vaults</a>
+      <a class="sl" href="../examples/vaults.html">The five live vaults</a>
       <a class="sl" href="../examples/scenarios.html">The ten scenarios</a>
       <a class="sl" href="../examples/plug-register.html">The plug register</a>
+      <a class="sl" href="../examples/execution-boundary/index.html">The execution boundary ★</a>
       </div>
     </div>
     <div class="ni ni-has">
       <a class="nl here" href="../agents/index.html">For agents<span class="caret">&#9662;</span></a>
       <div class="sub">
       <a class="sl here" href="../agents/index.html">The machine surface</a>
-      <a class="sl" href="../concepts/index.html">All 42 concepts, addressable</a>
+      <a class="sl" href="../concepts/index.html">All 43 concepts, addressable</a>
       <a class="sl" href="../shipped/index.html">What is argued, what runs</a>
       <a class="sl" href="../llms.txt">llms.txt</a>
       </div>
@@ -100,7 +101,7 @@
 <p class="lead">This site was commissioned for agents. The brief says it plainly — <em>“to handle the cases where I need agents to have a good understanding of some of those key concepts and ideas”</em> — so the machine surface is the deliverable rather than a courtesy page bolted on at the end. This page is the contract: what is fetchable, what is promised, and the one instruction that matters more than any of it.</p>
 <div class="agent" style="margin-top:0">
   <h4>If you read nothing else on this page</h4>
-  <p><b>Nothing in this corpus is implemented in code.</b> Greps for <code>risk_</code>, <code>RiskAcceptance</code>, <code>risk_register</code> and <code>riskmandate</code> across the implementing repository return zero matches, and the project's own reality file says: <em>“All items below are PROPOSED. None have been code-verified. Do not describe any of these as existing features.”</em> Everything on this site is a design argument. Four vaults, three worked graphs and ten scenarios exist; the engine does not. <a href="../shipped/index.html">/shipped/</a> is the inventory.</p>
+  <p><b>Nothing in this corpus is implemented in code.</b> Greps for <code>risk_</code>, <code>RiskAcceptance</code>, <code>risk_register</code> and <code>riskmandate</code> across the implementing repository return zero matches, and the project's own reality file says: <em>“All items below are PROPOSED. None have been code-verified. Do not describe any of these as existing features.”</em> Everything on this site is a design argument. Five vaults, three worked graphs, ten scenarios and <a href="../examples/execution-boundary/index.html">one live instrument</a> exist; the engine does not. The instrument computes a verdict over one invented scenario — it is a worked example that recomputes, not a running system, and it gates nothing. <a href="../shipped/index.html">/shipped/</a> is the inventory.</p>
 </div>
 
 <h2 id="surfaces">What is fetchable</h2>
@@ -108,7 +109,7 @@
   <a class="surface" href="../data/concepts.json">
     <span class="num">1 · structured</span>
     <h3><code>/data/concepts.json</code></h3>
-    <p>All <b>42 concepts</b>: id, name, one-line definition, longer detail, maturity, newcomer-followability, first-written date, canonical source path, the page that argues it, its anchor URL, related concepts and the best verbatim quote. Plus the reading order and the six teaching altitudes.</p>
+    <p>All <b>43 concepts</b>: id, name, one-line definition, longer detail, maturity, newcomer-followability, first-written date, canonical source path, the page that argues it, its anchor URL, related concepts and the best verbatim quote. Plus the reading order and the seven teaching altitudes.</p>
     <span class="st">the highest-value single fetch</span>
   </a>
   <a class="surface s2" href="../llms-full.txt">
@@ -127,12 +128,12 @@
 <div class="tablewrap"><table>
   <thead><tr><th>Path</th><th>What it holds</th><th>Format</th></tr></thead>
   <tbody>
-    <tr><td><a href="../data/concepts.json"><code>/data/concepts.json</code></a></td><td>The 42 concepts as structured data</td><td>JSON</td></tr>
+    <tr><td><a href="../data/concepts.json"><code>/data/concepts.json</code></a></td><td>The 43 concepts as structured data</td><td>JSON</td></tr>
     <tr><td><a href="../.well-known/agent-content.json"><code>/.well-known/agent-content.json</code></a></td><td>The site manifest: sections, surfaces, the honesty constraint, licence</td><td>JSON</td></tr>
     <tr><td><a href="../llms.txt"><code>/llms.txt</code></a></td><td>The annotated map, fact-per-entry</td><td>text</td></tr>
     <tr><td><a href="../llms-full.txt"><code>/llms-full.txt</code></a></td><td>The whole site plus every source document</td><td>text</td></tr>
     <tr><td><a href="../briefs/00__BRIEF.md"><code>/briefs/&lt;filename&gt;</code></a></td><td>The eleven source documents, verbatim, at stable constructed paths</td><td>markdown · CSV · JSON</td></tr>
-    <tr><td><a href="../concepts/index.html"><code>/concepts/index.html#c1</code>…<code>#c42</code></a></td><td>Every concept as a stable HTML anchor</td><td>HTML</td></tr>
+    <tr><td><a href="../concepts/index.html"><code>/concepts/index.html#c1</code>…<code>#c43</code></a></td><td>Every concept as a stable HTML anchor</td><td>HTML</td></tr>
     <tr><td><a href="../sitemap.xml"><code>/sitemap.xml</code></a></td><td>Every page, with a last-modified date taken from the commit that touched it</td><td>XML</td></tr>
     <tr><td><a href="../index.md"><code>/index.md</code></a></td><td>The front page as markdown</td><td>markdown</td></tr>
   </tbody>
@@ -201,11 +202,11 @@
 
 <div class="agent">
   <h4>For an agent</h4>
-  <p><b>The agent contract for risks.sgit.ai.</b> Fetch, in order of preference: <code>https://risks.sgit.ai/data/concepts.json</code> (42 concepts, structured) · <code>https://risks.sgit.ai/llms-full.txt</code> (the whole site plus all source documents in one request) · <code>https://risks.sgit.ai/llms.txt</code> (the annotated map, each entry carrying a fact rather than a topic) · <code>https://risks.sgit.ai/briefs/&lt;filename&gt;</code> (source documents verbatim, at stable constructed paths) · <code>https://risks.sgit.ai/concepts/index.html#c1</code>…<code>#c42</code> (every concept as an anchor). Four properties are enforced by the pre-release gate rather than remembered: constructed paths resolve, every page ends with a pasteable agent block, the JSON and the HTML concept index cannot drift, and no implementation over-claim survives a release. <b>The single most important thing to carry: nothing in this corpus is implemented in code — describe all of it as design, never as an existing feature.</b> This site does not own the general graph machinery (graphs.sgit.ai), agent identity (nhi.sgit.ai), attribution (pki.sgit.ai), in-line enforcement (sg-sentinel.sgit.ai — this model never sits in-line), evidence supply (newsroom.sgit.ai) or anything commercial (riskmandate.ai).</p>
+  <p><b>The agent contract for risks.sgit.ai.</b> Fetch, in order of preference: <code>https://risks.sgit.ai/data/concepts.json</code> (43 concepts, structured) · <code>https://risks.sgit.ai/llms-full.txt</code> (the whole site plus all source documents in one request) · <code>https://risks.sgit.ai/llms.txt</code> (the annotated map, each entry carrying a fact rather than a topic) · <code>https://risks.sgit.ai/briefs/&lt;filename&gt;</code> (source documents verbatim, at stable constructed paths) · <code>https://risks.sgit.ai/concepts/index.html#c1</code>…<code>#c43</code> (every concept as an anchor). Four properties are enforced by the pre-release gate rather than remembered: constructed paths resolve, every page ends with a pasteable agent block, the JSON and the HTML concept index cannot drift, and no implementation over-claim survives a release. <b>The single most important thing to carry: nothing in this corpus is implemented in code — describe all of it as design, never as an existing feature.</b> This site does not own the general graph machinery (graphs.sgit.ai), agent identity (nhi.sgit.ai), attribution (pki.sgit.ai), in-line enforcement (sg-sentinel.sgit.ai — this model never sits in-line), evidence supply (newsroom.sgit.ai) or anything commercial (riskmandate.ai).</p>
 </div>
 
 <div class="pagenav">
-  <a href="../concepts/index.html">← All 42 concepts</a>
+  <a href="../concepts/index.html">← All 43 concepts</a>
   <a href="../shipped/index.html">What is argued, what runs →</a>
 </div>
 </main>
@@ -216,7 +217,7 @@
     <p>The conceptual and research home for risk in the sgit.ai estate: what a risk is, what acceptance is, and why it is modelled this way. <a href="https://riskmandate.ai" style="display:inline;padding:0">riskmandate.ai</a> answers how you get your risks accepted and what it costs; this site answers why the model has the shape it has. <b>Nothing here is implemented in code</b> — <a href="../shipped/index.html" style="display:inline;padding:0">/shipped/</a> says so plainly. Part of the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network. All content CC BY 4.0 unless a page states otherwise.</p>
     <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://riskmandate.ai">↗ riskmandate.ai</a> — the product · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> — the graph machinery · <a href="https://nhi.sgit.ai">↗ nhi.sgit.ai</a> · <a href="https://pki.sgit.ai">↗ pki.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
     <p class="partnote">⚠ Participant disclosure: published by the sgit project, which also builds riskmandate.ai — the commercial product this research underpins. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
-    <p class="verline">site <a href="../admin/versions.html">v0.1.0</a> · <a href="../admin/index.html">engineering</a></p>
+    <p class="verline">site <a href="../admin/versions.html">v0.2.0</a> · <a href="../admin/index.html">engineering</a></p>
   </div>
   <div>
     <h4>Start here</h4>
@@ -229,7 +230,7 @@
   <div>
     <h4>For agents</h4>
     <a href="../agents/index.html">&#8594; The machine surface</a>
-    <a href="../concepts/index.html">All 42 concepts</a>
+    <a href="../concepts/index.html">All 43 concepts</a>
     <a href="../data/concepts.json">concepts.json — the definitions</a>
     <a href="../llms.txt">llms.txt</a>
     <a href="../llms-full.txt">llms-full.txt</a>
@@ -237,9 +238,9 @@
   <div>
     <h4>The proof</h4>
     <a href="../examples/index.html">Three worked graphs</a>
-    <a href="../examples/vaults.html">The four live vaults</a>
+    <a href="../examples/vaults.html">The five live vaults</a>
     <a href="../examples/2fa.html">The 2FA instance graph</a>
-    <a href="../examples/article-26-5.html">Article 26(5): fact to board</a>
+    <a href="../examples/execution-boundary/index.html">The execution boundary</a>
     <a href="../shipped/index.html">What is argued, what runs</a>
   </div>
   <div>

@@ -115,6 +115,11 @@ a.card:hover{border-color:var(--accent);text-decoration:none}
 .card h3,.card h4{margin:.25rem 0 .45rem;font-size:.95rem;color:#101114;font-family:var(--sans)}
 .card p{margin:0;font-size:.8rem;color:var(--dim);line-height:1.55}
 .card .go{display:inline-block;margin-top:.55rem;font-size:.75rem;color:var(--accent-dk);font-weight:600}
+/* the flagship card: one per section at most, for the thing the section is really about */
+.card.feature{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),var(--shadow);
+  background:linear-gradient(180deg,var(--panel) 0%,var(--panel2) 100%);grid-column:1/-1}
+.card.feature .tag{color:var(--accent-dk)}
+a.card.feature:hover{border-color:var(--accent-dk);box-shadow:0 0 0 2px var(--accent),var(--shadow)}
 
 /* ---------- two-populations split table ---------- */
 .split{max-width:1000px;margin:0 auto;padding:0 1.1rem}
@@ -385,6 +390,7 @@ table.gloss td.plain{color:var(--accent-dk)}
 .p-ships{color:#0f766e;border:1px solid rgba(15,118,110,.35);background:rgba(15,118,110,.08)}
 .p-argued{color:#b45309;border:1px solid rgba(180,83,9,.35);background:rgba(180,83,9,.08)}
 .p-absent{color:#b91c1c;border:1px solid rgba(185,28,28,.35);background:rgba(185,28,28,.08)}
+.p-plain2{color:#5c5f66;border:1px solid #d5d0c2;background:#f2f0e9}
 .p-live{color:#1d4ed8;border:1px solid rgba(29,78,216,.3);background:rgba(29,78,216,.07)}
 
 
@@ -447,6 +453,9 @@ pre.term{background:var(--panel);border:1px solid var(--line);border-radius:10px
   line-height:1.65;color:#34363c;overflow-x:auto;box-shadow:var(--shadow)}
 pre.term b{color:var(--accent-dk);font-weight:600}
 pre.term em{font-style:normal;color:var(--dim2)}
+/* a credential is one long unbroken token — scrolling it sideways inside a card hides
+   the half that matters, so this variant wraps at any character instead */
+pre.term.wrap{overflow-x:visible;white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-all}
 
 /* tables and listings inside a front-page band. The shared stylesheet scopes both to
    main.doc, because on the sibling sites a table always lives on a document page. Here
@@ -564,3 +573,24 @@ table.rungs td.struck{color:var(--dim2);text-decoration:line-through}
 .vault p{margin:0 0 .5rem;font-size:.85rem;line-height:1.6;color:#34363c}
 .vault .why{font-size:.8rem;color:var(--dim);border-top:1px dashed var(--line);padding-top:.5rem;margin:0}
 .vault .go{display:inline-block;margin-top:.55rem;font-size:.76rem;font-weight:600;color:var(--accent-dk)}
+
+
+/* ---------- live vault embed ----------
+   The app is not copied here: its ciphertext is fetched from the SG/Send server over CORS,
+   decrypted in the reader's browser with the read key printed on the page, and booted in a
+   sandboxed opaque-origin iframe. Loading on click, because it pulls ~30 encrypted objects. */
+.embedhost{border:1px solid var(--line2); border-radius:12px; background:var(--panel);
+  box-shadow:var(--shadow); overflow:hidden; margin:1.4rem 0}
+.embedbar{display:flex; align-items:center; gap:.9rem; flex-wrap:wrap; padding:.75rem 1rem;
+  background:var(--panel2); border-bottom:1px solid var(--line)}
+.embedbar .lbl{font-family:var(--mono); font-size:.68rem; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--dim)}
+.embedbar button{font:600 .82rem/1 var(--sans); cursor:pointer; background:var(--accent-dk); color:#fff;
+  border:1px solid var(--accent-dk); border-radius:7px; padding:.45rem .95rem}
+.embedbar button:hover{background:var(--accent); border-color:var(--accent)}
+.embedbar button[disabled]{opacity:.55; cursor:default}
+.embedbar .hint{font-size:.76rem; color:var(--dim2)}
+.embedframe{min-height:0; background:var(--panel2)}
+.embedframe:empty{display:none}
+.embedframe iframe{display:block; width:100%; height:78vh; min-height:560px; border:0; background:#fff}
+.embedframe .embedmsg{padding:1.5rem 1.2rem; font-size:.88rem; color:var(--dim); text-align:center}

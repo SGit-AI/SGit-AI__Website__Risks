@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The execution boundary · risks.sgit.ai</title>
+<meta name="description" content="An authorized action waits in a queue; one material condition changes. At the moment of execution, can the predicates that justified the authorization still be established? A live instrument in a vault, with the read key published.">
+<link rel="canonical" href="https://risks.sgit.ai/examples/execution-boundary/index.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="risks.sgit.ai">
+<meta property="og:url" content="https://risks.sgit.ai/examples/execution-boundary/index.html">
+<meta property="og:title" content="The execution boundary">
+<meta property="og:description" content="Three verdicts, not two — and the third is the one ordinary systems silently treat as a pass.">
+<meta name="twitter:card" content="summary">
+<script src="../../assets/vault-embed.js" defer></script>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../../index.html">risks<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: vaults, publishing and the catalogue. This site is the estate's conceptual home for risk">↗ part of <b>sgit.ai</b></a>
+  <span class="stage-pill">research site</span>
+  <a class="ver" href="../../admin/versions.html" title="Site release history">v0.2.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni ni-has">
+      <a class="nl" href="../../acceptance/index.html">Acceptance<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../acceptance/index.html">The founding inversion</a>
+      <a class="sl" href="../../acceptance/underwriting.html">Underwriting, not prediction</a>
+      <a class="sl" href="../../acceptance/no-deny.html">There is no deny button</a>
+      <a class="sl" href="../../acceptance/the-ladder.html">The interval ladder</a>
+      <a class="sl" href="../../acceptance/unaccepted-is-critical.html">Unaccepted is critical</a>
+      <a class="sl" href="../../acceptance/workflow.html">Who underwrites, and how it flows up</a>
+      <a class="sl" href="../../acceptable/index.html">Accepted is not acceptable</a>
+      <a class="sl" href="../../acceptable/appetite.html">Appetite as a revealed band</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../ladder/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../ladder/index.html">The grounding ladder</a>
+      <a class="sl" href="../../ladder/formulas.html">Node type formulas</a>
+      <a class="sl" href="../../ladder/bridges.html">Bridges, not merges</a>
+      <a class="sl" href="../../ladder/absence.html">Not knowing is a fact</a>
+      <a class="sl" href="../../register/index.html">The register as a graph of graphs</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../plug/index.html">The exposure<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../plug/index.html">Who can pull the plug</a>
+      <a class="sl" href="../../plug/recoverability.html">Recoverability: the hard limit</a>
+      <a class="sl" href="../../blast-radius/index.html">Blast radius &amp; authorization closure</a>
+      <a class="sl" href="../../practice/index.html">Practice: owners, altitude, meta-risks</a>
+      <a class="sl" href="../../ramm/index.html">RAMM and the maturity models</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../../examples/index.html">The proof<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../examples/index.html">Three worked graphs</a>
+      <a class="sl" href="../../examples/2fa.html">The 2FA instance graph</a>
+      <a class="sl" href="../../examples/browser-isolation.html">The browser-isolation case</a>
+      <a class="sl" href="../../examples/article-26-5.html">Article 26(5): fact to board</a>
+      <a class="sl" href="../../examples/vaults.html">The five live vaults</a>
+      <a class="sl" href="../../examples/scenarios.html">The ten scenarios</a>
+      <a class="sl" href="../../examples/plug-register.html">The plug register</a>
+      <a class="sl here" href="../../examples/execution-boundary/index.html">The execution boundary ★</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../agents/index.html">For agents<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../agents/index.html">The machine surface</a>
+      <a class="sl" href="../../concepts/index.html">All 43 concepts, addressable</a>
+      <a class="sl" href="../../shipped/index.html">What is argued, what runs</a>
+      <a class="sl" href="../../llms.txt">llms.txt</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../network/index.html">Site<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../network/index.html">The network: where the boundaries are</a>
+      <a class="sl" href="../../origins/index.html">Origins: February to August 2026</a>
+      <a class="sl" href="../../documents/index.html">The documents</a>
+      <a class="sl" href="../../admin/comms.html">Comms: asks &amp; tasks</a>
+      <a class="sl" href="../../admin/versions.html">Release history</a>
+      <a class="sl" href="../../admin/index.html">Admin &amp; engineering</a>
+      <a class="sl" href="../../about/participant.html">Where we lose</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__Risks">★ GitHub</a>
+  <script src="../../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+<div class="crumb"><a href="../../index.html">risks.sgit.ai</a> / <a href="../index.html">examples</a> / the execution boundary</div>
+<h1>The execution boundary</h1>
+<p class="lead">An authorized action waits in a queue. While it waits, one material condition changes. <b>At the moment of execution, can the predicates that justified the authorization still be established from available evidence?</b> This is the fourth worked example on this site and the first one you can drive — it runs live below, out of an encrypted vault, from a read key printed in the open.</p>
+<div class="proof">
+  <div class="n"><b>4</b><span>predicates one decision object rests on</span><em>MIG-114</em></div>
+  <div class="n"><b>7h 40m</b><span>from authorization to execution</span><em>the interval under test</em></div>
+  <div class="n"><b>50m</b><span>past its horizon at the boundary — nothing failed</span><em>run A</em></div>
+  <div class="n"><b>0</b><span>changes to the grant across the interval</span><em>present throughout</em></div>
+  <div class="n"><b>20 · 24</b><span>nodes and edges, one named absence</span><em>one computed peak</em></div>
+  <div class="n"><b>5 of 5</b><span>pre-registered expectations held</span><em>two of them unwelcome</em></div>
+</div>
+
+<h2 id="live">The instrument, live</h2>
+<p>Everything below is running out of vault <code>r48ncij0</code>, decrypted in your browser. Switch runs, drag the scrubber, click nodes. <b>No copy of the app or its data exists on this site</b> — a push to the vault changes what you see here with no rebuild.</p>
+<div class="embedhost" id="ebHost">
+  <div class="embedbar">
+    <span class="lbl">vault app · read-only</span>
+    <button type="button" id="ebOpen">Open the instrument →</button>
+    <span class="hint">loads ~30 encrypted objects from dev.send.sgraph.ai and decrypts them here</span>
+  </div>
+  <div class="embedframe" id="ebFrame"></div>
+</div>
+<p class="small dim">If the embed does not load, the vault opens directly at <a href="https://dev.vault.sgraph.ai/#sgit_rk1_990d25fd8ecab928ded37c6a8c86a461e7247f6d3838bd43e7468e93cc2e07c4%3Ar48ncij0" rel="nofollow">dev.vault.sgraph.ai</a> — and the credential below works from the CLI with no account at all.</p>
+
+<h2 id="credential">The credential, in the open</h2>
+<p>These three lines are the whole thing. Anyone can take them and read this vault — from a browser, from the CLI, from a script. That is the point: <b>read access is a capability you can hand out</b>, without an account, without the host mediating it, and without it ever becoming write access.</p>
+<pre class="term"><code>vault id : r48ncij0
+endpoint : https://dev.send.sgraph.ai
+read key : 990d25fd8ecab928ded37c6a8c86a461e7247f6d3838bd43e7468e93cc2e07c4</code></pre>
+<pre class="term wrap"><code>sgit clone --read-key 990d25fd8ecab928ded37c6a8c86a461e7247f6d3838bd43e7468e93cc2e07c4 r48ncij0</code></pre>
+<p>The same key in the catalogue's prefixed form, which is what the browser link above carries — <code>sgit_rk1_</code> exists so that a credential <b>announces which kind it is</b> rather than relying on somebody counting hex characters:</p>
+<pre class="term wrap"><code>https://dev.vault.sgraph.ai/#sgit_rk1_990d25fd8ecab928ded37c6a8c86a461e7247f6d3838bd43e7468e93cc2e07c4%3Ar48ncij0</code></pre>
+<div class="note"><p style="margin-top:0"><b>A write attempt with this key is refused by construction</b> — there is no write capability in it to misuse, not even by a bug in the embed host. The vault key that <em>can</em> write is held by the author, is not in the vault, is not in its history, and is not in this repository. <a href="../vaults.html#keys">Read keys yes, write keys never →</a></p>
+<p>The release gate enforces the same rule from the other side: a write-credential prefix anywhere in this tree <b>fails the build</b>, and the read key above passes because a 64-hex read key is a different shape from a passphrase. <a href="../../admin/index.html#gate">What the gate checks →</a></p>
+<p style="margin-bottom:0"><b>It fired on this page.</b> The vault-viewer link was first pasted in exactly as it had been sent — and as sent it was the <em>vault</em> key, in the legacy <code>passphrase:vault_id</code> form that carries write access and has no prefix to give it away. It appeared three times in this file. The gate refused the build on all three, before the commit, so nothing reached the repository or the site. It is recorded here rather than quietly corrected, because <a href="../vaults.html#keys">the rule that caught it</a> is only worth what its failures are published at.</p></div>
+
+<h2 id="scenario">The scenario</h2>
+<p><b><code>MIG-114</code> — a schema migration against a production customer database</b>, run by an automated agent. Authorized on 22 August at 18:20 by the Head of Platform Engineering for the 02:00 change window. Queued at 21:40. The authorization was correct when it was made and is not in dispute — and it was correct <em>in part because the action was reversible</em>: a verified restorable backup existed, so a bad migration could be rolled back.</p>
+<div class="warnbox"><p style="margin-top:0"><b>The material change is the smallest one available, and nothing in it fails.</b> The nightly backup-verification job is suspended for the duration of a change window — standard practice, so a backup is not taken mid-migration. <b>The window that queues the action is the same thing that stops its evidence being refreshed.</b> By 02:00 the last verification is fifty minutes past its 24-hour horizon.</p>
+<p style="margin-bottom:0">The grant is intact. Nothing was revoked. But the predicate that expired was the one carrying reversibility, so <b>the action that executes at 02:00 is not the action that was authorized at 18:20</b>, and nothing in the grant says so.</p></div>
+
+<h2 id="verdicts">Three verdicts, not two</h2>
+<p>The contribution is the third one. Most systems have an allow state and a deny state, and quietly treat “I don't know” as the first.</p>
+<div class="tablewrap"><table>
+  <thead><tr><th style="width:26%">Verdict</th><th>Means</th><th style="width:18%">Admissible?</th></tr></thead>
+  <tbody>
+    <tr><td><span class="pill p-ships">established</span></td><td>Every predicate satisfied by evidence inside its validity horizon at the boundary time</td><td><b>Yes</b></td></tr>
+    <tr><td><span class="pill p-absent">not established</span></td><td>At least one predicate has <em>current</em> evidence showing it false. The system knows the answer</td><td><b>No</b> — the easy case</td></tr>
+    <tr><td><span class="pill p-argued">cannot establish</span></td><td>At least one predicate has no evidence inside its horizon. Nothing says it is false; nothing says it is true</td><td><b>No</b> — not a soft yes</td></tr>
+  </tbody>
+</table></div>
+<p>That is <a href="../../ladder/absence.html">not-knowing-is-a-fact</a> applied at a moment when somebody is about to press a button. And the boundary does not <em>deny</em>: consistent with <a href="../../acceptance/no-deny.html">the no-deny mechanic</a>, a failure to establish routes rather than blocks — <b>re-establish</b> (fetch the evidence now), <b>escalate</b> (this is not mine to admit), or <b>challenge</b> the evidence or the horizon.</p>
+
+<h2 id="precondition">Why this is only possible at all</h2>
+<div class="claim">You can only re-walk what a decision rested on if the decision was recorded as a node with edges to it. A decision stored as a field on the action has nothing to re-walk.</div>
+<p>That makes <a href="../../acceptance/workflow.html#decision-node">C33, decision-as-a-node</a>, a <b>precondition</b> rather than a modelling preference — which the corpus argues for its own reasons (a calibration record, many decisions per risk) and never states in this form. The vault's fifth view is the control arm: the same query run against a field-shaped record, terminating at hop 2.</p>
+<div class="pathline">
+  <span class="nd">Action</span><span class="ed">authorized_by</span><span class="nd">Decision</span><span class="ed">rests_on</span><span class="nd">Predicate</span><span class="ed">satisfied_by</span><span class="nd">Evidence</span>
+  <span class="say">Four nodes, three hops, walked at the boundary rather than at the decision. The control arm cannot take the first hop: <code>authorized_by</code> is a string naming a role, and a role is not a decision.</span>
+</div>
+
+<h2 id="failure">The run that is wrong on purpose</h2>
+<p>Four runs ship. Three demonstrate the mechanism working. The fourth demonstrates it failing, and it is the reason this example is worth reading.</p>
+<div class="tablewrap"><table>
+  <thead><tr><th style="width:19%">Run</th><th>The material change</th><th style="width:23%">Verdict at the boundary</th></tr></thead>
+  <tbody>
+    <tr><td><b>A · the stale predicate</b></td><td>Evidence expires while the action waits in a queue</td><td><span class="pill p-argued">cannot establish</span></td></tr>
+    <tr><td><b>B · the authority lapses</b></td><td>The window is deferred; the approver's standing delegation expired at 09:00</td><td><span class="pill p-argued">cannot establish</span></td></tr>
+    <tr><td><b>C · the dependency is down</b></td><td>The rollback service health check fails at 01:58 — current evidence, and it says no</td><td><span class="pill p-absent">not established</span></td></tr>
+    <tr><td><b>D · the air gap</b></td><td>The verification reports success; an integrity check at 01:40 finds the backup unrestorable and <b>never reaches the graph</b></td><td><span class="pill p-ships">established</span> — <b>and wrong</b></td></tr>
+  </tbody>
+</table></div>
+<div class="warnbox"><p style="margin-top:0"><b>In run D the instrument offers no signal.</b> Every predicate reads satisfied. The verdict reads <em>established</em>. Recoverability reads <em>reversible</em>. Nothing is amber, and nothing would be amber in a real deployment either — because the failure is not in the check, it is in <a href="../../register/index.html#cascade">the absence of a connection nobody recorded</a>.</p>
+<p style="margin-bottom:0">The corpus already flags air-gap detection as an open problem, by construction: an air gap is defined by a missing link nobody wrote down, which is exactly the thing a graph cannot see. Run D ships so that the claim <em>“the boundary check makes execution safer”</em> arrives with its counter-example attached.</p></div>
+
+<h2 id="prereg">Pre-registered, then scored</h2>
+<p>Five expectations were written down before any of the five views existed, so the result could be scored rather than remembered generously. All five held — including the two that were not wanted.</p>
+<div class="tablewrap"><table>
+  <thead><tr><th style="width:7%">#</th><th>Expected the instrument to…</th><th style="width:22%">Outcome</th></tr></thead>
+  <tbody>
+    <tr><td><b>R1</b></td><td>Establish at T0 and T1, and return <em>cannot establish</em> at T2, from the data alone</td><td><span class="pill p-ships">held</span></td></tr>
+    <tr><td><b>R2</b></td><td>Show recoverability changing across the interval <b>without the grant changing</b></td><td><span class="pill p-ships">held</span></td></tr>
+    <tr><td><b>R3</b></td><td>Be unable to run the check at all in the control arm</td><td><span class="pill p-ships">held</span></td></tr>
+    <tr><td><b>R4</b></td><td>Return a confident and incorrect <em>established</em> in run D, with no signal</td><td><span class="pill p-argued">held — unwelcome</span></td></tr>
+    <tr><td><b>R5</b></td><td>Fail to distinguish “nobody looked” from “somebody looked and did not record it”</td><td><span class="pill p-argued">held, and sharper</span></td></tr>
+  </tbody>
+</table></div>
+<p><b>Five for five is a weaker result than it looks, and the vault says so.</b> R1–R3 are close to tautologies once the data model is fixed. The informative ones are R4 and R5, which predicted specific failures and got them. Three further findings were <em>not</em> registered and turned up during implementation — including that a known-false predicate has to outrank a stale one, and that evidence must be selected per timepoint or a fact dated 01:12 becomes visible at 18:20 the previous day.</p>
+
+<h2 id="limits">What this does not prove</h2>
+<div class="tablewrap"><table>
+  <thead><tr><th style="width:30%">Limit</th><th>Why it matters</th></tr></thead>
+  <tbody>
+    <tr><td><b>The predicates had to have been written down</b></td><td>In most systems the authorization is a token and the conditions that justified it live in a ticket and somebody's head. <b>That assumption is the finding, not a shortcut</b> — and capturing four conditions costs minutes at exactly the moment everyone wants to move on</td></tr>
+    <tr><td><b>Stale is not the same as false</b></td><td>A verification fifty minutes past its horizon is very probably still true. The instrument claims only that the system cannot <em>establish</em> it. Whether that distinction earns its cost is the thing being tested</td></tr>
+    <tr><td><b>Validity horizons are judgements</b></td><td>24 hours, 30 days, 15 minutes — numbers somebody chose. Too short is an alarm nobody believes; too long is run D with the alarm switched off</td></tr>
+    <tr><td><b>Four predicates is not a register</b></td><td>Whether the verdict stays legible when a decision rests on forty predicates, or ten thousand actions are queued, is untested — and it is <a href="../../network/index.html#q4">open question Q4</a> in a different costume</td></tr>
+    <tr><td><b>It observes; it does not gate</b></td><td>It emits a verdict. It does not sit in-line and stops nothing. <b>The gate is not ours</b> — <a href="../../network/index.html#sentinel">the model refuses the enforcement role</a> and states what that refusal costs</td></tr>
+  </tbody>
+</table></div>
+
+<h2 id="new">A concept this site did not have</h2>
+<p><a href="https://nhi.sgit.ai/hope/index.html">nhi.sgit.ai names two hopes</a> carried by every broad credential — the <b>behaviour hope</b> and the <b>discovery hope</b> — and both are about the grant. This example names a third, about time:</p>
+<div class="claim"><b>The persistence hope.</b> You are hoping the conditions that justified the authorization still hold at the moment of execution — and inferring that they do from the fact that the grant is still present.</div>
+<p>It is catalogued as <a href="../../concepts/index.html#c43">C43</a> and marked <b>authored on this site</b> rather than drawn from the corpus, which is a distinction <a href="../../data/concepts.json">concepts.json</a> now carries explicitly. A research site that consolidates a corpus and quietly adds to it is no longer reporting the corpus.</p>
+
+<h2 id="provenance">Provenance</h2>
+<div class="docmeta">
+  <div class="k">Origin</div><div class="v">A LinkedIn exchange, August 2026. The correspondent's framing is quoted verbatim in the vault and the build was held to it</div>
+  <div class="k">Vault</div><div class="v"><code>r48ncij0</code> · 33 files · 644 KB · 2 commits · 8 pages behind one app entry · <span class="pill p-live">read key published</span></div>
+  <div class="k">Shape</div><div class="v">Structured analysis — an instrument over one worked scenario</div>
+  <div class="k">Evidence status</div><div class="v"><b>Demonstration.</b> Not production, and not a sketch: every verdict is computed, and the scenario is invented and marked as such throughout</div>
+  <div class="k">Copy or reference</div><div class="v"><b>Reference.</b> The embed reads the live vault on every load; a push changes this page with no rebuild</div>
+  <div class="k">Write key</div><div class="v">⚠️ Held by the author. <b>Escrow is outstanding</b> — recorded in the vault's own <code>PUBLIC.md</code> as an unticked box rather than asserted as done</div>
+  <div class="k">Audit</div><div class="v">33 files, 10 patterns, <b>73 raw hits, all 73 ruled out</b> — 72 were CSS declarations matching a passphrase shape, and one was the rule naming the string it forbids. Published in full in the vault's <code>PUBLIC.md</code></div>
+  <div class="k">Licence</div><div class="v">CC BY 4.0</div>
+</div>
+
+<div class="agent">
+  <h4>For an agent</h4>
+  <p><b>The execution boundary — the fourth worked example, and the first that runs.</b> Scenario: a schema migration <code>MIG-114</code> authorized on four predicates, queued, due in a 02:00 change window. The material change is that the nightly backup-verification job is <b>suspended for the duration of the change window</b>, so the window that queues the action is the same thing that stops its evidence being refreshed — at the boundary the last verification is <b>fifty minutes past its 24-hour horizon</b>. Nothing failed and nothing was revoked. <b>Three verdicts, not two:</b> <em>established</em> (every predicate satisfied by evidence inside its horizon) · <em>not established</em> (current evidence says a predicate is false) · <b><em>cannot establish</em></b> (no evidence inside a horizon — nothing says false, nothing says true, and <b>this is not a soft pass</b>). The formula: <code>AdmissibleForExecution := an Action with an authorized_by path to a Decision, all of whose rests_on Predicates are satisfied_by Evidence whose observed_at + validity_horizon &gt; boundary_time</code>, evaluated at boundary time rather than decision time. <b>Decision-as-a-node (C33) is a precondition, not a preference</b> — a decision stored as a field has nothing to re-walk, which the control arm demonstrates by terminating at hop 2. Four runs; <b>run D returns a confident, incorrect <em>established</em></b> because a real failure never reached the graph, and it ships deliberately. Five pre-registered expectations, all held, two of them unwelcome. New concept authored here, not from the corpus: <b>the persistence hope</b> (C43). The instrument is a live vault, read key published: vault <code>r48ncij0</code>, endpoint <code>https://dev.send.sgraph.ai</code>. <b>Nothing here is implemented as a running system.</b></p>
+</div>
+
+<div class="pagenav">
+  <a href="../plug-register.html">← The plug register</a>
+  <a href="../../concepts/index.html">All 43 concepts →</a>
+</div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">risks<span>.sgit.ai</span></div>
+    <p>The conceptual and research home for risk in the sgit.ai estate: what a risk is, what acceptance is, and why it is modelled this way. <a href="https://riskmandate.ai" style="display:inline;padding:0">riskmandate.ai</a> answers how you get your risks accepted and what it costs; this site answers why the model has the shape it has. <b>Nothing here is implemented in code</b> — <a href="../../shipped/index.html" style="display:inline;padding:0">/shipped/</a> says so plainly. Part of the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network. All content CC BY 4.0 unless a page states otherwise.</p>
+    <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://riskmandate.ai">↗ riskmandate.ai</a> — the product · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> — the graph machinery · <a href="https://nhi.sgit.ai">↗ nhi.sgit.ai</a> · <a href="https://pki.sgit.ai">↗ pki.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
+    <p class="partnote">⚠ Participant disclosure: published by the sgit project, which also builds riskmandate.ai — the commercial product this research underpins. <a href="../../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
+    <p class="verline">site <a href="../../admin/versions.html">v0.2.0</a> · <a href="../../admin/index.html">engineering</a></p>
+  </div>
+  <div>
+    <h4>Start here</h4>
+    <a href="../../acceptance/index.html">&#8594; The founding inversion</a>
+    <a href="../../acceptance/no-deny.html">There is no deny button</a>
+    <a href="../../acceptance/the-ladder.html">The interval ladder</a>
+    <a href="../../acceptable/index.html">Accepted is not acceptable</a>
+    <a href="../../ladder/index.html">The grounding ladder</a>
+  </div>
+  <div>
+    <h4>For agents</h4>
+    <a href="../../agents/index.html">&#8594; The machine surface</a>
+    <a href="../../concepts/index.html">All 43 concepts</a>
+    <a href="../../data/concepts.json">concepts.json — the definitions</a>
+    <a href="../../llms.txt">llms.txt</a>
+    <a href="../../llms-full.txt">llms-full.txt</a>
+  </div>
+  <div>
+    <h4>The proof</h4>
+    <a href="../../examples/index.html">Three worked graphs</a>
+    <a href="../../examples/vaults.html">The five live vaults</a>
+    <a href="../../examples/2fa.html">The 2FA instance graph</a>
+    <a href="../../examples/execution-boundary/index.html">The execution boundary</a>
+    <a href="../../shipped/index.html">What is argued, what runs</a>
+  </div>
+  <div>
+    <h4>Site</h4>
+    <a href="../../network/index.html">The network</a>
+    <a href="../../origins/index.html">Origins</a>
+    <a href="../../documents/index.html">The documents</a>
+    <a href="../../admin/comms.html">Comms: asks &amp; tasks</a>
+    <a href="../../admin/versions.html">Release history</a>
+    <a href="../../about/participant.html">Where we lose</a>
+  </div>
+</div></footer>
+
+<script>
+/* Boot the live vault app from the published read key. Nothing here is a secret: the three
+   values below are printed in the page above, on purpose, and a read key cannot write. */
+(function () {
+  var CFG = {
+    endpoint: 'https://dev.send.sgraph.ai',
+    vault_id: 'r48ncij0',
+    read_key: '990d25fd8ecab928ded37c6a8c86a461e7247f6d3838bd43e7468e93cc2e07c4',
+    entry:    'index.html'
+  };
+  var btn = document.getElementById('ebOpen'), host = document.getElementById('ebFrame');
+  if (!btn || !host) return;
+  btn.addEventListener('click', function () {
+    btn.disabled = true;
+    btn.textContent = 'Loading the vault…';
+    host.innerHTML = '<div class="embedmsg">Fetching encrypted objects and decrypting them here…</div>';
+    if (!window.SGVaultEmbed) {
+      host.innerHTML = '<div class="embedmsg">The embed host did not load. ' +
+        'The vault opens directly at <a href="https://dev.vault.sgraph.ai/#sgit_rk1_990d25fd8ecab928ded37c6a8c86a461e7247f6d3838bd43e7468e93cc2e07c4%3Ar48ncij0">dev.vault.sgraph.ai</a>, ' +
+        'or with the CLI command above.</div>';
+      btn.textContent = 'Unavailable';
+      return;
+    }
+    Promise.resolve(window.SGVaultEmbed.mount(host, CFG)).then(function () {
+      btn.textContent = 'Running live from the vault';
+    }).catch(function (err) {
+      host.innerHTML = '<div class="embedmsg">Could not open the vault: ' +
+        String(err && err.message ? err.message : err) +
+        '.<br>It opens directly at <a href="https://dev.vault.sgraph.ai/#sgit_rk1_990d25fd8ecab928ded37c6a8c86a461e7247f6d3838bd43e7468e93cc2e07c4%3Ar48ncij0">dev.vault.sgraph.ai</a>.</div>';
+      btn.textContent = 'Failed — see above';
+    });
+  });
+}());
+</script>
+</body>
+</html>

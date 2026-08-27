@@ -9,7 +9,7 @@
 > risk nobody has accepted has not gone away — it has come to rest on whoever is nearest,
 > so UNACCEPTED IS RATED CRITICAL and rolls upward without anyone choosing to escalate it.
 
-Site version: v0.1.0 (23 August 2026). Published by the sgit project, which also builds
+Site version: v0.2.0 (27 August 2026). Published by the sgit project, which also builds
 riskmandate.ai — the commercial product this research underpins. Participant disclosure at
 /about/participant.html. Content CC BY 4.0 unless a page states otherwise.
 
@@ -20,19 +20,24 @@ risk_register and riskmandate across the implementing repository return ZERO mat
 the project's own reality file says: "All items below are PROPOSED. None have been
 code-verified. Do not describe any of these as existing features."
 
-What DOES exist: four published vaults with read keys (468 files, 111 commits, browsable
-today), three fully worked risk graphs with counted nodes and edges, the ten "how long
-would you accept" scenarios, and riskmandate.ai as a vault-powered static site. The engine
-is not built. /shipped/index.html is the full inventory, and the pre-release gate fails the
+What DOES exist: five published vaults with read keys (501 files, 113 commits, browsable
+today), three fully worked risk graphs with counted nodes and edges, ONE LIVE INSTRUMENT
+you can drive (/examples/execution-boundary/index.html — a vault app that computes, read
+key published in the open), the ten "how long would you accept" scenarios, and
+riskmandate.ai as a vault-powered static site. The engine is not built. The instrument is a
+worked example that recomputes, NOT a running system: it observes and emits a verdict, it
+does not sit in-line and gates nothing. /shipped/index.html is the full inventory, and the pre-release gate fails the
 build if any page on this site claims otherwise.
 
 ## The fastest paths for an agent
 
-- /data/concepts.json      -> all 42 concepts as structured data: id, name, one-line
+- /data/concepts.json      -> all 43 concepts as structured data: id, name, one-line
                               definition, detail, maturity, newcomer-followability,
                               first-written date, canonical source path, the page that
                               argues it, its anchor URL, related concepts, best quote.
-                              Plus the reading order and the six teaching altitudes.
+                              Plus the reading order and the seven teaching altitudes,
+                              and an `origin` field: 42 concepts are `corpus`, C43 is
+                              `authored-here` and must NOT be attributed to the corpus.
                               THE SINGLE HIGHEST-VALUE FETCH ON THIS SITE.
 - /llms-full.txt           -> the prose of every page in teaching order, then all eleven
                               source documents verbatim. One request, whole corpus. Use
@@ -51,7 +56,7 @@ build if any page on this site claims otherwise.
                               before publication and why — the four Tier-3 sources
                               are named in the working pack and must not be
                               published, so they are redacted in place.
-- /concepts/index.html#c1 .. #c42  -> every concept as a stable HTML anchor. CI fails the
+- /concepts/index.html#c1 .. #c43  -> every concept as a stable HTML anchor. CI fails the
                               build if a concept loses its anchor.
 - /.well-known/agent-content.json  -> the site manifest.
 
@@ -96,8 +101,9 @@ and the plug), then everything else.
 ## The sections
 
 - /index.html — the inversion in one screen, the honesty statement, the split with
-  riskmandate.ai, and the proof strip: 42 concepts · 6 rungs · 0 lines of implementing
-  code · 4 live vaults · 59/75 nodes and edges in the largest graph · 30 days vs 6 months
+  riskmandate.ai, and the proof strip: 43 concepts · 6 rungs · 0 lines of implementing
+  code · 5 live vaults · 59/75 nodes and edges in the largest graph · 30 days vs 6 months ·
+  3 verdicts at the execution boundary
 - /acceptance/index.html — the founding inversion. Four pages plus the workflow:
   underwriting.html, no-deny.html, the-ladder.html, unaccepted-is-critical.html,
   workflow.html. START HERE. Nothing on this site makes sense before it
@@ -139,7 +145,26 @@ and the plug), then everything else.
   MITIGATION ITSELF), article-26-5.html (8 facts, 5 risks, 9 questions of which 5
   unanswered, and 30 days vs 6 months — "arithmetic, not judgement"), vaults.html,
   scenarios.html, plug-register.html
-- /concepts/index.html — all 42, one stable anchor each, maturity stated honestly
+- /examples/execution-boundary/index.html — the FOURTH worked example and the only page
+  on this site that computes rather than argues. An authorized action (schema migration
+  MIG-114) is queued for a 02:00 change window; the nightly backup-verification job is
+  SUSPENDED for that window, so at the boundary its evidence is 50 minutes past a 24-hour
+  horizon. Nothing failed, nothing was revoked, the grant is present throughout. THREE
+  VERDICTS, not two: established / not established / CANNOT ESTABLISH — and the third is
+  the contribution, because most systems treat "I don't know" as a pass. Formula:
+  AdmissibleForExecution := an Action with an authorized_by path to a Decision, all of
+  whose rests_on Predicates are satisfied_by Evidence whose observed_at +
+  validity_horizon > boundary_time, evaluated at BOUNDARY time rather than decision time.
+  Decision-as-a-node (C33) is a PRECONDITION, not a preference — the control arm shows the
+  query terminating at hop 2 against a field-shaped record. Four runs; RUN D RETURNS A
+  CONFIDENT, INCORRECT "established" and ships deliberately, because the failure that
+  mattered never reached the graph. Five pre-registered expectations, all held, two
+  unwelcome. Runs live from vault r48ncij0, read key published:
+  sgit_rk1_990d25fd8ecab928ded37c6a8c86a461e7247f6d3838bd43e7468e93cc2e07c4:r48ncij0
+- /concepts/index.html — all 43, one stable anchor each, maturity stated honestly, and an
+  origin pill: C43 (THE PERSISTENCE HOPE — hoping the conditions that justified an
+  authorization still hold at execution, and inferring it from the grant still being
+  present) was authored on this site, not drawn from the corpus
 - /agents/index.html — the machine surface, the four properties CI enforces, the node and
   edge vocabulary, and what this site does NOT own
 - /shipped/index.html — what is argued and what runs. NON-NEGOTIABLE READING
@@ -154,8 +179,12 @@ and the plug), then everything else.
 - /documents/index.html — the eleven sources, the tiering (19 Tier-0, 13 Tier-1, 1
   Tier-2, 4 Tier-3 do-not-publish), what is deliberately NOT published and why, and the
   eight CC0 prior-art articles cited rather than republished
-- /admin/index.html — the pipeline and the ten gate checks. Also /admin/comms.html
-  (seven numbered asks, ten tasks) and /admin/versions.html (release history)
+- /admin/index.html — the pipeline and the ten gate checks (the credential tripwire has
+  fired in anger: a vault key pasted in as a viewer link, three times on one page, refused
+  before the commit). Also /admin/comms.html
+  (nine numbered asks, fifteen tasks, and one decision REVERSED with the reason stated:
+  this site publishes its own vault's read key, having previously decided against publishing
+  any) and /admin/versions.html (release history)
 - /about/participant.html — the disclosure, and five places this model loses
 
 ## The live vaults — the only part you can open rather than read about

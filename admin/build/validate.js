@@ -6,7 +6,7 @@
 //   2. internal links — every relative href/src in every .html file resolves to a
 //      file in the tree, AND every fragment resolves to an id in the target page.
 //      The fragment half is site-specific: this site's promise to an agent is that
-//      every one of the 42 concepts has a stable anchor. A promise that is checked
+//      every one of the 43 concepts has a stable anchor. A promise that is checked
 //      is a fact; a promise that is remembered is a hope.
 //   3. canonical host — every <link rel="canonical"> and og:url points at the host
 //      in CNAME, and every page declares one
@@ -14,9 +14,11 @@
 //      and the tree agree in both directions. The commissioned audience for this
 //      site is agents, so a page missing from llms.txt is, for the reader this site
 //      was built for, a page that does not exist.
-//   5. the definitions endpoint — data/concepts.json parses, carries all 42
-//      concepts, and every one of them has a matching anchor on /concepts/. It is
-//      the single highest-value artefact this site ships; it is not left to drift.
+//   5. the definitions endpoint — data/concepts.json parses, carries all 43 concepts,
+//      every one has a matching anchor on /concepts/, and every one declares an
+//      `origin` of either `corpus` or `authored-here`. That second field matters: a
+//      research site that consolidates a corpus and quietly adds to it is no longer
+//      reporting the corpus, so provenance is enforced rather than remembered.
 //   6. the over-claim tripwire — NOTHING in the risk corpus is implemented in code.
 //      No page may say the engine is built, shipping or installable. A page may
 //      state the claim in order to correct it by marking the element data-not-built.
@@ -24,9 +26,9 @@
 //      vendor assessment, a competitor map, investor figures, a contract draft).
 //      Their distinctive strings must never appear in the tree — briefs/ included,
 //      which is why the published pack carries redactions and a PUBLIC.md recording them.
-//   8. key-leak tripwire — nothing may look like an sgit vault key (a >=20-char
-//      passphrase joined by a colon to a uuid-shaped id). Read keys yes, write keys
-//      never — and the safest way to keep that rule is to ship neither in the HTML.
+//   8. credential tripwire — this site publishes a vault READ key on purpose, so the
+//      rule is precise rather than strict: a 64-hex read key passes, and a write
+//      credential (by prefix, or a passphrase joined to a vault id) fails the build.
 //   9. div balance — every page opens and closes the same number of <div>s. A
 //      <div class="note"> closed with </p> is accepted silently by browsers and
 //      runs the note's left border down the rest of the page.
@@ -150,10 +152,10 @@ for (const f of htmlFiles) if (!listed.includes(rel(f))) {
 }
 
 // --- 5. the definitions endpoint ------------------------------------------
-// 42 concepts, one anchor each, addressable. The brief calls this "the single
+// 43 concepts, one anchor each, addressable. The brief calls this "the single
 // highest-value thing this site can ship", so the gate owns it: the JSON and the
 // human page cannot drift apart without failing the release.
-const CONCEPT_COUNT = 42;
+const CONCEPT_COUNT = 43;
 let concepts = null;
 try {
   concepts = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/concepts.json'), 'utf8'));
@@ -169,10 +171,14 @@ if (concepts) {
     errors.push(`data/concepts.json says ${concepts.site_version}, version.txt says ${VERSION}`);
   }
   const anchors = idsOf(path.join(ROOT, 'concepts/index.html'));
-  const REQUIRED = ['id', 'name', 'definition', 'maturity', 'source', 'page'];
+  const REQUIRED = ['id', 'name', 'definition', 'maturity', 'source', 'page', 'origin'];
+  const ORIGINS = ['corpus', 'authored-here'];
   for (const c of list) {
     for (const k of REQUIRED) if (!c[k]) {
       errors.push(`data/concepts.json: ${c.id || '(no id)'} is missing "${k}"`);
+    }
+    if (c.origin && !ORIGINS.includes(c.origin)) {
+      errors.push(`data/concepts.json: ${c.id} has origin "${c.origin}" — must be one of ${ORIGINS.join(', ')}`);
     }
     if (c.id && !anchors.has(c.id.toLowerCase())) {
       errors.push(`data/concepts.json: ${c.id} has no anchor #${String(c.id).toLowerCase()} on /concepts/index.html`);
@@ -230,11 +236,42 @@ for (const f of files) {
 }
 
 // --- 8. key-leak tripwire -------------------------------------------------
-const KEY_SHAPE = /[A-Za-z0-9_-]{20,}:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/;
+// This site PUBLISHES a vault read key on purpose (/examples/execution-boundary/), so the
+// rule cannot be "nothing key-shaped". It has to be precise instead of stricter — the same
+// correction sgit.ai had to make when its own tripwire banned the string it needed in order
+// to teach people to recognise it. A read key is 64 hex characters and cannot become write
+// access; anything else before a colon is a passphrase, which means write.
+const WRITE_CRED = [
+  { re: /sgit_(?:vk1|private_vault)_[A-Za-z0-9_-]{8,}/,
+    why: 'a vault (write) credential prefix' },
+  { re: /[A-Za-z0-9_-]{20,}:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/,
+    why: 'a passphrase joined to a uuid-shaped vault id' },
+];
 for (const f of files) {
   if (/\.(png|jpg|jpeg|gif|webp|ico|woff2?|zip|svg|pdf)$/.test(f)) continue;
+  const r = rel(f);
+  if (r === 'admin/build/validate.js') continue;   // this file carries the patterns
   const t = fs.readFileSync(f, 'utf8');
-  if (KEY_SHAPE.test(t)) errors.push(`${rel(f)}: contains a vault-key-shaped string`);
+  for (const c of WRITE_CRED) {
+    const m = t.match(c.re);
+    if (m) errors.push(`${r}: contains ${c.why} — write credentials are never published`);
+  }
+  // A bare passphrase:vault_id is the older credential shape and it carries write access.
+  // A read key is 64 hex characters — with or without one of the published read-key
+  // prefixes. Anything else before the colon is a passphrase, and a passphrase is a
+  // write credential no matter what the surrounding prose calls it.
+  //
+  // This check has fired in anger. Building the execution-boundary example, the
+  // vault-viewer link was pasted in as given — and as given it was the vault key, three
+  // times on one page. The gate caught all three before the commit. That is the whole
+  // reason the rule is a pattern in a build script rather than a paragraph in a README.
+  const READ_KEY = /^(?:sgit_rk1_|sgit_private_read_|sgit_public_read_)?[0-9a-f]{64}$/;
+  for (const m of t.matchAll(/\b([A-Za-z0-9_-]{20,}):([a-z0-9]{6,12})\b/g)) {
+    if (READ_KEY.test(m[1])) continue;                      // a read key — publishable
+    if (/[;{}]/.test(t.slice(Math.max(0, m.index - 60), m.index + 60))) continue; // css/js noise
+    errors.push(`${r}: "${m[1].slice(0, 12)}…:${m[2]}" looks like a passphrase joined to a ` +
+                `vault id — if it is a read key it must be 64 hex characters`);
+  }
 }
 
 // --- 9. div balance -------------------------------------------------------

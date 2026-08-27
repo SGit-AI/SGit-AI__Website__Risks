@@ -1,10 +1,10 @@
 {
   "site": "risks.sgit.ai",
-  "site_version": "v0.1.0",
+  "site_version": "v0.2.0",
   "updated": "2026-08-23",
   "title": "risks.sgit.ai — the conceptual and research home for risk",
   "summary": "Traditional risk management predicts the probability of a future event. This model asks a named human to underwrite an exposure that already exists, insurance-style, with personal accountability attached. From that inversion follow the no-deny mechanic, the interval ladder, unaccepted-equals-critical, and the grounding ladder underneath.",
-  "important": "ESSENTIALLY NOTHING ON THIS SITE IS IMPLEMENTED IN CODE. Greps for risk_, RiskAcceptance, risk_register and riskmandate across the implementing repository return zero matches. Four vaults, three worked graphs and ten scenarios exist; the engine does not. Do not describe any of this as an existing feature. See /shipped/index.html.",
+  "important": "ESSENTIALLY NOTHING ON THIS SITE IS IMPLEMENTED IN CODE. Greps for risk_, RiskAcceptance, risk_register and riskmandate across the implementing repository return zero matches. Five vaults, three worked graphs, ten scenarios and one live instrument (/examples/execution-boundary/index.html, a vault app that computes a verdict over one invented scenario) exist; the engine does not. Do not describe any of this as an existing feature. See /shipped/index.html.",
   "licence": "CC BY 4.0 for content; Apache 2.0 for build tooling",
   "publisher": {
     "name": "the sgit project",
@@ -16,7 +16,7 @@
     "definitions": {
       "url": "https://risks.sgit.ai/data/concepts.json",
       "format": "application/json",
-      "holds": "All 42 concepts: id, name, one-line definition, detail, maturity, newcomer-followability, first-written date, canonical source path, page, anchor, related concepts, quote. Plus the agent reading order and the six teaching altitudes.",
+      "holds": "All 43 concepts: id, name, one-line definition, detail, maturity, newcomer-followability, first-written date, canonical source path, page, anchor, related concepts, quote. Plus the agent reading order and the seven teaching altitudes.",
       "note": "The highest-value single fetch on this site."
     },
     "full_text": {
@@ -66,10 +66,11 @@
     {"path": "/plug/index.html", "fact": "The plug always exists; what older registers called 'no plug' was zero recoverability. Detection floors at 12-18 hours."},
     {"path": "/practice/index.html", "fact": "Confirmed, validated and accepted are three acts by three roles tracked per altitude, and the mismatches are the findings."},
     {"path": "/ramm/index.html", "fact": "Only one of RAMM's five base levels has a stated predicate; the other four are named only."},
-    {"path": "/examples/index.html", "fact": "Three worked graphs with counted nodes and edges, four published vaults, and the 30-days-versus-6-months finding that is arithmetic rather than judgement."},
-    {"path": "/concepts/index.html", "fact": "All 42 concepts with a stable anchor each and maturity stated honestly."},
+    {"path": "/examples/index.html", "fact": "Three worked graphs with counted nodes and edges, five published vaults, and the 30-days-versus-6-months finding that is arithmetic rather than judgement."},
+    {"path": "/examples/execution-boundary/index.html", "fact": "The fourth worked example and the only page here that computes: whether the predicates behind an authorization can still be established at the moment of execution. Three verdicts, not two, and the third is cannot-establish. Runs live from vault r48ncij0 with the read key published."},
+    {"path": "/concepts/index.html", "fact": "All 43 concepts with a stable anchor each and maturity stated honestly."},
     {"path": "/agents/index.html", "fact": "The machine surface is the commissioned deliverable of this site, not a courtesy page."},
-    {"path": "/shipped/index.html", "fact": "The concepts are argued, the worked examples are real graphs, four vaults are live, and the engine is not built."},
+    {"path": "/shipped/index.html", "fact": "The concepts are argued, the worked examples are real graphs, five vaults are live, one worked example computes rather than argues, and the engine is still not built."},
     {"path": "/origins/index.html", "fact": "The model starts as orthodox GRC in February 2026 and inverts itself in June."},
     {"path": "/network/index.html", "fact": "Eight sites, one argument, eight open questions published unresolved and seven honest tensions."},
     {"path": "/documents/index.html", "fact": "Eleven sources published verbatim, and what was deliberately excluded published at equal length."},

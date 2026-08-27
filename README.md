@@ -7,7 +7,8 @@ it cannot be denied, so **there is no deny button**; the only choice is *how lon
 interval is the decision**, because each rung implies a specific operational response.
 
 > **This is a research site. The concepts are argued, the worked examples are real graphs, and
-> four vaults are live and browsable. The engine is not built.** Greps for `risk_`,
+> five vaults are live and browsable, and one worked example computes rather than argues.
+> The engine is not built.** Greps for `risk_`,
 > `RiskAcceptance`, `risk_register` and `riskmandate` across the implementing repository return
 > zero matches. See [`/shipped/`](https://risks.sgit.ai/shipped/index.html).
 
@@ -39,7 +40,7 @@ Live site: https://risks.sgit.ai (GitHub Pages, deployed from `dev`).
 - `plug/` — who can pull the plug, the five-dimension profile, recoverability as the hard limit
 - `practice/` — owners, altitude, the physical act, density, meta-risks, do-not-internalise
 - `ramm/` — the maturity models, and an honest account of where they are underspecified
-- `examples/` — three worked graphs, four live vaults, the ten scenarios, the plug register
+- `examples/` — four worked graphs, five live vaults, the ten scenarios, the plug register
 - `concepts/` — all 42, one stable anchor each, maturity stated honestly
 - `agents/` — the machine surface and the agent contract
 - `shipped/` — what is argued, and what runs
@@ -47,7 +48,7 @@ Live site: https://risks.sgit.ai (GitHub Pages, deployed from `dev`).
 - `network/` — the eight-site boundary map, eight open questions, seven honest tensions
 - `documents/` — the eleven sources, the tiering, and what is deliberately not published
 - `briefs/` — those eleven source documents, verbatim, at stable constructed paths
-- `data/concepts.json` — the definitions endpoint: 42 concepts as structured data
+- `data/concepts.json` — the definitions endpoint: 43 concepts as structured data
 - `about/participant.html` — the disclosure, and five places this model loses
 - `admin/` — engineering: comms (asks & tasks), versions, build tooling
 - `admin/build/chrome.py` — the single definition of nav and footer, applied across every page
@@ -74,7 +75,7 @@ Same as the sibling sites — `sgit.ai`, `pki.sgit.ai`, `graphs.sgit.ai`, `issue
 2. Internal links **and fragments** — every `#anchor` must resolve to an id in the target page
 3. Canonical host agreement with `CNAME`
 4. The agent surface — every section hub named in `llms.txt`; sitemap and tree agree both ways
-5. **The definitions endpoint** — `data/concepts.json` parses, carries all 42 concepts with
+5. **The definitions endpoint** — `data/concepts.json` parses, carries all 43 concepts with
    every required field, agrees with `version.txt`, and every concept has an anchor on `/concepts/`
 6. **The over-claim tripwire** — no page may say the engine is built, shipping or installable
    (escape hatch: mark the element `data-not-built` to state a claim in order to correct it)
