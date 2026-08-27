@@ -9,7 +9,7 @@
 > risk nobody has accepted has not gone away — it has come to rest on whoever is nearest,
 > so UNACCEPTED IS RATED CRITICAL and rolls upward without anyone choosing to escalate it.
 
-Site version: v0.2.0 (27 August 2026). Published by the sgit project, which also builds
+Site version: v0.2.1 (27 August 2026). Published by the sgit project, which also builds
 riskmandate.ai — the commercial product this research underpins. Participant disclosure at
 /about/participant.html. Content CC BY 4.0 unless a page states otherwise.
 
@@ -20,7 +20,7 @@ risk_register and riskmandate across the implementing repository return ZERO mat
 the project's own reality file says: "All items below are PROPOSED. None have been
 code-verified. Do not describe any of these as existing features."
 
-What DOES exist: five published vaults with read keys (501 files, 113 commits, browsable
+What DOES exist: five published vaults with read keys (502 files, 115 commits, browsable
 today), three fully worked risk graphs with counted nodes and edges, ONE LIVE INSTRUMENT
 you can drive (/examples/execution-boundary/index.html — a vault app that computes, read
 key published in the open), the ten "how long would you accept" scenarios, and

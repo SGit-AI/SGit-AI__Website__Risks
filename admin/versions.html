@@ -20,7 +20,7 @@
   <a class="brand" href="../index.html">risks<span>.sgit.ai</span></a>
   <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: vaults, publishing and the catalogue. This site is the estate's conceptual home for risk">↗ part of <b>sgit.ai</b></a>
   <span class="stage-pill">research site</span>
-  <a class="ver" href="../admin/versions.html" title="Site release history">v0.2.0</a>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.2.1</a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
   <div class="nav-items">
     <div class="ni ni-has">
@@ -103,6 +103,15 @@
   <thead><tr><th>Version</th><th>Date</th><th>What shipped</th></tr></thead>
   <tbody>
     <tr>
+      <td class="vnum">v0.2.1</td>
+      <td>27 Aug 2026</td>
+      <td><b>Numbers derived rather than typed, and the verification stated at its real strength.</b>
+        <p><b>Every published figure about the Execution Boundary vault is now derived from the vault.</b> v0.2.0 described it, and description got two of them wrong: it said <em>“8 app entries”</em> when <code>app.json</code> declares exactly one and the eight are pages behind it, and it said two commits when the log shows four. The vault gained <code>build/facts.py</code>, which reads the tree, the commit log and the manifest and prints the catalogue line; the site now carries what that prints — <b>34 files · 648 KB · 4 commits · 8 pages behind 1 app entry</b> — and the five-vault totals move with it. <a href="https://sgit.ai/demos/vaults/publishing.md">The publishing method</a> asks for derived facts and this is why.</p>
+        <p><b>What the embed was actually verified to do, said at its real strength.</b> The claim on the page was that the live render was unverified from the build machine, which was true and unhelpfully coarse. Against the real endpoint it is now established that the published read key clones the vault to byte-identical files, that the objects carry <code>access-control-allow-origin: *</code>, and that the exact fetch-and-decrypt sequence the embed performs resolves the ref, walks the commit tree to every file, and decrypts the entry page. <b>The one step still unexercised is the sandboxed iframe booting the app</b> — because the machine this was built on cannot reach the network from a browser, only from the shell. <a href="../examples/execution-boundary/index.html#provenance">Both halves are on the page</a>, in a row of their own, rather than one implying the other.</p>
+        <p><b>The near-miss now travels with the artefact, not just with the site.</b> The vault's <a href="../examples/vaults.html#execution-boundary"><code>PUBLIC.md</code></a> carries the write-up, because the credential that was nearly published is the vault's and a finding filed only at the far end of a link is a finding that goes missing. Its audit was re-run over the changed tree — <b>34 files, 77 raw hits, all 77 ruled out</b>, four more than the first run because this file now quotes four CSS declarations as examples of the false positive, which is the scan finding its own worked example. And the illustration in it names no part of the real credential: a truncated write credential is still a piece of a write credential.</p>
+      </td>
+    </tr>
+    <tr>
       <td class="vnum">v0.2.0</td>
       <td>27 Aug 2026</td>
       <td><b>The execution boundary — the first thing on this site that computes, and the first vault this site built rather than borrowed.</b>
@@ -147,7 +156,7 @@
     <p>The conceptual and research home for risk in the sgit.ai estate: what a risk is, what acceptance is, and why it is modelled this way. <a href="https://riskmandate.ai" style="display:inline;padding:0">riskmandate.ai</a> answers how you get your risks accepted and what it costs; this site answers why the model has the shape it has. <b>Nothing here is implemented in code</b> — <a href="../shipped/index.html" style="display:inline;padding:0">/shipped/</a> says so plainly. Part of the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network. All content CC BY 4.0 unless a page states otherwise.</p>
     <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://riskmandate.ai">↗ riskmandate.ai</a> — the product · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> — the graph machinery · <a href="https://nhi.sgit.ai">↗ nhi.sgit.ai</a> · <a href="https://pki.sgit.ai">↗ pki.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
     <p class="partnote">⚠ Participant disclosure: published by the sgit project, which also builds riskmandate.ai — the commercial product this research underpins. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
-    <p class="verline">site <a href="../admin/versions.html">v0.2.0</a> · <a href="../admin/index.html">engineering</a></p>
+    <p class="verline">site <a href="../admin/versions.html">v0.2.1</a> · <a href="../admin/index.html">engineering</a></p>
   </div>
   <div>
     <h4>Start here</h4>
